@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Yale-adjacent blue palette */
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --ink: #0f1f3a;           /* near-black navy */
+  --ink-2: #1e3a6a;         /* darker brand blue */
+  --muted: #64748b;         /* slate-500 */
+  --border: #e2e8f0;        /* slate-200 */
+  --accent: #00356b;        /* Yale blue */
+  --accent-2: #1d4ed8;      /* blue-700 */
+  --accent-soft: #dbeafe;   /* blue-100 */
+  --danger: #b91c1c;        /* red-700 */
+  --stripe: #f1f5f9;        /* slate-100 */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-bg: var(--bg);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-accent-soft: var(--accent-soft);
+  --color-danger: var(--danger);
+  --color-stripe: var(--stripe);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+* {
+  box-sizing: border-box;
+}
+
+/* Dragging helpers */
+.drag-handle {
+  cursor: grab;
+  color: var(--muted);
+  user-select: none;
+}
+.drag-handle:active {
+  cursor: grabbing;
+}
+.sortable-dragging {
+  opacity: 0.6;
+  z-index: 20;
 }

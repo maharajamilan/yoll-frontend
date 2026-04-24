@@ -1,0 +1,8553 @@
+{
+  "waves": {
+    "F25": {
+      "label": "Fall 2025",
+      "n": 3424,
+      "note": "Reweighted using S25 pipeline as standard."
+    }
+  },
+  "columns": {
+    "age": {
+      "label": "age",
+      "question": "What is your age?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "gender": {
+      "label": "gender",
+      "question": "What is your gender?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Man"
+        },
+        {
+          "code": 2,
+          "label": "Woman"
+        },
+        {
+          "code": 3,
+          "label": "Other"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "ces_race": {
+      "label": "ces_race",
+      "question": "What racial or ethnic group best describes you? (combined)",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "White"
+        },
+        {
+          "code": 2,
+          "label": "Black or African-American"
+        },
+        {
+          "code": 3,
+          "label": "Hispanic or Latino"
+        },
+        {
+          "code": 4,
+          "label": "Asian or Asian-American"
+        },
+        {
+          "code": 5,
+          "label": "Native American"
+        },
+        {
+          "code": 6,
+          "label": "Asian or Asian-American"
+        },
+        {
+          "code": 7,
+          "label": "Two or more races"
+        },
+        {
+          "code": 8,
+          "label": "Other"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "education": {
+      "label": "education",
+      "question": "What is the highest level of education you have completed?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Some high school or less"
+        },
+        {
+          "code": 2,
+          "label": "High school diploma or GED"
+        },
+        {
+          "code": 3,
+          "label": "Some college, but no degree"
+        },
+        {
+          "code": 4,
+          "label": "Associates or technical degree"
+        },
+        {
+          "code": 5,
+          "label": "Bachelor\u2019s degree"
+        },
+        {
+          "code": 6,
+          "label": "Graduate or professional degree (MA, MS, MBA, PhD, JD, MD, DDS, etc.)"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "anes_party_id": {
+      "label": "anes_party_id",
+      "question": "Generally speaking, do you usually think of yourself as a Republican, a Democrat, independent, or what?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Republican"
+        },
+        {
+          "code": 2,
+          "label": "Democrat"
+        },
+        {
+          "code": 3,
+          "label": "Independent"
+        },
+        {
+          "code": 4,
+          "label": "Other"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "pid_leaners": {
+      "label": "pid_leaners",
+      "question": "Do you think of yourself as closer to the Republican or Democratic party?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The Democratic Party"
+        },
+        {
+          "code": 2,
+          "label": "The Republican Party"
+        },
+        {
+          "code": 3,
+          "label": "Neither"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "2024_recalled_vote": {
+      "label": "2024_recalled_vote",
+      "question": "Who did you vote for for president in 2024?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Kamala Harris"
+        },
+        {
+          "code": 2,
+          "label": "Donald Trump"
+        },
+        {
+          "code": 3,
+          "label": "Other"
+        },
+        {
+          "code": 4,
+          "label": "Did not vote"
+        },
+        {
+          "code": 5,
+          "label": "Was not old enough to vote"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "income": {
+      "label": "income",
+      "question": "What was your total household income before taxes during the past 12 months?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Under $25,000"
+        },
+        {
+          "code": 2,
+          "label": "At least $25,000 but under $50,000"
+        },
+        {
+          "code": 3,
+          "label": "At least $50,000 but under $100,000"
+        },
+        {
+          "code": 4,
+          "label": "At least $100,000 but under $200,000"
+        },
+        {
+          "code": 5,
+          "label": "$200,000 or more"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "sexuality": {
+      "label": "sexuality",
+      "question": "Which of the following best describes your sexual orientation? Remember, your answers are anonymous. - Selected Choice",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Straight (heterosexual)"
+        },
+        {
+          "code": 2,
+          "label": "Gay or lesbian"
+        },
+        {
+          "code": 3,
+          "label": "Bisexual"
+        },
+        {
+          "code": 4,
+          "label": "Prefer not to say"
+        },
+        {
+          "code": 5,
+          "label": "Other"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "religion": {
+      "label": "religion",
+      "question": "What is your present religion, if any? Are you:",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Protestant"
+        },
+        {
+          "code": 2,
+          "label": "Roman Catholic"
+        },
+        {
+          "code": 3,
+          "label": "Mormon"
+        },
+        {
+          "code": 4,
+          "label": "Orthodox, such as Greek or Russian Orthodox"
+        },
+        {
+          "code": 5,
+          "label": "Jewish"
+        },
+        {
+          "code": 6,
+          "label": "Muslim"
+        },
+        {
+          "code": 7,
+          "label": "Buddhist"
+        },
+        {
+          "code": 8,
+          "label": "Hindu"
+        },
+        {
+          "code": 9,
+          "label": "Atheist"
+        },
+        {
+          "code": 10,
+          "label": "Agnostic"
+        },
+        {
+          "code": 11,
+          "label": "Something else"
+        },
+        {
+          "code": 12,
+          "label": "Nothing in particular"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "jewish_id": {
+      "label": "jewish_id",
+      "question": "Regardless of your level of religiosity, do you consider yourself to be culturally Jewish?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Yes"
+        },
+        {
+          "code": 2,
+          "label": "No"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "anes_ideology": {
+      "label": "anes_ideology",
+      "question": "Here is a seven-point scale on which the political views that people might hold are arranged from extremely liberal to extremely conservative. Where would you place yourself on this scale?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Extremely liberal"
+        },
+        {
+          "code": 2,
+          "label": "Liberal"
+        },
+        {
+          "code": 3,
+          "label": "Slightly liberal"
+        },
+        {
+          "code": 4,
+          "label": "Moderate; middle of the road"
+        },
+        {
+          "code": 5,
+          "label": "Slightly conservative"
+        },
+        {
+          "code": 6,
+          "label": "Conservative"
+        },
+        {
+          "code": 7,
+          "label": "Extremely conservative"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "need_for_cognition_1": {
+      "label": "need_for_cognition_1",
+      "question": "For each of the statements below, please indicate to what extent the statement is characteristic of you. - I prefer complex to simple problems",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "need_for_cognition_2": {
+      "label": "need_for_cognition_2",
+      "question": "For each of the statements below, please indicate to what extent the statement is characteristic of you. - Thinking is not my idea of fun",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "trump_approval": {
+      "label": "trump_approval",
+      "question": "How do you feel about the way that Donald Trump is handling his job as president?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly approve"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat approve"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat disapprove"
+        },
+        {
+          "code": 4,
+          "label": "Strongly disapprove"
+        },
+        {
+          "code": 5,
+          "label": "Not sure or no opinion"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "generic_ballot": {
+      "label": "generic_ballot",
+      "question": "If the election for U.S. Congress in your district was held today, which one of the following candidates would you vote for?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The Democrat"
+        },
+        {
+          "code": 2,
+          "label": "The Republican"
+        },
+        {
+          "code": 3,
+          "label": "Don't know"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff": {
+      "label": "issue_rank_maxdiff",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Cost of living/affordability"
+        },
+        {
+          "code": 2,
+          "label": "Healthcare"
+        },
+        {
+          "code": 3,
+          "label": "Jobs"
+        },
+        {
+          "code": 4,
+          "label": "Taxes"
+        },
+        {
+          "code": 5,
+          "label": "The national debt"
+        },
+        {
+          "code": 6,
+          "label": "Corruption"
+        },
+        {
+          "code": 7,
+          "label": "Social Security"
+        },
+        {
+          "code": 8,
+          "label": "Medicaid and Medicare"
+        },
+        {
+          "code": 9,
+          "label": "K-12 education"
+        },
+        {
+          "code": 10,
+          "label": "Abortion"
+        },
+        {
+          "code": 11,
+          "label": "Crime"
+        },
+        {
+          "code": 12,
+          "label": "Israel and Palestine"
+        },
+        {
+          "code": 13,
+          "label": "Race relations"
+        },
+        {
+          "code": 14,
+          "label": "Diplomatic relations"
+        },
+        {
+          "code": 15,
+          "label": "Climate change"
+        },
+        {
+          "code": 16,
+          "label": "The environment"
+        },
+        {
+          "code": 17,
+          "label": "Election integrity"
+        },
+        {
+          "code": 18,
+          "label": "Immigration"
+        },
+        {
+          "code": 19,
+          "label": "Regulating businesses and corporations"
+        },
+        {
+          "code": 20,
+          "label": "Ukraine and Russia"
+        },
+        {
+          "code": 21,
+          "label": "Acceptance of gay people"
+        },
+        {
+          "code": 22,
+          "label": "Acceptance of transgender people"
+        },
+        {
+          "code": 23,
+          "label": "Higher education"
+        },
+        {
+          "code": 24,
+          "label": "China"
+        },
+        {
+          "code": 25,
+          "label": "Trade"
+        },
+        {
+          "code": 26,
+          "label": "Artificial intelligence"
+        },
+        {
+          "code": 27,
+          "label": "Guns"
+        },
+        {
+          "code": 28,
+          "label": "Democracy"
+        },
+        {
+          "code": 29,
+          "label": "Free speech"
+        },
+        {
+          "code": 30,
+          "label": "Housing"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_6": {
+      "label": "issue_rank_maxdiff_do_6",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Corruption",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_7": {
+      "label": "issue_rank_maxdiff_do_7",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Social Security",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_8": {
+      "label": "issue_rank_maxdiff_do_8",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Medicaid and Medicare",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_9": {
+      "label": "issue_rank_maxdiff_do_9",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order K-12 education",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_10": {
+      "label": "issue_rank_maxdiff_do_10",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Abortion",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_11": {
+      "label": "issue_rank_maxdiff_do_11",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Crime",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_12": {
+      "label": "issue_rank_maxdiff_do_12",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Israel and Palestine",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_13": {
+      "label": "issue_rank_maxdiff_do_13",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Race relations",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_14": {
+      "label": "issue_rank_maxdiff_do_14",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Diplomatic relations",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_15": {
+      "label": "issue_rank_maxdiff_do_15",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Climate change",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_16": {
+      "label": "issue_rank_maxdiff_do_16",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order The environment",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_17": {
+      "label": "issue_rank_maxdiff_do_17",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Election integrity",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_18": {
+      "label": "issue_rank_maxdiff_do_18",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Immigration",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_19": {
+      "label": "issue_rank_maxdiff_do_19",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Regulating businesses and corporations",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_20": {
+      "label": "issue_rank_maxdiff_do_20",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Ukraine and Russia",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_21": {
+      "label": "issue_rank_maxdiff_do_21",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Acceptance of gay people",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_22": {
+      "label": "issue_rank_maxdiff_do_22",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Acceptance of transgender people",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_23": {
+      "label": "issue_rank_maxdiff_do_23",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Higher education",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_24": {
+      "label": "issue_rank_maxdiff_do_24",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order China",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_25": {
+      "label": "issue_rank_maxdiff_do_25",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Trade",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_26": {
+      "label": "issue_rank_maxdiff_do_26",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Artificial intelligence",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_27": {
+      "label": "issue_rank_maxdiff_do_27",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Guns",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_28": {
+      "label": "issue_rank_maxdiff_do_28",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Democracy",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_29": {
+      "label": "issue_rank_maxdiff_do_29",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Free speech",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "issue_rank_maxdiff_do_30": {
+      "label": "issue_rank_maxdiff_do_30",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you? - Display Order Housing",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "br_change": {
+      "label": "br_change",
+      "question": "Which of the following do you agree with the most, even if none are exactly right?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Things are going well in America and no real changes are needed"
+        },
+        {
+          "code": 2,
+          "label": "Things could be going better in America and what is needed is a return to basic stability"
+        },
+        {
+          "code": 3,
+          "label": "Things in America are going poorly and what is needed is a major change and a shock to the system"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "change_party": {
+      "label": "change_party",
+      "question": "Which of the two main political parties do you think most stands for change?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The Democratic Party"
+        },
+        {
+          "code": 2,
+          "label": "The Republican Party"
+        },
+        {
+          "code": 3,
+          "label": "Both parties equally"
+        },
+        {
+          "code": 4,
+          "label": "Neither party"
+        },
+        {
+          "code": 5,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "future_optimism": {
+      "label": "future_optimism",
+      "question": "How do you, personally, feel about the future of America?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very optimistic"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat optimistic"
+        },
+        {
+          "code": 3,
+          "label": "Not very optimistic"
+        },
+        {
+          "code": 4,
+          "label": "Not optimistic at all"
+        },
+        {
+          "code": 5,
+          "label": "Not sure or no opinion"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "attention_check": {
+      "label": "attention_check",
+      "question": "In this question, we just want to verify that you are a real person. In the list below, please select\n\u201chealthcare.\u201d",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Healthcare"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "2028_dem_primary": {
+      "label": "2028_dem_primary",
+      "question": "2028_dem_primary",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Andy Beshear"
+        },
+        {
+          "code": 2,
+          "label": "Alexandria Ocasio-Cortez"
+        },
+        {
+          "code": 3,
+          "label": "Kamala Harris"
+        },
+        {
+          "code": 4,
+          "label": "Wes Moore"
+        },
+        {
+          "code": 5,
+          "label": "Gavin Newsom"
+        },
+        {
+          "code": 6,
+          "label": "JB Pritzker"
+        },
+        {
+          "code": 7,
+          "label": "Josh Shapiro"
+        },
+        {
+          "code": 8,
+          "label": "Gretchen Whitmer"
+        },
+        {
+          "code": 9,
+          "label": "Mark Cuban"
+        },
+        {
+          "code": 10,
+          "label": "Ruben Gallego"
+        },
+        {
+          "code": 11,
+          "label": "Mark Kelly"
+        },
+        {
+          "code": 12,
+          "label": "Jared Polis"
+        },
+        {
+          "code": 13,
+          "label": "Pete Buttigieg"
+        },
+        {
+          "code": 14,
+          "label": "Cory Booker"
+        },
+        {
+          "code": 15,
+          "label": "Tim Walz"
+        },
+        {
+          "code": 16,
+          "label": "Jon Ossoff"
+        },
+        {
+          "code": 17,
+          "label": "Chris Murphy"
+        },
+        {
+          "code": 18,
+          "label": "Raphael Warnock"
+        },
+        {
+          "code": 19,
+          "label": "Rahm Emanuel"
+        },
+        {
+          "code": 20,
+          "label": "Other"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_dem_primary_do_6": {
+      "label": "a2028_dem_primary_do_6",
+      "question": "If the 2028 Democratic presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order JB Pritzker",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_dem_primary_do_7": {
+      "label": "a2028_dem_primary_do_7",
+      "question": "If the 2028 Democratic presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Josh Shapiro",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_dem_primary_do_8": {
+      "label": "a2028_dem_primary_do_8",
+      "question": "If the 2028 Democratic presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Gretchen Whitmer",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_dem_primary_do_9": {
+      "label": "a2028_dem_primary_do_9",
+      "question": "If the 2028 Democratic presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Mark Cuban",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_dem_primary_do_10": {
+      "label": "a2028_dem_primary_do_10",
+      "question": "If the 2028 Democratic presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Ruben Gallego",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_dem_primary_do_11": {
+      "label": "a2028_dem_primary_do_11",
+      "question": "If the 2028 Democratic presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Mark Kelly",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_dem_primary_do_12": {
+      "label": "a2028_dem_primary_do_12",
+      "question": "If the 2028 Democratic presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Jared Polis",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_dem_primary_do_13": {
+      "label": "a2028_dem_primary_do_13",
+      "question": "If the 2028 Democratic presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Pete Buttigieg",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_dem_primary_do_14": {
+      "label": "a2028_dem_primary_do_14",
+      "question": "If the 2028 Democratic presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Cory Booker",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_dem_primary_do_15": {
+      "label": "a2028_dem_primary_do_15",
+      "question": "If the 2028 Democratic presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Tim Walz",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_dem_primary_do_16": {
+      "label": "a2028_dem_primary_do_16",
+      "question": "If the 2028 Democratic presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Jon Ossoff",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_dem_primary_do_17": {
+      "label": "a2028_dem_primary_do_17",
+      "question": "If the 2028 Democratic presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Chris Murphy",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_dem_primary_do_18": {
+      "label": "a2028_dem_primary_do_18",
+      "question": "If the 2028 Democratic presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Raphael Warnock",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_dem_primary_do_19": {
+      "label": "a2028_dem_primary_do_19",
+      "question": "If the 2028 Democratic presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Rahm Emanuel",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_dem_primary_do_20": {
+      "label": "a2028_dem_primary_do_20",
+      "question": "If the 2028 Democratic presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Other",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 20,
+          "label": "20.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "d_electable_maxdiff": {
+      "label": "d_electable_maxdiff",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Andy Beshear"
+        },
+        {
+          "code": 2,
+          "label": "Alexandria Ocasio-Cortez"
+        },
+        {
+          "code": 3,
+          "label": "Kamala Harris"
+        },
+        {
+          "code": 4,
+          "label": "Wes Moore"
+        },
+        {
+          "code": 5,
+          "label": "Gavin Newsom"
+        },
+        {
+          "code": 6,
+          "label": "JB Pritzker"
+        },
+        {
+          "code": 7,
+          "label": "Josh Shapiro"
+        },
+        {
+          "code": 8,
+          "label": "Gretchen Whitmer"
+        },
+        {
+          "code": 9,
+          "label": "Mark Cuban"
+        },
+        {
+          "code": 10,
+          "label": "Ruben Gallego"
+        },
+        {
+          "code": 11,
+          "label": "Mark Kelly"
+        },
+        {
+          "code": 12,
+          "label": "Jared Polis"
+        },
+        {
+          "code": 13,
+          "label": "Pete Buttigieg"
+        },
+        {
+          "code": 14,
+          "label": "Cory Booker"
+        },
+        {
+          "code": 15,
+          "label": "Tim Walz"
+        },
+        {
+          "code": 16,
+          "label": "Jon Ossoff"
+        },
+        {
+          "code": 17,
+          "label": "Chris Murphy"
+        },
+        {
+          "code": 18,
+          "label": "Raphael Warnock"
+        },
+        {
+          "code": 19,
+          "label": "Rahm Emanuel"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "d_electable_maxdiff_do_6": {
+      "label": "d_electable_maxdiff_do_6",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican? - Display Order JB Pritzker",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "d_electable_maxdiff_do_7": {
+      "label": "d_electable_maxdiff_do_7",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican? - Display Order Josh Shapiro",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "d_electable_maxdiff_do_8": {
+      "label": "d_electable_maxdiff_do_8",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican? - Display Order Gretchen Whitmer",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "d_electable_maxdiff_do_9": {
+      "label": "d_electable_maxdiff_do_9",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican? - Display Order Mark Cuban",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "d_electable_maxdiff_do_10": {
+      "label": "d_electable_maxdiff_do_10",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican? - Display Order Ruben Gallego",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "d_electable_maxdiff_do_11": {
+      "label": "d_electable_maxdiff_do_11",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican? - Display Order Mark Kelly",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "d_electable_maxdiff_do_12": {
+      "label": "d_electable_maxdiff_do_12",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican? - Display Order Jared Polis",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "d_electable_maxdiff_do_13": {
+      "label": "d_electable_maxdiff_do_13",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican? - Display Order Pete Buttigieg",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "d_electable_maxdiff_do_14": {
+      "label": "d_electable_maxdiff_do_14",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican? - Display Order Cory Booker",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "d_electable_maxdiff_do_15": {
+      "label": "d_electable_maxdiff_do_15",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican? - Display Order Tim Walz",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "d_electable_maxdiff_do_16": {
+      "label": "d_electable_maxdiff_do_16",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican? - Display Order Jon Ossoff",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "d_electable_maxdiff_do_17": {
+      "label": "d_electable_maxdiff_do_17",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican? - Display Order Chris Murphy",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "d_electable_maxdiff_do_18": {
+      "label": "d_electable_maxdiff_do_18",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican? - Display Order Raphael Warnock",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "d_electable_maxdiff_do_19": {
+      "label": "d_electable_maxdiff_do_19",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican? - Display Order Rahm Emanuel",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "d_base_vs_swing": {
+      "label": "d_base_vs_swing",
+      "question": "When it comes to winning the next election, what do you think is more important for Democrats?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Democrats need to focus on energizing and turning out their voter base by running on progressive policies."
+        },
+        {
+          "code": 2,
+          "label": "Democrats need to focus on moderating their policies and ideology in order to appeal to a wider range of voters."
+        },
+        {
+          "code": 3,
+          "label": "Democrats don\u2019t need to change much from their 2024 strategy."
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "2028_gop_primary": {
+      "label": "2028_gop_primary",
+      "question": "2028_gop_primary",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "JD Vance"
+        },
+        {
+          "code": 2,
+          "label": "Ron DeSantis"
+        },
+        {
+          "code": 3,
+          "label": "Brian Kemp"
+        },
+        {
+          "code": 4,
+          "label": "Glenn Youngkin"
+        },
+        {
+          "code": 5,
+          "label": "Nikki Haley"
+        },
+        {
+          "code": 6,
+          "label": "Mike Pence"
+        },
+        {
+          "code": 7,
+          "label": "Vivek Ramaswamy"
+        },
+        {
+          "code": 8,
+          "label": "Ted Cruz"
+        },
+        {
+          "code": 9,
+          "label": "Marco Rubio"
+        },
+        {
+          "code": 10,
+          "label": "Josh Hawley"
+        },
+        {
+          "code": 11,
+          "label": "Tim Scott"
+        },
+        {
+          "code": 12,
+          "label": "Tulsi Gabbard"
+        },
+        {
+          "code": 13,
+          "label": "Robert F. Kennedy Jr."
+        },
+        {
+          "code": 14,
+          "label": "Steve Bannon"
+        },
+        {
+          "code": 15,
+          "label": "Tucker Carlson"
+        },
+        {
+          "code": 16,
+          "label": "Kristi Noem"
+        },
+        {
+          "code": 17,
+          "label": "Katie Britt"
+        },
+        {
+          "code": 19,
+          "label": "Donald Trump Jr."
+        },
+        {
+          "code": 20,
+          "label": "Greg Abbott"
+        },
+        {
+          "code": 21,
+          "label": "Elise Stefanik"
+        },
+        {
+          "code": 22,
+          "label": "Other"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_do_6": {
+      "label": "a2028_gop_primary_do_6",
+      "question": "If the 2028 Republican presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Mike Pence",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_do_7": {
+      "label": "a2028_gop_primary_do_7",
+      "question": "If the 2028 Republican presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Vivek Ramaswamy",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_do_8": {
+      "label": "a2028_gop_primary_do_8",
+      "question": "If the 2028 Republican presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Ted Cruz",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_do_9": {
+      "label": "a2028_gop_primary_do_9",
+      "question": "If the 2028 Republican presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Marco Rubio",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_do_10": {
+      "label": "a2028_gop_primary_do_10",
+      "question": "If the 2028 Republican presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Josh Hawley",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_do_11": {
+      "label": "a2028_gop_primary_do_11",
+      "question": "If the 2028 Republican presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Tim Scott",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_do_12": {
+      "label": "a2028_gop_primary_do_12",
+      "question": "If the 2028 Republican presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Tulsi Gabbard",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_do_13": {
+      "label": "a2028_gop_primary_do_13",
+      "question": "If the 2028 Republican presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Robert F. Kennedy Jr.",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_do_14": {
+      "label": "a2028_gop_primary_do_14",
+      "question": "If the 2028 Republican presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Steve Bannon",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_do_15": {
+      "label": "a2028_gop_primary_do_15",
+      "question": "If the 2028 Republican presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Tucker Carlson",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_do_16": {
+      "label": "a2028_gop_primary_do_16",
+      "question": "If the 2028 Republican presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Kristi Noem",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_do_17": {
+      "label": "a2028_gop_primary_do_17",
+      "question": "If the 2028 Republican presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Katie Britt",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_do_18": {
+      "label": "a2028_gop_primary_do_18",
+      "question": "If the 2028 Republican presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Doug Burgum",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_do_19": {
+      "label": "a2028_gop_primary_do_19",
+      "question": "If the 2028 Republican presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Donald Trump Jr.",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_do_20": {
+      "label": "a2028_gop_primary_do_20",
+      "question": "If the 2028 Republican presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Greg Abbott",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_do_21": {
+      "label": "a2028_gop_primary_do_21",
+      "question": "If the 2028 Republican presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Elise Stefanik",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_do_22": {
+      "label": "a2028_gop_primary_do_22",
+      "question": "If the 2028 Republican presidential primary were held today, and these were the candidates, which candidate would you vote for? - Display Order Other",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 22,
+          "label": "22.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "2028_gop_primary_djt": {
+      "label": "2028_gop_primary_djt",
+      "question": "2028_gop_primary_djt",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Donald J. Trump"
+        },
+        {
+          "code": 2,
+          "label": "JD Vance"
+        },
+        {
+          "code": 3,
+          "label": "Ron DeSantis"
+        },
+        {
+          "code": 4,
+          "label": "Brian Kemp"
+        },
+        {
+          "code": 5,
+          "label": "Glenn Youngkin"
+        },
+        {
+          "code": 6,
+          "label": "Nikki Haley"
+        },
+        {
+          "code": 7,
+          "label": "Mike Pence"
+        },
+        {
+          "code": 8,
+          "label": "Vivek Ramaswamy"
+        },
+        {
+          "code": 9,
+          "label": "Ted Cruz"
+        },
+        {
+          "code": 10,
+          "label": "Marco Rubio"
+        },
+        {
+          "code": 11,
+          "label": "Josh Hawley"
+        },
+        {
+          "code": 12,
+          "label": "Tim Scott"
+        },
+        {
+          "code": 13,
+          "label": "Tulsi Gabbard"
+        },
+        {
+          "code": 14,
+          "label": "Robert F. Kennedy Jr."
+        },
+        {
+          "code": 15,
+          "label": "Steve Bannon"
+        },
+        {
+          "code": 16,
+          "label": "Tucker Carlson"
+        },
+        {
+          "code": 17,
+          "label": "Kristi Noem"
+        },
+        {
+          "code": 18,
+          "label": "Katie Britt"
+        },
+        {
+          "code": 19,
+          "label": "Doug Burgum"
+        },
+        {
+          "code": 20,
+          "label": "Greg Abbott"
+        },
+        {
+          "code": 21,
+          "label": "Elise Stefanik"
+        },
+        {
+          "code": 22,
+          "label": "Other"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_djt_do_6": {
+      "label": "a2028_gop_primary_djt_do_6",
+      "question": "If the 2028 Republican presidential primary were held today, and Donald Trump were running for a third term as president, which candidate would you vote for? - Display Order Nikki Haley",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_djt_do_7": {
+      "label": "a2028_gop_primary_djt_do_7",
+      "question": "If the 2028 Republican presidential primary were held today, and Donald Trump were running for a third term as president, which candidate would you vote for? - Display Order Mike Pence",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_djt_do_8": {
+      "label": "a2028_gop_primary_djt_do_8",
+      "question": "If the 2028 Republican presidential primary were held today, and Donald Trump were running for a third term as president, which candidate would you vote for? - Display Order Vivek Ramaswamy",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_djt_do_9": {
+      "label": "a2028_gop_primary_djt_do_9",
+      "question": "If the 2028 Republican presidential primary were held today, and Donald Trump were running for a third term as president, which candidate would you vote for? - Display Order Ted Cruz",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_djt_do_10": {
+      "label": "a2028_gop_primary_djt_do_10",
+      "question": "If the 2028 Republican presidential primary were held today, and Donald Trump were running for a third term as president, which candidate would you vote for? - Display Order Marco Rubio",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_djt_do_11": {
+      "label": "a2028_gop_primary_djt_do_11",
+      "question": "If the 2028 Republican presidential primary were held today, and Donald Trump were running for a third term as president, which candidate would you vote for? - Display Order Josh Hawley",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_djt_do_12": {
+      "label": "a2028_gop_primary_djt_do_12",
+      "question": "If the 2028 Republican presidential primary were held today, and Donald Trump were running for a third term as president, which candidate would you vote for? - Display Order Tim Scott",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_djt_do_13": {
+      "label": "a2028_gop_primary_djt_do_13",
+      "question": "If the 2028 Republican presidential primary were held today, and Donald Trump were running for a third term as president, which candidate would you vote for? - Display Order Tulsi Gabbard",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_djt_do_14": {
+      "label": "a2028_gop_primary_djt_do_14",
+      "question": "If the 2028 Republican presidential primary were held today, and Donald Trump were running for a third term as president, which candidate would you vote for? - Display Order Robert F. Kennedy Jr.",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_djt_do_15": {
+      "label": "a2028_gop_primary_djt_do_15",
+      "question": "If the 2028 Republican presidential primary were held today, and Donald Trump were running for a third term as president, which candidate would you vote for? - Display Order Steve Bannon",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_djt_do_16": {
+      "label": "a2028_gop_primary_djt_do_16",
+      "question": "If the 2028 Republican presidential primary were held today, and Donald Trump were running for a third term as president, which candidate would you vote for? - Display Order Tucker Carlson",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_djt_do_17": {
+      "label": "a2028_gop_primary_djt_do_17",
+      "question": "If the 2028 Republican presidential primary were held today, and Donald Trump were running for a third term as president, which candidate would you vote for? - Display Order Kristi Noem",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_djt_do_18": {
+      "label": "a2028_gop_primary_djt_do_18",
+      "question": "If the 2028 Republican presidential primary were held today, and Donald Trump were running for a third term as president, which candidate would you vote for? - Display Order Katie Britt",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_djt_do_19": {
+      "label": "a2028_gop_primary_djt_do_19",
+      "question": "If the 2028 Republican presidential primary were held today, and Donald Trump were running for a third term as president, which candidate would you vote for? - Display Order Doug Burgum",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_djt_do_20": {
+      "label": "a2028_gop_primary_djt_do_20",
+      "question": "If the 2028 Republican presidential primary were held today, and Donald Trump were running for a third term as president, which candidate would you vote for? - Display Order Greg Abbott",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_djt_do_21": {
+      "label": "a2028_gop_primary_djt_do_21",
+      "question": "If the 2028 Republican presidential primary were held today, and Donald Trump were running for a third term as president, which candidate would you vote for? - Display Order Elise Stefanik",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 19,
+          "label": "19.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a2028_gop_primary_djt_do_22": {
+      "label": "a2028_gop_primary_djt_do_22",
+      "question": "If the 2028 Republican presidential primary were held today, and Donald Trump were running for a third term as president, which candidate would you vote for? - Display Order Other",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 22,
+          "label": "22.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "r_electable_maxdiff": {
+      "label": "r_electable_maxdiff",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "JD Vance"
+        },
+        {
+          "code": 2,
+          "label": "Ron DeSantis"
+        },
+        {
+          "code": 3,
+          "label": "Brian Kemp"
+        },
+        {
+          "code": 4,
+          "label": "Glenn Youngkin"
+        },
+        {
+          "code": 5,
+          "label": "Nikki Haley"
+        },
+        {
+          "code": 6,
+          "label": "Mike Pence"
+        },
+        {
+          "code": 7,
+          "label": "Vivek Ramaswamy"
+        },
+        {
+          "code": 8,
+          "label": "Ted Cruz"
+        },
+        {
+          "code": 9,
+          "label": "Marco Rubio"
+        },
+        {
+          "code": 10,
+          "label": "Josh Hawley"
+        },
+        {
+          "code": 11,
+          "label": "Tim Scott"
+        },
+        {
+          "code": 12,
+          "label": "Tulsi Gabbard"
+        },
+        {
+          "code": 13,
+          "label": "Robert F. Kennedy Jr."
+        },
+        {
+          "code": 14,
+          "label": "Steve Bannon"
+        },
+        {
+          "code": 15,
+          "label": "Tucker Carlson"
+        },
+        {
+          "code": 16,
+          "label": "Kristi Noem"
+        },
+        {
+          "code": 17,
+          "label": "Katie Britt"
+        },
+        {
+          "code": 18,
+          "label": "Doug Burgum"
+        },
+        {
+          "code": 19,
+          "label": "Donald Trump Jr."
+        },
+        {
+          "code": 20,
+          "label": "Greg Abbott"
+        },
+        {
+          "code": 21,
+          "label": "Elise Stefanik"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "r_electable_maxdiff_do_6": {
+      "label": "r_electable_maxdiff_do_6",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat? - Display Order Mike Pence",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "r_electable_maxdiff_do_7": {
+      "label": "r_electable_maxdiff_do_7",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat? - Display Order Vivek Ramaswamy",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "r_electable_maxdiff_do_8": {
+      "label": "r_electable_maxdiff_do_8",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat? - Display Order Ted Cruz",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "r_electable_maxdiff_do_9": {
+      "label": "r_electable_maxdiff_do_9",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat? - Display Order Marco Rubio",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "r_electable_maxdiff_do_10": {
+      "label": "r_electable_maxdiff_do_10",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat? - Display Order Josh Hawley",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "r_electable_maxdiff_do_11": {
+      "label": "r_electable_maxdiff_do_11",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat? - Display Order Tim Scott",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "r_electable_maxdiff_do_12": {
+      "label": "r_electable_maxdiff_do_12",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat? - Display Order Tulsi Gabbard",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "r_electable_maxdiff_do_13": {
+      "label": "r_electable_maxdiff_do_13",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat? - Display Order Robert F. Kennedy Jr.",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "r_electable_maxdiff_do_14": {
+      "label": "r_electable_maxdiff_do_14",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat? - Display Order Steve Bannon",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "r_electable_maxdiff_do_15": {
+      "label": "r_electable_maxdiff_do_15",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat? - Display Order Tucker Carlson",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "r_electable_maxdiff_do_16": {
+      "label": "r_electable_maxdiff_do_16",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat? - Display Order Kristi Noem",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "r_electable_maxdiff_do_17": {
+      "label": "r_electable_maxdiff_do_17",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat? - Display Order Katie Britt",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "r_electable_maxdiff_do_18": {
+      "label": "r_electable_maxdiff_do_18",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat? - Display Order Doug Burgum",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "r_electable_maxdiff_do_19": {
+      "label": "r_electable_maxdiff_do_19",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat? - Display Order Donald Trump Jr.",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "r_electable_maxdiff_do_20": {
+      "label": "r_electable_maxdiff_do_20",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat? - Display Order Greg Abbott",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "r_electable_maxdiff_do_21": {
+      "label": "r_electable_maxdiff_do_21",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat? - Display Order Elise Stefanik",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "r_base_vs_swing": {
+      "label": "r_base_vs_swing",
+      "question": "When it comes to the next election, what do you think is more important for Republicans?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Republicans need to focus on energizing and turning out the base, by running on conservative, America-first policies that give their voters something to vote for"
+        },
+        {
+          "code": 2,
+          "label": "Republicans need to focus on moderating in order to appeal to the swing voters and independents who decide elections"
+        },
+        {
+          "code": 3,
+          "label": "Republicans don\u2019t need to change much from their 2024 strategy"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "hersh_battery_1": {
+      "label": "hersh_battery_1",
+      "question": "To what extent do you agree with these statements? - Jews in the United States are more loyal to Israel than to America.",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "hersh_battery_2": {
+      "label": "hersh_battery_2",
+      "question": "To what extent do you agree with these statements? - It\u2019s appropriate to boycott Jewish American-owned businesses to protest the war in Gaza.",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "hersh_battery_3": {
+      "label": "hersh_battery_3",
+      "question": "To what extent do you agree with these statements? - Jews in the United States have too much power.",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "as_scenarios_1": {
+      "label": "as_scenarios_1",
+      "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Not allowing a Jewish student to join a theater group because of their pro-Israel views",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "It is a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 2,
+          "label": "It is NOT a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "as_scenarios_2": {
+      "label": "as_scenarios_2",
+      "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Boycotting Jewish American-owned businesses to protest the war in Gaza",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "It is a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 2,
+          "label": "It is NOT a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "as_scenarios_3": {
+      "label": "as_scenarios_3",
+      "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Boycotting Israeli-owned businesses to protest the war in Gaza",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "It is a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 2,
+          "label": "It is NOT a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "as_scenarios_4": {
+      "label": "as_scenarios_4",
+      "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Saying that pro-Israel lobbyists have too much influence over the government",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "It is a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 2,
+          "label": "It is NOT a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "as_scenarios_5": {
+      "label": "as_scenarios_5",
+      "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Calling what is happening in Gaza a \u201cgenocide\u201d",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "It is a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 2,
+          "label": "It is NOT a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "as_scenarios_6": {
+      "label": "as_scenarios_6",
+      "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Comparing the Israeli government\u2019s policies to the Nazis",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "It is a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 2,
+          "label": "It is NOT a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "as_scenarios_7": {
+      "label": "as_scenarios_7",
+      "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Protesting the war in Gaza outside of a synagogue",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "It is a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 2,
+          "label": "It is NOT a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "as_scenarios_8": {
+      "label": "as_scenarios_8",
+      "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Saying that Jewish people in the United States have too much power",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "It is a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 2,
+          "label": "It is NOT a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "as_scenarios_9": {
+      "label": "as_scenarios_9",
+      "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Using the phrase \u201cglobalize the intifada\u201d",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "It is a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 2,
+          "label": "It is NOT a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "as_scenarios_10": {
+      "label": "as_scenarios_10",
+      "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Saying that Jews have too much influence over the media",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "It is a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 2,
+          "label": "It is NOT a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "as_scenarios_11": {
+      "label": "as_scenarios_11",
+      "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Saying that Jews are too concerned with money",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "It is a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 2,
+          "label": "It is NOT a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "as_scenarios_12": {
+      "label": "as_scenarios_12",
+      "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Saying that Jews are responsible for immigration policies that are making America less of a white, Christian nation",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "It is a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 2,
+          "label": "It is NOT a form of anti-Jewish prejudice"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "as_scenarios_do_6": {
+      "label": "as_scenarios_do_6",
+      "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Display Order Comparing the Israeli government\u2019s policies to the Nazis",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "as_scenarios_do_7": {
+      "label": "as_scenarios_do_7",
+      "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Display Order Protesting the war in Gaza outside of a synagogue",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "as_scenarios_do_8": {
+      "label": "as_scenarios_do_8",
+      "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Display Order Saying that Jewish people in the United States have too much power",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "as_scenarios_do_9": {
+      "label": "as_scenarios_do_9",
+      "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Display Order Using the phrase \u201cglobalize the intifada\u201d",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "as_scenarios_do_10": {
+      "label": "as_scenarios_do_10",
+      "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Display Order Saying that Jews have too much influence over the media",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "as_scenarios_do_11": {
+      "label": "as_scenarios_do_11",
+      "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Display Order Saying that Jews are too concerned with money",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "as_scenarios_do_12": {
+      "label": "as_scenarios_do_12",
+      "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Display Order Saying that Jews are responsible for immigration policies that are making America less of a white, Christian nation",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "zionism_def_8": {
+      "label": "zionism_def_8",
+      "question": "Which of the following definitions is closest to how you would define the word \u201cZionism?\u201d Check all that apply. I\u2019m not familiar with the term \u201cZionism\u201d",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "I\u2019m not familiar with the term \u201cZionism\u201d"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "zionism_def_do_6": {
+      "label": "zionism_def_do_6",
+      "question": "Which of the following definitions is closest to how you would define the word \u201cZionism?\u201d Check all that apply. - Display Order A form of racism and apartheid against Palestinians",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        },
+        {
+          "code": 6,
+          "label": "6"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "zionism_def_do_7": {
+      "label": "zionism_def_do_7",
+      "question": "Which of the following definitions is closest to how you would define the word \u201cZionism?\u201d Check all that apply. - Display Order None of the above",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 7,
+          "label": "7"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "zionism_def_do_8": {
+      "label": "zionism_def_do_8",
+      "question": "Which of the following definitions is closest to how you would define the word \u201cZionism?\u201d Check all that apply. - Display Order I\u2019m not familiar with the term \u201cZionism\u201d",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 8,
+          "label": "8"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "role_of_jews": {
+      "label": "role_of_jews",
+      "question": "On the whole, do you think the American Jewish community has a positive or negative impact on the United States?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Positive impact"
+        },
+        {
+          "code": 2,
+          "label": "Negative impact"
+        },
+        {
+          "code": 3,
+          "label": "No impact or neutral impact"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "jews_left_right": {
+      "label": "jews_left_right",
+      "question": "Which comes closest to your view on the impact of the Jewish community on American politics?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Jews have pushed American politics to the right."
+        },
+        {
+          "code": 2,
+          "label": "Jews have pushed American politics to the left."
+        },
+        {
+          "code": 3,
+          "label": "Jews have not pushed American politics to either side."
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "israel_exist": {
+      "label": "israel_exist",
+      "question": "Do you believe the state of Israel should exist as a Jewish state?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Israel should exist as a Jewish state"
+        },
+        {
+          "code": 2,
+          "label": "Israel should exist, but not as a Jewish state"
+        },
+        {
+          "code": 3,
+          "label": "Israel should not exist"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "israel_military_aid": {
+      "label": "israel_military_aid",
+      "question": "Do you favor the United States\u2026",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Increasing military aid to Israel"
+        },
+        {
+          "code": 2,
+          "label": "Maintaining the same amount of military aid to Israel"
+        },
+        {
+          "code": 3,
+          "label": "Decreasing military aid to Israel"
+        },
+        {
+          "code": 4,
+          "label": "Stopping all military aid to Israel"
+        },
+        {
+          "code": 5,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "who_defines_a_do_6": {
+      "label": "who_defines_a_do_6",
+      "question": "In recent years, many colleges and universities have adopted policies to reduce antisemitism (anti-Jewish prejudice or discrimination) on campuses. Defining antisemitism is often controversial when adopting these policies. For the purposes of these policies, who should get to decide what counts as antisemitism? Check all that apply. - Display Order The Jewish community as a whole",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "who_defines_a_do_7": {
+      "label": "who_defines_a_do_7",
+      "question": "In recent years, many colleges and universities have adopted policies to reduce antisemitism (anti-Jewish prejudice or discrimination) on campuses. Defining antisemitism is often controversial when adopting these policies. For the purposes of these policies, who should get to decide what counts as antisemitism? Check all that apply. - Display Order None of the above",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 7,
+          "label": "7.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "who_defines_b_do_6": {
+      "label": "who_defines_b_do_6",
+      "question": "In recent years, many colleges and universities have adopted policies to reduce Islamophobia (anti-Muslim prejudice or discrimination) on campuses. Defining Islamophobia is often controversial when adopting these policies. For the purposes of these policies, who should get to decide what counts as Islamophobia? Check all that apply. - Display Order The Muslim community as a whole",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "who_defines_b_do_7": {
+      "label": "who_defines_b_do_7",
+      "question": "In recent years, many colleges and universities have adopted policies to reduce Islamophobia (anti-Muslim prejudice or discrimination) on campuses. Defining Islamophobia is often controversial when adopting these policies. For the purposes of these policies, who should get to decide what counts as Islamophobia? Check all that apply. - Display Order None of the above",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 7,
+          "label": "7.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "who_defines_c_do_6": {
+      "label": "who_defines_c_do_6",
+      "question": "In recent years, many colleges and universities have adopted policies to reduce anti-Black racism (anti-Black prejudice or discrimination) on campuses. Defining anti-Black racism is often controversial when adopting these policies. For the purposes of these policies, who should get to decide what counts as anti-Black racism? Check all that apply. - Display Order The Black community as a whole",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "who_defines_c_do_7": {
+      "label": "who_defines_c_do_7",
+      "question": "In recent years, many colleges and universities have adopted policies to reduce anti-Black racism (anti-Black prejudice or discrimination) on campuses. Defining anti-Black racism is often controversial when adopting these policies. For the purposes of these policies, who should get to decide what counts as anti-Black racism? Check all that apply. - Display Order None of the above",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 7,
+          "label": "7.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "obbba_benefits": {
+      "label": "obbba_benefits",
+      "question": "Which group do you think will benefit the most from the One Big Beautiful Bill Act?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The poor (people making less than $25,000)"
+        },
+        {
+          "code": 2,
+          "label": "The working class (people making $25,000 to $50,000)"
+        },
+        {
+          "code": 3,
+          "label": "The middle class (people making $50,000 to $100,000)"
+        },
+        {
+          "code": 4,
+          "label": "The upper middle class (people making $100,000 to $200,000)"
+        },
+        {
+          "code": 5,
+          "label": "The wealthy (people making more than $200,000)"
+        },
+        {
+          "code": 6,
+          "label": "Billionaires"
+        },
+        {
+          "code": 7,
+          "label": "Groups will benefit roughly equally"
+        },
+        {
+          "code": 8,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "obbba_benefits_do_6": {
+      "label": "obbba_benefits_do_6",
+      "question": "Which group do you think will benefit the most from the One Big Beautiful Bill Act? - Display Order Billionaires",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 6,
+          "label": "6"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "obbba_benefits_do_7": {
+      "label": "obbba_benefits_do_7",
+      "question": "Which group do you think will benefit the most from the One Big Beautiful Bill Act? - Display Order Groups will benefit roughly equally",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 7,
+          "label": "7"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "obbba_benefits_do_8": {
+      "label": "obbba_benefits_do_8",
+      "question": "Which group do you think will benefit the most from the One Big Beautiful Bill Act? - Display Order Not sure",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 8,
+          "label": "8"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "obbba_effects_gen_1": {
+      "label": "obbba_effects_gen_1",
+      "question": "Do you agree or disagree that the One Big Beautiful Bill Act will\u2026 - Increase the prices I pay for everyday purchases",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Agree"
+        },
+        {
+          "code": 2,
+          "label": "Disagree"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "obbba_effects_gen_2": {
+      "label": "obbba_effects_gen_2",
+      "question": "Do you agree or disagree that the One Big Beautiful Bill Act will\u2026 - Increase my taxes",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Agree"
+        },
+        {
+          "code": 2,
+          "label": "Disagree"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "obbba_effects_gen_3": {
+      "label": "obbba_effects_gen_3",
+      "question": "Do you agree or disagree that the One Big Beautiful Bill Act will\u2026 - Lead to more jobs",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Agree"
+        },
+        {
+          "code": 2,
+          "label": "Disagree"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "obbba_effects_gen_4": {
+      "label": "obbba_effects_gen_4",
+      "question": "Do you agree or disagree that the One Big Beautiful Bill Act will\u2026 - Increase government spending",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Agree"
+        },
+        {
+          "code": 2,
+          "label": "Disagree"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "obbba_effects_gen_5": {
+      "label": "obbba_effects_gen_5",
+      "question": "Do you agree or disagree that the One Big Beautiful Bill Act will\u2026 - Increase the national debt",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Agree"
+        },
+        {
+          "code": 2,
+          "label": "Disagree"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "obbba_effects_pers": {
+      "label": "obbba_effects_pers",
+      "question": "How do you think the One Big Beautiful Bill Act will affect your personal financial situation?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Will improve my personal finances"
+        },
+        {
+          "code": 2,
+          "label": "Will hurt my personal finances"
+        },
+        {
+          "code": 3,
+          "label": "Will have no effect on my personal finances"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "obbba_maxdiff_1": {
+      "label": "obbba_maxdiff_1",
+      "question": "There is a lot of talk these days about the recently passed One Big Beautiful Bill Act. Which position do you agree with more?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Democrats say: ${e://Field/d_msg_1}"
+        },
+        {
+          "code": 2,
+          "label": "Republicans say: ${e://Field/r_msg_1}"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "obbba_maxdiff_2": {
+      "label": "obbba_maxdiff_2",
+      "question": "There is a lot of talk these days about the recently passed One Big Beautiful Bill Act. Which position do you agree with more?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Democrats say: ${e://Field/d_msg_2}"
+        },
+        {
+          "code": 2,
+          "label": "Republicans say: ${e://Field/r_msg_2}"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "obbba_maxdiff_3": {
+      "label": "obbba_maxdiff_3",
+      "question": "There is a lot of talk these days about the recently passed One Big Beautiful Bill Act. Which position do you agree with more?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Democrats say: ${e://Field/d_msg_3}"
+        },
+        {
+          "code": 2,
+          "label": "Republicans say: ${e://Field/r_msg_3}"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "obbba_maxdiff_4": {
+      "label": "obbba_maxdiff_4",
+      "question": "There is a lot of talk these days about the recently passed One Big Beautiful Bill Act. Which position do you agree with more?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Democrats say: ${e://Field/d_msg_4}"
+        },
+        {
+          "code": 2,
+          "label": "Republicans say: ${e://Field/r_msg_4}"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "close_friends": {
+      "label": "close_friends",
+      "question": "How many close friends would you say that you have?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 0,
+          "label": "0.0"
+        },
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 13,
+          "label": "13.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 16,
+          "label": "16.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 21,
+          "label": "21.0"
+        },
+        {
+          "code": 23,
+          "label": "23.0"
+        },
+        {
+          "code": 24,
+          "label": "24.0"
+        },
+        {
+          "code": 25,
+          "label": "25.0"
+        },
+        {
+          "code": 27,
+          "label": "27.0"
+        },
+        {
+          "code": 30,
+          "label": "30.0"
+        },
+        {
+          "code": 34,
+          "label": "34.0"
+        },
+        {
+          "code": 40,
+          "label": "40.0"
+        },
+        {
+          "code": 45,
+          "label": "45.0"
+        },
+        {
+          "code": 50,
+          "label": "50.0"
+        },
+        {
+          "code": 65,
+          "label": "65.0"
+        },
+        {
+          "code": 67,
+          "label": "67.0"
+        },
+        {
+          "code": 75,
+          "label": "75.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "opposite_sex_friends": {
+      "label": "opposite_sex_friends",
+      "question": "How many of your close friends are of the opposite sex?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 0,
+          "label": "0.0"
+        },
+        {
+          "code": 1,
+          "label": "1.0"
+        },
+        {
+          "code": 2,
+          "label": "2.0"
+        },
+        {
+          "code": 3,
+          "label": "3.0"
+        },
+        {
+          "code": 4,
+          "label": "4.0"
+        },
+        {
+          "code": 5,
+          "label": "5.0"
+        },
+        {
+          "code": 6,
+          "label": "6.0"
+        },
+        {
+          "code": 7,
+          "label": "7.0"
+        },
+        {
+          "code": 8,
+          "label": "8.0"
+        },
+        {
+          "code": 9,
+          "label": "9.0"
+        },
+        {
+          "code": 10,
+          "label": "10.0"
+        },
+        {
+          "code": 11,
+          "label": "11.0"
+        },
+        {
+          "code": 12,
+          "label": "12.0"
+        },
+        {
+          "code": 14,
+          "label": "14.0"
+        },
+        {
+          "code": 15,
+          "label": "15.0"
+        },
+        {
+          "code": 17,
+          "label": "17.0"
+        },
+        {
+          "code": 18,
+          "label": "18.0"
+        },
+        {
+          "code": 20,
+          "label": "20.0"
+        },
+        {
+          "code": 23,
+          "label": "23.0"
+        },
+        {
+          "code": 25,
+          "label": "25.0"
+        },
+        {
+          "code": 30,
+          "label": "30.0"
+        },
+        {
+          "code": 33,
+          "label": "33.0"
+        },
+        {
+          "code": 35,
+          "label": "35.0"
+        },
+        {
+          "code": 43,
+          "label": "43.0"
+        },
+        {
+          "code": 45,
+          "label": "45.0"
+        },
+        {
+          "code": 50,
+          "label": "50.0"
+        },
+        {
+          "code": 60,
+          "label": "60.0"
+        },
+        {
+          "code": 67,
+          "label": "67.0"
+        },
+        {
+          "code": 75,
+          "label": "75.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "leah_battery_1": {
+      "label": "leah_battery_1",
+      "question": "If you found yourself in the following situations, do you have a friend who, if you asked, would: - Drop off food for you when you\u2019re sick",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Yes"
+        },
+        {
+          "code": 2,
+          "label": "No"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "leah_battery_2": {
+      "label": "leah_battery_2",
+      "question": "If you found yourself in the following situations, do you have a friend who, if you asked, would: - Help you move to a new apartment or house",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Yes"
+        },
+        {
+          "code": 2,
+          "label": "No"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "leah_battery_3": {
+      "label": "leah_battery_3",
+      "question": "If you found yourself in the following situations, do you have a friend who, if you asked, would: - Talk to you about a difficult personal situation, like a breakup",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Yes"
+        },
+        {
+          "code": 2,
+          "label": "No"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "leah_battery_4": {
+      "label": "leah_battery_4",
+      "question": "If you found yourself in the following situations, do you have a friend who, if you asked, would: - Come to a last-minute social event or hangout",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Yes"
+        },
+        {
+          "code": 2,
+          "label": "No"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "milestones": {
+      "label": "milestones",
+      "question": "How do you feel you compare to your peer group in terms of romantic relationship milestones (for example, first kiss, sexual experiences, dating, romantic love)?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "I have less experience than my peers"
+        },
+        {
+          "code": 2,
+          "label": "I have average experience relative to my peers"
+        },
+        {
+          "code": 3,
+          "label": "I have more experience than my peers"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "trad_battery_1": {
+      "label": "trad_battery_1",
+      "question": "We are going to ask you a series of questions about dynamics in straight (heterosexual) relationships. Regardless of your personal sexual orientation or relationship status, please tell us who you think should do the following, in your opinion. - Make more money",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The man"
+        },
+        {
+          "code": 2,
+          "label": "The woman"
+        },
+        {
+          "code": 3,
+          "label": "Doesn't matter/both equally"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "trad_battery_2": {
+      "label": "trad_battery_2",
+      "question": "We are going to ask you a series of questions about dynamics in straight (heterosexual) relationships. Regardless of your personal sexual orientation or relationship status, please tell us who you think should do the following, in your opinion. - Take the lead on childcare",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The man"
+        },
+        {
+          "code": 2,
+          "label": "The woman"
+        },
+        {
+          "code": 3,
+          "label": "Doesn't matter/both equally"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "trad_battery_3": {
+      "label": "trad_battery_3",
+      "question": "We are going to ask you a series of questions about dynamics in straight (heterosexual) relationships. Regardless of your personal sexual orientation or relationship status, please tell us who you think should do the following, in your opinion. - Make the big financial decisions for the family",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The man"
+        },
+        {
+          "code": 2,
+          "label": "The woman"
+        },
+        {
+          "code": 3,
+          "label": "Doesn't matter/both equally"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "trad_battery_4": {
+      "label": "trad_battery_4",
+      "question": "We are going to ask you a series of questions about dynamics in straight (heterosexual) relationships. Regardless of your personal sexual orientation or relationship status, please tell us who you think should do the following, in your opinion. - Handle household chores like cooking and cleaning",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The man"
+        },
+        {
+          "code": 2,
+          "label": "The woman"
+        },
+        {
+          "code": 3,
+          "label": "Doesn't matter/both equally"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "trad_battery_5": {
+      "label": "trad_battery_5",
+      "question": "We are going to ask you a series of questions about dynamics in straight (heterosexual) relationships. Regardless of your personal sexual orientation or relationship status, please tell us who you think should do the following, in your opinion. - Ask the other person out on a first date",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The man"
+        },
+        {
+          "code": 2,
+          "label": "The woman"
+        },
+        {
+          "code": 3,
+          "label": "Doesn't matter/both equally"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "manosphere_battery_1": {
+      "label": "manosphere_battery_1",
+      "question": "For the following statements, tell us whether you agree or disagree with each one: - A woman\u2019s place is in the home",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "manosphere_battery_2": {
+      "label": "manosphere_battery_2",
+      "question": "For the following statements, tell us whether you agree or disagree with each one: - Men and women should get equal pay for equal work",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "manosphere_battery_3": {
+      "label": "manosphere_battery_3",
+      "question": "For the following statements, tell us whether you agree or disagree with each one: - These days, men have it worse than women on average",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "manosphere_battery_4": {
+      "label": "manosphere_battery_4",
+      "question": "For the following statements, tell us whether you agree or disagree with each one: - Traditional masculinity is under attack in society these days",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "manosphere_battery_5": {
+      "label": "manosphere_battery_5",
+      "question": "For the following statements, tell us whether you agree or disagree with each one: - Acceptance of gay people has gone too far",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "manosphere_battery_6": {
+      "label": "manosphere_battery_6",
+      "question": "For the following statements, tell us whether you agree or disagree with each one: - Acceptance of transgender people has gone too far",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "manosphere_battery_do_6": {
+      "label": "manosphere_battery_do_6",
+      "question": "For the following statements, tell us whether you agree or disagree with each one: - Display Order Acceptance of transgender people has gone too far",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        },
+        {
+          "code": 6,
+          "label": "6"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "gender_wars_1": {
+      "label": "gender_wars_1",
+      "question": "In your opinion, who, in general, has more challenges in the following areas today? - Making friends",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Young men"
+        },
+        {
+          "code": 2,
+          "label": "Young women"
+        },
+        {
+          "code": 3,
+          "label": "Both equally"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "gender_wars_2": {
+      "label": "gender_wars_2",
+      "question": "In your opinion, who, in general, has more challenges in the following areas today? - Finding a romantic partner",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Young men"
+        },
+        {
+          "code": 2,
+          "label": "Young women"
+        },
+        {
+          "code": 3,
+          "label": "Both equally"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "gender_wars_3": {
+      "label": "gender_wars_3",
+      "question": "In your opinion, who, in general, has more challenges in the following areas today? - Finding a good job",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Young men"
+        },
+        {
+          "code": 2,
+          "label": "Young women"
+        },
+        {
+          "code": 3,
+          "label": "Both equally"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "gender_wars_4": {
+      "label": "gender_wars_4",
+      "question": "In your opinion, who, in general, has more challenges in the following areas today? - Finding a sense of purpose in life",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Young men"
+        },
+        {
+          "code": 2,
+          "label": "Young women"
+        },
+        {
+          "code": 3,
+          "label": "Both equally"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "gender_wars_5": {
+      "label": "gender_wars_5",
+      "question": "In your opinion, who, in general, has more challenges in the following areas today? - Talking about emotions/mental health",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Young men"
+        },
+        {
+          "code": 2,
+          "label": "Young women"
+        },
+        {
+          "code": 3,
+          "label": "Both equally"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a_as_whodefinessplit_do_who_defines_a": {
+      "label": "a_as_whodefinessplit_do_who_defines_a",
+      "question": "[AS] Who defines split - Display Order who_defines_A",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a_as_whodefinessplit_do_who_defines_b": {
+      "label": "a_as_whodefinessplit_do_who_defines_b",
+      "question": "[AS] Who defines split - Display Order who_defines_B",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "a_as_whodefinessplit_do_who_defines_c": {
+      "label": "a_as_whodefinessplit_do_who_defines_c",
+      "question": "[AS] Who defines split - Display Order who_defines_C",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1.0"
+        }
+      ],
+      "waves": [
+        "F25"
+      ]
+    },
+    "weight": {
+      "label": "weight",
+      "question": "weight",
+      "type": "numeric",
+      "waves": [
+        "F25"
+      ]
+    }
+  }
+}

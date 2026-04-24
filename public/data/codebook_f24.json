@@ -1,0 +1,2613 @@
+{
+  "waves": {
+    "F24": {
+      "label": "Fall 2024",
+      "n": 5128,
+      "note": "Registered voters only; reweighted using S25 pipeline."
+    }
+  },
+  "columns": {
+    "age": {
+      "label": "Age",
+      "question": "What is your age?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "18-21"
+        },
+        {
+          "code": 2,
+          "label": "22-29"
+        },
+        {
+          "code": 3,
+          "label": "30-44"
+        },
+        {
+          "code": 4,
+          "label": "45-64"
+        },
+        {
+          "code": 5,
+          "label": "65+"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "gender": {
+      "label": "Gender",
+      "question": "What is your gender?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Man"
+        },
+        {
+          "code": 2,
+          "label": "Woman"
+        },
+        {
+          "code": 3,
+          "label": "Other"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "race": {
+      "label": "Race",
+      "question": "What is your race?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "White"
+        },
+        {
+          "code": 2,
+          "label": "Black"
+        },
+        {
+          "code": 3,
+          "label": "Hispanic"
+        },
+        {
+          "code": 4,
+          "label": "Asian"
+        },
+        {
+          "code": 5,
+          "label": "Other"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "education": {
+      "label": "Education",
+      "question": "What is the highest level of education you have completed?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Some high school or less"
+        },
+        {
+          "code": 2,
+          "label": "High school diploma or GED"
+        },
+        {
+          "code": 3,
+          "label": "Some college, but no degree"
+        },
+        {
+          "code": 4,
+          "label": "Associates or technical degree"
+        },
+        {
+          "code": 5,
+          "label": "Bachelor\u2019s degree"
+        },
+        {
+          "code": 6,
+          "label": "Graduate or professional degree (MA, MS, MBA, PhD, JD, MD, DDS etc.)"
+        },
+        {
+          "code": 7,
+          "label": "Prefer not to say"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "income": {
+      "label": "Income",
+      "question": "What was your annual income last year?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Less than $25,000"
+        },
+        {
+          "code": 2,
+          "label": "$25,000-$49,999"
+        },
+        {
+          "code": 3,
+          "label": "$50,000-$74,999"
+        },
+        {
+          "code": 4,
+          "label": "$75,000-$99,999"
+        },
+        {
+          "code": 5,
+          "label": "$100,000-$149,999"
+        },
+        {
+          "code": 6,
+          "label": "$150,000 or more"
+        },
+        {
+          "code": 7,
+          "label": "Prefer not to say"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "party_id": {
+      "label": "Party ID",
+      "question": "Which political party do you most closely identify with?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The Democratic Party"
+        },
+        {
+          "code": 2,
+          "label": "The Republican Party"
+        },
+        {
+          "code": 3,
+          "label": "Independent (also known as no party affiliation in some states)"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "pid_lean": {
+      "label": "PID Lean",
+      "question": "If you had to choose, would you say you are closer to the Democratic Party or the Republican Party?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The Democratic Party"
+        },
+        {
+          "code": 2,
+          "label": "The Republican Party"
+        },
+        {
+          "code": 3,
+          "label": "Neither"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "x2024_horserace": {
+      "label": "x2024_horserace",
+      "question": "If the November 2024 election for U.S. president was held today, and these were the candidates, who would you vote for?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Democrat Kamala Harris"
+        },
+        {
+          "code": 2,
+          "label": "Republican Donald Trump"
+        },
+        {
+          "code": 3,
+          "label": "Green Party candidate Jill Stein"
+        },
+        {
+          "code": 4,
+          "label": "Libertarian candidate Chase Oliver"
+        },
+        {
+          "code": 5,
+          "label": "Independent candidate Cornel West"
+        },
+        {
+          "code": 6,
+          "label": "Not sure"
+        },
+        {
+          "code": 7,
+          "label": "Someone else"
+        },
+        {
+          "code": 8,
+          "label": "Would not vote"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "x2020_vote": {
+      "label": "x2020_vote",
+      "question": "Who did you vote for for president in 2020?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Joe Biden"
+        },
+        {
+          "code": 2,
+          "label": "Donald Trump"
+        },
+        {
+          "code": 3,
+          "label": "Other"
+        },
+        {
+          "code": 4,
+          "label": "Did not vote"
+        },
+        {
+          "code": 5,
+          "label": "Was not old enough to vote"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "need_for_cognition_1": {
+      "label": "Need for cognition_1",
+      "question": "Need for cognition_1",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "need_for_cognition_2": {
+      "label": "Need for cognition_2",
+      "question": "Need for cognition_2",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "need_for_cognition_3": {
+      "label": "Need for cognition_3",
+      "question": "Need for cognition_3",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "x2024_horserace_push": {
+      "label": "x2024_horserace_push",
+      "question": "x2024_horserace_push",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        },
+        {
+          "code": 6,
+          "label": "6"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "favorabilities_1": {
+      "label": "Favorabilities_1",
+      "question": "Favorabilities_1",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "favorabilities_2": {
+      "label": "Favorabilities_2",
+      "question": "Favorabilities_2",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "favorabilities_3": {
+      "label": "Favorabilities_3",
+      "question": "Favorabilities_3",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "favorabilities_4": {
+      "label": "Favorabilities_4",
+      "question": "Favorabilities_4",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "ideology_1": {
+      "label": "Ideology_1",
+      "question": "Ideology_1",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        },
+        {
+          "code": 7,
+          "label": "7"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "ideology_2": {
+      "label": "Ideology_2",
+      "question": "Ideology_2",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        },
+        {
+          "code": 7,
+          "label": "7"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "ideology_3": {
+      "label": "Ideology_3",
+      "question": "Ideology_3",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        },
+        {
+          "code": 7,
+          "label": "7"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "ideology_4": {
+      "label": "Ideology_4",
+      "question": "Ideology_4",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        },
+        {
+          "code": 7,
+          "label": "7"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "ideology_5": {
+      "label": "Ideology_5",
+      "question": "Ideology_5",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        },
+        {
+          "code": 7,
+          "label": "7"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "ideology_6": {
+      "label": "Ideology_6",
+      "question": "Ideology_6",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        },
+        {
+          "code": 7,
+          "label": "7"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "ideology_7": {
+      "label": "Ideology_7",
+      "question": "Ideology_7",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        },
+        {
+          "code": 7,
+          "label": "7"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "social_support_1": {
+      "label": "Social support_1",
+      "question": "Social support_1",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "social_support_2": {
+      "label": "Social support_2",
+      "question": "Social support_2",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "social_support_3": {
+      "label": "Social support_3",
+      "question": "Social support_3",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "social_support_4": {
+      "label": "Social support_4",
+      "question": "Social support_4",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "social_support_5": {
+      "label": "Social support_5",
+      "question": "Social support_5",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "social_support_6": {
+      "label": "Social support_6",
+      "question": "Social support_6",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "social_support_7": {
+      "label": "Social support_7",
+      "question": "Social support_7",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_support_1": {
+      "label": "Econ support_1",
+      "question": "Econ support_1",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_support_2": {
+      "label": "Econ support_2",
+      "question": "Econ support_2",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_support_3": {
+      "label": "Econ support_3",
+      "question": "Econ support_3",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_support_4": {
+      "label": "Econ support_4",
+      "question": "Econ support_4",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_support_5": {
+      "label": "Econ support_5",
+      "question": "Econ support_5",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_support_6": {
+      "label": "Econ support_6",
+      "question": "Econ support_6",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_support_7": {
+      "label": "Econ support_7",
+      "question": "Econ support_7",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_support_8": {
+      "label": "Econ support_8",
+      "question": "Econ support_8",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_support_9": {
+      "label": "Econ support_9",
+      "question": "Econ support_9",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_support_10": {
+      "label": "Econ support_10",
+      "question": "Econ support_10",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "foreign_support_1": {
+      "label": "Foreign support_1",
+      "question": "Foreign support_1",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "foreign_support_2": {
+      "label": "Foreign support_2",
+      "question": "Foreign support_2",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "foreign_support_3": {
+      "label": "Foreign support_3",
+      "question": "Foreign support_3",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "foreign_support_4": {
+      "label": "Foreign support_4",
+      "question": "Foreign support_4",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "foreign_support_5": {
+      "label": "Foreign support_5",
+      "question": "Foreign support_5",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "foreign_support_6": {
+      "label": "Foreign support_6",
+      "question": "Foreign support_6",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "foreign_support_7": {
+      "label": "Foreign support_7",
+      "question": "Foreign support_7",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "foreign_support_8": {
+      "label": "Foreign support_8",
+      "question": "Foreign support_8",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "social_party_support_1": {
+      "label": "Social party support_1",
+      "question": "Social party support_1",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "social_party_support_2": {
+      "label": "Social party support_2",
+      "question": "Social party support_2",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "social_party_support_3": {
+      "label": "Social party support_3",
+      "question": "Social party support_3",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "social_party_support_4": {
+      "label": "Social party support_4",
+      "question": "Social party support_4",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "social_party_support_5": {
+      "label": "Social party support_5",
+      "question": "Social party support_5",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "social_party_support_6": {
+      "label": "Social party support_6",
+      "question": "Social party support_6",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "social_party_support_7": {
+      "label": "Social party support_7",
+      "question": "Social party support_7",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_party_support_1": {
+      "label": "Econ party support_1",
+      "question": "Econ party support_1",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_party_support_2": {
+      "label": "Econ party support_2",
+      "question": "Econ party support_2",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_party_support_3": {
+      "label": "Econ party support_3",
+      "question": "Econ party support_3",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_party_support_4": {
+      "label": "Econ party support_4",
+      "question": "Econ party support_4",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_party_support_5": {
+      "label": "Econ party support_5",
+      "question": "Econ party support_5",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_party_support_6": {
+      "label": "Econ party support_6",
+      "question": "Econ party support_6",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_party_support_7": {
+      "label": "Econ party support_7",
+      "question": "Econ party support_7",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_party_support_8": {
+      "label": "Econ party support_8",
+      "question": "Econ party support_8",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_party_support_9": {
+      "label": "Econ party support_9",
+      "question": "Econ party support_9",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "econ_party_support_10": {
+      "label": "Econ party support_10",
+      "question": "Econ party support_10",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "foreign_party_suppor_1": {
+      "label": "Foreign party suppor_1",
+      "question": "Foreign party suppor_1",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "foreign_party_suppor_2": {
+      "label": "Foreign party suppor_2",
+      "question": "Foreign party suppor_2",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "foreign_party_suppor_3": {
+      "label": "Foreign party suppor_3",
+      "question": "Foreign party suppor_3",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "foreign_party_suppor_4": {
+      "label": "Foreign party suppor_4",
+      "question": "Foreign party suppor_4",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "foreign_party_suppor_5": {
+      "label": "Foreign party suppor_5",
+      "question": "Foreign party suppor_5",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "foreign_party_suppor_6": {
+      "label": "Foreign party suppor_6",
+      "question": "Foreign party suppor_6",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "foreign_party_suppor_7": {
+      "label": "Foreign party suppor_7",
+      "question": "Foreign party suppor_7",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "foreign_party_suppor_8": {
+      "label": "Foreign party suppor_8",
+      "question": "Foreign party suppor_8",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "senate_control": {
+      "label": "Senate control",
+      "question": "Senate control",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "house_control": {
+      "label": "House control",
+      "question": "House control",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "scotus_control": {
+      "label": "SCOTUS control",
+      "question": "SCOTUS control",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "scotus_appointments": {
+      "label": "SCOTUS appointments",
+      "question": "SCOTUS appointments",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "gerrymandering_def": {
+      "label": "Gerrymandering def.",
+      "question": "Gerrymandering def.",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "ec_mechanics": {
+      "label": "EC mechanics",
+      "question": "EC mechanics",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "amendment_mechanics": {
+      "label": "Amendment mechanics",
+      "question": "Amendment mechanics",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "filibuster": {
+      "label": "Filibuster",
+      "question": "Filibuster",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "scotus_bias": {
+      "label": "SCOTUS bias",
+      "question": "SCOTUS bias",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "money_vs_ideology": {
+      "label": "Money vs ideology",
+      "question": "Money vs ideology",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        },
+        {
+          "code": 4,
+          "label": "4"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "npv": {
+      "label": "NPV",
+      "question": "NPV",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        },
+        {
+          "code": 3,
+          "label": "3"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "threat_max_diff_1": {
+      "label": "threat_max_diff_1",
+      "question": "threat_max_diff_1",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "threat_max_diff_2": {
+      "label": "threat_max_diff_2",
+      "question": "threat_max_diff_2",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "reform_max_diff_1": {
+      "label": "reform_max_diff_1",
+      "question": "reform_max_diff_1",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    },
+    "reform_max_diff_2": {
+      "label": "reform_max_diff_2",
+      "question": "reform_max_diff_2",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 2,
+          "label": "2"
+        }
+      ],
+      "waves": [
+        "F24"
+      ]
+    }
+  }
+}

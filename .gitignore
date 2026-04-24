@@ -36,6 +36,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# raw data — only the preprocessed JSON in public/data/ is committed
+/data-raw/
+
+# local editor / agent config
+/.claude/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

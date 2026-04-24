@@ -1,0 +1,5715 @@
+{
+  "waves": {
+    "S25": {
+      "label": "Spring 2025",
+      "n": 4230,
+      "note": "Weighted via S25 pipeline."
+    }
+  },
+  "columns": {
+    "Age": {
+      "label": "Age",
+      "question": "What is your age?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "18-21"
+        },
+        {
+          "code": 2,
+          "label": "22-29"
+        },
+        {
+          "code": 3,
+          "label": "30-44"
+        },
+        {
+          "code": 4,
+          "label": "45-64"
+        },
+        {
+          "code": 5,
+          "label": "65+"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Gender": {
+      "label": "Gender",
+      "question": "What is your gender? - Selected Choice",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Man"
+        },
+        {
+          "code": 2,
+          "label": "Woman"
+        },
+        {
+          "code": 3,
+          "label": "Other"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Race": {
+      "label": "Race",
+      "question": "What is your race? - Selected Choice",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "White"
+        },
+        {
+          "code": 2,
+          "label": "Black"
+        },
+        {
+          "code": 3,
+          "label": "Hispanic"
+        },
+        {
+          "code": 4,
+          "label": "Asian"
+        },
+        {
+          "code": 5,
+          "label": "Other"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Education": {
+      "label": "Education",
+      "question": "What is the highest level of education you have completed?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Some high school or less"
+        },
+        {
+          "code": 2,
+          "label": "High school diploma or GED"
+        },
+        {
+          "code": 3,
+          "label": "Some college, but no degree"
+        },
+        {
+          "code": 4,
+          "label": "Associates or technical degree"
+        },
+        {
+          "code": 5,
+          "label": "Bachelor\u2019s degree"
+        },
+        {
+          "code": 6,
+          "label": "Graduate or professional degree (MA, MS, MBA, PhD, JD, MD, DDS etc.)"
+        },
+        {
+          "code": 7,
+          "label": "Prefer not to say"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Income": {
+      "label": "Income",
+      "question": "What was your total household income before taxes during the past 12 months?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Less than $25,000"
+        },
+        {
+          "code": 2,
+          "label": "$25,000-$49,999"
+        },
+        {
+          "code": 3,
+          "label": "$50,000-$74,999"
+        },
+        {
+          "code": 4,
+          "label": "$75,000-$99,999"
+        },
+        {
+          "code": 5,
+          "label": "$100,000-$149,999"
+        },
+        {
+          "code": 6,
+          "label": "$150,000 or more"
+        },
+        {
+          "code": 7,
+          "label": "Prefer not to say"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Party ID": {
+      "label": "Party ID",
+      "question": "Which political party do you most closely identify with?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The Democratic Party"
+        },
+        {
+          "code": 2,
+          "label": "The Republican Party"
+        },
+        {
+          "code": 3,
+          "label": "Independent (also known as no party affiliation in some states)"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "PID Lean": {
+      "label": "PID Lean",
+      "question": "If you had to choose, would you say you are closer to the Democratic Party or the Republican Party?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The Democratic Party"
+        },
+        {
+          "code": 2,
+          "label": "The Republican Party"
+        },
+        {
+          "code": 3,
+          "label": "Neither"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "2024 vote": {
+      "label": "2024 vote",
+      "question": "Who did you vote for for president in 2024?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Kamala Harris"
+        },
+        {
+          "code": 2,
+          "label": "Donald Trump"
+        },
+        {
+          "code": 3,
+          "label": "Other"
+        },
+        {
+          "code": 4,
+          "label": "Did not vote"
+        },
+        {
+          "code": 5,
+          "label": "Was not old enough to vote"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Need for cognition_1": {
+      "label": "Need for cognition_1",
+      "question": "For each of the statements below, please indicate to what extent the statement is characteristic of you. - I prefer complex to simple problems",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Need for cognition_2": {
+      "label": "Need for cognition_2",
+      "question": "For each of the statements below, please indicate to what extent the statement is characteristic of you. - Thinking is not my idea of fun",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Need for cognition_3": {
+      "label": "Need for cognition_3",
+      "question": "For each of the statements below, please indicate to what extent the statement is characteristic of you. - Select \"Disagree\" to prove that you are reading this question",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 2,
+          "label": "Agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Favorabilities_1": {
+      "label": "Favorabilities_1",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Donald Trump",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Favorabilities_2": {
+      "label": "Favorabilities_2",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - JD Vance",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Favorabilities_3": {
+      "label": "Favorabilities_3",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Elon Musk",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Favorabilities_4": {
+      "label": "Favorabilities_4",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Kamala Harris",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Favorabilities_5": {
+      "label": "Favorabilities_5",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Joe Biden",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Ideology_1": {
+      "label": "Ideology_1",
+      "question": "How would you rate each of the following individuals and groups? - Yourself",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very conservative"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 5,
+          "label": "Very liberal"
+        },
+        {
+          "code": 7,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Ideology_2": {
+      "label": "Ideology_2",
+      "question": "How would you rate each of the following individuals and groups? - Donald Trump",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very conservative"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 5,
+          "label": "Very liberal"
+        },
+        {
+          "code": 7,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Ideology_3": {
+      "label": "Ideology_3",
+      "question": "How would you rate each of the following individuals and groups? - JD Vance",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very conservative"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 5,
+          "label": "Very liberal"
+        },
+        {
+          "code": 7,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Ideology_4": {
+      "label": "Ideology_4",
+      "question": "How would you rate each of the following individuals and groups? - Elon Musk",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very conservative"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 5,
+          "label": "Very liberal"
+        },
+        {
+          "code": 7,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Ideology_5": {
+      "label": "Ideology_5",
+      "question": "How would you rate each of the following individuals and groups? - The Republican Party",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very conservative"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 5,
+          "label": "Very liberal"
+        },
+        {
+          "code": 7,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Ideology_6": {
+      "label": "Ideology_6",
+      "question": "How would you rate each of the following individuals and groups? - The Democratic Party",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very conservative"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 5,
+          "label": "Very liberal"
+        },
+        {
+          "code": 7,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Generic ballot 2026": {
+      "label": "Generic ballot 2026",
+      "question": "If the election for U.S. Congress in your district was held today, which one of the following candidates would you vote for?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The Democrat"
+        },
+        {
+          "code": 2,
+          "label": "The Republican"
+        },
+        {
+          "code": 3,
+          "label": "Don't know"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Issue rank MaxDiff": {
+      "label": "Issue rank MaxDiff",
+      "question": "Choose the issue that you think is most important for the federal government to address:",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Inflation"
+        },
+        {
+          "code": 2,
+          "label": "Healthcare"
+        },
+        {
+          "code": 3,
+          "label": "Jobs and the economy"
+        },
+        {
+          "code": 4,
+          "label": "Government spending and the national debt"
+        },
+        {
+          "code": 5,
+          "label": "Corruption"
+        },
+        {
+          "code": 6,
+          "label": "Social Security and Medicare"
+        },
+        {
+          "code": 7,
+          "label": "Education"
+        },
+        {
+          "code": 8,
+          "label": "Abortion"
+        },
+        {
+          "code": 9,
+          "label": "Crime"
+        },
+        {
+          "code": 10,
+          "label": "Israel and Palestine"
+        },
+        {
+          "code": 11,
+          "label": "Race relations"
+        },
+        {
+          "code": 12,
+          "label": "National security and foreign policy"
+        },
+        {
+          "code": 13,
+          "label": "Climate change and the environment"
+        },
+        {
+          "code": 14,
+          "label": "Election integrity"
+        },
+        {
+          "code": 15,
+          "label": "Immigration and the border"
+        },
+        {
+          "code": 16,
+          "label": "Regulating businesses"
+        },
+        {
+          "code": 17,
+          "label": "Oil and gas exploration"
+        },
+        {
+          "code": 18,
+          "label": "Ukraine"
+        },
+        {
+          "code": 19,
+          "label": "Student loans"
+        },
+        {
+          "code": 20,
+          "label": "LGBTQ issues"
+        },
+        {
+          "code": 21,
+          "label": "College "
+        },
+        {
+          "code": 22,
+          "label": "China"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary horserace": {
+      "label": "D primary horserace",
+      "question": "If the 2028 Democratic presidential primary were held today, and these were the candidates, who would you vote for? - Selected Choice",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Andy Beshear"
+        },
+        {
+          "code": 2,
+          "label": "Alexandria Ocasio-Cortez"
+        },
+        {
+          "code": 3,
+          "label": "Roy Cooper"
+        },
+        {
+          "code": 4,
+          "label": "John Fetterman"
+        },
+        {
+          "code": 5,
+          "label": "Kamala Harris"
+        },
+        {
+          "code": 6,
+          "label": "Wes Moore"
+        },
+        {
+          "code": 7,
+          "label": "Gavin Newsom"
+        },
+        {
+          "code": 8,
+          "label": "JB Pritzker"
+        },
+        {
+          "code": 9,
+          "label": "Josh Shapiro"
+        },
+        {
+          "code": 10,
+          "label": "Gretchen Whitmer"
+        },
+        {
+          "code": 11,
+          "label": "Mark Cuban"
+        },
+        {
+          "code": 12,
+          "label": "Ruben Gallego"
+        },
+        {
+          "code": 13,
+          "label": "Stephen A. Smith"
+        },
+        {
+          "code": 14,
+          "label": "Mark Kelly"
+        },
+        {
+          "code": 15,
+          "label": "Jared Polis"
+        },
+        {
+          "code": 16,
+          "label": "Pete Buttigieg"
+        },
+        {
+          "code": 17,
+          "label": "Other"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary favs_1": {
+      "label": "D primary favs_1",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Andy Beshear",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary favs_2": {
+      "label": "D primary favs_2",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Alexandria Ocasio-Cortez",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary favs_3": {
+      "label": "D primary favs_3",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Roy Cooper",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary favs_4": {
+      "label": "D primary favs_4",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - John Fetterman",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary favs_5": {
+      "label": "D primary favs_5",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Kamala Harris",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary favs_6": {
+      "label": "D primary favs_6",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Wes Moore",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary favs_7": {
+      "label": "D primary favs_7",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Gavin Newsom",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary favs_8": {
+      "label": "D primary favs_8",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - JB Pritzker",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary favs_9": {
+      "label": "D primary favs_9",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Josh Shapiro",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary favs_10": {
+      "label": "D primary favs_10",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Gretchen Whitmer",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary favs_11": {
+      "label": "D primary favs_11",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Mark Cuban",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary favs_12": {
+      "label": "D primary favs_12",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Ruben Gallego",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary favs_13": {
+      "label": "D primary favs_13",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Stephen A. Smith",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary favs_14": {
+      "label": "D primary favs_14",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Mark Kelly",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary favs_15": {
+      "label": "D primary favs_15",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Jared Polis",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary favs_16": {
+      "label": "D primary favs_16",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Pete Buttigieg",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary ideology\u00a0_1": {
+      "label": "D primary ideology\u00a0_1",
+      "question": "How would you rate the following individuals? - Andy Beshear",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary ideology\u00a0_2": {
+      "label": "D primary ideology\u00a0_2",
+      "question": "How would you rate the following individuals? - Alexandria Ocasio-Cortez",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary ideology\u00a0_3": {
+      "label": "D primary ideology\u00a0_3",
+      "question": "How would you rate the following individuals? - Roy Cooper",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary ideology\u00a0_4": {
+      "label": "D primary ideology\u00a0_4",
+      "question": "How would you rate the following individuals? - John Fetterman",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary ideology\u00a0_5": {
+      "label": "D primary ideology\u00a0_5",
+      "question": "How would you rate the following individuals? - Kamala Harris",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary ideology\u00a0_6": {
+      "label": "D primary ideology\u00a0_6",
+      "question": "How would you rate the following individuals? - Wes Moore",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary ideology\u00a0_7": {
+      "label": "D primary ideology\u00a0_7",
+      "question": "How would you rate the following individuals? - Gavin Newsom",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary ideology\u00a0_8": {
+      "label": "D primary ideology\u00a0_8",
+      "question": "How would you rate the following individuals? - JB Pritzker",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary ideology\u00a0_9": {
+      "label": "D primary ideology\u00a0_9",
+      "question": "How would you rate the following individuals? - Josh Shapiro",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary ideology\u00a0_10": {
+      "label": "D primary ideology\u00a0_10",
+      "question": "How would you rate the following individuals? - Gretchen Whitmer",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary ideology\u00a0_11": {
+      "label": "D primary ideology\u00a0_11",
+      "question": "How would you rate the following individuals? - Mark Cuban",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary ideology\u00a0_12": {
+      "label": "D primary ideology\u00a0_12",
+      "question": "How would you rate the following individuals? - Ruben Gallego",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary ideology\u00a0_13": {
+      "label": "D primary ideology\u00a0_13",
+      "question": "How would you rate the following individuals? - Stephen A. Smith",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary ideology\u00a0_14": {
+      "label": "D primary ideology\u00a0_14",
+      "question": "How would you rate the following individuals? - Mark Kelly",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary ideology\u00a0_15": {
+      "label": "D primary ideology\u00a0_15",
+      "question": "How would you rate the following individuals? - Jared Polis",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D primary ideology\u00a0_16": {
+      "label": "D primary ideology\u00a0_16",
+      "question": "How would you rate the following individuals? - Pete Buttigieg",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D electable MaxDiff": {
+      "label": "D electable MaxDiff",
+      "question": "Which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Andy Beshear"
+        },
+        {
+          "code": 2,
+          "label": "Alexandria Ocasio-Cortez"
+        },
+        {
+          "code": 3,
+          "label": "Roy Cooper"
+        },
+        {
+          "code": 4,
+          "label": "John Fetterman"
+        },
+        {
+          "code": 5,
+          "label": "Kamala Harris"
+        },
+        {
+          "code": 6,
+          "label": "Wes Moore"
+        },
+        {
+          "code": 7,
+          "label": "Gavin Newsom"
+        },
+        {
+          "code": 8,
+          "label": "JB Pritzker"
+        },
+        {
+          "code": 9,
+          "label": "Josh Shapiro"
+        },
+        {
+          "code": 10,
+          "label": "Gretchen Whitmer"
+        },
+        {
+          "code": 11,
+          "label": "Mark Cuban"
+        },
+        {
+          "code": 12,
+          "label": "Ruben Gallego"
+        },
+        {
+          "code": 13,
+          "label": "Stephen A. Smith"
+        },
+        {
+          "code": 14,
+          "label": "Mark Kelly"
+        },
+        {
+          "code": 15,
+          "label": "Jared Polis"
+        },
+        {
+          "code": 16,
+          "label": "Pete Buttigieg"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "D base vs swing": {
+      "label": "D base vs swing",
+      "question": "When it comes to winning the next election, what do you think is more important for Democrats?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Democrats need to focus on energizing and turning out their voter base, by running on progressive policies that give their voters something to vote for"
+        },
+        {
+          "code": 2,
+          "label": "Democrats need to focus on moderating in order to appeal to the swing voters and independents who decide elections"
+        },
+        {
+          "code": 3,
+          "label": "Democrats don\u2019t need to change much from their 2024 strategy"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary horserace": {
+      "label": "R primary horserace",
+      "question": "If the 2028 Republican presidential primary were held today, and these were the candidates, who would you vote for? - Selected Choice",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "JD Vance"
+        },
+        {
+          "code": 17,
+          "label": "Other"
+        },
+        {
+          "code": 18,
+          "label": "Ron DeSantis"
+        },
+        {
+          "code": 19,
+          "label": "Brian Kemp"
+        },
+        {
+          "code": 20,
+          "label": "Glenn Youngkin"
+        },
+        {
+          "code": 21,
+          "label": "Nikki Haley"
+        },
+        {
+          "code": 22,
+          "label": "Vivek Ramaswamy"
+        },
+        {
+          "code": 23,
+          "label": "Ted Cruz"
+        },
+        {
+          "code": 24,
+          "label": "Marco Rubio"
+        },
+        {
+          "code": 25,
+          "label": "Josh Hawley"
+        },
+        {
+          "code": 26,
+          "label": "Tim Scott"
+        },
+        {
+          "code": 27,
+          "label": "Marjorie Taylor Greene"
+        },
+        {
+          "code": 28,
+          "label": "Tulsi Gabbard"
+        },
+        {
+          "code": 29,
+          "label": "Robert F. Kennedy Jr."
+        },
+        {
+          "code": 30,
+          "label": "Steve Bannon"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary '28 w/ DJT": {
+      "label": "R primary '28 w/ DJT",
+      "question": "If the 2028 Republican presidential primary were held today, and Donald Trump was running in the primary so that he could serve a third term as president, who would you vote for? - Selected Choice",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Donald J. Trump"
+        },
+        {
+          "code": 2,
+          "label": "JD Vance"
+        },
+        {
+          "code": 3,
+          "label": "Ron DeSantis"
+        },
+        {
+          "code": 4,
+          "label": "Brian Kemp"
+        },
+        {
+          "code": 5,
+          "label": "Glenn Youngkin"
+        },
+        {
+          "code": 6,
+          "label": "Nikki Haley"
+        },
+        {
+          "code": 7,
+          "label": "Vivek Ramaswamy"
+        },
+        {
+          "code": 8,
+          "label": "Ted Cruz"
+        },
+        {
+          "code": 9,
+          "label": "Marco Rubio"
+        },
+        {
+          "code": 10,
+          "label": "Josh Hawley"
+        },
+        {
+          "code": 11,
+          "label": "Tim Scott"
+        },
+        {
+          "code": 12,
+          "label": "Tulsi Gabbard"
+        },
+        {
+          "code": 13,
+          "label": "Robert F. Kennedy Jr."
+        },
+        {
+          "code": 14,
+          "label": "Steve Bannon"
+        },
+        {
+          "code": 15,
+          "label": "Other"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary favs_1": {
+      "label": "R primary favs_1",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - JD Vance",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary favs_2": {
+      "label": "R primary favs_2",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Ron DeSantis",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary favs_3": {
+      "label": "R primary favs_3",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Brian Kemp",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary favs_4": {
+      "label": "R primary favs_4",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Glenn Youngkin",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary favs_5": {
+      "label": "R primary favs_5",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Nikki Haley",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary favs_6": {
+      "label": "R primary favs_6",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Vivek Ramaswamy",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary favs_7": {
+      "label": "R primary favs_7",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Ted Cruz",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary favs_8": {
+      "label": "R primary favs_8",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Marco Rubio",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary favs_9": {
+      "label": "R primary favs_9",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Josh Hawley",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary favs_10": {
+      "label": "R primary favs_10",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Tim Scott",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary favs_11": {
+      "label": "R primary favs_11",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Marjorie Taylor Greene",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary favs_12": {
+      "label": "R primary favs_12",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Tulsi Gabbard",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary favs_13": {
+      "label": "R primary favs_13",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Robert F. Kennedy Jr.",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary favs_14": {
+      "label": "R primary favs_14",
+      "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Steve Bannon",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Haven\u2019t heard of them or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary ideology_1": {
+      "label": "R primary ideology_1",
+      "question": "How would you rate the following individuals? - JD Vance",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        },
+        {
+          "code": 6,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary ideology_2": {
+      "label": "R primary ideology_2",
+      "question": "How would you rate the following individuals? - Ron DeSantis",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        },
+        {
+          "code": 6,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary ideology_3": {
+      "label": "R primary ideology_3",
+      "question": "How would you rate the following individuals? - Brian Kemp",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        },
+        {
+          "code": 6,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary ideology_4": {
+      "label": "R primary ideology_4",
+      "question": "How would you rate the following individuals? - Glenn Youngkin",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        },
+        {
+          "code": 6,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary ideology_5": {
+      "label": "R primary ideology_5",
+      "question": "How would you rate the following individuals? - Nikki Haley",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        },
+        {
+          "code": 6,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary ideology_6": {
+      "label": "R primary ideology_6",
+      "question": "How would you rate the following individuals? - Vivek Ramaswamy",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        },
+        {
+          "code": 6,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary ideology_7": {
+      "label": "R primary ideology_7",
+      "question": "How would you rate the following individuals? - Ted Cruz",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        },
+        {
+          "code": 6,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary ideology_8": {
+      "label": "R primary ideology_8",
+      "question": "How would you rate the following individuals? - Marco Rubio",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        },
+        {
+          "code": 6,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary ideology_9": {
+      "label": "R primary ideology_9",
+      "question": "How would you rate the following individuals? - Josh Hawley",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        },
+        {
+          "code": 6,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary ideology_10": {
+      "label": "R primary ideology_10",
+      "question": "How would you rate the following individuals? - Tim Scott",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        },
+        {
+          "code": 6,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary ideology_11": {
+      "label": "R primary ideology_11",
+      "question": "How would you rate the following individuals? - Marjorie Taylor Greene",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        },
+        {
+          "code": 6,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary ideology_12": {
+      "label": "R primary ideology_12",
+      "question": "How would you rate the following individuals? - Tulsi Gabbard",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        },
+        {
+          "code": 6,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary ideology_13": {
+      "label": "R primary ideology_13",
+      "question": "How would you rate the following individuals? - Robert F. Kennedy Jr.",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        },
+        {
+          "code": 6,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R primary ideology_14": {
+      "label": "R primary ideology_14",
+      "question": "How would you rate the following individuals? - Steve Bannon",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
+        },
+        {
+          "code": 6,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R electable MaxDiff": {
+      "label": "R electable MaxDiff",
+      "question": "Which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "JD Vance"
+        },
+        {
+          "code": 2,
+          "label": "Ron DeSantis"
+        },
+        {
+          "code": 3,
+          "label": "Brian Kemp"
+        },
+        {
+          "code": 4,
+          "label": "Glenn Youngkin"
+        },
+        {
+          "code": 5,
+          "label": "Nikki Haley"
+        },
+        {
+          "code": 6,
+          "label": "Vivek Ramaswamy"
+        },
+        {
+          "code": 7,
+          "label": "Ted Cruz"
+        },
+        {
+          "code": 8,
+          "label": "Marco Rubio"
+        },
+        {
+          "code": 9,
+          "label": "Josh Hawley"
+        },
+        {
+          "code": 10,
+          "label": "Tim Scott"
+        },
+        {
+          "code": 11,
+          "label": "Marjorie Taylor Greene"
+        },
+        {
+          "code": 12,
+          "label": "Tulsi Gabbard"
+        },
+        {
+          "code": 13,
+          "label": "Robert F. Kennedy Jr."
+        },
+        {
+          "code": 14,
+          "label": "Steve Bannon"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "R base vs swing": {
+      "label": "R base vs swing",
+      "question": "When it comes to the next election, what do you think is more important for Republicans?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Republicans need to focus on energizing and turning out the base, by running on conservative, America-first policies that give their voters something to vote for"
+        },
+        {
+          "code": 2,
+          "label": "Republicans need to focus on moderating in order to appeal to the swing voters and independents who decide elections"
+        },
+        {
+          "code": 3,
+          "label": "Republicans don\u2019t need to change much from their 2024 strategy"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Abortion": {
+      "label": "Abortion",
+      "question": "When it comes to abortion, which of the following is closest to your view?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Abortion for any reason at any point in pregnancy should be legal"
+        },
+        {
+          "code": 2,
+          "label": "Abortion should be banned after 24 weeks of pregnancy. After 24 weeks, abortion should only be legal in the case of rape, incest, or to save the life of the mother."
+        },
+        {
+          "code": 3,
+          "label": "Abortion should be banned after 18 weeks of pregnancy. After 18 weeks, abortion should only be legal in the case of rape, incest, or to save the life of the mother."
+        },
+        {
+          "code": 4,
+          "label": "Abortion should be banned after 12 weeks of pregnancy. After 12 weeks, abortion should only be legal in the case of rape, incest, or to save the life of the mother."
+        },
+        {
+          "code": 5,
+          "label": "Abortion should be banned after 6 weeks of pregnancy. After 6 weeks, abortion should only be legal in the case of rape, incest, or to save the life of the mother."
+        },
+        {
+          "code": 6,
+          "label": "The abortion question should be left to the states to decide"
+        },
+        {
+          "code": 7,
+          "label": "All abortions should be banned nationwide to protect the lives of the unborn"
+        },
+        {
+          "code": 8,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Criminal justice": {
+      "label": "Criminal justice",
+      "question": "Which is more important in the United States today: keeping sentences harsh to reduce crime, or limiting the length of sentences to reduce mass incarceration?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Keeping sentences harsh to reduce crime"
+        },
+        {
+          "code": 2,
+          "label": "Limiting the length of sentences to reduce mass incarceration"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Trans sports_1": {
+      "label": "Trans sports_1",
+      "question": "When it comes to transgender women and girls \u2014 that is, people whose biological sex is male but who identify as female \u2014 do you think transgender women and girls should or should not be allowed to compete with other women and girls at each of the following levels? - Professional sports",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be allowed"
+        },
+        {
+          "code": 2,
+          "label": "Should not be allowed"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Trans sports_2": {
+      "label": "Trans sports_2",
+      "question": "When it comes to transgender women and girls \u2014 that is, people whose biological sex is male but who identify as female \u2014 do you think transgender women and girls should or should not be allowed to compete with other women and girls at each of the following levels? - College sports",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be allowed"
+        },
+        {
+          "code": 2,
+          "label": "Should not be allowed"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Trans sports_3": {
+      "label": "Trans sports_3",
+      "question": "When it comes to transgender women and girls \u2014 that is, people whose biological sex is male but who identify as female \u2014 do you think transgender women and girls should or should not be allowed to compete with other women and girls at each of the following levels? - High school sports",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be allowed"
+        },
+        {
+          "code": 2,
+          "label": "Should not be allowed"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Trans sports_4": {
+      "label": "Trans sports_4",
+      "question": "When it comes to transgender women and girls \u2014 that is, people whose biological sex is male but who identify as female \u2014 do you think transgender women and girls should or should not be allowed to compete with other women and girls at each of the following levels? - Youth sports",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be allowed"
+        },
+        {
+          "code": 2,
+          "label": "Should not be allowed"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Youth transition_1": {
+      "label": "Youth transition_1",
+      "question": "When it comes to gender transition treatments \u2014 such as hormone therapy or gender transition surgery \u2014 when is the youngest age you think people should or should not be allowed to receive these treatments? - People 21 and older",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be allowed, regardless of parental consent"
+        },
+        {
+          "code": 2,
+          "label": "Should be allowed only with parental consent"
+        },
+        {
+          "code": 3,
+          "label": "Should not be allowed"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Youth transition_2": {
+      "label": "Youth transition_2",
+      "question": "When it comes to gender transition treatments \u2014 such as hormone therapy or gender transition surgery \u2014 when is the youngest age you think people should or should not be allowed to receive these treatments? - People between the ages of 18 and 21",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be allowed, regardless of parental consent"
+        },
+        {
+          "code": 2,
+          "label": "Should be allowed only with parental consent"
+        },
+        {
+          "code": 3,
+          "label": "Should not be allowed"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Youth transition_3": {
+      "label": "Youth transition_3",
+      "question": "When it comes to gender transition treatments \u2014 such as hormone therapy or gender transition surgery \u2014 when is the youngest age you think people should or should not be allowed to receive these treatments? - People between the ages of 13 and 17",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be allowed, regardless of parental consent"
+        },
+        {
+          "code": 2,
+          "label": "Should be allowed only with parental consent"
+        },
+        {
+          "code": 3,
+          "label": "Should not be allowed"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Youth transition_4": {
+      "label": "Youth transition_4",
+      "question": "When it comes to gender transition treatments \u2014 such as hormone therapy or gender transition surgery \u2014 when is the youngest age you think people should or should not be allowed to receive these treatments? - People 13 and under",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be allowed, regardless of parental consent"
+        },
+        {
+          "code": 2,
+          "label": "Should be allowed only with parental consent"
+        },
+        {
+          "code": 3,
+          "label": "Should not be allowed"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "PC 1_1": {
+      "label": "PC 1_1",
+      "question": "Do you agree or disagree with the following: - Democrats are too aggressive at policing language, which threatens free speech",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "PC 1_2": {
+      "label": "PC 1_2",
+      "question": "Do you agree or disagree with the following: - I would rather have a beer with a Republican politician than a Democratic one",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "PC 1_3": {
+      "label": "PC 1_3",
+      "question": "Do you agree or disagree with the following: - Republicans don\u2019t do enough to make sure that their supporters don\u2019t say offensive things",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "PC 2": {
+      "label": "PC 2",
+      "question": "Which comes closer to your view:",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Words have impacts. We have to ensure the way we talk is respectful towards women, people of color and other minority groups so they feel welcome in workplaces and other public spaces."
+        },
+        {
+          "code": 2,
+          "label": "Words are just words. The impulse to censor language is destroying our culture and the careers of good people who said something dumb or a perfectly innocent comment that was misinterpreted"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Weed legalization": {
+      "label": "Weed legalization",
+      "question": "When it comes to marijuana legalization, which of the following comes closest to your view?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Marijuana should be legalized federally for recreational and medicinal use"
+        },
+        {
+          "code": 2,
+          "label": "Marijuana should be legalized federally for medicinal use only"
+        },
+        {
+          "code": 3,
+          "label": "Marijuana legalization should be left to the states"
+        },
+        {
+          "code": 4,
+          "label": "Marijuana should not be legalized"
+        },
+        {
+          "code": 5,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Vaccine mandates": {
+      "label": "Vaccine mandates",
+      "question": "In your opinion, which of the following comes closest to what should be the vaccination requirement for public schools?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "All students should be required to be vaccinated"
+        },
+        {
+          "code": 2,
+          "label": "All students should be required to be vaccinated, except for those with medical conditions preventing them from being vaccinated"
+        },
+        {
+          "code": 3,
+          "label": "All students should be vaccinated, but exemptions should be granted for medical, religious, and philosophical reasons"
+        },
+        {
+          "code": 4,
+          "label": "There should be no vaccination requirements"
+        },
+        {
+          "code": 5,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Homelessness A": {
+      "label": "Homelessness A",
+      "question": "When it comes to homelessness, which position comes closest to your view?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Housing is a human right, and the way to fix homelessness is for the government to guarantee  housing to the poor"
+        },
+        {
+          "code": 2,
+          "label": "Homeless people are often drug addicts or mentally ill, and they need to be taken off the streets and locked up to protect law-abiding citizens"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Homelessness B": {
+      "label": "Homelessness B",
+      "question": "When it comes to homelessness, which position comes closest to your view?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Our response to homelessness should focus on helping people find shelter and treatment, not on throwing poor people in jail"
+        },
+        {
+          "code": 2,
+          "label": "Homeless people are often drug addicts or mentally ill, and they need to be taken off the streets and locked up to protect law-abiding citizens"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Uni statements": {
+      "label": "Uni statements",
+      "question": "To what extent do you agree with the following statement? \n\nUniversities should publish statements that take a position in response to current political and social issues.",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 4,
+          "label": "Strongly disagree"
+        },
+        {
+          "code": 5,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Teacher disclosure": {
+      "label": "Teacher disclosure",
+      "question": "Which view aligns closest to your stance on children who identify as LGBTQ+ in schools?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Teachers and other staff should be required to disclose a student\u2019s gender identity or sexual orientation to the student\u2019s parents/guardians."
+        },
+        {
+          "code": 2,
+          "label": "Teachers should be forbidden from disclosing a student\u2019s gender identity or sexual orientation to the student\u2019s parents/guardian without the student\u2019s permission."
+        },
+        {
+          "code": 3,
+          "label": "Teachers should use their best judgement in determining whether to disclose a student\u2019s gender identity or sexual orientation to the student\u2019s parents/guardian."
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Standardized tests": {
+      "label": "Standardized tests",
+      "question": "When it comes to standardized tests like the SAT or ACT, which of the following comes closest to your view?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Standardized tests are racially biased"
+        },
+        {
+          "code": 2,
+          "label": "Standardized tests aren\u2019t perfect, but overall they are fair and make college admissions more meritocratic"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Test optional": {
+      "label": "Test optional",
+      "question": "Which of the following comes closest to your views about the use of standardized testing in college admissions?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Universities should require all applicants to submit standardized test scores"
+        },
+        {
+          "code": 2,
+          "label": "Universities should allow applicants to choose whether or not to submit test scores (also known as test-optional admissions)"
+        },
+        {
+          "code": 3,
+          "label": "Universities should not accept standardized test scores from any applicants"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Ivy League favs": {
+      "label": "Ivy League favs",
+      "question": "In general, how would you say you feel about elite private universities, such as the Ivy League?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable"
+        },
+        {
+          "code": 5,
+          "label": "Neither favorable nor unfavorable"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Higher ed trust_1": {
+      "label": "Higher ed trust_1",
+      "question": "How much would you say that you trust professors from the following kinds of higher education institutions to educate America\u2019s youth? - Elite private universities, like the Ivy League",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Trust a lot"
+        },
+        {
+          "code": 2,
+          "label": "Trust a little"
+        },
+        {
+          "code": 3,
+          "label": "Neither trust nor distrust"
+        },
+        {
+          "code": 4,
+          "label": "Distrust a little"
+        },
+        {
+          "code": 5,
+          "label": "Distrust a lot"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Higher ed trust_2": {
+      "label": "Higher ed trust_2",
+      "question": "How much would you say that you trust professors from the following kinds of higher education institutions to educate America\u2019s youth? - Private non-profit universities",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Trust a lot"
+        },
+        {
+          "code": 2,
+          "label": "Trust a little"
+        },
+        {
+          "code": 3,
+          "label": "Neither trust nor distrust"
+        },
+        {
+          "code": 4,
+          "label": "Distrust a little"
+        },
+        {
+          "code": 5,
+          "label": "Distrust a lot"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Higher ed trust_3": {
+      "label": "Higher ed trust_3",
+      "question": "How much would you say that you trust professors from the following kinds of higher education institutions to educate America\u2019s youth? - Public 4-year universities",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Trust a lot"
+        },
+        {
+          "code": 2,
+          "label": "Trust a little"
+        },
+        {
+          "code": 3,
+          "label": "Neither trust nor distrust"
+        },
+        {
+          "code": 4,
+          "label": "Distrust a little"
+        },
+        {
+          "code": 5,
+          "label": "Distrust a lot"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Higher ed trust_4": {
+      "label": "Higher ed trust_4",
+      "question": "How much would you say that you trust professors from the following kinds of higher education institutions to educate America\u2019s youth? - Community colleges",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Trust a lot"
+        },
+        {
+          "code": 2,
+          "label": "Trust a little"
+        },
+        {
+          "code": 3,
+          "label": "Neither trust nor distrust"
+        },
+        {
+          "code": 4,
+          "label": "Distrust a little"
+        },
+        {
+          "code": 5,
+          "label": "Distrust a lot"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Higher ed trust_5": {
+      "label": "Higher ed trust_5",
+      "question": "How much would you say that you trust professors from the following kinds of higher education institutions to educate America\u2019s youth? - Private for-profit colleges",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Trust a lot"
+        },
+        {
+          "code": 2,
+          "label": "Trust a little"
+        },
+        {
+          "code": 3,
+          "label": "Neither trust nor distrust"
+        },
+        {
+          "code": 4,
+          "label": "Distrust a little"
+        },
+        {
+          "code": 5,
+          "label": "Distrust a lot"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Higher ed trust_6": {
+      "label": "Higher ed trust_6",
+      "question": "How much would you say that you trust professors from the following kinds of higher education institutions to educate America\u2019s youth? - Trade schools",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Trust a lot"
+        },
+        {
+          "code": 2,
+          "label": "Trust a little"
+        },
+        {
+          "code": 3,
+          "label": "Neither trust nor distrust"
+        },
+        {
+          "code": 4,
+          "label": "Distrust a little"
+        },
+        {
+          "code": 5,
+          "label": "Distrust a lot"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Pell Grant MGP": {
+      "label": "Pell Grant MGP",
+      "question": "Federal Pell Grants help low-income students afford college. Currently, Pell Grants can only be used for four-year colleges and graduate schools. Would you support changing the law so that Pell Grants could be used for trade schools?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly support"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat support"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat oppose"
+        },
+        {
+          "code": 4,
+          "label": "Strongly oppose"
+        },
+        {
+          "code": 5,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Endowment taxes": {
+      "label": "Endowment taxes",
+      "question": "To what extent would you support having private universities with an endowment \u2014 a financial fund made up of donations to a university, typically invested to support the institution\u2019s operations, scholarships, faculty salaries, and research \u2014 greater than $10 billion paying a tax of 21% on the annual profits from their endowments? Under current law, profits from university endowments are taxed at 1.4%.",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly support "
+        },
+        {
+          "code": 2,
+          "label": "Somewhat support"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat oppose "
+        },
+        {
+          "code": 4,
+          "label": "Strongly oppose"
+        },
+        {
+          "code": 5,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Your econ priority": {
+      "label": "Your econ priority",
+      "question": "If you could only improve one aspect of the American economy, which of the following would you choose?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "More jobs"
+        },
+        {
+          "code": 2,
+          "label": "Higher wages"
+        },
+        {
+          "code": 3,
+          "label": "Lower taxes"
+        },
+        {
+          "code": 4,
+          "label": "Better public services"
+        },
+        {
+          "code": 5,
+          "label": "Lower interest rates on credit cards and mortgages "
+        },
+        {
+          "code": 6,
+          "label": "Lower prices on goods, services, and gas (lower inflation)"
+        },
+        {
+          "code": 7,
+          "label": "None of the above"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "GOP econ priority": {
+      "label": "GOP econ priority",
+      "question": "Using the same list, which aspect of the American economy do you think the Republican Party is most focused on?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "More jobs"
+        },
+        {
+          "code": 2,
+          "label": "Higher wages"
+        },
+        {
+          "code": 3,
+          "label": "Lower taxes"
+        },
+        {
+          "code": 4,
+          "label": "Better public services"
+        },
+        {
+          "code": 5,
+          "label": "Lower interest rates on credit cards and mortgages "
+        },
+        {
+          "code": 6,
+          "label": "Lower prices on goods, services, and gas (lower inflation)"
+        },
+        {
+          "code": 7,
+          "label": "None of the above"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Dem econ priority": {
+      "label": "Dem econ priority",
+      "question": "Using the same list, which aspect of the American economy do you think the Democratic Party is most focused on?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "More jobs"
+        },
+        {
+          "code": 2,
+          "label": "Higher wages"
+        },
+        {
+          "code": 3,
+          "label": "Lower taxes"
+        },
+        {
+          "code": 4,
+          "label": "Better public services"
+        },
+        {
+          "code": 5,
+          "label": "Lower interest rates on credit cards and mortgages "
+        },
+        {
+          "code": 6,
+          "label": "Lower prices on goods, services, and gas (lower inflation)"
+        },
+        {
+          "code": 7,
+          "label": "None of the above"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Budget perceptions_1": {
+      "label": "Budget perceptions_1",
+      "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - Interest payments on the federal debt",
+      "type": "numeric",
+      "waves": [
+        "S25"
+      ]
+    },
+    "Budget perceptions_2": {
+      "label": "Budget perceptions_2",
+      "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - Social Security",
+      "type": "numeric",
+      "waves": [
+        "S25"
+      ]
+    },
+    "Budget perceptions_3": {
+      "label": "Budget perceptions_3",
+      "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - Medicare",
+      "type": "numeric",
+      "waves": [
+        "S25"
+      ]
+    },
+    "Budget perceptions_4": {
+      "label": "Budget perceptions_4",
+      "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - Other healthcare spending",
+      "type": "numeric",
+      "waves": [
+        "S25"
+      ]
+    },
+    "Budget perceptions_5": {
+      "label": "Budget perceptions_5",
+      "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - The military",
+      "type": "numeric",
+      "waves": [
+        "S25"
+      ]
+    },
+    "Budget perceptions_6": {
+      "label": "Budget perceptions_6",
+      "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - Foreign aid",
+      "type": "numeric",
+      "waves": [
+        "S25"
+      ]
+    },
+    "Budget perceptions_7": {
+      "label": "Budget perceptions_7",
+      "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - Education",
+      "type": "numeric",
+      "waves": [
+        "S25"
+      ]
+    },
+    "Budget perceptions_8": {
+      "label": "Budget perceptions_8",
+      "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - Welfare programs",
+      "type": "numeric",
+      "waves": [
+        "S25"
+      ]
+    },
+    "Budget perceptions_9": {
+      "label": "Budget perceptions_9",
+      "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - Infrastructure and transportation",
+      "type": "numeric",
+      "waves": [
+        "S25"
+      ]
+    },
+    "Budget perceptions_10": {
+      "label": "Budget perceptions_10",
+      "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - Waste and fraud",
+      "type": "numeric",
+      "waves": [
+        "S25"
+      ]
+    },
+    "Sports betting": {
+      "label": "Sports betting",
+      "question": "When it comes to the legalization of online sports gambling, which comes closer to your view?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "This is a free country and if Americans want to bet on sports they should be allowed to. Sports betting raises tax revenue for education, and we shouldn\u2019t restrict the freedom of the vast majority of responsible players just because some people make bad choices. Online sports betting should be legal."
+        },
+        {
+          "code": 2,
+          "label": "Sports betting is a predatory industry because companies depend on gambling addicts to make profits. Research has found that young working-class men are the most likely to become addicted, leading to higher rates of bankruptcy and debt. And constant gambling ads ruin the experience of watching sports. Online sports betting should not be legal."
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Lina Khan": {
+      "label": "Lina Khan",
+      "question": "When it comes to antitrust policy \u2014 that is, policies meant to ensure fair competition between companies \u2014 which comes closer to your view?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Antitrust policy should be mainly focused on keeping consumer prices low, even if that sometimes means not breaking up large companies "
+        },
+        {
+          "code": 2,
+          "label": "Antitrust policy should be mainly focused on keeping corporate power in check, even if that sometimes means higher prices"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Crypto favs": {
+      "label": "Crypto favs",
+      "question": "How do you feel about cryptocurrencies generally?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favorable"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favorable"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unfavorable"
+        },
+        {
+          "code": 4,
+          "label": "Strongly unfavorable "
+        },
+        {
+          "code": 5,
+          "label": "Neither favorable nor unfavorable"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Nuclear support": {
+      "label": "Nuclear support",
+      "question": "Overall, do you strongly favor, somewhat favor, somewhat oppose or strongly oppose the use of nuclear energy as one of the ways to provide electricity for the U.S.?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly favor"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat favor"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat oppose"
+        },
+        {
+          "code": 4,
+          "label": "Strongly oppose"
+        },
+        {
+          "code": 5,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Nuclear expand": {
+      "label": "Nuclear expand",
+      "question": "When it comes to the use of nuclear energy to provide electricity, which of the following comes closest to your view?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "America should invest more in nuclear energy to reduce greenhouse gas emissions and combat climate change"
+        },
+        {
+          "code": 2,
+          "label": "America should invest more in nuclear energy to lower electricity bills for consumers"
+        },
+        {
+          "code": 3,
+          "label": "America should not invest more in nuclear energy, because it is dangerous for the environment"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Deficit reduction A": {
+      "label": "Deficit reduction A",
+      "question": "When it comes to reducing the deficit \u2014 the shortfall between what the government spends and what it collects in revenue each year, requiring borrowing to cover the gap \u2014 which approach do you prefer the most?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Reduce the deficit mainly by cutting government spending"
+        },
+        {
+          "code": 2,
+          "label": "Reduce the deficit mainly by raising taxes"
+        },
+        {
+          "code": 3,
+          "label": "Reduce the deficit with a combination of tax hikes and spending cuts"
+        },
+        {
+          "code": 4,
+          "label": "Don\u2019t think deficit reduction is a priority"
+        },
+        {
+          "code": 5,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Tax hikes A_1": {
+      "label": "Tax hikes A_1",
+      "question": "What do you think of the following types of taxes? - Wealth and high-income taxes (e.g., taxes on billionaires, millionaires, and income over $400,000)",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be increased"
+        },
+        {
+          "code": 2,
+          "label": "Should be kept at the same level"
+        },
+        {
+          "code": 3,
+          "label": "Should be decreased"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Tax hikes A_2": {
+      "label": "Tax hikes A_2",
+      "question": "What do you think of the following types of taxes? - Middle- and low-income taxes (e.g., income taxes on people making less than $100,000)",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be increased"
+        },
+        {
+          "code": 2,
+          "label": "Should be kept at the same level"
+        },
+        {
+          "code": 3,
+          "label": "Should be decreased"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Tax hikes A_3": {
+      "label": "Tax hikes A_3",
+      "question": "What do you think of the following types of taxes? - Business taxes (e.g., corporate taxes, payroll taxes)",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be increased"
+        },
+        {
+          "code": 2,
+          "label": "Should be kept at the same level"
+        },
+        {
+          "code": 3,
+          "label": "Should be decreased"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Tax hikes A_4": {
+      "label": "Tax hikes A_4",
+      "question": "What do you think of the following types of taxes? - Environmental taxes (e.g., taxes on greenhouse gas emissions, or other pollution)",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be increased"
+        },
+        {
+          "code": 2,
+          "label": "Should be kept at the same level"
+        },
+        {
+          "code": 3,
+          "label": "Should be decreased"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Tax hikes A_5": {
+      "label": "Tax hikes A_5",
+      "question": "What do you think of the following types of taxes? - Consumption taxes (e.g., excise taxes on cigarettes/alcohol, sales taxes)",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be increased"
+        },
+        {
+          "code": 2,
+          "label": "Should be kept at the same level"
+        },
+        {
+          "code": 3,
+          "label": "Should be decreased"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Tax hikes A_6": {
+      "label": "Tax hikes A_6",
+      "question": "What do you think of the following types of taxes? - Taxes on imported goods (tariffs)",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be increased"
+        },
+        {
+          "code": 2,
+          "label": "Should be kept at the same level"
+        },
+        {
+          "code": 3,
+          "label": "Should be decreased"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Spending cuts A_1": {
+      "label": "Spending cuts A_1",
+      "question": "When it comes to government spending, what do you think of the following programs? - Social Security",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should spend more on"
+        },
+        {
+          "code": 2,
+          "label": "Should keep spending the same amount on"
+        },
+        {
+          "code": 3,
+          "label": "Should spend less on"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Spending cuts A_2": {
+      "label": "Spending cuts A_2",
+      "question": "When it comes to government spending, what do you think of the following programs? - Medicare",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should spend more on"
+        },
+        {
+          "code": 2,
+          "label": "Should keep spending the same amount on"
+        },
+        {
+          "code": 3,
+          "label": "Should spend less on"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Spending cuts A_3": {
+      "label": "Spending cuts A_3",
+      "question": "When it comes to government spending, what do you think of the following programs? - Medicaid",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should spend more on"
+        },
+        {
+          "code": 2,
+          "label": "Should keep spending the same amount on"
+        },
+        {
+          "code": 3,
+          "label": "Should spend less on"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Spending cuts A_4": {
+      "label": "Spending cuts A_4",
+      "question": "When it comes to government spending, what do you think of the following programs? - The military",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should spend more on"
+        },
+        {
+          "code": 2,
+          "label": "Should keep spending the same amount on"
+        },
+        {
+          "code": 3,
+          "label": "Should spend less on"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Spending cuts A_5": {
+      "label": "Spending cuts A_5",
+      "question": "When it comes to government spending, what do you think of the following programs? - Veterans\u2019 affairs",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should spend more on"
+        },
+        {
+          "code": 2,
+          "label": "Should keep spending the same amount on"
+        },
+        {
+          "code": 3,
+          "label": "Should spend less on"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Spending cuts A_6": {
+      "label": "Spending cuts A_6",
+      "question": "When it comes to government spending, what do you think of the following programs? - Foreign aid",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should spend more on"
+        },
+        {
+          "code": 2,
+          "label": "Should keep spending the same amount on"
+        },
+        {
+          "code": 3,
+          "label": "Should spend less on"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Spending cuts A_7": {
+      "label": "Spending cuts A_7",
+      "question": "When it comes to government spending, what do you think of the following programs? - Education",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should spend more on"
+        },
+        {
+          "code": 2,
+          "label": "Should keep spending the same amount on"
+        },
+        {
+          "code": 3,
+          "label": "Should spend less on"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Spending cuts A_8": {
+      "label": "Spending cuts A_8",
+      "question": "When it comes to government spending, what do you think of the following programs? - Welfare programs",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should spend more on"
+        },
+        {
+          "code": 2,
+          "label": "Should keep spending the same amount on"
+        },
+        {
+          "code": 3,
+          "label": "Should spend less on"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Spending cuts A_9": {
+      "label": "Spending cuts A_9",
+      "question": "When it comes to government spending, what do you think of the following programs? - Infrastructure and transportation",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should spend more on"
+        },
+        {
+          "code": 2,
+          "label": "Should keep spending the same amount on"
+        },
+        {
+          "code": 3,
+          "label": "Should spend less on"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Deficit reduction B": {
+      "label": "Deficit reduction B",
+      "question": "When it comes to reducing the deficit \u2014 the shortfall between what the government spends and what it collects in revenue each year, requiring borrowing to cover the gap \u2014 which approach do you prefer the most?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Reduce the deficit mainly by cutting government spending"
+        },
+        {
+          "code": 2,
+          "label": "Reduce the deficit mainly by raising taxes"
+        },
+        {
+          "code": 3,
+          "label": "Reduce the deficit with a combination of tax hikes and spending cuts"
+        },
+        {
+          "code": 4,
+          "label": "Don\u2019t think deficit reduction is a priority"
+        },
+        {
+          "code": 5,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Tax hikes B_1": {
+      "label": "Tax hikes B_1",
+      "question": "What do you think of the following types of taxes? - Wealth and high-income taxes (e.g., taxes on billionaires, millionaires, and income over $400,000)",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be increased"
+        },
+        {
+          "code": 2,
+          "label": "Should be kept at the same level"
+        },
+        {
+          "code": 3,
+          "label": "Should be decreased"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Tax hikes B_2": {
+      "label": "Tax hikes B_2",
+      "question": "What do you think of the following types of taxes? - Middle- and low-income taxes (e.g., income taxes on people making less than $100,000)",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be increased"
+        },
+        {
+          "code": 2,
+          "label": "Should be kept at the same level"
+        },
+        {
+          "code": 3,
+          "label": "Should be decreased"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Tax hikes B_3": {
+      "label": "Tax hikes B_3",
+      "question": "What do you think of the following types of taxes? - Business taxes (e.g., corporate taxes, payroll taxes)",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be increased"
+        },
+        {
+          "code": 2,
+          "label": "Should be kept at the same level"
+        },
+        {
+          "code": 3,
+          "label": "Should be decreased"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Tax hikes B_4": {
+      "label": "Tax hikes B_4",
+      "question": "What do you think of the following types of taxes? - Environmental taxes (e.g., taxes on greenhouse gas emissions, or other pollution)",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be increased"
+        },
+        {
+          "code": 2,
+          "label": "Should be kept at the same level"
+        },
+        {
+          "code": 3,
+          "label": "Should be decreased"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Tax hikes B_5": {
+      "label": "Tax hikes B_5",
+      "question": "What do you think of the following types of taxes? - Consumption taxes (e.g., excise taxes on cigarettes/alcohol, sales taxes)",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be increased"
+        },
+        {
+          "code": 2,
+          "label": "Should be kept at the same level"
+        },
+        {
+          "code": 3,
+          "label": "Should be decreased"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Tax hikes B_6": {
+      "label": "Tax hikes B_6",
+      "question": "What do you think of the following types of taxes? - Taxes on imported goods (tariffs)",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be increased"
+        },
+        {
+          "code": 2,
+          "label": "Should be kept at the same level"
+        },
+        {
+          "code": 3,
+          "label": "Should be decreased"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Spending cuts B_1": {
+      "label": "Spending cuts B_1",
+      "question": "When it comes to government spending, what do you think of the following programs? - Social Security",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should spend more on"
+        },
+        {
+          "code": 2,
+          "label": "Should keep spending the same amount on"
+        },
+        {
+          "code": 3,
+          "label": "Should spend less on"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Spending cuts B_2": {
+      "label": "Spending cuts B_2",
+      "question": "When it comes to government spending, what do you think of the following programs? - Medicare",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should spend more on"
+        },
+        {
+          "code": 2,
+          "label": "Should keep spending the same amount on"
+        },
+        {
+          "code": 3,
+          "label": "Should spend less on"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Spending cuts B_3": {
+      "label": "Spending cuts B_3",
+      "question": "When it comes to government spending, what do you think of the following programs? - Medicaid",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should spend more on"
+        },
+        {
+          "code": 2,
+          "label": "Should keep spending the same amount on"
+        },
+        {
+          "code": 3,
+          "label": "Should spend less on"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Spending cuts B_4": {
+      "label": "Spending cuts B_4",
+      "question": "When it comes to government spending, what do you think of the following programs? - The military",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should spend more on"
+        },
+        {
+          "code": 2,
+          "label": "Should keep spending the same amount on"
+        },
+        {
+          "code": 3,
+          "label": "Should spend less on"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Spending cuts B_5": {
+      "label": "Spending cuts B_5",
+      "question": "When it comes to government spending, what do you think of the following programs? - Veterans\u2019 affairs",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should spend more on"
+        },
+        {
+          "code": 2,
+          "label": "Should keep spending the same amount on"
+        },
+        {
+          "code": 3,
+          "label": "Should spend less on"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Spending cuts B_6": {
+      "label": "Spending cuts B_6",
+      "question": "When it comes to government spending, what do you think of the following programs? - Foreign aid",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should spend more on"
+        },
+        {
+          "code": 2,
+          "label": "Should keep spending the same amount on"
+        },
+        {
+          "code": 3,
+          "label": "Should spend less on"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Spending cuts B_7": {
+      "label": "Spending cuts B_7",
+      "question": "When it comes to government spending, what do you think of the following programs? - Education",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should spend more on"
+        },
+        {
+          "code": 2,
+          "label": "Should keep spending the same amount on"
+        },
+        {
+          "code": 3,
+          "label": "Should spend less on"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Spending cuts B_8": {
+      "label": "Spending cuts B_8",
+      "question": "When it comes to government spending, what do you think of the following programs? - Welfare programs",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should spend more on"
+        },
+        {
+          "code": 2,
+          "label": "Should keep spending the same amount on"
+        },
+        {
+          "code": 3,
+          "label": "Should spend less on"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Spending cuts B_9": {
+      "label": "Spending cuts B_9",
+      "question": "When it comes to government spending, what do you think of the following programs? - Infrastructure and transportation",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should spend more on"
+        },
+        {
+          "code": 2,
+          "label": "Should keep spending the same amount on"
+        },
+        {
+          "code": 3,
+          "label": "Should spend less on"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Tariffs general": {
+      "label": "Tariffs general",
+      "question": "Tariffs are a tax on imported goods, paid for by the person or company who imports the goods. Donald Trump has proposed new tariffs on all imports to the United States, arguing that they will reduce the national debt and create jobs. Democrats support tariffs on some strategic goods\u2014such as microchips and electric vehicles\u2014to prevent adversaries like China from gaining a competitive edge. Economists warn that any tariffs could hurt the economy by raising prices for consumers, which must be weighed against potential national security benefits. Which of the following best reflects your view?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "America should impose blanket tariffs on all imports in order to boost American manufacturing"
+        },
+        {
+          "code": 2,
+          "label": "America should impose strategic tariffs on only some goods, so that we can compete with China"
+        },
+        {
+          "code": 3,
+          "label": "America should try to avoid tariffs so we don\u2019t make inflation worse"
+        },
+        {
+          "code": 4,
+          "label": "Not sure or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Immigration level": {
+      "label": "Immigration level",
+      "question": "When it comes to legal immigration to the US, which comes closest to your view?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Legal immigration should be increased"
+        },
+        {
+          "code": 2,
+          "label": "Legal immigration should be kept at its present level"
+        },
+        {
+          "code": 3,
+          "label": "Legal immigration should be decreased"
+        },
+        {
+          "code": 4,
+          "label": "Not sure or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Mass deportations_1": {
+      "label": "Mass deportations_1",
+      "question": "Below are descriptions of various categories of illegal immigrants to the United States. For each, please select whether you think they should or should not be deported. - Someone who crossed the US border illegally and then claimed refugee or asylum status",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be deported"
+        },
+        {
+          "code": 2,
+          "label": "Should not be deported"
+        },
+        {
+          "code": 3,
+          "label": "Not sure or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Mass deportations_2": {
+      "label": "Mass deportations_2",
+      "question": "Below are descriptions of various categories of illegal immigrants to the United States. For each, please select whether you think they should or should not be deported. - Someone brought to the US illegally as a child and is now an adult (also known as DREAMers)",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be deported"
+        },
+        {
+          "code": 2,
+          "label": "Should not be deported"
+        },
+        {
+          "code": 3,
+          "label": "Not sure or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Mass deportations_3": {
+      "label": "Mass deportations_3",
+      "question": "Below are descriptions of various categories of illegal immigrants to the United States. For each, please select whether you think they should or should not be deported. - Someone who came to the US illegally as an adult and now has children who are US citizens",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be deported"
+        },
+        {
+          "code": 2,
+          "label": "Should not be deported"
+        },
+        {
+          "code": 3,
+          "label": "Not sure or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Mass deportations_4": {
+      "label": "Mass deportations_4",
+      "question": "Below are descriptions of various categories of illegal immigrants to the United States. For each, please select whether you think they should or should not be deported. - Someone who illegally entered the US over 10 years ago and has no criminal record",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be deported"
+        },
+        {
+          "code": 2,
+          "label": "Should not be deported"
+        },
+        {
+          "code": 3,
+          "label": "Not sure or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Mass deportations_5": {
+      "label": "Mass deportations_5",
+      "question": "Below are descriptions of various categories of illegal immigrants to the United States. For each, please select whether you think they should or should not be deported. - Someone who illegally entered the US and has been convicted of a violent crime",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be deported"
+        },
+        {
+          "code": 2,
+          "label": "Should not be deported"
+        },
+        {
+          "code": 3,
+          "label": "Not sure or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Mass deportations_6": {
+      "label": "Mass deportations_6",
+      "question": "Below are descriptions of various categories of illegal immigrants to the United States. For each, please select whether you think they should or should not be deported. - Someone who illegally entered the US and has been convicted of a non-violent crime, such as selling illegal drugs or shoplifting",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Should be deported"
+        },
+        {
+          "code": 2,
+          "label": "Should not be deported"
+        },
+        {
+          "code": 3,
+          "label": "Not sure or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Student deportations": {
+      "label": "Student deportations",
+      "question": "You may have heard about some international students who participated in campus protests against the war in Gaza being detained by federal immigration authorities and threatened with deportation. \n\nWhite House officials argue that these students should be deported, or have their visas revoked, because their actions in the protests were antisemitic and constituted a threat to national security under a 1952 law. \n\nLegal experts say that these detentions are unconstitutional and threaten free speech, since the Supreme Court has ruled in the past that the First Amendment applies to non-citizens. \n\nWhich of the following comes closer to your view?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "International students should be deported for participating in campus protests"
+        },
+        {
+          "code": 2,
+          "label": "International students should not be deported for participating in campus protests"
+        },
+        {
+          "code": 3,
+          "label": "Not sure or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Ukraine": {
+      "label": "Ukraine",
+      "question": "When it comes to the Ukraine conflict, which position comes closest to your view?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "America should stop providing aid to Ukraine, negotiate a peace deal with Russia to stop the war, and focus our resources on issues at home"
+        },
+        {
+          "code": 2,
+          "label": "America should continue to provide aid to Ukraine so they can stand up to Putin\u2019s invasion and protect their right to decide their own country\u2019s future"
+        },
+        {
+          "code": 3,
+          "label": "Not sure or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Middle East": {
+      "label": "Middle East",
+      "question": "When it comes to the Middle East, which comes closest to your view?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "America should increase its involvement in the Middle East. A larger American presence is needed to combat terrorism and keep bad actors like Iran in check."
+        },
+        {
+          "code": 2,
+          "label": "America should maintain its current level of involvement in the Middle East. It is important to continue our counter-terrorism operations and ensure regional stability for allied countries, like Israel. "
+        },
+        {
+          "code": 3,
+          "label": "America should reduce its involvement in the Middle East. The region\u2019s problems are not fixable with more US involvement, and we should be focusing our attention on competing with China in the Pacific and Asia. "
+        },
+        {
+          "code": 4,
+          "label": "Not sure or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Taiwan": {
+      "label": "Taiwan",
+      "question": "When it comes to China and Taiwan, which position comes closest to your view?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "If China invades Taiwan, America should intervene militarily to protect Taiwan. Taiwan is a democracy, and China shouldn\u2019t be given a blank check to wage wars of conquest whenever it pleases."
+        },
+        {
+          "code": 2,
+          "label": "If China invades Taiwan, America should provide military and humanitarian aid to Taiwan, but should rule out military intervention. "
+        },
+        {
+          "code": 3,
+          "label": "If China invades Taiwan, America should not militarily intervene or provide economic aid to protect Taiwan. Intervention would risk starting a war with another nuclear power. "
+        },
+        {
+          "code": 4,
+          "label": "Not sure or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Senate control": {
+      "label": "Senate control",
+      "question": "Which party currently holds a majority of the seats in the U.S. Senate?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The Democratic Party"
+        },
+        {
+          "code": 2,
+          "label": "The Republican Party"
+        },
+        {
+          "code": 3,
+          "label": "Neither party"
+        },
+        {
+          "code": 4,
+          "label": "Don't know"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "House control": {
+      "label": "House control",
+      "question": "Which party currently holds a majority of the seats in the U.S. House of Representatives?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The Democratic Party"
+        },
+        {
+          "code": 2,
+          "label": "The Republican Party"
+        },
+        {
+          "code": 3,
+          "label": "Neither party"
+        },
+        {
+          "code": 4,
+          "label": "Don't know"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "SCOTUS control": {
+      "label": "SCOTUS control",
+      "question": "Which party appointed a majority of the justices currently on the Supreme Court?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The Democratic Party"
+        },
+        {
+          "code": 2,
+          "label": "The Republican Party"
+        },
+        {
+          "code": 3,
+          "label": "Neither party"
+        },
+        {
+          "code": 4,
+          "label": "Don't know"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "SCOTUS appointments": {
+      "label": "SCOTUS appointments",
+      "question": "Which description of how judges, including Supreme Court justices, are appointed is most accurate?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Presidents nominate judges, who must then be confirmed by a simple majority vote in the Senate before taking office"
+        },
+        {
+          "code": 2,
+          "label": "Presidents appoint judges, with no input from the Senate or House"
+        },
+        {
+          "code": 3,
+          "label": "The House and Senate vote to appoint judges by a two-thirds supermajority, with no input from the president"
+        },
+        {
+          "code": 4,
+          "label": "Don't know"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Gerrymandering def.": {
+      "label": "Gerrymandering def.",
+      "question": "Which description of \u201cgerrymandering\u201d is the most accurate?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "When politicians redraw districts for Congress or state legislatures to advantage one political party"
+        },
+        {
+          "code": 2,
+          "label": "Whenever districts for Congress or state legislatures are redrawn"
+        },
+        {
+          "code": 3,
+          "label": "Attempts to suppress the votes of racial minorities or people who are likely to vote for the other party"
+        },
+        {
+          "code": 4,
+          "label": "Don't know"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "EC mechanics": {
+      "label": "EC mechanics",
+      "question": "Which statement best describes how the Electoral College works in US presidential elections?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Each state gets a certain number of electoral votes based on how many members it has in Congress (both the House and the Senate). In most states, the candidate with the most votes wins all of that state\u2019s electoral votes. To become president, a candidate needs 270 electoral votes."
+        },
+        {
+          "code": 2,
+          "label": "Each state gets electoral votes equal to the total number of its members in the House and Senate. In most states, the candidate with the most votes gets all of that state\u2019s electoral votes. The candidate who gets the most electoral votes wins the presidency, even if they don\u2019t have a majority."
+        },
+        {
+          "code": 3,
+          "label": "Each state gets electoral votes based on the total number of its members in the House and Senate. If one candidate wins the most votes nationwide, they become president. But if no one wins a majority of the popular votes, then the candidate with the most electoral votes wins."
+        },
+        {
+          "code": 4,
+          "label": "Don't know"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Amendment mechanics": {
+      "label": "Amendment mechanics",
+      "question": "Which description of how the process to amend the Constitution works is the most accurate?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "First, either two-thirds of both the US House and Senate must vote to propose the amendment to the states, or two-thirds of state legislatures can vote to call a constitutional convention. Then, three-quarters of state legislatures must vote in favor of adopting the amendment."
+        },
+        {
+          "code": 2,
+          "label": "After Congress passes a bill proposing the amendment, the governors of the fifty states must vote to ratify the amendment before it takes effect. If even one state\u2019s governor votes against the amendment, it does not take effect."
+        },
+        {
+          "code": 3,
+          "label": "It is not possible to amend the Constitution, as new amendments were banned."
+        },
+        {
+          "code": 4,
+          "label": "Don't know"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Filibuster": {
+      "label": "Filibuster",
+      "question": "Which description of the Senate filibuster is most accurate?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The filibuster is a rule created by the Senate, meaning it could be changed at any time. It says that most legislation needs 60 votes to pass, except for certain budget bills and judicial nominations."
+        },
+        {
+          "code": 2,
+          "label": "The filibuster is a part of the Constitution that requires 60 votes in the Senate to pass any legislation."
+        },
+        {
+          "code": 3,
+          "label": "The filibuster is a rule created by the Senate, meaning it could be changed at any time, and says that all legislation needs 60 votes to pass."
+        },
+        {
+          "code": 4,
+          "label": "Don't know"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Judicial power": {
+      "label": "Judicial power",
+      "question": "Which view comes closest to your stance on the role of the judiciary?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The judiciary branch shouldn\u2019t be allowed to control the executive's power. If a judge can unilaterally block every presidential action nationwide, elections become meaningless. "
+        },
+        {
+          "code": 2,
+          "label": "The judiciary branch should have the power to strike down unconstitutional decisions made by the executive branch. The Constitution created a system of checks and balances, and the president should follow court decisions."
+        },
+        {
+          "code": 3,
+          "label": "Not sure or no opinion"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "SCOTUS bias": {
+      "label": "SCOTUS bias",
+      "question": "Which is a better description of how the Supreme Court has been ruling on cases, in practice?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "More often than not, the Supreme Court rules on the legal and constitutional merits of cases, without concern for party politics"
+        },
+        {
+          "code": 2,
+          "label": "More often than not, the Supreme Court rules to advantage one political party or ideological group, rather than on the legal or constitutional merits of the case"
+        },
+        {
+          "code": 3,
+          "label": "Don't know"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Money vs ideology": {
+      "label": "Money vs ideology",
+      "question": "What do you think is a bigger problem in politics these days?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Activist groups who push their ideological agendas on policymakers, even if those ideas are too extreme for most Americans"
+        },
+        {
+          "code": 2,
+          "label": "Wealthy donors who use campaign contributions and lobbyists to push for policies that help them at the expense of the middle class"
+        },
+        {
+          "code": 3,
+          "label": "Don't know"
+        },
+        {
+          "code": 4,
+          "label": "Neither of these"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "NPV": {
+      "label": "NPV",
+      "question": "When it comes to how the United States elects presidents, which approach do you prefer?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The United States should switch to a system where the president is elected by a national popular vote. America\u2019s commander-in-chief should be the person who wins the most votes."
+        },
+        {
+          "code": 2,
+          "label": "The United States should continue with the Electoral College system, even if that means someone can win the presidency while losing the popular vote. This was the system that the Founding Fathers designed, and America should stick with it."
+        },
+        {
+          "code": 3,
+          "label": "Don't know"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Zoning": {
+      "label": "Zoning",
+      "question": "When it comes to detailed rules about what can be built in your city, which would you prefer?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Having regular voters decide through ballot measures"
+        },
+        {
+          "code": 2,
+          "label": "Having city planners and experts decide"
+        },
+        {
+          "code": 3,
+          "label": "Having elected officials decide"
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Confidence in voters_1": {
+      "label": "Confidence in voters_1",
+      "question": "Do you agree or disagree with the following statements? - Voters are informed enough to make decisions about politics.",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Confidence in voters_2": {
+      "label": "Confidence in voters_2",
+      "question": "Do you agree or disagree with the following statements? - I trust elected officials to make decisions.",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Confidence in voters_3": {
+      "label": "Confidence in voters_3",
+      "question": "Do you agree or disagree with the following statements? - We should have more direct ballot measures where regular voters make decisions instead of elected officials.",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Threat MaxDiff 1": {
+      "label": "Threat MaxDiff 1",
+      "question": "Which of the following issues do you think poses a bigger threat to our democracy?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "${e://Field/threat_statement1}"
+        },
+        {
+          "code": 2,
+          "label": "${e://Field/threat_statement2}"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Threat MaxDiff 2": {
+      "label": "Threat MaxDiff 2",
+      "question": "Which of the following issues do you think poses a bigger threat to our democracy?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "${e://Field/threat_statement3}"
+        },
+        {
+          "code": 2,
+          "label": "${e://Field/threat_statement4}"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Reform MaxDiff 1": {
+      "label": "Reform MaxDiff 1",
+      "question": "Which proposal for a democratic reform do you think will improve our government the most?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "${e://Field/reform_statement1}"
+        },
+        {
+          "code": 2,
+          "label": "${e://Field/reform_statement2}"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    },
+    "Reform MaxDiff 2": {
+      "label": "Reform MaxDiff 2",
+      "question": "Which proposal for a democratic reform do you think will improve our government the most?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "${e://Field/reform_statement3}"
+        },
+        {
+          "code": 2,
+          "label": "${e://Field/reform_statement4}"
+        }
+      ],
+      "waves": [
+        "S25"
+      ]
+    }
+  }
+}

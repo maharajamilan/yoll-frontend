@@ -1,0 +1,243 @@
+{
+  "waves": {
+    "stacked_all": {
+      "label": "All waves (stacked)",
+      "n": 12782,
+      "note": "Stacked: F24+S25+F25. Only demographic columns available across all waves."
+    }
+  },
+  "columns": {
+    "_wave": {
+      "label": "Wave",
+      "question": "Survey wave",
+      "type": "categorical",
+      "options": [
+        {
+          "code": "F24",
+          "label": "F24"
+        },
+        {
+          "code": "S25",
+          "label": "S25"
+        },
+        {
+          "code": "F25",
+          "label": "F25"
+        }
+      ],
+      "waves": [
+        "F24",
+        "S25",
+        "F25"
+      ]
+    },
+    "Age": {
+      "label": "Age",
+      "question": "What is your age?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "18-21"
+        },
+        {
+          "code": 2,
+          "label": "22-29"
+        },
+        {
+          "code": 3,
+          "label": "30-44"
+        },
+        {
+          "code": 4,
+          "label": "45-64"
+        },
+        {
+          "code": 5,
+          "label": "65+"
+        }
+      ],
+      "waves": [
+        "F24",
+        "S25",
+        "F25"
+      ]
+    },
+    "Gender": {
+      "label": "Gender",
+      "question": "What is your gender?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Man"
+        },
+        {
+          "code": 2,
+          "label": "Woman"
+        },
+        {
+          "code": 3,
+          "label": "Other"
+        }
+      ],
+      "waves": [
+        "F24",
+        "S25",
+        "F25"
+      ]
+    },
+    "Race": {
+      "label": "Race",
+      "question": "What is your race?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "White"
+        },
+        {
+          "code": 2,
+          "label": "Black"
+        },
+        {
+          "code": 3,
+          "label": "Hispanic"
+        },
+        {
+          "code": 4,
+          "label": "Asian"
+        },
+        {
+          "code": 5,
+          "label": "Other"
+        }
+      ],
+      "waves": [
+        "F24",
+        "S25",
+        "F25"
+      ]
+    },
+    "Education": {
+      "label": "Education",
+      "question": "What is the highest level of education you have completed?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Some high school or less"
+        },
+        {
+          "code": 2,
+          "label": "High school diploma or GED"
+        },
+        {
+          "code": 3,
+          "label": "Some college, but no degree"
+        },
+        {
+          "code": 4,
+          "label": "Associates or technical degree"
+        },
+        {
+          "code": 5,
+          "label": "Bachelor\u2019s degree"
+        },
+        {
+          "code": 6,
+          "label": "Graduate or professional degree"
+        },
+        {
+          "code": 7,
+          "label": "Prefer not to say"
+        }
+      ],
+      "waves": [
+        "F24",
+        "S25",
+        "F25"
+      ]
+    },
+    "Party ID": {
+      "label": "Party ID",
+      "question": "Which political party do you most closely identify with?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The Democratic Party"
+        },
+        {
+          "code": 2,
+          "label": "The Republican Party"
+        },
+        {
+          "code": 3,
+          "label": "Independent"
+        }
+      ],
+      "waves": [
+        "F24",
+        "S25",
+        "F25"
+      ]
+    },
+    "PID Lean": {
+      "label": "PID Lean",
+      "question": "Do you lean closer to the Democratic Party or the Republican Party?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "The Democratic Party"
+        },
+        {
+          "code": 2,
+          "label": "The Republican Party"
+        },
+        {
+          "code": 3,
+          "label": "Neither"
+        }
+      ],
+      "waves": [
+        "F24",
+        "S25",
+        "F25"
+      ]
+    },
+    "2024 vote": {
+      "label": "2024 vote",
+      "question": "Who did you vote for for president in 2024?",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Kamala Harris"
+        },
+        {
+          "code": 2,
+          "label": "Donald Trump"
+        },
+        {
+          "code": 3,
+          "label": "Other"
+        },
+        {
+          "code": 4,
+          "label": "Did not vote"
+        },
+        {
+          "code": 5,
+          "label": "Was not old enough to vote"
+        }
+      ],
+      "waves": [
+        "F24",
+        "S25",
+        "F25"
+      ]
+    }
+  }
+}
