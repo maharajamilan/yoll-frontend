@@ -84,7 +84,7 @@ export default function Home() {
             questions, and the tool will produce weighted crosstabs you can
             export as CSV.
           </p>
-          <p className="text-[color:var(--muted)]">
+          <p className="text-[color:var(--muted)] mb-3">
             <strong>A note on weighting:</strong> to keep results comparable
             across waves, every wave is reweighted using the Spring 2025 YYP
             weighting procedure (age × gender × race × education × party ID
@@ -98,6 +98,29 @@ export default function Home() {
             for those crosstabs naturally restricts to respondents who were
             asked the question.
           </p>
+          <div className="mt-3 rounded-md border border-amber-300 bg-amber-50 p-3 text-xs text-amber-900">
+            <p className="font-semibold mb-1">⚠ Known limitations</p>
+            <ul className="list-disc list-outside pl-4 space-y-1">
+              <li>
+                <strong>MaxDiff questions are not properly processed.</strong>{" "}
+                Items that asked respondents to rank or choose-from a list
+                (issue rank, electability MaxDiffs, etc.) currently render as
+                raw item codes instead of meaningful counts. Don&apos;t rely on
+                MaxDiff crosstabs from this tool yet.
+              </li>
+              <li>
+                <strong>
+                  Some repeated questions aren&apos;t matched across waves
+                  inside stacked datasets.
+                </strong>{" "}
+                Cross-wave matching is by canonicalized column name, so
+                questions whose wording was preserved but whose variable name
+                changed will appear as separate single-wave columns instead of
+                being pooled. If a question you expect to be cross-wave only
+                shows up tagged with one wave, that&apos;s why.
+              </li>
+            </ul>
+          </div>
         </section>
 
         <StepCard number={1} title="Select Data Source">
