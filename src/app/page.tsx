@@ -91,8 +91,12 @@ export default function Home() {
             × 2024 vote, raked to national registered-voter targets).
             Originally-published topline numbers may differ slightly.{" "}
             <strong>Stacking</strong> pools weighted respondents across the
-            selected waves; a given question only appears when it is present
-            in every pooled wave.
+            selected waves. Every question asked in any of the pooled waves is
+            available; the column label tags partial coverage (e.g.{" "}
+            <code className="text-[11px]">[F25]</code> or{" "}
+            <code className="text-[11px]">[F24+S25]</code>), and the weighted N
+            for those crosstabs naturally restricts to respondents who were
+            asked the question.
           </p>
         </section>
 
@@ -115,7 +119,7 @@ export default function Home() {
                   </option>
                 ))}
               </optgroup>
-              <optgroup label="Stacked (demographic crosstabs only)">
+              <optgroup label="Stacked (pooled across waves)">
                 {AVAILABLE_WAVES.filter((w) => w.group === "stacked").map((w) => (
                   <option key={w.id} value={w.id}>
                     {w.label}

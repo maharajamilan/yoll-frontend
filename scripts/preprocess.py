@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -440,23 +441,22 @@ def preprocess_wave(wave: str) -> None:
 # Stacked datasets
 # ------------------------------------------------------------------
 
-# Canonical column name -> per-wave source column name. A column appears in a
-# stacked dataset only if it exists in every wave being stacked. Values are
-# canonicalized to the S25 coding scheme — in particular Party ID / Race are
-# mapped via the harmonized_<wave>.csv file, so the F25 swaps and F25 race
-# fold-down are respected.
-CANONICAL_ALIASES: dict[str, dict[str, str]] = {
-    # key: canonical name; value: {wave: source column in that wave's data}.
-    # For demographic columns we substitute the harmonized value (from
-    # data-raw/harmonized/harmonized_<wave>.csv) so Race/Party ID/Age are
-    # already in S25 coding.
-    "Age":        {"F24": "_HARM_Age", "S25": "_HARM_Age", "F25": "_HARM_Age"},
-    "Gender":     {"F24": "_HARM_Gender", "S25": "_HARM_Gender", "F25": "_HARM_Gender"},
-    "Race":       {"F24": "_HARM_Race", "S25": "_HARM_Race", "F25": "_HARM_Race"},
-    "Education":  {"F24": "_HARM_Education", "S25": "_HARM_Education", "F25": "_HARM_Education"},
-    "Party ID":   {"F24": "_HARM_Party ID", "S25": "_HARM_Party ID", "F25": "_HARM_Party ID"},
-    "PID Lean":   {"F24": "_HARM_PID Lean", "S25": "_HARM_PID Lean", "F25": "_HARM_PID Lean"},
-    "2024 vote":  {"F24": "_HARM_2024 Vote", "S25": "_HARM_2024 Vote", "F25": "_HARM_2024 Vote"},
+# Canonical demographic columns get their values from the harmonized crosswalk
+# so Race / Party ID / Age coding is identical across waves regardless of how
+# each raw wave coded them. Every other column from any pooled wave is also
+# exposed in the stacked dataset, but only when its option code-set agrees
+# across all waves that asked it. Rows from a wave that didn't ask a given
+# question carry null for that column — the crosstab math already skips nulls,
+# so weighted N naturally restricts to respondents from waves that asked it.
+HARMONIZED_DEMOGRAPHICS: dict[str, str] = {
+    # canonical name in stacked dataset -> column name in harmonized_<wave>.csv
+    "Age": "Age",
+    "Gender": "Gender",
+    "Race": "Race",
+    "Education": "Education",
+    "Party ID": "Party ID",
+    "PID Lean": "PID Lean",
+    "2024 vote": "2024 Vote",
 }
 
 CANONICAL_OPTIONS: dict[str, list[tuple[int, str]]] = {
@@ -498,6 +498,18 @@ CANONICAL_QUESTIONS: dict[str, str] = {
 }
 
 
+def canonicalize(name: str) -> str:
+    """Normalize a column name so 'Need for cognition_1' and
+    'need_for_cognition_1' collide — lowercase, alphanumeric-only, single
+    underscores, stripped."""
+    return re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")
+
+
+HARMONIZED_CANONS = {canonicalize(k) for k in HARMONIZED_DEMOGRAPHICS} | {
+    "income",  # exists in F24 + S25 but not F25; not part of S25 raking targets
+}
+
+
 def load_harmonized(wave: str) -> pd.DataFrame:
     path = REPO_ROOT / "data-raw" / "harmonized" / f"harmonized_{wave.lower()}.csv"
     if not path.exists():
@@ -505,47 +517,173 @@ def load_harmonized(wave: str) -> pd.DataFrame:
     return pd.read_csv(path)
 
 
+def _options_signature(options: list | None) -> tuple | None:
+    """Comparable, order-independent signature of an options list."""
+    if not options:
+        return None
+    return tuple(sorted((o["code"], o["label"]) for o in options))
+
+
+def _options_codes(options: list | None) -> tuple | None:
+    if not options:
+        return None
+    return tuple(sorted(o["code"] for o in options))
+
+
 def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
     print(f"\n===== stack {stack_id} ({'+'.join(waves)}) =====")
-    all_rows = []
-    total_n = 0
+
+    # Per wave, gather: processed codebook (to know surviving column schema),
+    # raw values DataFrame (so we can pull non-demographic values keyed by
+    # case_id), harmonized demographics, and final weights.
+    loaders = {"S25": load_s25, "F25": load_f25, "F24": load_f24}
+    per_wave: dict[str, dict] = {}
     for wave in waves:
-        harm = load_harmonized(wave)
+        cb_path = OUTPUT_DIR / f"codebook_{wave.lower()}.json"
+        if not cb_path.exists():
+            raise FileNotFoundError(
+                f"{cb_path} missing; run preprocess for {wave} first"
+            )
+        cb = json.loads(cb_path.read_text())
+        values, _, _, case_id_col = loaders[wave]()
+        if case_id_col != "case_id":
+            values = values.rename(columns={case_id_col: "case_id"})
+        # Some raw waves ship their own 'weight'/'weights' column; we always
+        # want our re-raked weight from data-raw/weights/, so drop them first
+        # to keep the merge unambiguous.
+        for w_col in ("weight", "weights"):
+            if w_col in values.columns:
+                values = values.drop(columns=[w_col])
+        harm = load_harmonized(wave).rename(
+            columns={c: f"__HARM__{c}" for c in HARMONIZED_DEMOGRAPHICS.values()}
+        )
         weights = load_weights(wave)
-        merged = harm.merge(weights, on="case_id", how="left")
-        merged["weight"] = merged["weight"].fillna(1.0)
-        merged["_wave"] = wave
-        all_rows.append(merged)
-        total_n += len(merged)
-        print(f"  {wave}: {len(merged)} rows")
+        df = (
+            values.merge(harm[["case_id"] + [f"__HARM__{v}" for v in HARMONIZED_DEMOGRAPHICS.values()]],
+                          on="case_id", how="left")
+                  .merge(weights, on="case_id", how="left")
+        )
+        df["weight"] = df["weight"].fillna(1.0)
+        per_wave[wave] = {"cb": cb, "df": df}
+        print(f"  {wave}: {len(df)} rows; {len(cb['columns'])} columns survived per-wave preprocess")
 
-    stacked = pd.concat(all_rows, ignore_index=True)
+    # Pool non-demographic columns by canonical name across waves.
+    # canon -> {wave: orig_col_name}
+    canon_map: dict[str, dict[str, str]] = {}
+    for wave, info in per_wave.items():
+        for orig in info["cb"]["columns"]:
+            ck = canonicalize(orig)
+            if ck in HARMONIZED_CANONS:
+                continue  # demographics handled separately
+            canon_map.setdefault(ck, {})[wave] = orig
 
-    # Build columns list in stacked data: canonical names + wave id
-    canonical_cols = list(CANONICAL_ALIASES.keys())
-    data_cols = ["_wave"] + canonical_cols
+    # Decide each canonical column's stack-compatibility and merged schema.
+    accepted: dict[str, dict] = {}  # canon -> {output_key, label, question, type, options, wave_to_orig, present_waves}
+    skipped: list[tuple[str, str]] = []
+    for canon, by_wave in canon_map.items():
+        present_waves = sorted(by_wave.keys(), key=lambda w: waves.index(w))
+        entries = [(w, per_wave[w]["cb"]["columns"][by_wave[w]]) for w in present_waves]
 
-    # For the compact data, materialize the harmonized columns under their
-    # canonical names
-    harm_col_map = {
-        "Age": "Age",
-        "Gender": "Gender",
-        "Race": "Race",
-        "Education": "Education",
-        "Party ID": "Party ID",
-        "PID Lean": "PID Lean",
-        "2024 vote": "2024 Vote",
-    }
-    export = pd.DataFrame({"_wave": stacked["_wave"]})
-    for canon in canonical_cols:
-        export[canon] = stacked[harm_col_map[canon]]
+        # Single wave: always include verbatim
+        if len(entries) == 1:
+            w, e = entries[0]
+            accepted[canon] = {
+                "label": e["label"],
+                "question": e["question"],
+                "type": e.get("type", "categorical"),
+                "options": e.get("options"),
+                "wave_to_orig": dict(by_wave),
+                "present_waves": present_waves,
+            }
+            continue
 
-    rows = []
-    for _, row in export.iterrows():
-        rows.append([to_compact_value(v) for v in row])
+        # Multiple waves: figure out compatibility
+        sigs = [_options_signature(e.get("options")) for _, e in entries]
+        codes = [_options_codes(e.get("options")) for _, e in entries]
 
+        if all(s is None for s in sigs):
+            # Numeric in every wave that has it
+            accepted[canon] = {
+                "label": entries[0][1]["label"],
+                "question": entries[0][1]["question"],
+                "type": "numeric",
+                "options": None,
+                "wave_to_orig": dict(by_wave),
+                "present_waves": present_waves,
+            }
+            continue
+        if any(s is None for s in sigs):
+            skipped.append((canon, "mixed numeric/categorical across waves"))
+            continue
+        if len(set(sigs)) == 1:
+            # Codes AND labels match exactly
+            accepted[canon] = {
+                "label": entries[0][1]["label"],
+                "question": entries[0][1]["question"],
+                "type": "categorical",
+                "options": entries[0][1]["options"],
+                "wave_to_orig": dict(by_wave),
+                "present_waves": present_waves,
+            }
+            continue
+        if len(set(codes)) == 1:
+            # Codes match, labels drift — common when one wave hand-coded options
+            # and another auto-generated them. Adopt the first (most-readable)
+            # wave's labels but flag for visibility.
+            accepted[canon] = {
+                "label": entries[0][1]["label"],
+                "question": entries[0][1]["question"],
+                "type": "categorical",
+                "options": entries[0][1]["options"],
+                "wave_to_orig": dict(by_wave),
+                "present_waves": present_waves,
+                "label_drift": True,
+            }
+            continue
+        skipped.append((canon, f"diverging code-sets {dict(zip([w for w,_ in entries], codes))}"))
+
+    print(f"  pooled non-demog canonicals: {len(canon_map)}; "
+          f"accepted: {len(accepted)}; skipped: {len(skipped)}")
+    if skipped:
+        for canon, reason in skipped[:8]:
+            print(f"    skip {canon}: {reason}")
+        if len(skipped) > 8:
+            print(f"    ... and {len(skipped) - 8} more")
+
+    # Pick the prettiest available native name as the output column ID. Prefer
+    # S25 (capitalized + spaces, most readable), then F25, then F24.
+    name_priority = ("S25", "F25", "F24")
+
+    def output_key_for(by_wave: dict[str, str]) -> str:
+        for w in name_priority:
+            if w in by_wave:
+                return by_wave[w]
+        return next(iter(by_wave.values()))
+
+    # For each accepted canonical column, finalize the output key, dedup any
+    # collisions (same key across different canonicals — extremely rare).
+    used_keys: set[str] = set()
+    for canon, info in accepted.items():
+        key = output_key_for(info["wave_to_orig"])
+        original = key
+        n = 2
+        while key in used_keys:
+            key = f"{original} ({n})"
+            n += 1
+        info["output_key"] = key
+        used_keys.add(key)
+
+    # Compose final column ordering: _wave, then canonical demographics, then
+    # accepted non-demographics sorted by output_key.
+    output_columns: list[str] = ["_wave"] + list(HARMONIZED_DEMOGRAPHICS.keys())
+    nondemog_ordered = sorted(
+        accepted.values(),
+        key=lambda info: info["output_key"].lower(),
+    )
+    output_columns += [info["output_key"] for info in nondemog_ordered]
+
+    # Build the codebook entries.
     columns_out: dict[str, dict] = {}
-    # Meta column _wave: categorical with wave options
     columns_out["_wave"] = {
         "label": "Wave",
         "question": "Survey wave",
@@ -553,26 +691,92 @@ def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
         "options": [{"code": w, "label": w} for w in waves],
         "waves": waves,
     }
-    for canon in canonical_cols:
-        columns_out[canon] = {
-            "label": canon,
-            "question": CANONICAL_QUESTIONS.get(canon, canon),
+    for canon_name in HARMONIZED_DEMOGRAPHICS:
+        columns_out[canon_name] = {
+            "label": canon_name,
+            "question": CANONICAL_QUESTIONS.get(canon_name, canon_name),
             "type": "categorical",
-            "options": [{"code": c, "label": l} for c, l in CANONICAL_OPTIONS[canon]],
+            "options": [{"code": c, "label": l} for c, l in CANONICAL_OPTIONS[canon_name]],
             "waves": waves,
         }
+    for info in nondemog_ordered:
+        present = info["present_waves"]
+        # Annotate label with wave coverage when not asked in every pooled wave.
+        coverage = "" if set(present) == set(waves) else f"  [{'+'.join(present)}]"
+        entry: dict = {
+            "label": f"{info['label']}{coverage}",
+            "question": info["question"],
+            "type": info["type"],
+            "waves": present,
+        }
+        if info["options"]:
+            entry["options"] = info["options"]
+        columns_out[info["output_key"]] = entry
+
+    # Materialize stacked rows. We do this column-by-column per wave because
+    # itertuples renames columns with spaces/punct (e.g. "Need for cognition_1"
+    # -> "_0"), which would silently null them out.
+    rows: list[list] = []
+    weights_out: list[float] = []
+    for wave in waves:
+        wdf = per_wave[wave]["df"]
+        n_wave = len(wdf)
+
+        # Build per-wave column arrays aligned to output_columns.
+        wave_cols: list[list] = []
+        for out_key in output_columns:
+            if out_key == "_wave":
+                wave_cols.append([wave] * n_wave)
+            elif out_key in HARMONIZED_DEMOGRAPHICS:
+                src = f"__HARM__{HARMONIZED_DEMOGRAPHICS[out_key]}"
+                wave_cols.append(
+                    [to_compact_value(v) for v in wdf[src].tolist()]
+                )
+            else:
+                # Find the canonical info for this output key
+                src = None
+                for info in nondemog_ordered:
+                    if info["output_key"] == out_key:
+                        src = info["wave_to_orig"].get(wave)
+                        break
+                if src is None or src not in wdf.columns:
+                    wave_cols.append([None] * n_wave)
+                else:
+                    wave_cols.append(
+                        [to_compact_value(v) for v in wdf[src].tolist()]
+                    )
+
+        # Transpose column-major to row-major and append.
+        for i in range(n_wave):
+            rows.append([wave_cols[c][i] for c in range(len(output_columns))])
+        weights_out.extend(float(w) for w in wdf["weight"].tolist())
+
+    total_n = len(rows)
+
+    cov_summary = {
+        "all_waves": sum(1 for info in accepted.values() if set(info["present_waves"]) == set(waves)),
+        "two_waves": sum(1 for info in accepted.values() if 1 < len(info["present_waves"]) < len(waves)),
+        "single_wave": sum(1 for info in accepted.values() if len(info["present_waves"]) == 1),
+    }
+    note = (
+        f"Stacked: {'+'.join(waves)}. {len(HARMONIZED_DEMOGRAPHICS)} canonical "
+        f"demographics + {len(accepted)} non-demographic columns "
+        f"(in all {len(waves)} waves: {cov_summary['all_waves']}; "
+        f"partial coverage: {cov_summary['two_waves']}; "
+        f"single wave: {cov_summary['single_wave']}). "
+        f"Rows from waves that didn't ask a given question carry null."
+    )
 
     codebook = {
-        "waves": {stack_id: {"label": label, "n": int(total_n),
-                             "note": f"Stacked: {'+'.join(waves)}. Only demographic columns available across all waves."}},
+        "waves": {stack_id: {"label": label, "n": int(total_n), "note": note}},
         "columns": columns_out,
     }
     data_payload = {
         "wave": stack_id,
         "n": int(total_n),
-        "columns": data_cols,
+        "columns": output_columns,
         "rows": rows,
-        "weights": [float(w) for w in stacked["weight"].tolist()],
+        "weights": weights_out,
     }
     cb_path = OUTPUT_DIR / f"codebook_{stack_id}.json"
     data_path = OUTPUT_DIR / f"data_{stack_id}.json"
@@ -580,7 +784,10 @@ def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
     data_path.write_text(json.dumps(data_payload, separators=(",", ":")))
     print(f"  Wrote {cb_path} ({cb_path.stat().st_size/1024:.1f} KB)")
     print(f"  Wrote {data_path} ({data_path.stat().st_size/1024:.1f} KB)")
-    print(f"  Total N={total_n}")
+    print(f"  Total N={total_n}; columns={len(output_columns)}; "
+          f"all-waves={cov_summary['all_waves']}, "
+          f"partial={cov_summary['two_waves']}, "
+          f"single={cov_summary['single_wave']}")
 
 
 def main() -> int:
