@@ -145,6 +145,25 @@ function CrosstabTable({ result }: { result: CrosstabResult }) {
                 </td>
               ))}
             </tr>
+            <tr className="bg-[color:var(--stripe)]">
+              <td
+                className="px-3 py-2 font-medium"
+                title="95% margin of error in percentage points, computed as 1.96·√(0.25/n_eff) using Kish's effective sample size n_eff = (Σw)²/Σ(w²) and assuming p = 0.5 (the conservative max MOE)."
+              >
+                MOE (95%)
+              </td>
+              {result.columns.map((c) => {
+                const m = result.moe[c.key];
+                return (
+                  <td
+                    key={c.key}
+                    className="text-right px-3 py-2 font-medium tabular-nums"
+                  >
+                    {Number.isFinite(m) ? `\u00B1${m.toFixed(1)}` : "—"}
+                  </td>
+                );
+              })}
+            </tr>
           </tbody>
         </table>
       </div>

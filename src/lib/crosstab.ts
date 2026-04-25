@@ -24,6 +24,14 @@ export type CrosstabResult = {
   columns: CrosstabColumn[];
   rows: CrosstabRow[];
   weightedN: Record<string, number>;
+  /** Kish's effective sample size: (Σw)² / Σ(w²). Lower than weightedN when weights vary. */
+  effectiveN: Record<string, number>;
+  /**
+   * Margin of error in percentage points at 95% confidence, computed as
+   * 1.96·√(0.25/n_eff) · 100. Uses p = 0.5 (the conservative max MOE), per
+   * standard pollster convention. NaN when the column has no respondents.
+   */
+  moe: Record<string, number>;
   /** Error message if this question couldn't be computed (e.g. column missing). */
   error?: string;
 };
@@ -156,6 +164,8 @@ export function runCrosstab(
       columns: [],
       rows: [],
       weightedN: {},
+      effectiveN: {},
+      moe: {},
       error: `Column ${question.column} is not in this wave's codebook.`,
     };
   }
@@ -167,6 +177,8 @@ export function runCrosstab(
       columns: [],
       rows: [],
       weightedN: {},
+      effectiveN: {},
+      moe: {},
       error: `Column ${question.column} is not in this wave's data file.`,
     };
   }
@@ -181,12 +193,17 @@ export function runCrosstab(
     for (const c of columns) weightedCount[r.key][c.key] = 0;
   }
   const weightedTotal: Record<string, number> = {};
-  for (const c of columns) weightedTotal[c.key] = 0;
+  const weightedSqTotal: Record<string, number> = {};
+  for (const c of columns) {
+    weightedTotal[c.key] = 0;
+    weightedSqTotal[c.key] = 0;
+  }
 
   const nRows = data.rows.length;
   for (let i = 0; i < nRows; i++) {
     const row = data.rows[i];
     const w = data.weights[i];
+    const w2 = w * w;
     const resp = row[qIdx];
     if (resp === null || resp === undefined) continue;
     const respStr = String(resp);
@@ -204,6 +221,7 @@ export function runCrosstab(
       if (c.isTotal) {
         if (matchedRow) weightedCount[matchedRow.key][c.key] += w;
         weightedTotal[c.key] += w;
+        weightedSqTotal[c.key] += w2;
       } else {
         // All predicates must match.
         let ok = true;
@@ -221,7 +239,25 @@ export function runCrosstab(
         if (!ok) continue;
         if (matchedRow) weightedCount[matchedRow.key][c.key] += w;
         weightedTotal[c.key] += w;
+        weightedSqTotal[c.key] += w2;
       }
+    }
+  }
+
+  // Kish effective N + 95% MOE (max, at p=0.5) per column.
+  const effectiveN: Record<string, number> = {};
+  const moe: Record<string, number> = {};
+  for (const c of columns) {
+    const sumW = weightedTotal[c.key];
+    const sumW2 = weightedSqTotal[c.key];
+    if (sumW <= 0 || sumW2 <= 0) {
+      effectiveN[c.key] = 0;
+      moe[c.key] = NaN;
+    } else {
+      const nEff = (sumW * sumW) / sumW2;
+      effectiveN[c.key] = nEff;
+      // 1.96 · √(0.25 / n_eff) · 100  →  percentage points
+      moe[c.key] = (1.96 * Math.sqrt(0.25 / nEff)) * 100;
     }
   }
 
@@ -240,6 +276,8 @@ export function runCrosstab(
     columns: columns.map(({ key, label }) => ({ key, label })),
     rows,
     weightedN: weightedTotal,
+    effectiveN,
+    moe,
   };
 }
 
@@ -268,6 +306,15 @@ export function crosstabToCsv(results: CrosstabResult[]): string {
       csvRow([
         "Weighted N",
         ...r.columns.map((c) => Math.round(r.weightedN[c.key]).toString()),
+      ]),
+    );
+    lines.push(
+      csvRow([
+        "MOE (\u00B1pp, 95%)",
+        ...r.columns.map((c) => {
+          const m = r.moe[c.key];
+          return Number.isFinite(m) ? m.toFixed(1) : "";
+        }),
       ]),
     );
     lines.push("");
