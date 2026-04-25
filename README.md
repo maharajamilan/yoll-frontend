@@ -5,9 +5,13 @@ A web tool for exploring Yale Youth Poll (YYP) survey data. You pick a wave
 columns, choose one or more questions, and the tool produces weighted
 crosstabs you can export as CSV.
 
+**Live (password-protected):** <https://yoll-crosstabs.vercel.app> — ask
+Milan for the team password.
+
 If you just want a quick read on what the tool does, scroll down to
 [**What the app does**](#what-the-app-does). The rest of this page is mostly
-about getting it running on your computer.
+about getting it running on your computer (which you only need to do if you
+want to play with the code, not just use the tool).
 
 > **Heads up — this is preliminary.**
 > A couple of caveats are surfaced inside the app itself, but worth flagging
