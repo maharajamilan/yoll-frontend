@@ -12,10 +12,19 @@ export type MaxDiffItem = {
   label: string;
   /**
    * Name of the sibling `_do_N` column in the data file. Non-null on this
-   * column iff the item was shown to that respondent. The frontend reads it
-   * to compute per-item "offers" (denominator of the win rate).
+   * column iff the item was shown to that respondent.
+   * Single-task MaxDiff: the value is just a slot indicator (1 or 2).
+   * Multi-task MaxDiff: the value is an integer count of how many rounds
+   * this respondent was shown the item.
    */
   do_col: string;
+  /**
+   * Multi-task MaxDiff only. Companion to `do_col`: integer count of how
+   * many rounds this respondent picked this item. When absent (single-task
+   * MaxDiff), wins are inferred by checking whether the main column's pick
+   * matches `code`.
+   */
+  pick_col?: string;
 };
 
 export type CodebookColumn = {

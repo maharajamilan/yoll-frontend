@@ -198,6 +198,119 @@ F25_DEMO_OPTION_OVERRIDES: dict[str, list[tuple[int, str]]] = {
     ],
 }
 
+# Populated in load_f25() by build_f25_obbba_messages and read by preprocess_wave
+# to wire the synthetic `obbba_messages` MaxDiff codebook entry.
+F25_OBBBA_ITEMS: list[dict] = []
+
+
+# Items that drive the synthetic `obbba_messages` MaxDiff. The codebook XLSX
+# labels for `obbba_maxdiff_<round>` are unfilled Qualtrics piped placeholders
+# ("Democrats say: ${e://Field/d_msg_<round>}"); the actual message text lives
+# in per-respondent `d_msg_<round>` / `r_msg_<round>` columns. Across all
+# respondents these resolve to 24 unique D messages × 24 unique R messages.
+# Each respondent saw 4 rounds, each round = a randomly drawn (D, R) pair, and
+# picked one of the two. We collate the 4 rounds into a single MaxDiff with 48
+# items so per-message win rates (picks ÷ times shown) are directly readable.
+_OBBBA_ROUNDS = (1, 2, 3, 4)
+
+
+def build_f25_obbba_messages(raw: pd.DataFrame) -> tuple[pd.DataFrame, list[dict]]:
+    """Returns (extra_columns_df, items_list).
+
+    extra_columns_df: per-respondent integer counts. For each item id i:
+      - `obbba_messages_do_<i>` = # rounds (1..4) this respondent was shown msg i
+      - `obbba_messages_pick_<i>` = # rounds (1..4) this respondent picked msg i
+      Null when count is 0.
+    items_list: codebook items list, each with code/label/do_col/pick_col.
+    """
+    # Collect unique D + R messages with deterministic codes (D first, then R,
+    # each side sorted alphabetically so codes stay stable across pipeline runs).
+    d_msgs: set[str] = set()
+    r_msgs: set[str] = set()
+    for n in _OBBBA_ROUNDS:
+        if f"d_msg_{n}" in raw.columns:
+            d_msgs.update(raw[f"d_msg_{n}"].dropna().astype(str).tolist())
+        if f"r_msg_{n}" in raw.columns:
+            r_msgs.update(raw[f"r_msg_{n}"].dropna().astype(str).tolist())
+    d_sorted = sorted(d_msgs)
+    r_sorted = sorted(r_msgs)
+    items: list[dict] = []
+    msg_to_code: dict[str, int] = {}
+    code = 1
+    for txt in d_sorted:
+        msg_to_code[txt] = code
+        items.append({
+            "code": code,
+            "label": f"Democrats say: {txt}",
+            "do_col": f"obbba_messages_do_{code}",
+            "pick_col": f"obbba_messages_pick_{code}",
+        })
+        code += 1
+    for txt in r_sorted:
+        msg_to_code[txt] = code
+        items.append({
+            "code": code,
+            "label": f"Republicans say: {txt}",
+            "do_col": f"obbba_messages_do_{code}",
+            "pick_col": f"obbba_messages_pick_{code}",
+        })
+        code += 1
+
+    n = len(raw)
+    n_items = len(items)
+    # Pre-allocate Python int matrices (NaN-friendly via 0 sentinel; we fill
+    # columns with NaN when count is 0 so the data file stays sparse).
+    do_counts = [[0] * n for _ in range(n_items)]
+    pick_counts = [[0] * n for _ in range(n_items)]
+
+    # Fast access to per-round arrays
+    arrays = {}
+    for n_round in _OBBBA_ROUNDS:
+        arrays[f"d_{n_round}"] = raw[f"d_msg_{n_round}"].astype(object).where(raw[f"d_msg_{n_round}"].notna(), None).tolist() if f"d_msg_{n_round}" in raw.columns else [None]*n
+        arrays[f"r_{n_round}"] = raw[f"r_msg_{n_round}"].astype(object).where(raw[f"r_msg_{n_round}"].notna(), None).tolist() if f"r_msg_{n_round}" in raw.columns else [None]*n
+        arrays[f"pick_{n_round}"] = raw[f"obbba_maxdiff_{n_round}"].tolist() if f"obbba_maxdiff_{n_round}" in raw.columns else [None]*n
+        arrays[f"do1_{n_round}"] = raw[f"obbba_maxdiff_{n_round}_do_1"].tolist() if f"obbba_maxdiff_{n_round}_do_1" in raw.columns else [None]*n
+
+    for ri in range(n):
+        for n_round in _OBBBA_ROUNDS:
+            d_msg = arrays[f"d_{n_round}"][ri]
+            r_msg = arrays[f"r_{n_round}"][ri]
+            if d_msg is None or r_msg is None:
+                continue
+            d_id = msg_to_code.get(str(d_msg))
+            r_id = msg_to_code.get(str(r_msg))
+            if d_id is None or r_id is None:
+                continue
+            # Both items were shown this round
+            do_counts[d_id - 1][ri] += 1
+            do_counts[r_id - 1][ri] += 1
+            pick = arrays[f"pick_{n_round}"][ri]
+            do1 = arrays[f"do1_{n_round}"][ri]
+            if pick is None or do1 is None or pd.isna(pick) or pd.isna(do1):
+                continue
+            pick_int = int(pick) if not pd.isna(pick) else None
+            do1_int = int(do1) if not pd.isna(do1) else None
+            if pick_int not in (1, 2) or do1_int not in (1, 2):
+                continue
+            # do1_int says which side is in slot 1: 1 = D in slot 1, 2 = R in slot 1
+            d_in_slot_1 = (do1_int == 1)
+            picked_d = (pick_int == 1 and d_in_slot_1) or (pick_int == 2 and not d_in_slot_1)
+            if picked_d:
+                pick_counts[d_id - 1][ri] += 1
+            else:
+                pick_counts[r_id - 1][ri] += 1
+
+    # Build the extras DataFrame, using NaN where count == 0 so the data file stays sparse.
+    cols = {}
+    for it in items:
+        code_i = it["code"]
+        do_arr = do_counts[code_i - 1]
+        pk_arr = pick_counts[code_i - 1]
+        cols[it["do_col"]] = [v if v > 0 else np.nan for v in do_arr]
+        cols[it["pick_col"]] = [v if v > 0 else np.nan for v in pk_arr]
+    extras = pd.DataFrame(cols, index=raw.index)
+    return extras, items
+
 
 def load_f25() -> tuple[pd.DataFrame, dict[str, str], pd.DataFrame, str]:
     data_path = F25_DIR / "yypfall25dat_withweights.csv"
@@ -207,6 +320,24 @@ def load_f25() -> tuple[pd.DataFrame, dict[str, str], pd.DataFrame, str]:
     # Strip _labels columns (kept separately as labels_df for codebook building)
     numeric_cols = [c for c in raw.columns if not c.endswith("_labels")]
     values = raw[numeric_cols].copy()
+
+    # Build the synthetic obbba_messages MaxDiff by collating obbba_maxdiff_1..4
+    # rounds with the actual message text per respondent. Append the new
+    # `obbba_messages_do_<id>` / `obbba_messages_pick_<id>` columns plus a
+    # main token column. Stash items list in module-level holder so the
+    # codebook builder can pick it up.
+    obbba_extras, obbba_items = build_f25_obbba_messages(raw)
+    # Main token column: 1 if respondent answered any obbba round, else NaN.
+    any_pick = pd.Series(np.nan, index=raw.index)
+    for n in _OBBBA_ROUNDS:
+        col = f"obbba_maxdiff_{n}"
+        if col in raw.columns:
+            mask = raw[col].notna()
+            any_pick.loc[mask] = 1
+    values = pd.concat([values, obbba_extras], axis=1).copy()
+    values["obbba_messages"] = any_pick
+    F25_OBBBA_ITEMS.clear()
+    F25_OBBBA_ITEMS.extend(obbba_items)
 
     # Build labels_df by pulling the _labels sibling for each column (where present)
     labels = pd.DataFrame(index=raw.index)
@@ -459,6 +590,30 @@ def preprocess_wave(wave: str) -> None:
     # the data file so the frontend can compute wins/offers per item.
     maxdiff_bases, maxdiff_do_cols = detect_maxdiff_bases(values)
 
+    # F25 obbba: the per-round binary tasks (`obbba_maxdiff_1..4`) and their
+    # message-text companions (`d_msg_1..4`, `r_msg_1..4`) are superseded by
+    # the synthetic `obbba_messages` MaxDiff (built in load_f25). Hide the
+    # raw inputs from the user-facing codebook; keep their pre-aggregated
+    # offer/pick siblings in the data file.
+    obbba_hide_cols: set[str] = set()
+    obbba_aux_cols: set[str] = set()
+    if wave == "F25" and F25_OBBBA_ITEMS:
+        for n in _OBBBA_ROUNDS:
+            obbba_hide_cols.add(f"obbba_maxdiff_{n}")
+            obbba_hide_cols.add(f"obbba_maxdiff_{n}_do_1")
+            obbba_hide_cols.add(f"obbba_maxdiff_{n}_do_2")
+            obbba_hide_cols.add(f"d_msg_{n}")
+            obbba_hide_cols.add(f"r_msg_{n}")
+        for it in F25_OBBBA_ITEMS:
+            obbba_aux_cols.add(it["do_col"])
+            obbba_aux_cols.add(it["pick_col"])
+        # Auto-detected MaxDiff might have caught obbba_maxdiff_1..4 (each is
+        # a 2-item _do_ pair, threshold is 3+ siblings, but be defensive).
+        maxdiff_bases = {b: items for b, items in maxdiff_bases.items()
+                         if not b.startswith("obbba_maxdiff_")}
+        maxdiff_do_cols = {c for c in maxdiff_do_cols
+                           if not c.startswith("obbba_maxdiff_")}
+
     # Build codebook columns
     columns_out: dict[str, dict] = {}
     for col in values.columns:
@@ -468,6 +623,8 @@ def preprocess_wave(wave: str) -> None:
             continue  # display-order column for a non-MaxDiff base — drop
         if col in maxdiff_do_cols:
             continue  # consumed by parent MaxDiff entry below
+        if col in obbba_hide_cols or col in obbba_aux_cols:
+            continue  # hidden from user; aux cols still flow into data file below
         labels_col = labels[col] if col in labels.columns else None
         question_text = qtexts.get(col, col)
         readable_label = F24_READABLE_NAMES.get(col) if wave == "F24" else col
@@ -501,6 +658,21 @@ def preprocess_wave(wave: str) -> None:
         else:
             columns_out[col] = entry
 
+    # Inject the synthetic obbba_messages MaxDiff entry (F25 only).
+    if wave == "F25" and F25_OBBBA_ITEMS:
+        columns_out["obbba_messages"] = {
+            "label": "OBBBA D vs R messaging (collated 4 rounds)",
+            "question": (
+                "There is a lot of talk these days about the recently passed "
+                "One Big Beautiful Bill Act. Which position do you agree with "
+                "more? — collated across 4 rounds of randomly drawn (Democrat, "
+                "Republican) message pairs"
+            ),
+            "type": "maxdiff",
+            "items": list(F25_OBBBA_ITEMS),
+            "waves": [wave],
+        }
+
     # Put demographic columns first for UX
     demo_priority = {
         "S25": ["Age", "Gender", "Race", "Education", "Income", "Party ID", "PID Lean", "2024 vote"],
@@ -522,12 +694,14 @@ def preprocess_wave(wave: str) -> None:
         "columns": ordered_columns,
     }
 
-    # Build data payload. Codebook columns + MaxDiff `_do_N` siblings (kept as
-    # data-only — frontend reads them to compute offers but they're not user-
-    # facing). Use column-by-column extraction to dodge itertuples renaming.
+    # Build data payload. Codebook columns + MaxDiff `_do_N` siblings + obbba
+    # aux columns (offer/pick counts per message). All non-codebook columns
+    # are data-only metadata — the frontend reads them to compute wins/offers
+    # but they don't appear in the question picker.
     user_cols = list(ordered_columns.keys())
     do_cols = sorted(c for c in maxdiff_do_cols if c in values.columns)
-    keep_cols = user_cols + do_cols
+    aux_cols = sorted(c for c in obbba_aux_cols if c in values.columns)
+    keep_cols = user_cols + do_cols + aux_cols
     n_rows_v = len(values)
     col_arrays: list[list] = []
     for c in keep_cols:
@@ -908,16 +1082,18 @@ def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
     )
     output_columns += [info["output_key"] for info in nondemog_ordered]
 
-    # MaxDiff `_do_N` siblings: not user-facing (no codebook entry) but carried
-    # in the data file so the frontend can compute wins/offers per item.
+    # MaxDiff `_do_N` (and optional `_pick_N`) siblings: not user-facing (no
+    # codebook entry) but carried in the data file so the frontend can compute
+    # offers and (multi-task) wins per item.
     maxdiff_do_extras: list[str] = []
     for info in nondemog_ordered:
         if info["type"] != "maxdiff" or not info.get("items"):
             continue
         for it in info["items"]:
-            do_col = it.get("do_col")
-            if do_col and do_col not in output_columns:
-                maxdiff_do_extras.append(do_col)
+            for k in ("do_col", "pick_col"):
+                col = it.get(k)
+                if col and col not in output_columns and col not in maxdiff_do_extras:
+                    maxdiff_do_extras.append(col)
     output_columns += maxdiff_do_extras
 
     # Build the codebook entries.

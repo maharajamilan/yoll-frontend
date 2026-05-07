@@ -3,7 +3,7 @@
     "stacked_2026": {
       "label": "2026 cycle (S25 + F25)",
       "n": 7654,
-      "note": "Stacked: S25+F25. 7 canonical demographics + 270 non-demographic columns (in all 2 waves: 5; partial coverage: 0; single wave: 265). Rows from waves that didn't ask a given question carry null."
+      "note": "Stacked: S25+F25. 7 canonical demographics + 267 non-demographic columns (in all 2 waves: 5; partial coverage: 0; single wave: 262). Rows from waves that didn't ask a given question carry null."
     }
   },
   "columns": {
@@ -4922,75 +4922,301 @@
         }
       ]
     },
-    "obbba_maxdiff_1": {
-      "label": "obbba_maxdiff_1  [F25]",
-      "question": "There is a lot of talk these days about the recently passed One Big Beautiful Bill Act. Which position do you agree with more?",
-      "type": "categorical",
+    "obbba_messages": {
+      "label": "OBBBA D vs R messaging (collated 4 rounds)  [F25]",
+      "question": "There is a lot of talk these days about the recently passed One Big Beautiful Bill Act. Which position do you agree with more? \u2014 collated across 4 rounds of randomly drawn (Democrat, Republican) message pairs",
+      "type": "maxdiff",
       "waves": [
         "F25"
       ],
-      "options": [
+      "items": [
         {
           "code": 1,
-          "label": "Democrats say: ${e://Field/d_msg_1}"
+          "label": "Democrats say: 40 million low-income individuals and families will lose essential food assistance through drastic cuts to the SNAP program in OBBBA.",
+          "do_col": "obbba_messages_do_1",
+          "pick_col": "obbba_messages_pick_1"
         },
         {
           "code": 2,
-          "label": "Republicans say: ${e://Field/r_msg_1}"
-        }
-      ]
-    },
-    "obbba_maxdiff_2": {
-      "label": "obbba_maxdiff_2  [F25]",
-      "question": "There is a lot of talk these days about the recently passed One Big Beautiful Bill Act. Which position do you agree with more?",
-      "type": "categorical",
-      "waves": [
-        "F25"
-      ],
-      "options": [
-        {
-          "code": 1,
-          "label": "Democrats say: ${e://Field/d_msg_2}"
+          "label": "Democrats say: If you are concerned about the existential threat of climate change, this law decimates investments in energy efficiency and sustainable energy like wind and solar and moves us in exactly the wrong direction when it comes to energy.",
+          "do_col": "obbba_messages_do_2",
+          "pick_col": "obbba_messages_pick_2"
         },
         {
-          "code": 2,
-          "label": "Republicans say: ${e://Field/r_msg_2}"
-        }
-      ]
-    },
-    "obbba_maxdiff_3": {
-      "label": "obbba_maxdiff_3  [F25]",
-      "question": "There is a lot of talk these days about the recently passed One Big Beautiful Bill Act. Which position do you agree with more?",
-      "type": "categorical",
-      "waves": [
-        "F25"
-      ],
-      "options": [
-        {
-          "code": 1,
-          "label": "Democrats say: ${e://Field/d_msg_3}"
+          "code": 3,
+          "label": "Democrats say: Instead of passing OBBBA, both parties could have worked together to extend middle-class tax cuts without giveaways to corporations and the wealthy, built on the success of $35 insulin and Medicare drug price negotiations to make healthcare more affordable, and reduced the deficit \u2014 something both parties agree should be a priority.",
+          "do_col": "obbba_messages_do_3",
+          "pick_col": "obbba_messages_pick_3"
         },
         {
-          "code": 2,
-          "label": "Republicans say: ${e://Field/r_msg_3}"
-        }
-      ]
-    },
-    "obbba_maxdiff_4": {
-      "label": "obbba_maxdiff_4  [F25]",
-      "question": "There is a lot of talk these days about the recently passed One Big Beautiful Bill Act. Which position do you agree with more?",
-      "type": "categorical",
-      "waves": [
-        "F25"
-      ],
-      "options": [
-        {
-          "code": 1,
-          "label": "Democrats say: ${e://Field/d_msg_4}"
+          "code": 4,
+          "label": "Democrats say: Medicaid work requirements in OBBBA will kick 17 million people off of health insurance. These are life and death decisions There are people can't afford health insurance because they have no money in their budget to go and buy health care. Now they've got to make a decision between eating and their rent, or they just don't go to the doctor.",
+          "do_col": "obbba_messages_do_4",
+          "pick_col": "obbba_messages_pick_4"
         },
         {
-          "code": 2,
-          "label": "Republicans say: ${e://Field/r_msg_4}"
+          "code": 5,
+          "label": "Democrats say: Millions of working Americans rely on SNAP to feed their families. If OBBBA passes, many will go hungry. SNAP isn't a handout \u2014 it's a lifeline. Stripping it away will hurt real people.",
+          "do_col": "obbba_messages_do_5",
+          "pick_col": "obbba_messages_pick_5"
+        },
+        {
+          "code": 6,
+          "label": "Democrats say: OBBBA is a triple\u2013whammy: it makes devastating cuts to food and healthcare programs while driving up costs for everyone; gives massive tax breaks to big corporations and the ultra-rich instead of the middle class; and irresponsibly adds over $5 trillion to the national debt. It is fundamentally unfair and un-American: Families will lose health care. Hospitals will close. Kids will go hungry. All so the wealthiest 0.1% can get even richer.",
+          "do_col": "obbba_messages_do_6",
+          "pick_col": "obbba_messages_pick_6"
+        },
+        {
+          "code": 7,
+          "label": "Democrats say: OBBBA means more seniors, veterans, people with disabilities and children will go to bed hungry. It means farmers, who are already operating on razor-thin margins, will see billions in lost revenue. It will mean job losses and lost wages for everyone who is a part of the food system \u2013 from truck drivers to local grocers.",
+          "do_col": "obbba_messages_do_7",
+          "pick_col": "obbba_messages_pick_7"
+        },
+        {
+          "code": 8,
+          "label": "Democrats say: OBBBA will kill 300,000 jobs in wind and solar per year. We're going to lose out on $450 billion in capital as thousands of projects go under. We are going to have energy shortages as a result of this legislation.",
+          "do_col": "obbba_messages_do_8",
+          "pick_col": "obbba_messages_pick_8"
+        },
+        {
+          "code": 9,
+          "label": "Democrats say: OBBBA work requirements are designed to kick people off of Medicaid. The work requirements are built so that people won't be able to satisfy them because Republicans hate the idea that Medicaid actually helps the working poor in this country.",
+          "do_col": "obbba_messages_do_9",
+          "pick_col": "obbba_messages_pick_9"
+        },
+        {
+          "code": 10,
+          "label": "Democrats say: Republicans flooded OBBBA with unchecked billions in the name of 'homeland security' while Americans are against masked ICE agents terrorizing people in our communities who have been contributing to this country for decades \u2014including parents of U.S. Marines and even American kids.",
+          "do_col": "obbba_messages_do_10",
+          "pick_col": "obbba_messages_pick_10"
+        },
+        {
+          "code": 11,
+          "label": "Democrats say: Republicans' so-called 'Big, Beautiful Bill' guts health coverage to pay for tax cuts for billionaires.",
+          "do_col": "obbba_messages_do_11",
+          "pick_col": "obbba_messages_pick_11"
+        },
+        {
+          "code": 12,
+          "label": "Democrats say: Thanks to OBBBA, jobs that should belong in America will go to China, because China is not cutting back on clean energy. They're going to get way ahead of us on this industry, like they did on electric cars. And Americans will pay the price in high energy costs and fewer jobs.",
+          "do_col": "obbba_messages_do_12",
+          "pick_col": "obbba_messages_pick_12"
+        },
+        {
+          "code": 13,
+          "label": "Democrats say: The One Big Beautiful Bill provides ICE with an expanded budget of over $170 billion, raising fears of widespread abuse, as more reports emerge of masked agents detaining individuals at courthouses, workplaces, schools, and places of worship, often without transparency, oversight, or accountability.",
+          "do_col": "obbba_messages_do_13",
+          "pick_col": "obbba_messages_pick_13"
+        },
+        {
+          "code": 14,
+          "label": "Democrats say: The SNAP cuts in OBBBA will make groceries more expensive, shutter local grocery stores, and force kids to go hungry.",
+          "do_col": "obbba_messages_do_14",
+          "pick_col": "obbba_messages_pick_14"
+        },
+        {
+          "code": 15,
+          "label": "Democrats say: The big ugly bill is going to mean a lot of big ugly energy bills. It's economics 101, straight from Trump University: more demand and less supply as wind and solar is killed, meaning more costs for consumers and small businesses.",
+          "do_col": "obbba_messages_do_15",
+          "pick_col": "obbba_messages_pick_15"
+        },
+        {
+          "code": 16,
+          "label": "Democrats say: The fact is that millions of Americans are about to lose their health care and food assistance so Republicans can give giant tax breaks to the rich and large corporate interests. The overwhelming majority of people on Medicaid already work or are caretakers for loved ones. This isn't about work, it's about burying people in so much monthly paperwork that they miss a filing deadline and lose their health care and food assistance.",
+          "do_col": "obbba_messages_do_16",
+          "pick_col": "obbba_messages_pick_16"
+        },
+        {
+          "code": 17,
+          "label": "Democrats say: The fossil fuel industry will make a fortune off the Big Beautiful-for-Billionaires Bill. And American families will have to pay.",
+          "do_col": "obbba_messages_do_17",
+          "pick_col": "obbba_messages_pick_17"
+        },
+        {
+          "code": 18,
+          "label": "Democrats say: The law's changes to Medicaid will cause people to lose access to their healthcare or spend more on it, hospitals and nursing homes will close, and will prevent people from receiving at-home care",
+          "do_col": "obbba_messages_do_18",
+          "pick_col": "obbba_messages_pick_18"
+        },
+        {
+          "code": 19,
+          "label": "Democrats say: The real-life consequences of these nearly $1 trillion in Medicaid cuts \u2013 the largest ever proposed by Congress \u2013 will result in irreparable harm to our health care system, reducing access to care for all Americans and severely undermining the ability of hospitals and health systems to care for our most vulnerable patients.",
+          "do_col": "obbba_messages_do_19",
+          "pick_col": "obbba_messages_pick_19"
+        },
+        {
+          "code": 20,
+          "label": "Democrats say: The result of OBBBA? Average electric bills will rise by 10% more, costing working families an additional $400 a year.",
+          "do_col": "obbba_messages_do_20",
+          "pick_col": "obbba_messages_pick_20"
+        },
+        {
+          "code": 21,
+          "label": "Democrats say: This bill would destroy the future of clean energy in this country, increase energy costs, slash hundreds of thousands of good jobs, sell off our public lands, weaken environmental and public health protections, and put polluters above the law, all to give tax cuts to the wealthiest people in this country.",
+          "do_col": "obbba_messages_do_21",
+          "pick_col": "obbba_messages_pick_21"
+        },
+        {
+          "code": 22,
+          "label": "Democrats say: This law rips away health care from vulnerable children and families, guts food assistance, and raises costs for everyday Americans.",
+          "do_col": "obbba_messages_do_22",
+          "pick_col": "obbba_messages_pick_22"
+        },
+        {
+          "code": 23,
+          "label": "Democrats say: Under the so-called middle-class provisions of OBBBA, the wealthiest 0.1% get an average tax cut of $400,000. What does it mean to your family? Fewer benefits. Higher costs.",
+          "do_col": "obbba_messages_do_23",
+          "pick_col": "obbba_messages_pick_23"
+        },
+        {
+          "code": 24,
+          "label": "Democrats say: With this bill, tens of millions who would otherwise qualify for health care benefits would be mummified in new red tape, shortened enrollment periods, higher premiums and weaker coverage.",
+          "do_col": "obbba_messages_do_24",
+          "pick_col": "obbba_messages_pick_24"
+        },
+        {
+          "code": 25,
+          "label": "Republicans say: America's brave ICE officers are putting their own lives on the line to make our communities safer. OBBBA secures historic investments in border security and immigration enforcement, ensuring law enforcement officers have the tools they need to protect American citizens from foreign criminals and terrorists.",
+          "do_col": "obbba_messages_do_25",
+          "pick_col": "obbba_messages_pick_25"
+        },
+        {
+          "code": 26,
+          "label": "Republicans say: Despite critics' rhetoric about tax cuts for 'billionaires and corporations,' the reality is this legislation prevents massive tax hikes across the board and overwhelmingly benefits middle-class households and job creators.",
+          "do_col": "obbba_messages_do_26",
+          "pick_col": "obbba_messages_pick_26"
+        },
+        {
+          "code": 27,
+          "label": "Republicans say: For rural communities, OBBBA cuts through permitting delays and restarts oil, gas, and coal leases, boosting our energy sector and creating thousands of jobs.",
+          "do_col": "obbba_messages_do_27",
+          "pick_col": "obbba_messages_pick_27"
+        },
+        {
+          "code": 28,
+          "label": "Republicans say: If you are able to work and you refuse to do so, you are defrauding the system. You're cheating the system. And no one in the country believes that that's right. So there's a moral component to the SNAP changes in OBBBA.",
+          "do_col": "obbba_messages_do_28",
+          "pick_col": "obbba_messages_pick_28"
+        },
+        {
+          "code": 29,
+          "label": "Republicans say: Millionaires and billionaires don't work for tips. They don't get paid overtime. And they don't rely on Social Security. Working families do, and for the first time, the Big Beautiful Bill shields these earnings from being taxed.",
+          "do_col": "obbba_messages_do_29",
+          "pick_col": "obbba_messages_pick_29"
+        },
+        {
+          "code": 30,
+          "label": "Republicans say: OBBBA cuts wasteful spending on woke Green New Deal-style programs and secures American energy dominance to support the rapid innovation of American industry.",
+          "do_col": "obbba_messages_do_30",
+          "pick_col": "obbba_messages_pick_30"
+        },
+        {
+          "code": 31,
+          "label": "Republicans say: OBBBA delivers for the American people by extending tax relief for hardworking families and small businesses, securing our border, unleashing American energy dominance, achieving peace through strength, and critically \u2013 making real, measurable reductions in federal spending.",
+          "do_col": "obbba_messages_do_31",
+          "pick_col": "obbba_messages_pick_31"
+        },
+        {
+          "code": 32,
+          "label": "Republicans say: OBBBA is a win for law and order and the safety and security of the American people: the $165 billion in funding will help the Department of Homeland Security and our brave law enforcement further deliver on President Trump's mandate to arrest and deport criminal illegal aliens.",
+          "do_col": "obbba_messages_do_32",
+          "pick_col": "obbba_messages_pick_32"
+        },
+        {
+          "code": 33,
+          "label": "Republicans say: OBBBA protects Medicaid for future generations as well as for the seniors, children, individuals with disabilities, and others who rely on the program. The law establishes common sense work requirements in Medicaid for certain able-bodied adults without dependents.",
+          "do_col": "obbba_messages_do_33",
+          "pick_col": "obbba_messages_pick_33"
+        },
+        {
+          "code": 34,
+          "label": "Republicans say: OBBBA removes barriers for America's energy producers to invest in our nation's energy future and accelerates the responsible development of America-made energy on federal lands.These smart, durable reforms will help ensure our nation's independent producers keep powering American energy dominance for generations to come.",
+          "do_col": "obbba_messages_do_34",
+          "pick_col": "obbba_messages_pick_34"
+        },
+        {
+          "code": 35,
+          "label": "Republicans say: OBBBA returns personal accountability to the Medicaid program. Under the status quo, able-bodied adults can remain on the rolls without working or meaningfully engaging with their communities. The One Big Beautiful Bill transforms the existing system by instituting commonsense community engagement requirements, the kind of reforms once lauded by Democrats under President Bill Clinton.",
+          "do_col": "obbba_messages_do_35",
+          "pick_col": "obbba_messages_pick_35"
+        },
+        {
+          "code": 36,
+          "label": "Republicans say: OBBBA takes a practical approach to improve SNAP by reducing waste, enhancing accountability, and encouraging recipients to move toward self-reliance through work and training",
+          "do_col": "obbba_messages_do_36",
+          "pick_col": "obbba_messages_pick_36"
+        },
+        {
+          "code": 37,
+          "label": "Republicans say: Our bill requires people to work or train 80 hours each month to remain on Medicaid. This is a responsible path to self-reliance for able-bodied, working-age people. No more taxpayer-funded coddling",
+          "do_col": "obbba_messages_do_37",
+          "pick_col": "obbba_messages_pick_37"
+        },
+        {
+          "code": 38,
+          "label": "Republicans say: President Trump and Congressional Republicans ran on restoring American energy dominance, after the Biden Administration's all-out assault on oil and gas production left the U.S. with higher gas and energy prices. The One Big Beautiful Bill delivered on rolling back stringent regulations on the oil and gas sector, reducing tax burdens on the sector, streamlining permits, and ending the special treatment that the IRA gave to solar and wind producers.",
+          "do_col": "obbba_messages_do_38",
+          "pick_col": "obbba_messages_pick_38"
+        },
+        {
+          "code": 39,
+          "label": "Republicans say: Republican reforms aim to tighten eligibility, reinforce work requirements, and curb misuse in SNAP. These measures will further facilitate self-sufficiency for recipients, reduce taxpayer burden, and empower states to take greater ownership over their welfare programs.",
+          "do_col": "obbba_messages_do_39",
+          "pick_col": "obbba_messages_pick_39"
+        },
+        {
+          "code": 40,
+          "label": "Republicans say: The OBBBA does not cut Medicaid benefits for those who need them, but it does make sure that people who are not eligible for these benefits do not collect them. Since 2019, Medicaid spending has increased 60%. It's unsustainable. If we wanted to ensure that Medicaid exists for current and future generations, Congress had to get to the bottom of this unsustainable growth rate and make some significant changes.",
+          "do_col": "obbba_messages_do_40",
+          "pick_col": "obbba_messages_pick_40"
+        },
+        {
+          "code": 41,
+          "label": "Republicans say: The One Big Beautiful Bill Act represents a sea change for border security and immigration enforcement. That change is long overdue, particularly as we work to undo the devastation of the Biden-Harris border crisis.",
+          "do_col": "obbba_messages_do_41",
+          "pick_col": "obbba_messages_pick_41"
+        },
+        {
+          "code": 42,
+          "label": "Republicans say: The One Big Beautiful Bill is a big and beautiful win for the American people. It's big because it delivers the largest tax cuts for families and small businesses.",
+          "do_col": "obbba_messages_do_42",
+          "pick_col": "obbba_messages_pick_42"
+        },
+        {
+          "code": 43,
+          "label": "Republicans say: The One Big Beautiful Bill restores the dignity of work with historically bipartisan work requirements for able-bodied Americans. We are implementing common sense, Clinton-era work, volunteer, education, or training requirements with broad bipartisan support.",
+          "do_col": "obbba_messages_do_43",
+          "pick_col": "obbba_messages_pick_43"
+        },
+        {
+          "code": 44,
+          "label": "Republicans say: The law's changes to Medicaid will prevent illegal immigrants and able-bodied adults from taking advantage of the system and make the system more fiscally responsible",
+          "do_col": "obbba_messages_do_44",
+          "pick_col": "obbba_messages_pick_44"
+        },
+        {
+          "code": 45,
+          "label": "Republicans say: The thing that will bankrupt this country more than any other policy is flooding the country with illegal immigration and then giving those migrants generous benefits. OBBBA fixes this problem.",
+          "do_col": "obbba_messages_do_45",
+          "pick_col": "obbba_messages_pick_45"
+        },
+        {
+          "code": 46,
+          "label": "Republicans say: There are about 4.8 million people on Medicaid right now nationwide who are able-bodied workers, young men, for example, who are not working, who are taking advantage of the system. When you make young men work, it's good for them, it's good for their dignity, it's good for their self worth, and it's good for the community that they live in.",
+          "do_col": "obbba_messages_do_46",
+          "pick_col": "obbba_messages_pick_46"
+        },
+        {
+          "code": 47,
+          "label": "Republicans say: This law unleashes American energy, refills the Strategic Petroleum Reserve, and repeals the Green New Scam policies. The One Big Beautiful Bill unleashes clean, American-made energy and will reduce the cost of living for Americans nationwide.",
+          "do_col": "obbba_messages_do_47",
+          "pick_col": "obbba_messages_pick_47"
+        },
+        {
+          "code": 48,
+          "label": "Republicans say: When Americans do their taxes next year, they're going to see that they're saving money, particularly if they are a working family who's in the low to middle income brackets, they're a senior citizen on Social Security, they're a tipped worker \u2014 they're going to see savings thanks to OBBBA.",
+          "do_col": "obbba_messages_do_48",
+          "pick_col": "obbba_messages_pick_48"
         }
       ]
     },

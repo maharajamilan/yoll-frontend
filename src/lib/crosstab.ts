@@ -309,7 +309,15 @@ function runMaxDiffCrosstab(
   data: WaveData,
   codebook: Codebook,
   question: Question,
-  cbCol: { question: string; items?: { code: string | number; label: string; do_col: string }[] },
+  cbCol: {
+    question: string;
+    items?: {
+      code: string | number;
+      label: string;
+      do_col: string;
+      pick_col?: string;
+    }[];
+  },
   opts: { includeTotal: boolean; groups: Group[] },
 ): CrosstabResult {
   const colIdx: Record<string, number> = {};
@@ -346,14 +354,21 @@ function runMaxDiffCrosstab(
     };
   }
 
-  // Resolve do_col indices once. Skip items whose do_col is missing in this
-  // wave's data (defensive — shouldn't happen with the F25-only MaxDiff path
-  // but matters for stacked datasets where the do_col is present only for F25 rows).
-  const itemPlan: { code: string; label: string; doIdx: number }[] = [];
+  // Resolve do_col / pick_col indices once. Skip items whose do_col is missing
+  // in this wave's data (defensive — shouldn't happen with single-wave MaxDiff
+  // but matters for stacked datasets where do_col is present only for the
+  // MaxDiff-bearing wave).
+  const itemPlan: {
+    code: string;
+    label: string;
+    doIdx: number;
+    pickIdx: number | undefined;
+  }[] = [];
   for (const it of items) {
     const doIdx = colIdx[it.do_col];
     if (doIdx === undefined) continue;
-    itemPlan.push({ code: String(it.code), label: it.label, doIdx });
+    const pickIdx = it.pick_col ? colIdx[it.pick_col] : undefined;
+    itemPlan.push({ code: String(it.code), label: it.label, doIdx, pickIdx });
   }
 
   const columns = buildColumns(codebook, data, opts.includeTotal, opts.groups);
@@ -408,15 +423,36 @@ function runMaxDiffCrosstab(
       }
 
       // Per-item: was this item shown? (offers) and was it picked? (wins)
+      // Single-task MaxDiff: do_col holds a slot indicator (1 or 2). One offer
+      // per shown, one win iff main column == item.code.
+      // Multi-task MaxDiff: do_col holds a count of how many rounds the item
+      // was shown to this respondent; pick_col holds the matching pick count.
+      // Each round is an independent observation, so we scale Σw and Σw² by
+      // the count to get a faithful effective N.
       let anyShown = false;
       for (const it of itemPlan) {
         const shown = row[it.doIdx];
         if (shown === null || shown === undefined) continue;
         anyShown = true;
-        offers[it.code][c.key] += w;
-        offersSq[it.code][c.key] += w2;
-        if (pickStr !== null && pickStr === it.code) {
-          wins[it.code][c.key] += w;
+        if (it.pickIdx !== undefined) {
+          // Multi-task: shown is a count
+          const shownCount = Number(shown) || 0;
+          if (shownCount <= 0) continue;
+          offers[it.code][c.key] += w * shownCount;
+          offersSq[it.code][c.key] += w2 * shownCount;
+          const picked = row[it.pickIdx];
+          const pickedCount =
+            picked === null || picked === undefined ? 0 : Number(picked) || 0;
+          if (pickedCount > 0) {
+            wins[it.code][c.key] += w * pickedCount;
+          }
+        } else {
+          // Single-task: shown is just a slot indicator (any non-null = shown)
+          offers[it.code][c.key] += w;
+          offersSq[it.code][c.key] += w2;
+          if (pickStr !== null && pickStr === it.code) {
+            wins[it.code][c.key] += w;
+          }
         }
       }
       // Column-level N: count any respondent who saw at least one item AND made a pick.
