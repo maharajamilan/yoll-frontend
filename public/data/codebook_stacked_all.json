@@ -3,7 +3,7 @@
     "stacked_all": {
       "label": "All waves (stacked)",
       "n": 12782,
-      "note": "Stacked: F24+S25+F25. 7 canonical demographics + 325 non-demographic columns (in all 3 waves: 2; partial coverage: 25; single wave: 298). Rows from waves that didn't ask a given question carry null."
+      "note": "Stacked: F24+S25+F25. 7 canonical demographics + 328 non-demographic columns (in all 3 waves: 2; partial coverage: 25; single wave: 301). Rows from waves that didn't ask a given question carry null."
     }
   },
   "columns": {
@@ -2527,6 +2527,111 @@
         }
       ]
     },
+    "d_electable_maxdiff": {
+      "label": "d_electable_maxdiff  [F25]",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican?",
+      "type": "maxdiff",
+      "waves": [
+        "F25"
+      ],
+      "items": [
+        {
+          "code": 1,
+          "label": "Andy Beshear",
+          "do_col": "d_electable_maxdiff_do_1"
+        },
+        {
+          "code": 2,
+          "label": "Alexandria Ocasio-Cortez",
+          "do_col": "d_electable_maxdiff_do_2"
+        },
+        {
+          "code": 3,
+          "label": "Kamala Harris",
+          "do_col": "d_electable_maxdiff_do_3"
+        },
+        {
+          "code": 4,
+          "label": "Wes Moore",
+          "do_col": "d_electable_maxdiff_do_4"
+        },
+        {
+          "code": 5,
+          "label": "Gavin Newsom",
+          "do_col": "d_electable_maxdiff_do_5"
+        },
+        {
+          "code": 6,
+          "label": "JB Pritzker",
+          "do_col": "d_electable_maxdiff_do_6"
+        },
+        {
+          "code": 7,
+          "label": "Josh Shapiro",
+          "do_col": "d_electable_maxdiff_do_7"
+        },
+        {
+          "code": 8,
+          "label": "Gretchen Whitmer",
+          "do_col": "d_electable_maxdiff_do_8"
+        },
+        {
+          "code": 9,
+          "label": "Mark Cuban",
+          "do_col": "d_electable_maxdiff_do_9"
+        },
+        {
+          "code": 10,
+          "label": "Ruben Gallego",
+          "do_col": "d_electable_maxdiff_do_10"
+        },
+        {
+          "code": 11,
+          "label": "Mark Kelly",
+          "do_col": "d_electable_maxdiff_do_11"
+        },
+        {
+          "code": 12,
+          "label": "Jared Polis",
+          "do_col": "d_electable_maxdiff_do_12"
+        },
+        {
+          "code": 13,
+          "label": "Pete Buttigieg",
+          "do_col": "d_electable_maxdiff_do_13"
+        },
+        {
+          "code": 14,
+          "label": "Cory Booker",
+          "do_col": "d_electable_maxdiff_do_14"
+        },
+        {
+          "code": 15,
+          "label": "Tim Walz",
+          "do_col": "d_electable_maxdiff_do_15"
+        },
+        {
+          "code": 16,
+          "label": "Jon Ossoff",
+          "do_col": "d_electable_maxdiff_do_16"
+        },
+        {
+          "code": 17,
+          "label": "Chris Murphy",
+          "do_col": "d_electable_maxdiff_do_17"
+        },
+        {
+          "code": 18,
+          "label": "Raphael Warnock",
+          "do_col": "d_electable_maxdiff_do_18"
+        },
+        {
+          "code": 19,
+          "label": "Rahm Emanuel",
+          "do_col": "d_electable_maxdiff_do_19"
+        }
+      ]
+    },
     "Deficit reduction A": {
       "label": "Deficit reduction A  [S25]",
       "question": "When it comes to reducing the deficit \u2014 the shortfall between what the government spends and what it collects in revenue each year, requiring borrowing to cover the gap \u2014 which approach do you prefer the most?",
@@ -4855,6 +4960,166 @@
         {
           "code": 5,
           "label": "Not sure"
+        }
+      ]
+    },
+    "issue_rank_maxdiff": {
+      "label": "issue_rank_maxdiff  [F25]",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you?",
+      "type": "maxdiff",
+      "waves": [
+        "F25"
+      ],
+      "items": [
+        {
+          "code": 1,
+          "label": "Cost of living/affordability",
+          "do_col": "issue_rank_maxdiff_do_1"
+        },
+        {
+          "code": 2,
+          "label": "Healthcare",
+          "do_col": "issue_rank_maxdiff_do_2"
+        },
+        {
+          "code": 3,
+          "label": "Jobs",
+          "do_col": "issue_rank_maxdiff_do_3"
+        },
+        {
+          "code": 4,
+          "label": "Taxes",
+          "do_col": "issue_rank_maxdiff_do_4"
+        },
+        {
+          "code": 5,
+          "label": "The national debt",
+          "do_col": "issue_rank_maxdiff_do_5"
+        },
+        {
+          "code": 6,
+          "label": "Corruption",
+          "do_col": "issue_rank_maxdiff_do_6"
+        },
+        {
+          "code": 7,
+          "label": "Social Security",
+          "do_col": "issue_rank_maxdiff_do_7"
+        },
+        {
+          "code": 8,
+          "label": "Medicaid and Medicare",
+          "do_col": "issue_rank_maxdiff_do_8"
+        },
+        {
+          "code": 9,
+          "label": "K-12 education",
+          "do_col": "issue_rank_maxdiff_do_9"
+        },
+        {
+          "code": 10,
+          "label": "Abortion",
+          "do_col": "issue_rank_maxdiff_do_10"
+        },
+        {
+          "code": 11,
+          "label": "Crime",
+          "do_col": "issue_rank_maxdiff_do_11"
+        },
+        {
+          "code": 12,
+          "label": "Israel and Palestine",
+          "do_col": "issue_rank_maxdiff_do_12"
+        },
+        {
+          "code": 13,
+          "label": "Race relations",
+          "do_col": "issue_rank_maxdiff_do_13"
+        },
+        {
+          "code": 14,
+          "label": "Diplomatic relations",
+          "do_col": "issue_rank_maxdiff_do_14"
+        },
+        {
+          "code": 15,
+          "label": "Climate change",
+          "do_col": "issue_rank_maxdiff_do_15"
+        },
+        {
+          "code": 16,
+          "label": "The environment",
+          "do_col": "issue_rank_maxdiff_do_16"
+        },
+        {
+          "code": 17,
+          "label": "Election integrity",
+          "do_col": "issue_rank_maxdiff_do_17"
+        },
+        {
+          "code": 18,
+          "label": "Immigration",
+          "do_col": "issue_rank_maxdiff_do_18"
+        },
+        {
+          "code": 19,
+          "label": "Regulating businesses and corporations",
+          "do_col": "issue_rank_maxdiff_do_19"
+        },
+        {
+          "code": 20,
+          "label": "Ukraine and Russia",
+          "do_col": "issue_rank_maxdiff_do_20"
+        },
+        {
+          "code": 21,
+          "label": "Acceptance of gay people",
+          "do_col": "issue_rank_maxdiff_do_21"
+        },
+        {
+          "code": 22,
+          "label": "Acceptance of transgender people",
+          "do_col": "issue_rank_maxdiff_do_22"
+        },
+        {
+          "code": 23,
+          "label": "Higher education",
+          "do_col": "issue_rank_maxdiff_do_23"
+        },
+        {
+          "code": 24,
+          "label": "China",
+          "do_col": "issue_rank_maxdiff_do_24"
+        },
+        {
+          "code": 25,
+          "label": "Trade",
+          "do_col": "issue_rank_maxdiff_do_25"
+        },
+        {
+          "code": 26,
+          "label": "Artificial intelligence",
+          "do_col": "issue_rank_maxdiff_do_26"
+        },
+        {
+          "code": 27,
+          "label": "Guns",
+          "do_col": "issue_rank_maxdiff_do_27"
+        },
+        {
+          "code": 28,
+          "label": "Democracy",
+          "do_col": "issue_rank_maxdiff_do_28"
+        },
+        {
+          "code": 29,
+          "label": "Free speech",
+          "do_col": "issue_rank_maxdiff_do_29"
+        },
+        {
+          "code": 30,
+          "label": "Housing",
+          "do_col": "issue_rank_maxdiff_do_30"
         }
       ]
     },
@@ -7217,6 +7482,121 @@
         {
           "code": 6,
           "label": "Not sure"
+        }
+      ]
+    },
+    "r_electable_maxdiff": {
+      "label": "r_electable_maxdiff  [F25]",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat?",
+      "type": "maxdiff",
+      "waves": [
+        "F25"
+      ],
+      "items": [
+        {
+          "code": 1,
+          "label": "JD Vance",
+          "do_col": "r_electable_maxdiff_do_1"
+        },
+        {
+          "code": 2,
+          "label": "Ron DeSantis",
+          "do_col": "r_electable_maxdiff_do_2"
+        },
+        {
+          "code": 3,
+          "label": "Brian Kemp",
+          "do_col": "r_electable_maxdiff_do_3"
+        },
+        {
+          "code": 4,
+          "label": "Glenn Youngkin",
+          "do_col": "r_electable_maxdiff_do_4"
+        },
+        {
+          "code": 5,
+          "label": "Nikki Haley",
+          "do_col": "r_electable_maxdiff_do_5"
+        },
+        {
+          "code": 6,
+          "label": "Mike Pence",
+          "do_col": "r_electable_maxdiff_do_6"
+        },
+        {
+          "code": 7,
+          "label": "Vivek Ramaswamy",
+          "do_col": "r_electable_maxdiff_do_7"
+        },
+        {
+          "code": 8,
+          "label": "Ted Cruz",
+          "do_col": "r_electable_maxdiff_do_8"
+        },
+        {
+          "code": 9,
+          "label": "Marco Rubio",
+          "do_col": "r_electable_maxdiff_do_9"
+        },
+        {
+          "code": 10,
+          "label": "Josh Hawley",
+          "do_col": "r_electable_maxdiff_do_10"
+        },
+        {
+          "code": 11,
+          "label": "Tim Scott",
+          "do_col": "r_electable_maxdiff_do_11"
+        },
+        {
+          "code": 12,
+          "label": "Tulsi Gabbard",
+          "do_col": "r_electable_maxdiff_do_12"
+        },
+        {
+          "code": 13,
+          "label": "Robert F. Kennedy Jr.",
+          "do_col": "r_electable_maxdiff_do_13"
+        },
+        {
+          "code": 14,
+          "label": "Steve Bannon",
+          "do_col": "r_electable_maxdiff_do_14"
+        },
+        {
+          "code": 15,
+          "label": "Tucker Carlson",
+          "do_col": "r_electable_maxdiff_do_15"
+        },
+        {
+          "code": 16,
+          "label": "Kristi Noem",
+          "do_col": "r_electable_maxdiff_do_16"
+        },
+        {
+          "code": 17,
+          "label": "Katie Britt",
+          "do_col": "r_electable_maxdiff_do_17"
+        },
+        {
+          "code": 18,
+          "label": "Doug Burgum",
+          "do_col": "r_electable_maxdiff_do_18"
+        },
+        {
+          "code": 19,
+          "label": "Donald Trump Jr.",
+          "do_col": "r_electable_maxdiff_do_19"
+        },
+        {
+          "code": 20,
+          "label": "Greg Abbott",
+          "do_col": "r_electable_maxdiff_do_20"
+        },
+        {
+          "code": 21,
+          "label": "Elise Stefanik",
+          "do_col": "r_electable_maxdiff_do_21"
         }
       ]
     },

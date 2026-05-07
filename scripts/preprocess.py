@@ -183,6 +183,22 @@ def load_s25() -> tuple[pd.DataFrame, dict[str, str], pd.DataFrame, str]:
 # ------------------------------------------------------------------
 
 
+# Verasight ships F25 `age` as bracketed codes 1-6 with labels that just echo
+# the codes ("1.0", "2.0", ...). The codebook XLSX flags it as `[Numeric]` and
+# offers no human labels, so we override with the actual brackets (verified
+# against `age_actualnumber` in the raw CSV: each code's min/max age).
+F25_DEMO_OPTION_OVERRIDES: dict[str, list[tuple[int, str]]] = {
+    "age": [
+        (1, "18-22"),
+        (2, "23-29"),
+        (3, "30-34"),
+        (4, "35-44"),
+        (5, "45-64"),
+        (6, "65+"),
+    ],
+}
+
+
 def load_f25() -> tuple[pd.DataFrame, dict[str, str], pd.DataFrame, str]:
     data_path = F25_DIR / "yypfall25dat_withweights.csv"
     codebook_path = F25_DIR / "2025-138a_codebook.xlsx"
@@ -430,8 +446,12 @@ def preprocess_wave(wave: str) -> None:
         print(f"  WARNING: {missing} rows had no weight match; filling with 1.0")
         merged["weight"] = merged["weight"].fillna(1.0)
 
-    # Hand overrides only apply to F24
-    option_overrides = F24_DEMO_OPTION_OVERRIDES if wave == "F24" else None
+    # Per-wave hand-coded option label overrides for cases where the upstream
+    # codebook ships only numeric codes.
+    option_overrides = {
+        "F24": F24_DEMO_OPTION_OVERRIDES,
+        "F25": F25_DEMO_OPTION_OVERRIDES,
+    }.get(wave)
 
     # First pass: detect MaxDiff bases (and their _do_N siblings). The siblings
     # don't get user-facing codebook entries — they're consumed as offer
@@ -767,7 +787,7 @@ def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
         # categoricals, even when the question text matches.
         types_seen = {e.get("type", "categorical") for _, e in entries}
         if len(types_seen) > 1 or "maxdiff" in types_seen:
-            # If everyone is maxdiff with matching item codes, allow it; else skip.
+            # If everyone is MaxDiff with matching item codes, pool them straight.
             if types_seen == {"maxdiff"}:
                 items_by_code = [tuple(sorted(it["code"] for it in e.get("items", []))) for _, e in entries]
                 if len(set(items_by_code)) == 1:
@@ -781,6 +801,25 @@ def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
                         "present_waves": present_waves,
                     }
                     continue
+            # Mixed types: at least one wave is MaxDiff, others are categorical.
+            # Prefer the MaxDiff version — it has display-order data so it can
+            # produce real win rates. Other waves' rows show null on the
+            # `_do_N` siblings, so the MaxDiff math naturally restricts the
+            # denominator to MaxDiff-bearing waves.
+            md_entries = [(w, e) for w, e in entries if e.get("type") == "maxdiff"]
+            if md_entries and len({tuple(sorted(it["code"] for it in e.get("items", []))) for _, e in md_entries}) == 1:
+                md_waves = {w: by_wave[w] for w, _ in md_entries}
+                md_present = [w for w in waves if w in md_waves]
+                accepted[canon] = {
+                    "label": md_entries[0][1]["label"],
+                    "question": md_entries[0][1]["question"],
+                    "type": "maxdiff",
+                    "options": None,
+                    "items": md_entries[0][1].get("items"),
+                    "wave_to_orig": md_waves,
+                    "present_waves": md_present,
+                }
+                continue
             skipped.append((canon, f"mixed/incompatible types across waves: {types_seen}"))
             continue
 
