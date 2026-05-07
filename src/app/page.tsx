@@ -98,8 +98,8 @@ export default function Home() {
             for those crosstabs naturally restricts to respondents who were
             asked the question.
           </p>
-          <div className="mt-3 rounded-md border border-amber-300 bg-amber-50 p-3 text-xs text-amber-900">
-            <p className="font-semibold mb-1">⚠ Caveats</p>
+          <div className="mt-3 rounded-md border border-emerald-300 bg-emerald-50 p-3 text-xs text-emerald-900">
+            <p className="font-semibold mb-1">Caveats</p>
             <ul className="list-disc list-outside pl-4 space-y-1">
               <li>
                 <strong>
