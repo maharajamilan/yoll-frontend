@@ -16,11 +16,18 @@ want to play with the code, not just use the tool).
 > **Heads up — this is preliminary.**
 > A couple of caveats are surfaced inside the app itself, but worth flagging
 > here too:
-> - **MaxDiff questions don't render correctly yet** (issue rank, electability,
->   etc. — the codes show up as raw numbers instead of meaningful counts).
-> - **Some questions repeated across waves don't get pooled in stacked
->   datasets** — when a question's variable name changed between waves it's
->   currently treated as two single-wave columns rather than one combined one.
+> - **MaxDiff aggregation is Fall 2025 only.** Issue rank / D-electable /
+>   R-electable MaxDiffs render as per-item win rates (picks ÷ times shown)
+>   when you pick the Fall 2025 wave. The Spring 2025 and Fall 2024
+>   replication packages don't ship display-order data, so their older
+>   MaxDiffs still show pick frequencies (biased by exposure) and aren't
+>   pooled into stacked datasets.
+> - **Cross-wave question matching is exact-text only.** Columns pool by
+>   canonical variable name plus a second pass that matches identical
+>   question wording + option codes across waves. Questions whose wording
+>   was edited even slightly between waves still appear as separate
+>   single-wave columns; we don't fuzzy-match because silently pooling
+>   slightly-different questions is the worse failure mode.
 
 ---
 

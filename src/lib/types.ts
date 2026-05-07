@@ -5,11 +5,27 @@ export type CodebookOption = {
   label: string;
 };
 
+export type MaxDiffItem = {
+  /** The numeric code that the main column carries when this item is picked. */
+  code: ResponseCode;
+  /** Human-readable item label (e.g. "Cost of living/affordability"). */
+  label: string;
+  /**
+   * Name of the sibling `_do_N` column in the data file. Non-null on this
+   * column iff the item was shown to that respondent. The frontend reads it
+   * to compute per-item "offers" (denominator of the win rate).
+   */
+  do_col: string;
+};
+
 export type CodebookColumn = {
   label: string;
   question: string;
-  type: "categorical" | "numeric";
+  type: "categorical" | "numeric" | "maxdiff";
+  /** For categoricals only. */
   options?: CodebookOption[];
+  /** For MaxDiffs only. */
+  items?: MaxDiffItem[];
   waves: string[];
 };
 

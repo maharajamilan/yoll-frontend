@@ -100,12 +100,20 @@ function CrosstabTable({ result }: { result: CrosstabResult }) {
           {result.questionText}
         </div>
       )}
+      {result.isMaxDiff && (
+        <div className="text-xs text-[color:var(--muted)] italic">
+          MaxDiff: each respondent saw a randomly assigned pair of items and
+          picked one. Cell value is win rate = picks &divide; times shown,
+          with per-cell &plusmn;MOE (95%). Hover a cell for raw wins/offers.
+          Items sorted by overall win rate.
+        </div>
+      )}
       <div className="overflow-x-auto rounded-md border border-[color:var(--border)]">
         <table className="w-full text-sm">
           <thead>
             <tr className="bg-[color:var(--accent)] text-white">
               <th className="text-left px-3 py-2 font-semibold whitespace-nowrap">
-                Response
+                {result.isMaxDiff ? "Item" : "Response"}
               </th>
               {result.columns.map((c) => (
                 <th
@@ -124,18 +132,54 @@ function CrosstabTable({ result }: { result: CrosstabResult }) {
                 className={i % 2 === 0 ? "bg-white" : "bg-[color:var(--stripe)]"}
               >
                 <td className="px-3 py-2">{row.label}</td>
-                {result.columns.map((c) => (
-                  <td
-                    key={c.key}
-                    className="text-right px-3 py-2 tabular-nums"
-                  >
-                    {row.pct[c.key].toFixed(1)}%
-                  </td>
-                ))}
+                {result.columns.map((c) => {
+                  if (result.isMaxDiff) {
+                    const pct = row.pct[c.key];
+                    const moe = row.cellMoe?.[c.key];
+                    const offers = row.cellOffers?.[c.key];
+                    const wins = row.cellWins?.[c.key];
+                    const tooltip =
+                      offers !== undefined && wins !== undefined
+                        ? `Wins ${Math.round(wins).toLocaleString()} / Offers ${Math.round(offers).toLocaleString()}`
+                        : undefined;
+                    return (
+                      <td
+                        key={c.key}
+                        className="text-right px-3 py-2 tabular-nums whitespace-nowrap"
+                        title={tooltip}
+                      >
+                        {offers !== undefined && offers > 0 ? (
+                          <>
+                            {pct.toFixed(1)}%{" "}
+                            <span className="text-[color:var(--muted)] text-xs">
+                              {Number.isFinite(moe)
+                                ? `±${(moe as number).toFixed(1)}`
+                                : ""}
+                            </span>
+                          </>
+                        ) : (
+                          <span className="text-[color:var(--muted)]">—</span>
+                        )}
+                      </td>
+                    );
+                  }
+                  return (
+                    <td
+                      key={c.key}
+                      className="text-right px-3 py-2 tabular-nums"
+                    >
+                      {row.pct[c.key].toFixed(1)}%
+                    </td>
+                  );
+                })}
               </tr>
             ))}
             <tr className="border-t border-[color:var(--border)] bg-[color:var(--stripe)]">
-              <td className="px-3 py-2 font-medium">Weighted N</td>
+              <td className="px-3 py-2 font-medium">
+                {result.isMaxDiff
+                  ? "Column N (any item shown + pick)"
+                  : "Weighted N"}
+              </td>
               {result.columns.map((c) => (
                 <td
                   key={c.key}
@@ -145,25 +189,27 @@ function CrosstabTable({ result }: { result: CrosstabResult }) {
                 </td>
               ))}
             </tr>
-            <tr className="bg-[color:var(--stripe)]">
-              <td
-                className="px-3 py-2 font-medium"
-                title="95% margin of error in percentage points, computed as 1.96·√(0.25/n_eff) using Kish's effective sample size n_eff = (Σw)²/Σ(w²) and assuming p = 0.5 (the conservative max MOE)."
-              >
-                MOE (95%)
-              </td>
-              {result.columns.map((c) => {
-                const m = result.moe[c.key];
-                return (
-                  <td
-                    key={c.key}
-                    className="text-right px-3 py-2 font-medium tabular-nums"
-                  >
-                    {Number.isFinite(m) ? `\u00B1${m.toFixed(1)}` : "—"}
-                  </td>
-                );
-              })}
-            </tr>
+            {!result.isMaxDiff && (
+              <tr className="bg-[color:var(--stripe)]">
+                <td
+                  className="px-3 py-2 font-medium"
+                  title="95% margin of error in percentage points, computed as 1.96·√(0.25/n_eff) using Kish's effective sample size n_eff = (Σw)²/Σ(w²) and assuming p = 0.5 (the conservative max MOE)."
+                >
+                  MOE (95%)
+                </td>
+                {result.columns.map((c) => {
+                  const m = result.moe[c.key];
+                  return (
+                    <td
+                      key={c.key}
+                      className="text-right px-3 py-2 font-medium tabular-nums"
+                    >
+                      {Number.isFinite(m) ? `\u00B1${m.toFixed(1)}` : "—"}
+                    </td>
+                  );
+                })}
+              </tr>
+            )}
           </tbody>
         </table>
       </div>

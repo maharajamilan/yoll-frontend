@@ -99,25 +99,34 @@ export default function Home() {
             asked the question.
           </p>
           <div className="mt-3 rounded-md border border-amber-300 bg-amber-50 p-3 text-xs text-amber-900">
-            <p className="font-semibold mb-1">⚠ Known limitations</p>
+            <p className="font-semibold mb-1">⚠ Caveats</p>
             <ul className="list-disc list-outside pl-4 space-y-1">
               <li>
-                <strong>MaxDiff questions are not properly processed.</strong>{" "}
-                Items that asked respondents to rank or choose-from a list
-                (issue rank, electability MaxDiffs, etc.) currently render as
-                raw item codes instead of meaningful counts. Don&apos;t rely on
-                MaxDiff crosstabs from this tool yet.
+                <strong>
+                  MaxDiff aggregation is new — please kick the tires.
+                </strong>{" "}
+                The issue-rank, D-electable, and R-electable MaxDiffs
+                should now render as per-item <em>win rates</em>{" "}
+                (picks &divide; times shown) in the Fall 2025 wave, with
+                per-cell &plusmn;MOE. We <em>think</em> the math is right
+                but it hasn&apos;t been heavily validated — if any item
+                rate or cell looks off vs. what you&apos;d expect from the
+                topline, ping Milan. Spring 2025 and Fall 2024 didn&apos;t
+                ship display-order data, so their MaxDiff columns still
+                show pick frequencies (biased by exposure) and
+                aren&apos;t pooled into stacked datasets.
               </li>
               <li>
                 <strong>
-                  Some repeated questions aren&apos;t matched across waves
-                  inside stacked datasets.
+                  Cross-wave question matching is exact-text only.
                 </strong>{" "}
-                Cross-wave matching is by canonicalized column name, so
-                questions whose wording was preserved but whose variable name
-                changed will appear as separate single-wave columns instead of
-                being pooled. If a question you expect to be cross-wave only
-                shows up tagged with one wave, that&apos;s why.
+                Stacked datasets pool by canonicalized variable name plus
+                a second pass that matches columns whose normalized
+                question wording AND option codes are identical across
+                waves. Questions whose wording was edited even slightly
+                between waves still appear as separate single-wave
+                columns — silently pooling slightly-different questions
+                is a worse failure than missing a pool.
               </li>
             </ul>
           </div>

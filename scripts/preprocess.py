@@ -58,9 +58,13 @@ DROP_EXACT_ALL = {
     "case_id", "start_date", "end_date", "sample_type", "over_18", "consent_q",
     "us_voter",
 }
-DROP_SUFFIXES = ("_TEXT", "_text", "_do_1", "_do_2", "_do_3", "_do_4", "_do_5",
+DROP_SUFFIXES = ("_TEXT", "_text",
                  "_ado_1", "_ado_2", "_ado_3", "_ado_4", "_ado_5",
                  "_labels", "_actualnumber", "_count")
+# `_do_N` (display order) columns are kept conditionally: they're MaxDiff
+# offer-tracking siblings for some bases (issue_rank, electable, ...) and noise
+# for others (gender, education, ...). Detection handled inside preprocess_wave.
+_DO_RE = re.compile(r"_do_\d+$")
 DROP_PREFIXES = ("Unnamed:",)
 
 CATEGORICAL_MAX_OPTIONS = 40
@@ -79,6 +83,59 @@ def is_dropped(col: str) -> bool:
     if any(col.startswith(p) for p in DROP_PREFIXES):
         return True
     return False
+
+
+# Minimum number of _do_N siblings to qualify a base as MaxDiff. Three filters
+# out the binary forced-choice tasks (e.g. obbba_maxdiff_1..4 with only 2
+# items) — they're equivalent to ordinary categoricals so we leave them alone.
+_MAXDIFF_MIN_ITEMS = 3
+
+
+def detect_maxdiff_bases(
+    values: pd.DataFrame,
+) -> tuple[dict[str, list[int]], set[str]]:
+    """Find base columns that look like a MaxDiff:
+      - the base column itself exists with numeric codes
+      - at least _MAXDIFF_MIN_ITEMS sibling columns named `<base>_do_<N>`
+      - each `_do_N` is sparse-binary (values ⊂ {1, 2, NaN})
+
+    Returns (bases, do_cols) where:
+      bases   = {base_col: sorted list of item N's that have _do_N siblings}
+      do_cols = set of every consumed `_do_N` column name
+    """
+    cols = list(values.columns)
+    base_to_items: dict[str, list[int]] = {}
+    consumed: set[str] = set()
+    by_base: dict[str, list[tuple[int, str]]] = {}
+    for c in cols:
+        m = _DO_RE.search(c)
+        if not m:
+            continue
+        n = int(m.group(0).split("_")[-1])
+        base = c[: m.start()]
+        if base not in cols:
+            continue
+        by_base.setdefault(base, []).append((n, c))
+    for base, sibs in by_base.items():
+        if len(sibs) < _MAXDIFF_MIN_ITEMS:
+            continue
+        # Verify each sibling is binary {1, 2, NaN}
+        ok_items: list[int] = []
+        ok_do_cols: list[str] = []
+        for n, do_col in sorted(sibs):
+            uniq = set(values[do_col].dropna().unique().tolist())
+            if not uniq:
+                continue
+            # Allow 1.0/2.0 floats too
+            uniq_int = {int(v) for v in uniq if pd.notna(v) and float(v).is_integer()}
+            if uniq <= {1, 2, 1.0, 2.0} or (uniq_int <= {1, 2} and len(uniq_int) >= 1):
+                ok_items.append(n)
+                ok_do_cols.append(do_col)
+        if len(ok_items) < _MAXDIFF_MIN_ITEMS:
+            continue
+        base_to_items[base] = ok_items
+        consumed.update(ok_do_cols)
+    return base_to_items, consumed
 
 
 def to_compact_value(v):
@@ -376,11 +433,21 @@ def preprocess_wave(wave: str) -> None:
     # Hand overrides only apply to F24
     option_overrides = F24_DEMO_OPTION_OVERRIDES if wave == "F24" else None
 
+    # First pass: detect MaxDiff bases (and their _do_N siblings). The siblings
+    # don't get user-facing codebook entries — they're consumed as offer
+    # tracking metadata into the parent's codebook entry — but we keep them in
+    # the data file so the frontend can compute wins/offers per item.
+    maxdiff_bases, maxdiff_do_cols = detect_maxdiff_bases(values)
+
     # Build codebook columns
     columns_out: dict[str, dict] = {}
     for col in values.columns:
         if is_dropped(col):
             continue
+        if _DO_RE.search(col) and col not in maxdiff_do_cols:
+            continue  # display-order column for a non-MaxDiff base — drop
+        if col in maxdiff_do_cols:
+            continue  # consumed by parent MaxDiff entry below
         labels_col = labels[col] if col in labels.columns else None
         question_text = qtexts.get(col, col)
         readable_label = F24_READABLE_NAMES.get(col) if wave == "F24" else col
@@ -388,7 +455,30 @@ def preprocess_wave(wave: str) -> None:
             col, values[col], labels_col, question_text,
             readable_label, wave, option_overrides,
         )
-        if entry:
+        if entry is None:
+            continue
+        if col in maxdiff_bases:
+            # Promote to MaxDiff: rebuild as { type: "maxdiff", items: [...] }
+            items = []
+            opt_by_code = {
+                int(o["code"]) if isinstance(o["code"], (int, float)) and float(o["code"]).is_integer() else o["code"]: o["label"]
+                for o in (entry.get("options") or [])
+            }
+            for n in maxdiff_bases[col]:
+                lbl = opt_by_code.get(n, str(n))
+                items.append({
+                    "code": n,
+                    "label": lbl,
+                    "do_col": f"{col}_do_{n}",
+                })
+            columns_out[col] = {
+                "label": entry["label"],
+                "question": entry["question"],
+                "type": "maxdiff",
+                "items": items,
+                "waves": entry.get("waves", [wave]),
+            }
+        else:
             columns_out[col] = entry
 
     # Put demographic columns first for UX
@@ -412,12 +502,20 @@ def preprocess_wave(wave: str) -> None:
         "columns": ordered_columns,
     }
 
-    # Build data payload
-    keep_cols = list(ordered_columns.keys())
-    kept = values[keep_cols]
-    rows: list[list] = []
-    for _, row in kept.iterrows():
-        rows.append([to_compact_value(v) for v in row])
+    # Build data payload. Codebook columns + MaxDiff `_do_N` siblings (kept as
+    # data-only — frontend reads them to compute offers but they're not user-
+    # facing). Use column-by-column extraction to dodge itertuples renaming.
+    user_cols = list(ordered_columns.keys())
+    do_cols = sorted(c for c in maxdiff_do_cols if c in values.columns)
+    keep_cols = user_cols + do_cols
+    n_rows_v = len(values)
+    col_arrays: list[list] = []
+    for c in keep_cols:
+        col_arrays.append([to_compact_value(v) for v in values[c].tolist()])
+    rows: list[list] = [
+        [col_arrays[ci][ri] for ci in range(len(keep_cols))]
+        for ri in range(n_rows_v)
+    ]
 
     data_payload = {
         "wave": wave,
@@ -530,6 +628,23 @@ def _options_codes(options: list | None) -> tuple | None:
     return tuple(sorted(o["code"] for o in options))
 
 
+def _normalize_question(q: str | None) -> str | None:
+    """Aggressive-but-conservative wording normalization for cross-wave matches.
+
+    Lowercases, strips whitespace, collapses internal whitespace, drops trailing
+    punctuation, and strips a few non-substantive Qualtrics suffixes ("(check
+    all that apply)", " - selected choice", etc.).
+    """
+    if not q:
+        return None
+    s = str(q).lower().strip()
+    s = re.sub(r"\s+", " ", s)
+    s = re.sub(r"\s*\([^)]*\)\s*$", "", s)  # drop trailing "(check all...)"
+    s = re.sub(r"\s*-\s*selected choice\s*$", "", s)
+    s = s.rstrip("?.! ")
+    return s or None
+
+
 def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
     print(f"\n===== stack {stack_id} ({'+'.join(waves)}) =====")
 
@@ -577,6 +692,55 @@ def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
                 continue  # demographics handled separately
             canon_map.setdefault(ck, {})[wave] = orig
 
+    # Second-pass: merge single-wave entries from different waves that share
+    # the same (normalized question wording) AND (option-codes signature).
+    # Catches cases where Yale renamed a variable across waves but kept the
+    # text identical — e.g. `Need_for_cognition_1` -> `cognition_need_1`.
+    # Strict-after-normalization, not fuzzy: pooling responses to two slightly
+    # different questions silently is a worse failure than missing a pool.
+    wording_buckets: dict[tuple, list[tuple[str, str, str]]] = {}
+    for canon, by_wave in list(canon_map.items()):
+        if len(by_wave) != 1:
+            continue
+        wave, orig = next(iter(by_wave.items()))
+        e = per_wave[wave]["cb"]["columns"][orig]
+        # Skip MaxDiff and other non-pool-able types.
+        if e.get("type") not in (None, "categorical", "numeric"):
+            continue
+        nq = _normalize_question(e.get("question"))
+        if not nq:
+            continue
+        codes = _options_codes(e.get("options"))
+        key = (nq, codes, e.get("type", "categorical"))
+        wording_buckets.setdefault(key, []).append((canon, wave, orig))
+
+    merged_count = 0
+    for key, entries in wording_buckets.items():
+        if len(entries) < 2:
+            continue
+        waves_seen = {w for _, w, _ in entries}
+        if len(waves_seen) < 2:
+            continue  # all from the same wave (unlikely but safe)
+        # Promote into a single canon entry. Pick the F25 > S25 > F24 priority
+        # canon as the merged key (or first encountered if none of those waves
+        # qualifies); pop the others.
+        priority = ("F25", "S25", "F24")
+        entries_sorted = sorted(
+            entries,
+            key=lambda t: priority.index(t[1]) if t[1] in priority else 99,
+        )
+        keep_canon, _, _ = entries_sorted[0]
+        merged_by_wave: dict[str, str] = {}
+        for canon, wave, orig in entries:
+            merged_by_wave[wave] = orig
+            if canon != keep_canon:
+                canon_map.pop(canon, None)
+        canon_map[keep_canon] = merged_by_wave
+        merged_count += 1
+    if merged_count:
+        print(f"  wording-merged {merged_count} cross-wave column groups "
+              f"(different variable names, identical question text + codes)")
+
     # Decide each canonical column's stack-compatibility and merged schema.
     accepted: dict[str, dict] = {}  # canon -> {output_key, label, question, type, options, wave_to_orig, present_waves}
     skipped: list[tuple[str, str]] = []
@@ -592,9 +756,32 @@ def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
                 "question": e["question"],
                 "type": e.get("type", "categorical"),
                 "options": e.get("options"),
+                "items": e.get("items"),  # MaxDiff items list (None for non-MaxDiff)
                 "wave_to_orig": dict(by_wave),
                 "present_waves": present_waves,
             }
+            continue
+
+        # Mixed types across waves (e.g. one wave is MaxDiff, another isn't):
+        # auto-skip from stacking. MaxDiff structures don't pool with simple
+        # categoricals, even when the question text matches.
+        types_seen = {e.get("type", "categorical") for _, e in entries}
+        if len(types_seen) > 1 or "maxdiff" in types_seen:
+            # If everyone is maxdiff with matching item codes, allow it; else skip.
+            if types_seen == {"maxdiff"}:
+                items_by_code = [tuple(sorted(it["code"] for it in e.get("items", []))) for _, e in entries]
+                if len(set(items_by_code)) == 1:
+                    accepted[canon] = {
+                        "label": entries[0][1]["label"],
+                        "question": entries[0][1]["question"],
+                        "type": "maxdiff",
+                        "options": None,
+                        "items": entries[0][1].get("items"),
+                        "wave_to_orig": dict(by_wave),
+                        "present_waves": present_waves,
+                    }
+                    continue
+            skipped.append((canon, f"mixed/incompatible types across waves: {types_seen}"))
             continue
 
         # Multiple waves: figure out compatibility
@@ -682,6 +869,18 @@ def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
     )
     output_columns += [info["output_key"] for info in nondemog_ordered]
 
+    # MaxDiff `_do_N` siblings: not user-facing (no codebook entry) but carried
+    # in the data file so the frontend can compute wins/offers per item.
+    maxdiff_do_extras: list[str] = []
+    for info in nondemog_ordered:
+        if info["type"] != "maxdiff" or not info.get("items"):
+            continue
+        for it in info["items"]:
+            do_col = it.get("do_col")
+            if do_col and do_col not in output_columns:
+                maxdiff_do_extras.append(do_col)
+    output_columns += maxdiff_do_extras
+
     # Build the codebook entries.
     columns_out: dict[str, dict] = {}
     columns_out["_wave"] = {
@@ -709,8 +908,10 @@ def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
             "type": info["type"],
             "waves": present,
         }
-        if info["options"]:
+        if info.get("options"):
             entry["options"] = info["options"]
+        if info.get("items"):
+            entry["items"] = info["items"]
         columns_out[info["output_key"]] = entry
 
     # Materialize stacked rows. We do this column-by-column per wave because
@@ -732,6 +933,16 @@ def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
                 wave_cols.append(
                     [to_compact_value(v) for v in wdf[src].tolist()]
                 )
+            elif out_key in maxdiff_do_extras:
+                # MaxDiff offer-tracking column: same name across waves (it's
+                # tied to a specific wave's variable naming since we don't pool
+                # MaxDiff cross-wave). Pull verbatim if present in this wave.
+                if out_key in wdf.columns:
+                    wave_cols.append(
+                        [to_compact_value(v) for v in wdf[out_key].tolist()]
+                    )
+                else:
+                    wave_cols.append([None] * n_wave)
             else:
                 # Find the canonical info for this output key
                 src = None

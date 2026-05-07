@@ -183,7 +183,15 @@ function SortableQuestionRow({
 
       {expanded && (
         <div className="border-t border-[color:var(--border)] px-3 py-3 bg-[color:var(--stripe)]/40 space-y-3">
-          {!hasCustomBuckets ? (
+          {def?.type === "maxdiff" ? (
+            <p className="text-xs text-[color:var(--muted)]">
+              MaxDiff question. Each respondent saw a randomly assigned pair
+              of items and picked one. Each row in the results table is one
+              item; cell value is{" "}
+              <strong>win rate = picks ÷ times shown</strong>. Custom row
+              groupings aren&apos;t available for MaxDiff.
+            </p>
+          ) : !hasCustomBuckets ? (
             <div className="flex items-center justify-between gap-4 flex-wrap">
               <p className="text-xs text-[color:var(--muted)]">
                 Using the codebook&apos;s response options as-is. Combine or
