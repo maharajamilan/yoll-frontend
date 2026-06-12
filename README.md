@@ -5,8 +5,7 @@ A web tool for exploring Yale Youth Poll (YYP) survey data. You pick a wave
 columns, choose one or more questions, and the tool produces weighted
 crosstabs you can export as CSV.
 
-**Live (password-protected):** <https://yoll-crosstabs.vercel.app> — ask
-Milan for the team password.
+**Live:** <https://yoll-crosstabs.vercel.app> — public, no login required.
 
 If you just want a quick read on what the tool does, scroll down to
 [**What the app does**](#what-the-app-does). The rest of this page is mostly
@@ -111,8 +110,8 @@ re-downloaded the repo.
 * **"Port 3000 is already in use"** — something else is using that port.
   Either close that other thing, or run `npm run dev -- -p 3001` and use
   `http://localhost:3001` instead.
-* **The page loads but shows a password prompt** — that only happens in
-  the deployed version. Locally there's no password gate.
+* **Local vs. live** — the deployed site is public (no login). Locally there's
+  no gate either; `npm run dev` just opens straight to the tool.
 
 ---
 
@@ -178,8 +177,10 @@ slightly from what this tool produces.
 * **@dnd-kit** for drag-and-drop reordering
 * All crosstab math is in `src/lib/crosstab.ts`, runs client-side on the JSON
   data files in `public/data/`
-* Edge `src/proxy.ts` enforces a single-password gate on every route (Next.js
-  16 renamed the `middleware` convention to `proxy`)
+* Edge `src/proxy.ts` can gate the whole site behind a single password
+  (Next.js 16 renamed the `middleware` convention to `proxy`). It's currently
+  **dormant** — the site is public — because the `SITE_PASSWORD` env var is
+  unset on Vercel. Set it again to re-enable the gate (see Deployment).
 
 ### Data pipeline (optional — only needed to refresh data)
 
