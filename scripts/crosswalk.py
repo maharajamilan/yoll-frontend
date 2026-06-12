@@ -41,10 +41,13 @@ import pandas as pd
 REPO_ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = REPO_ROOT / "data-raw" / "harmonized"
 
-F24_DIR = Path("/Users/milansingh/Downloads/yyp f24 repo")
-S25_DIR = Path("/Users/milansingh/Downloads/yyp s25 repo")
-F25_DIR = Path("/Users/milansingh/Downloads/yyp f25 repo")
-S26_DIR = Path("/Users/milansingh/Downloads/yyp s26 repo")
+# Raw replication files live in the repo (data-raw/source/<wave>/), pulled from
+# Yale Dataverse by scripts/fetch_data.py — no dependency on local ~/Downloads.
+SOURCE_DIR = REPO_ROOT / "data-raw" / "source"
+F24_DIR = SOURCE_DIR / "F24"
+S25_DIR = SOURCE_DIR / "S25"
+F25_DIR = SOURCE_DIR / "F25"
+S26_DIR = SOURCE_DIR / "S26"
 
 # ------------------------------------------------------------------
 # Helpers
@@ -215,7 +218,7 @@ def harmonize_s26() -> pd.DataFrame:
     and single-wave display. S26's *weights* come from the official 138b pipeline
     in rake_weights.py, which uses S26's own coding — not this harmonization.
     """
-    src = S26_DIR / "data_original"
+    src = S26_DIR / "2025-138b_client.csv"
     df = pd.read_csv(src, low_memory=False)
     print(f"S26: {len(df)} rows")
 

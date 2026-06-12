@@ -188,23 +188,30 @@ The committed JSON in `public/data/` is what the app actually loads. You only
 need to re-run the pipeline if you're adding a new wave or changing the
 weighting scheme.
 
-The `scripts/` directory contains the Python pipeline that turns the raw YYP
-replication packages into the frontend-ready JSON. To re-run end to end, drop
-the F24 / S25 / F25 / S26 replication packages from
-[Yale Dataverse](https://dataverse.yale.edu/dataverse/YYP) into your
-`~/Downloads` under their canonical names (`yyp f24 repo`, `yyp s25 repo`,
-`yyp f25 repo`, `yyp s26 repo`) and run:
+The raw replication files are pulled straight from
+[Yale Dataverse](https://dataverse.yale.edu/dataverse/YYP) and committed under
+`data-raw/source/<wave>/` — the pipeline has **no dependency on local files**.
+To re-run end to end:
 
 ```bash
+python scripts/fetch_data.py       # pull raw files from Dataverse -> data-raw/source/
 python scripts/crosswalk.py        # raw -> harmonized S25-coded demographics
 python scripts/rake_weights.py     # S25 procedure for F24/S25/F25; official 138b for S26
 python scripts/preprocess.py       # produce public/data/{codebook,data}_*.json
 ```
 
-Adding a future wave touches: a `harmonize_<wave>()` in `crosswalk.py`, a
-`load_<wave>()` in `preprocess.py`, the wave's weighting in `rake_weights.py`,
-the `AVAILABLE_WAVES` list in `src/app/page.tsx`, and the stacked-dataset
-definitions in `preprocess.py` `main()`.
+`fetch_data.py` only downloads files already present in `data-raw/source/` if
+you pass `--force`; otherwise it skips them. `--list` prints every dataset in
+the YYP Dataverse collection so you can spot a newly released wave.
+
+Adding a future wave: run `python scripts/fetch_data.py --list`, add the new
+dataset's DOI + filenames to the `WAVES` map in `scripts/fetch_data.py`, then
+add a `harmonize_<wave>()` in `crosswalk.py`, a `load_<wave>()` in
+`preprocess.py`, the wave's weighting in `rake_weights.py`, the
+`AVAILABLE_WAVES` list in `src/app/page.tsx`, and the stacked-dataset
+definitions in `preprocess.py` `main()`. Re-run the four commands above and
+commit the regenerated `public/data/` JSON (and the new `data-raw/source/`
+files).
 
 Outputs in `public/data/`:
 

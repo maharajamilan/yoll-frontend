@@ -31,10 +31,13 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 WEIGHTS_DIR = REPO_ROOT / "data-raw" / "weights"
 OUTPUT_DIR = REPO_ROOT / "public" / "data"
 
-S25_DIR = Path("/Users/milansingh/Downloads/yyp s25 repo")
-F25_DIR = Path("/Users/milansingh/Downloads/yyp f25 repo")
-S26_DIR = Path("/Users/milansingh/Downloads/yyp s26 repo")
-F24_DIR = Path("/Users/milansingh/Downloads/yyp f24 repo")
+# Raw replication files live in the repo (data-raw/source/<wave>/), pulled from
+# Yale Dataverse by scripts/fetch_data.py — no dependency on local ~/Downloads.
+SOURCE_DIR = REPO_ROOT / "data-raw" / "source"
+S25_DIR = SOURCE_DIR / "S25"
+F25_DIR = SOURCE_DIR / "F25"
+S26_DIR = SOURCE_DIR / "S26"
+F24_DIR = SOURCE_DIR / "F24"
 
 # Columns we never expose (PII, admin, free-text, metadata).
 DROP_EXACT_ALL = {
@@ -502,7 +505,7 @@ def _s26_codebook_maps(codebook_path: Path) -> tuple[dict[str, str], dict[str, d
 
 
 def load_s26() -> tuple[pd.DataFrame, dict[str, str], pd.DataFrame, str]:
-    data_path = S26_DIR / "data_original"
+    data_path = S26_DIR / "2025-138b_client.csv"
     codebook_path = S26_DIR / "2025-138b_codebook.xlsx"
 
     raw = pd.read_csv(data_path, low_memory=False)

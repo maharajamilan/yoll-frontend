@@ -47,8 +47,8 @@ WEIGHTS_DIR = REPO_ROOT / "data-raw" / "weights"
 # to "refresh targets for S26", we reproduce the official pipeline faithfully so
 # our S26 matches the published YYP S26 toplines. It reads the RAW S26 data
 # (its own demographic coding), not the canonical harmonized CSV.
-S26_DIR = Path("/Users/milansingh/Downloads/yyp s26 repo")
-S26_RAW = S26_DIR / "data_original"
+S26_DIR = REPO_ROOT / "data-raw" / "source" / "S26"
+S26_RAW = S26_DIR / "2025-138b_client.csv"
 
 # S25 pipeline constants, copied verbatim from yyp2025_weighting_pipeline_official.ipynb
 RAKE_VARS = ["Age", "Race", "Education", "Gender", "Party ID"]

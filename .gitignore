@@ -36,8 +36,11 @@ yarn-error.log*
 # vercel
 .vercel
 
-# raw data — only the preprocessed JSON in public/data/ is committed
-/data-raw/
+# raw data: source/ is committed (pulled from Dataverse by fetch_data.py so the
+# pipeline runs without local files); harmonized/ + weights/ are regenerable
+# intermediates and stay out of git.
+/data-raw/harmonized/
+/data-raw/weights/
 
 # local editor / agent config
 /.claude/
