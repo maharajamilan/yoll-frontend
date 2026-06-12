@@ -44,6 +44,7 @@ OUTPUT_DIR = REPO_ROOT / "data-raw" / "harmonized"
 F24_DIR = Path("/Users/milansingh/Downloads/yyp f24 repo")
 S25_DIR = Path("/Users/milansingh/Downloads/yyp s25 repo")
 F25_DIR = Path("/Users/milansingh/Downloads/yyp f25 repo")
+S26_DIR = Path("/Users/milansingh/Downloads/yyp s26 repo")
 
 # ------------------------------------------------------------------
 # Helpers
@@ -199,6 +200,74 @@ def harmonize_f25() -> pd.DataFrame:
     return out
 
 
+def harmonize_s26() -> pd.DataFrame:
+    """S26 (Verasight, like F25) into canonical S25 coding. Quirks:
+      * `age` is the raw integer (no age_actualnumber) -> 5-bucket S25 scheme.
+      * Race is an 8-way multi-select (ces_race_1..8). We replicate Yale's
+        priority pick (Black>Asian>Native>Hispanic>White>MiddleEast>Two+>Other,
+        Middle Eastern folded into Asian) to a single code, then fold to S25's
+        5 categories.
+      * `anes_party_id` is SWAPPED vs S25 (1=Rep,2=Dem,3=Ind,4=Other).
+      * `pid_leaners` is ALSO swapped vs S25 (1=Rep,2=Dem,3=Neither).
+      * `a2024_recalled_vote` (leading 'a') matches S25's 2024-vote coding.
+
+    NOTE: these canonical demographics feed the stacked-dataset crosstab columns
+    and single-wave display. S26's *weights* come from the official 138b pipeline
+    in rake_weights.py, which uses S26's own coding — not this harmonization.
+    """
+    src = S26_DIR / "data_original"
+    df = pd.read_csv(src, low_memory=False)
+    print(f"S26: {len(df)} rows")
+
+    # Age: raw integer -> S25 5-bucket
+    age = pd.to_numeric(df["age"], errors="coerce").apply(age_to_s25_bucket)
+
+    # Race: priority pick over the 8 binaries, Middle Eastern (6) -> Asian (4),
+    # then fold to S25 5-cat (Native 5 / Two+ 7 / Other 8 -> Other 5).
+    race_priority = ["ces_race_2", "ces_race_4", "ces_race_5", "ces_race_3",
+                     "ces_race_1", "ces_race_6", "ces_race_7", "ces_race_8"]
+
+    def pick_race(row):
+        for col in race_priority:
+            if row.get(col) == 1:
+                return int(col.rsplit("_", 1)[-1])
+        return np.nan
+    ces_race = df.apply(pick_race, axis=1)
+    s26_race_to_s25 = {1: 1, 2: 2, 3: 3, 4: 4, 6: 4, 5: 5, 7: 5, 8: 5}
+    race = ces_race.map(s26_race_to_s25)
+
+    # Education 1-6 matches S25; Gender 1-3 matches S25
+    education = df["education"]
+    gender = df["gender"]
+
+    # Party ID swapped: F25/S26 anes_party_id 1=Rep,2=Dem,3=Ind,4=Other -> S25 1=Dem,2=Rep,3=Ind
+    party_map = {1: 2, 2: 1, 3: 3, 4: 3}
+    party_id = df["anes_party_id"].map(party_map)
+
+    # PID Lean swapped: S26 pid_leaners 1=Rep,2=Dem,3=Neither -> S25 1=Dem,2=Rep,3=Neither
+    lean_map = {1: 2, 2: 1, 3: 3}
+    pid_lean = df["pid_leaners"].map(lean_map)
+
+    # 2024 vote matches S25 coding
+    vote = df["a2024_recalled_vote"] if "a2024_recalled_vote" in df.columns else df["2024_recalled_vote"]
+
+    out = pd.DataFrame(
+        {
+            "case_id": df["case_id"],
+            "wave": "S26",
+            "Age": age,
+            "Race": race,
+            "Education": education,
+            "Gender": gender,
+            "Party ID": party_id,
+            "PID Lean": pid_lean,
+            "2024 Vote": vote,
+        }
+    )
+    out["pid5"] = derive_pid5(out["Party ID"], out["PID Lean"])
+    return out
+
+
 # ------------------------------------------------------------------
 # Sanity reporting
 # ------------------------------------------------------------------
@@ -216,14 +285,14 @@ def report(df: pd.DataFrame, wave: str) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--wave", choices=["F24", "S25", "F25", "all"], default="all")
+    parser.add_argument("--wave", choices=["F24", "S25", "F25", "S26", "all"], default="all")
     parser.add_argument("--verbose", action="store_true")
     args = parser.parse_args()
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    waves = ["F24", "S25", "F25"] if args.wave == "all" else [args.wave]
-    fns = {"F24": harmonize_f24, "S25": harmonize_s25, "F25": harmonize_f25}
+    waves = ["F24", "S25", "F25", "S26"] if args.wave == "all" else [args.wave]
+    fns = {"F24": harmonize_f24, "S25": harmonize_s25, "F25": harmonize_f25, "S26": harmonize_s26}
 
     for w in waves:
         df = fns[w]()

@@ -2,8 +2,8 @@
   "waves": {
     "stacked_all": {
       "label": "All waves (stacked)",
-      "n": 12782,
-      "note": "Stacked: F24+S25+F25. 7 canonical demographics + 325 non-demographic columns (in all 3 waves: 2; partial coverage: 25; single wave: 298). Rows from waves that didn't ask a given question carry null."
+      "n": 16211,
+      "note": "Stacked: F24+S25+F25+S26. 7 canonical demographics + 440 non-demographic columns (in all 4 waves: 2; partial coverage: 36; single wave: 402). Rows from waves that didn't ask a given question carry null."
     }
   },
   "columns": {
@@ -23,12 +23,17 @@
         {
           "code": "F25",
           "label": "F25"
+        },
+        {
+          "code": "S26",
+          "label": "S26"
         }
       ],
       "waves": [
         "F24",
         "S25",
-        "F25"
+        "F25",
+        "S26"
       ]
     },
     "Age": {
@@ -60,7 +65,8 @@
       "waves": [
         "F24",
         "S25",
-        "F25"
+        "F25",
+        "S26"
       ]
     },
     "Gender": {
@@ -84,7 +90,8 @@
       "waves": [
         "F24",
         "S25",
-        "F25"
+        "F25",
+        "S26"
       ]
     },
     "Race": {
@@ -116,7 +123,8 @@
       "waves": [
         "F24",
         "S25",
-        "F25"
+        "F25",
+        "S26"
       ]
     },
     "Education": {
@@ -156,7 +164,8 @@
       "waves": [
         "F24",
         "S25",
-        "F25"
+        "F25",
+        "S26"
       ]
     },
     "Party ID": {
@@ -180,7 +189,8 @@
       "waves": [
         "F24",
         "S25",
-        "F25"
+        "F25",
+        "S26"
       ]
     },
     "PID Lean": {
@@ -204,7 +214,8 @@
       "waves": [
         "F24",
         "S25",
-        "F25"
+        "F25",
+        "S26"
       ]
     },
     "2024 vote": {
@@ -236,15 +247,17 @@
       "waves": [
         "F24",
         "S25",
-        "F25"
+        "F25",
+        "S26"
       ]
     },
     "2024_recalled_vote": {
-      "label": "2024_recalled_vote  [F25]",
+      "label": "2024_recalled_vote  [F25+S26]",
       "question": "Who did you vote for for president in 2024?",
       "type": "categorical",
       "waves": [
-        "F25"
+        "F25",
+        "S26"
       ],
       "options": [
         {
@@ -269,196 +282,13 @@
         }
       ]
     },
-    "2028_dem_primary": {
-      "label": "2028_dem_primary  [F25]",
-      "question": "2028_dem_primary",
-      "type": "categorical",
-      "waves": [
-        "F25"
-      ],
-      "options": [
-        {
-          "code": 1,
-          "label": "Andy Beshear"
-        },
-        {
-          "code": 2,
-          "label": "Alexandria Ocasio-Cortez"
-        },
-        {
-          "code": 3,
-          "label": "Kamala Harris"
-        },
-        {
-          "code": 4,
-          "label": "Wes Moore"
-        },
-        {
-          "code": 5,
-          "label": "Gavin Newsom"
-        },
-        {
-          "code": 6,
-          "label": "JB Pritzker"
-        },
-        {
-          "code": 7,
-          "label": "Josh Shapiro"
-        },
-        {
-          "code": 8,
-          "label": "Gretchen Whitmer"
-        },
-        {
-          "code": 9,
-          "label": "Mark Cuban"
-        },
-        {
-          "code": 10,
-          "label": "Ruben Gallego"
-        },
-        {
-          "code": 11,
-          "label": "Mark Kelly"
-        },
-        {
-          "code": 12,
-          "label": "Jared Polis"
-        },
-        {
-          "code": 13,
-          "label": "Pete Buttigieg"
-        },
-        {
-          "code": 14,
-          "label": "Cory Booker"
-        },
-        {
-          "code": 15,
-          "label": "Tim Walz"
-        },
-        {
-          "code": 16,
-          "label": "Jon Ossoff"
-        },
-        {
-          "code": 17,
-          "label": "Chris Murphy"
-        },
-        {
-          "code": 18,
-          "label": "Raphael Warnock"
-        },
-        {
-          "code": 19,
-          "label": "Rahm Emanuel"
-        },
-        {
-          "code": 20,
-          "label": "Other"
-        }
-      ]
-    },
-    "2028_gop_primary": {
-      "label": "2028_gop_primary  [F25]",
-      "question": "2028_gop_primary",
-      "type": "categorical",
-      "waves": [
-        "F25"
-      ],
-      "options": [
-        {
-          "code": 1,
-          "label": "JD Vance"
-        },
-        {
-          "code": 2,
-          "label": "Ron DeSantis"
-        },
-        {
-          "code": 3,
-          "label": "Brian Kemp"
-        },
-        {
-          "code": 4,
-          "label": "Glenn Youngkin"
-        },
-        {
-          "code": 5,
-          "label": "Nikki Haley"
-        },
-        {
-          "code": 6,
-          "label": "Mike Pence"
-        },
-        {
-          "code": 7,
-          "label": "Vivek Ramaswamy"
-        },
-        {
-          "code": 8,
-          "label": "Ted Cruz"
-        },
-        {
-          "code": 9,
-          "label": "Marco Rubio"
-        },
-        {
-          "code": 10,
-          "label": "Josh Hawley"
-        },
-        {
-          "code": 11,
-          "label": "Tim Scott"
-        },
-        {
-          "code": 12,
-          "label": "Tulsi Gabbard"
-        },
-        {
-          "code": 13,
-          "label": "Robert F. Kennedy Jr."
-        },
-        {
-          "code": 14,
-          "label": "Steve Bannon"
-        },
-        {
-          "code": 15,
-          "label": "Tucker Carlson"
-        },
-        {
-          "code": 16,
-          "label": "Kristi Noem"
-        },
-        {
-          "code": 17,
-          "label": "Katie Britt"
-        },
-        {
-          "code": 19,
-          "label": "Donald Trump Jr."
-        },
-        {
-          "code": 20,
-          "label": "Greg Abbott"
-        },
-        {
-          "code": 21,
-          "label": "Elise Stefanik"
-        },
-        {
-          "code": 22,
-          "label": "Other"
-        }
-      ]
-    },
     "2028_gop_primary_djt": {
-      "label": "2028_gop_primary_djt  [F25]",
+      "label": "2028_gop_primary_djt  [F25+S26]",
       "question": "2028_gop_primary_djt",
       "type": "categorical",
       "waves": [
-        "F25"
+        "F25",
+        "S26"
       ],
       "options": [
         {
@@ -635,6 +465,1070 @@
         }
       ]
     },
+    "ai_ethics_1": {
+      "label": "ai_ethics_1  [S26]",
+      "question": "To what extent do you agree or disagree with the following statements? - The benefits of AI will outweigh the harms",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "ai_ethics_2": {
+      "label": "ai_ethics_2  [S26]",
+      "question": "To what extent do you agree or disagree with the following statements? - AI can be trusted to adopt values that are beneficial for our society",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "ai_familiarity_1": {
+      "label": "ai_familiarity_1  [S26]",
+      "question": "Please rate how familiar you are with each product. - Instagram",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Not familiar"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat familiar"
+        },
+        {
+          "code": 3,
+          "label": "Familiar"
+        },
+        {
+          "code": 4,
+          "label": "Very familiar"
+        }
+      ]
+    },
+    "ai_familiarity_10": {
+      "label": "ai_familiarity_10  [S26]",
+      "question": "Please rate how familiar you are with each product. - Samsung Galaxy",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Not familiar"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat familiar"
+        },
+        {
+          "code": 3,
+          "label": "Familiar"
+        },
+        {
+          "code": 4,
+          "label": "Very familiar"
+        }
+      ]
+    },
+    "ai_familiarity_2": {
+      "label": "ai_familiarity_2  [S26]",
+      "question": "Please rate how familiar you are with each product. - iPhone",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Not familiar"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat familiar"
+        },
+        {
+          "code": 3,
+          "label": "Familiar"
+        },
+        {
+          "code": 4,
+          "label": "Very familiar"
+        }
+      ]
+    },
+    "ai_familiarity_3": {
+      "label": "ai_familiarity_3  [S26]",
+      "question": "Please rate how familiar you are with each product. - ChatGPT",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Not familiar"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat familiar"
+        },
+        {
+          "code": 3,
+          "label": "Familiar"
+        },
+        {
+          "code": 4,
+          "label": "Very familiar"
+        }
+      ]
+    },
+    "ai_familiarity_4": {
+      "label": "ai_familiarity_4  [S26]",
+      "question": "Please rate how familiar you are with each product. - Facebook",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Not familiar"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat familiar"
+        },
+        {
+          "code": 3,
+          "label": "Familiar"
+        },
+        {
+          "code": 4,
+          "label": "Very familiar"
+        }
+      ]
+    },
+    "ai_familiarity_5": {
+      "label": "ai_familiarity_5  [S26]",
+      "question": "Please rate how familiar you are with each product. - Grok",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Not familiar"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat familiar"
+        },
+        {
+          "code": 3,
+          "label": "Familiar"
+        },
+        {
+          "code": 4,
+          "label": "Very familiar"
+        }
+      ]
+    },
+    "ai_familiarity_6": {
+      "label": "ai_familiarity_6  [S26]",
+      "question": "Please rate how familiar you are with each product. - Gemini",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Not familiar"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat familiar"
+        },
+        {
+          "code": 3,
+          "label": "Familiar"
+        },
+        {
+          "code": 4,
+          "label": "Very familiar"
+        }
+      ]
+    },
+    "ai_familiarity_7": {
+      "label": "ai_familiarity_7  [S26]",
+      "question": "Please rate how familiar you are with each product. - Claude",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Not familiar"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat familiar"
+        },
+        {
+          "code": 3,
+          "label": "Familiar"
+        },
+        {
+          "code": 4,
+          "label": "Very familiar"
+        }
+      ]
+    },
+    "ai_familiarity_8": {
+      "label": "ai_familiarity_8  [S26]",
+      "question": "Please rate how familiar you are with each product. - Omnius",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Not familiar"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat familiar"
+        },
+        {
+          "code": 3,
+          "label": "Familiar"
+        },
+        {
+          "code": 4,
+          "label": "Very familiar"
+        }
+      ]
+    },
+    "ai_familiarity_9": {
+      "label": "ai_familiarity_9  [S26]",
+      "question": "Please rate how familiar you are with each product. - Waymo",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Not familiar"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat familiar"
+        },
+        {
+          "code": 3,
+          "label": "Familiar"
+        },
+        {
+          "code": 4,
+          "label": "Very familiar"
+        }
+      ]
+    },
+    "ai_frequency": {
+      "label": "ai_frequency  [S26]",
+      "question": "How often do you interact with any form of AI (such as ChatGPT, Claude, Grok)?",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Daily or more"
+        },
+        {
+          "code": 2,
+          "label": "A few times a week"
+        },
+        {
+          "code": 3,
+          "label": "About once a week"
+        },
+        {
+          "code": 4,
+          "label": "A few times a month or less"
+        },
+        {
+          "code": 5,
+          "label": "Never"
+        }
+      ]
+    },
+    "ai_recognition_1": {
+      "label": "ai_recognition_1  [S26]",
+      "question": "How confident are you in your ability to recognize if the following types of media have been generated by AI? - Text",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Extremely confident"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat confident"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unconfident"
+        },
+        {
+          "code": 4,
+          "label": "Extremely unconfident"
+        },
+        {
+          "code": 5,
+          "label": "Not sure"
+        }
+      ]
+    },
+    "ai_recognition_2": {
+      "label": "ai_recognition_2  [S26]",
+      "question": "How confident are you in your ability to recognize if the following types of media have been generated by AI? - Images",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Extremely confident"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat confident"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unconfident"
+        },
+        {
+          "code": 4,
+          "label": "Extremely unconfident"
+        },
+        {
+          "code": 5,
+          "label": "Not sure"
+        }
+      ]
+    },
+    "ai_recognition_3": {
+      "label": "ai_recognition_3  [S26]",
+      "question": "How confident are you in your ability to recognize if the following types of media have been generated by AI? - Videos",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Extremely confident"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat confident"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unconfident"
+        },
+        {
+          "code": 4,
+          "label": "Extremely unconfident"
+        },
+        {
+          "code": 5,
+          "label": "Not sure"
+        }
+      ]
+    },
+    "ai_recognition_4": {
+      "label": "ai_recognition_4  [S26]",
+      "question": "How confident are you in your ability to recognize if the following types of media have been generated by AI? - Voices",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Extremely confident"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat confident"
+        },
+        {
+          "code": 3,
+          "label": "Somewhat unconfident"
+        },
+        {
+          "code": 4,
+          "label": "Extremely unconfident"
+        },
+        {
+          "code": 5,
+          "label": "Not sure"
+        }
+      ]
+    },
+    "ai_regulation_1": {
+      "label": "ai_regulation_1  [S26]",
+      "question": "Who should be responsible for regulating AI? Check all that apply. International agencies",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "International agencies"
+        }
+      ]
+    },
+    "ai_regulation_2": {
+      "label": "ai_regulation_2  [S26]",
+      "question": "Who should be responsible for regulating AI? Check all that apply. The federal government",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "The federal government"
+        }
+      ]
+    },
+    "ai_regulation_3": {
+      "label": "ai_regulation_3  [S26]",
+      "question": "Who should be responsible for regulating AI? Check all that apply. U.S. state governments",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "U.S. state governments"
+        }
+      ]
+    },
+    "ai_regulation_4": {
+      "label": "ai_regulation_4  [S26]",
+      "question": "Who should be responsible for regulating AI? Check all that apply. The companies that make the AI systems",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "The companies that make the AI systems"
+        }
+      ]
+    },
+    "ai_regulation_5": {
+      "label": "ai_regulation_5  [S26]",
+      "question": "Who should be responsible for regulating AI? Check all that apply. AI should not be regulated at all",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "AI should not be regulated at all"
+        }
+      ]
+    },
+    "ai_regulation_6": {
+      "label": "ai_regulation_6  [S26]",
+      "question": "Who should be responsible for regulating AI? Check all that apply. Not sure or no opinion",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Not sure or no opinion"
+        }
+      ]
+    },
+    "ai_situations_1": {
+      "label": "ai_situations_1  [S26]",
+      "question": "For the following situations, tell us whether or not you believe AI should be used. - Filling out personal tax forms",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "AI should do all of the work"
+        },
+        {
+          "code": 2,
+          "label": "AI should do most of the work with some human assistance"
+        },
+        {
+          "code": 3,
+          "label": "Humans should do most of the work with some AI assistance"
+        },
+        {
+          "code": 4,
+          "label": "Humans should do all of the work"
+        },
+        {
+          "code": 5,
+          "label": "Not sure or no opinion"
+        }
+      ]
+    },
+    "ai_situations_2": {
+      "label": "ai_situations_2  [S26]",
+      "question": "For the following situations, tell us whether or not you believe AI should be used. - Reading job applications and making hiring decisions",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "AI should do all of the work"
+        },
+        {
+          "code": 2,
+          "label": "AI should do most of the work with some human assistance"
+        },
+        {
+          "code": 3,
+          "label": "Humans should do most of the work with some AI assistance"
+        },
+        {
+          "code": 4,
+          "label": "Humans should do all of the work"
+        },
+        {
+          "code": 5,
+          "label": "Not sure or no opinion"
+        }
+      ]
+    },
+    "ai_situations_3": {
+      "label": "ai_situations_3  [S26]",
+      "question": "For the following situations, tell us whether or not you believe AI should be used. - Making decisions in military combat situations",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "AI should do all of the work"
+        },
+        {
+          "code": 2,
+          "label": "AI should do most of the work with some human assistance"
+        },
+        {
+          "code": 3,
+          "label": "Humans should do most of the work with some AI assistance"
+        },
+        {
+          "code": 4,
+          "label": "Humans should do all of the work"
+        },
+        {
+          "code": 5,
+          "label": "Not sure or no opinion"
+        }
+      ]
+    },
+    "ai_situations_4": {
+      "label": "ai_situations_4  [S26]",
+      "question": "For the following situations, tell us whether or not you believe AI should be used. - Deciding whether or not someone qualifies for government benefits, such as food stamps",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "AI should do all of the work"
+        },
+        {
+          "code": 2,
+          "label": "AI should do most of the work with some human assistance"
+        },
+        {
+          "code": 3,
+          "label": "Humans should do most of the work with some AI assistance"
+        },
+        {
+          "code": 4,
+          "label": "Humans should do all of the work"
+        },
+        {
+          "code": 5,
+          "label": "Not sure or no opinion"
+        }
+      ]
+    },
+    "ai_situations_5": {
+      "label": "ai_situations_5  [S26]",
+      "question": "For the following situations, tell us whether or not you believe AI should be used. - Making patient care decisions in healthcare settings",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "AI should do all of the work"
+        },
+        {
+          "code": 2,
+          "label": "AI should do most of the work with some human assistance"
+        },
+        {
+          "code": 3,
+          "label": "Humans should do most of the work with some AI assistance"
+        },
+        {
+          "code": 4,
+          "label": "Humans should do all of the work"
+        },
+        {
+          "code": 5,
+          "label": "Not sure or no opinion"
+        }
+      ]
+    },
+    "ai_situations_6": {
+      "label": "ai_situations_6  [S26]",
+      "question": "For the following situations, tell us whether or not you believe AI should be used. - Driving public buses, trains, or subways",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "AI should do all of the work"
+        },
+        {
+          "code": 2,
+          "label": "AI should do most of the work with some human assistance"
+        },
+        {
+          "code": 3,
+          "label": "Humans should do most of the work with some AI assistance"
+        },
+        {
+          "code": 4,
+          "label": "Humans should do all of the work"
+        },
+        {
+          "code": 5,
+          "label": "Not sure or no opinion"
+        }
+      ]
+    },
+    "ai_situations_7": {
+      "label": "ai_situations_7  [S26]",
+      "question": "For the following situations, tell us whether or not you believe AI should be used. - Helping K-12 students learn in the classroom",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "AI should do all of the work"
+        },
+        {
+          "code": 2,
+          "label": "AI should do most of the work with some human assistance"
+        },
+        {
+          "code": 3,
+          "label": "Humans should do most of the work with some AI assistance"
+        },
+        {
+          "code": 4,
+          "label": "Humans should do all of the work"
+        },
+        {
+          "code": 5,
+          "label": "Not sure or no opinion"
+        }
+      ]
+    },
+    "ai_test_1": {
+      "label": "ai_test_1  [S26]",
+      "question": "Now, please indicate whether or not you believe the following images are AI-generated. - 2",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "The image is AI generated"
+        },
+        {
+          "code": 2,
+          "label": "The image is not AI generated"
+        }
+      ]
+    },
+    "ai_test_2": {
+      "label": "ai_test_2  [S26]",
+      "question": "Now, please indicate whether or not you believe the following images are AI-generated. - 5",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "The image is AI generated"
+        },
+        {
+          "code": 2,
+          "label": "The image is not AI generated"
+        }
+      ]
+    },
+    "ai_test_3": {
+      "label": "ai_test_3  [S26]",
+      "question": "Now, please indicate whether or not you believe the following images are AI-generated. - 12",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "The image is AI generated"
+        },
+        {
+          "code": 2,
+          "label": "The image is not AI generated"
+        }
+      ]
+    },
+    "ai_test_4": {
+      "label": "ai_test_4  [S26]",
+      "question": "Now, please indicate whether or not you believe the following images are AI-generated. - 14",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "The image is AI generated"
+        },
+        {
+          "code": 2,
+          "label": "The image is not AI generated"
+        }
+      ]
+    },
+    "ai_uses_1": {
+      "label": "ai_uses_1  [S26]",
+      "question": "How often have you used AI in the following ways? - Used AI for advice in making major life decisions (career changes, moves, marriage proposals, etc.)",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Daily or more"
+        },
+        {
+          "code": 2,
+          "label": "A few times a week"
+        },
+        {
+          "code": 4,
+          "label": "About once a week"
+        },
+        {
+          "code": 5,
+          "label": "A few times a month or less"
+        },
+        {
+          "code": 7,
+          "label": "Never"
+        }
+      ]
+    },
+    "ai_uses_2": {
+      "label": "ai_uses_2  [S26]",
+      "question": "How often have you used AI in the following ways? - Used AI for everyday tasks (make a meal plan, create a playlist, write an email, etc.)",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Daily or more"
+        },
+        {
+          "code": 2,
+          "label": "A few times a week"
+        },
+        {
+          "code": 4,
+          "label": "About once a week"
+        },
+        {
+          "code": 5,
+          "label": "A few times a month or less"
+        },
+        {
+          "code": 7,
+          "label": "Never"
+        }
+      ]
+    },
+    "ai_uses_3": {
+      "label": "ai_uses_3  [S26]",
+      "question": "How often have you used AI in the following ways? - Talked with AI as you would talk to a friend",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Daily or more"
+        },
+        {
+          "code": 2,
+          "label": "A few times a week"
+        },
+        {
+          "code": 4,
+          "label": "About once a week"
+        },
+        {
+          "code": 5,
+          "label": "A few times a month or less"
+        },
+        {
+          "code": 7,
+          "label": "Never"
+        }
+      ]
+    },
+    "ai_uses_4": {
+      "label": "ai_uses_4  [S26]",
+      "question": "How often have you used AI in the following ways? - Talked with AI as you would talk to a romantic partner",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Daily or more"
+        },
+        {
+          "code": 2,
+          "label": "A few times a week"
+        },
+        {
+          "code": 4,
+          "label": "About once a week"
+        },
+        {
+          "code": 5,
+          "label": "A few times a month or less"
+        },
+        {
+          "code": 7,
+          "label": "Never"
+        }
+      ]
+    },
+    "ai_uses_5": {
+      "label": "ai_uses_5  [S26]",
+      "question": "How often have you used AI in the following ways? - Used AI as a therapist or mentor to discuss and process emotional topics",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Daily or more"
+        },
+        {
+          "code": 2,
+          "label": "A few times a week"
+        },
+        {
+          "code": 4,
+          "label": "About once a week"
+        },
+        {
+          "code": 5,
+          "label": "A few times a month or less"
+        },
+        {
+          "code": 7,
+          "label": "Never"
+        }
+      ]
+    },
+    "ai_uses_6": {
+      "label": "ai_uses_6  [S26]",
+      "question": "How often have you used AI in the following ways? - Used AI for work or academic purposes",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Daily or more"
+        },
+        {
+          "code": 2,
+          "label": "A few times a week"
+        },
+        {
+          "code": 4,
+          "label": "About once a week"
+        },
+        {
+          "code": 5,
+          "label": "A few times a month or less"
+        },
+        {
+          "code": 7,
+          "label": "Never"
+        }
+      ]
+    },
+    "ai_uses_7": {
+      "label": "ai_uses_7  [S26]",
+      "question": "How often have you used AI in the following ways? - Talked with fictional characters from film or other media via AI chatbots",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Daily or more"
+        },
+        {
+          "code": 2,
+          "label": "A few times a week"
+        },
+        {
+          "code": 4,
+          "label": "About once a week"
+        },
+        {
+          "code": 5,
+          "label": "A few times a month or less"
+        },
+        {
+          "code": 7,
+          "label": "Never"
+        }
+      ]
+    },
+    "ai_uses_ado_7": {
+      "label": "ai_uses_ado_7  [S26]",
+      "question": "How often have you used AI in the following ways? - Answer Display Order Never",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        },
+        {
+          "code": 5,
+          "label": "5"
+        }
+      ]
+    },
     "Amendment mechanics": {
       "label": "Amendment mechanics  [F24+S25]",
       "question": "Amendment mechanics",
@@ -663,11 +1557,12 @@
       ]
     },
     "anes_ideology": {
-      "label": "anes_ideology  [F25]",
+      "label": "anes_ideology  [F25+S26]",
       "question": "Here is a seven-point scale on which the political views that people might hold are arranged from extremely liberal to extremely conservative. Where would you place yourself on this scale?",
       "type": "categorical",
       "waves": [
-        "F25"
+        "F25",
+        "S26"
       ],
       "options": [
         {
@@ -701,11 +1596,12 @@
       ]
     },
     "anes_party_id": {
-      "label": "anes_party_id  [F25]",
+      "label": "anes_party_id  [F25+S26]",
       "question": "Generally speaking, do you usually think of yourself as a Republican, a Democrat, independent, or what?",
       "type": "categorical",
       "waves": [
-        "F25"
+        "F25",
+        "S26"
       ],
       "options": [
         {
@@ -723,6 +1619,146 @@
         {
           "code": 4,
           "label": "Other"
+        }
+      ]
+    },
+    "arg_news_sources_1": {
+      "label": "arg_news_sources_1  [S26]",
+      "question": "Which of the following do you regularly use to get news? Select all that apply. X (formerly Twitter)",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "X (formerly Twitter)"
+        }
+      ]
+    },
+    "arg_news_sources_10": {
+      "label": "arg_news_sources_10  [S26]",
+      "question": "Which of the following do you regularly use to get news? Select all that apply. TikTok",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "TikTok"
+        }
+      ]
+    },
+    "arg_news_sources_2": {
+      "label": "arg_news_sources_2  [S26]",
+      "question": "Which of the following do you regularly use to get news? Select all that apply. Cable television",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Cable television"
+        }
+      ]
+    },
+    "arg_news_sources_3": {
+      "label": "arg_news_sources_3  [S26]",
+      "question": "Which of the following do you regularly use to get news? Select all that apply. Facebook",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Facebook"
+        }
+      ]
+    },
+    "arg_news_sources_4": {
+      "label": "arg_news_sources_4  [S26]",
+      "question": "Which of the following do you regularly use to get news? Select all that apply. Local television",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Local television"
+        }
+      ]
+    },
+    "arg_news_sources_5": {
+      "label": "arg_news_sources_5  [S26]",
+      "question": "Which of the following do you regularly use to get news? Select all that apply. Podcasts and YouTube",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Podcasts and YouTube"
+        }
+      ]
+    },
+    "arg_news_sources_6": {
+      "label": "arg_news_sources_6  [S26]",
+      "question": "Which of the following do you regularly use to get news? Select all that apply. Broadcast television",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Broadcast television"
+        }
+      ]
+    },
+    "arg_news_sources_7": {
+      "label": "arg_news_sources_7  [S26]",
+      "question": "Which of the following do you regularly use to get news? Select all that apply. Newspapers or news websites",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Newspapers or news websites"
+        }
+      ]
+    },
+    "arg_news_sources_8": {
+      "label": "arg_news_sources_8  [S26]",
+      "question": "Which of the following do you regularly use to get news? Select all that apply. Instagram",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Instagram"
+        }
+      ]
+    },
+    "arg_news_sources_9": {
+      "label": "arg_news_sources_9  [S26]",
+      "question": "Which of the following do you regularly use to get news? Select all that apply. Reddit",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Reddit"
         }
       ]
     },
@@ -990,12 +2026,193 @@
         }
       ]
     },
+    "as_statements_1": {
+      "label": "as_statements_1  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - Antisemitism is a serious problem in the United States today.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "as_statements_2": {
+      "label": "as_statements_2  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - Jewish Americans face more hate crimes than almost every other demographic group in the United States.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "as_statements_3": {
+      "label": "as_statements_3  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - Jews are promoting nonwhite immigration to reduce the power of white Americans in American politics and culture.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "as_statements_4": {
+      "label": "as_statements_4  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - Jews have an extremely organized international community that puts their own interests before those of their home countries.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "as_statements_5": {
+      "label": "as_statements_5  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - The U.S. government should declare America a Christian nation.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "as_statements_6": {
+      "label": "as_statements_6  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - Being Christian is an important part of being truly American.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
     "attention_check": {
-      "label": "attention_check  [F25]",
+      "label": "attention_check  [F25+S26]",
       "question": "In this question, we just want to verify that you are a real person. In the list below, please select\n\u201chealthcare.\u201d",
       "type": "categorical",
       "waves": [
-        "F25"
+        "F25",
+        "S26"
       ],
       "options": [
         {
@@ -1110,45 +2327,111 @@
         "S25"
       ]
     },
-    "ces_race": {
-      "label": "ces_race  [F25]",
-      "question": "What racial or ethnic group best describes you? (combined)",
+    "burden_a": {
+      "label": "burden_a  [S26]",
+      "question": "Which of the following is closest to your view?",
       "type": "categorical",
       "waves": [
-        "F25"
+        "S26"
       ],
       "options": [
         {
           "code": 1,
-          "label": "White"
+          "label": "The government has too much paperwork and too many requirements for people to access benefit programs like food assistance and health insurance."
         },
         {
           "code": 2,
-          "label": "Black or African-American"
+          "label": "The government has too little paperwork and too few requirements to stop fraud and ensure that only the right people are accessing benefit programs."
         },
         {
           "code": 3,
-          "label": "Hispanic or Latino"
+          "label": "Not sure or no opinion"
+        }
+      ]
+    },
+    "burden_b": {
+      "label": "burden_b  [S26]",
+      "question": "Which of the following is closest to your view?",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "The government has too much paperwork and too many requirements for people to vote and register to vote."
         },
         {
-          "code": 4,
-          "label": "Asian or Asian-American"
+          "code": 2,
+          "label": "The government has too little paperwork and too few requirements to stop fraud and ensure that only the right people are voting and registering to vote."
         },
         {
-          "code": 5,
-          "label": "Native American"
+          "code": 3,
+          "label": "Not sure or no opinion"
+        }
+      ]
+    },
+    "burden_c": {
+      "label": "burden_c  [S26]",
+      "question": "Which of the following is closest to your view?",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "The government has too much paperwork and too many requirements for people to purchase guns."
         },
         {
-          "code": 6,
-          "label": "Asian or Asian-American"
+          "code": 2,
+          "label": "The government has too little paperwork and too few requirements to stop fraud and ensure that only the right people are purchasing guns."
         },
         {
-          "code": 7,
-          "label": "Two or more races"
-        },
+          "code": 3,
+          "label": "Not sure or no opinion"
+        }
+      ]
+    },
+    "burden_split_do_burden_a": {
+      "label": "burden_split_do_burden_a  [S26]",
+      "question": "burden_split - Display Order burden_a",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
         {
-          "code": 8,
-          "label": "Other"
+          "code": 1,
+          "label": "1"
+        }
+      ]
+    },
+    "burden_split_do_burden_b": {
+      "label": "burden_split_do_burden_b  [S26]",
+      "question": "burden_split - Display Order burden_b",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        }
+      ]
+    },
+    "burden_split_do_burden_c": {
+      "label": "burden_split_do_burden_c  [S26]",
+      "question": "burden_split - Display Order burden_c",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
         }
       ]
     },
@@ -1414,6 +2697,126 @@
         }
       ]
     },
+    "conflation_a": {
+      "label": "conflation_a  [S26]",
+      "question": "Which of the following comes closest to your view?",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Israel's actions in Gaza have made me think more negatively of Jewish people."
+        },
+        {
+          "code": 2,
+          "label": "Israel's actions in Gaza have made me think more positively of Jewish people."
+        },
+        {
+          "code": 3,
+          "label": "Israel's actions in Gaza have had no effect on my views of Jewish people."
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ]
+    },
+    "conflation_b": {
+      "label": "conflation_b  [S26]",
+      "question": "Which of the following comes closest to your view?",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Israel's actions in Gaza have made me think more negatively of Israeli people."
+        },
+        {
+          "code": 2,
+          "label": "Israel's actions in Gaza have made me think more positively of Israeli people."
+        },
+        {
+          "code": 3,
+          "label": "Israel's actions in Gaza have had no effect on my views of Israeli people."
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ]
+    },
+    "conflation_c": {
+      "label": "conflation_c  [S26]",
+      "question": "Which of the following comes closest to your view?",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Israel's actions in Gaza have made me think more negatively of Israel."
+        },
+        {
+          "code": 2,
+          "label": "Israel's actions in Gaza have made me think more positively of Israel."
+        },
+        {
+          "code": 3,
+          "label": "Israel's actions in Gaza have had no effect on my views of Israel."
+        },
+        {
+          "code": 4,
+          "label": "Not sure"
+        }
+      ]
+    },
+    "conflation_split_do_conflation_a": {
+      "label": "conflation_split_do_conflation_a  [S26]",
+      "question": "conflation_split - Display Order conflation_a",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        }
+      ]
+    },
+    "conflation_split_do_conflation_b": {
+      "label": "conflation_split_do_conflation_b  [S26]",
+      "question": "conflation_split - Display Order conflation_b",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        }
+      ]
+    },
+    "conflation_split_do_conflation_c": {
+      "label": "conflation_split_do_conflation_c  [S26]",
+      "question": "conflation_split - Display Order conflation_c",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        }
+      ]
+    },
     "Criminal justice": {
       "label": "Criminal justice  [S25]",
       "question": "Which is more important in the United States today: keeping sentences harsh to reduce crime, or limiting the length of sentences to reduce mass incarceration?",
@@ -1463,29 +2866,6 @@
         {
           "code": 5,
           "label": "Neither favorable nor unfavorable"
-        }
-      ]
-    },
-    "D base vs swing": {
-      "label": "D base vs swing  [S25+F25]",
-      "question": "When it comes to winning the next election, what do you think is more important for Democrats?",
-      "type": "categorical",
-      "waves": [
-        "S25",
-        "F25"
-      ],
-      "options": [
-        {
-          "code": 1,
-          "label": "Democrats need to focus on energizing and turning out their voter base, by running on progressive policies that give their voters something to vote for"
-        },
-        {
-          "code": 2,
-          "label": "Democrats need to focus on moderating in order to appeal to the swing voters and independents who decide elections"
-        },
-        {
-          "code": 3,
-          "label": "Democrats don\u2019t need to change much from their 2024 strategy"
         }
       ]
     },
@@ -2527,111 +3907,6 @@
         }
       ]
     },
-    "d_electable_maxdiff": {
-      "label": "d_electable_maxdiff  [F25]",
-      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican?",
-      "type": "maxdiff",
-      "waves": [
-        "F25"
-      ],
-      "items": [
-        {
-          "code": 1,
-          "label": "Andy Beshear",
-          "do_col": "d_electable_maxdiff_do_1"
-        },
-        {
-          "code": 2,
-          "label": "Alexandria Ocasio-Cortez",
-          "do_col": "d_electable_maxdiff_do_2"
-        },
-        {
-          "code": 3,
-          "label": "Kamala Harris",
-          "do_col": "d_electable_maxdiff_do_3"
-        },
-        {
-          "code": 4,
-          "label": "Wes Moore",
-          "do_col": "d_electable_maxdiff_do_4"
-        },
-        {
-          "code": 5,
-          "label": "Gavin Newsom",
-          "do_col": "d_electable_maxdiff_do_5"
-        },
-        {
-          "code": 6,
-          "label": "JB Pritzker",
-          "do_col": "d_electable_maxdiff_do_6"
-        },
-        {
-          "code": 7,
-          "label": "Josh Shapiro",
-          "do_col": "d_electable_maxdiff_do_7"
-        },
-        {
-          "code": 8,
-          "label": "Gretchen Whitmer",
-          "do_col": "d_electable_maxdiff_do_8"
-        },
-        {
-          "code": 9,
-          "label": "Mark Cuban",
-          "do_col": "d_electable_maxdiff_do_9"
-        },
-        {
-          "code": 10,
-          "label": "Ruben Gallego",
-          "do_col": "d_electable_maxdiff_do_10"
-        },
-        {
-          "code": 11,
-          "label": "Mark Kelly",
-          "do_col": "d_electable_maxdiff_do_11"
-        },
-        {
-          "code": 12,
-          "label": "Jared Polis",
-          "do_col": "d_electable_maxdiff_do_12"
-        },
-        {
-          "code": 13,
-          "label": "Pete Buttigieg",
-          "do_col": "d_electable_maxdiff_do_13"
-        },
-        {
-          "code": 14,
-          "label": "Cory Booker",
-          "do_col": "d_electable_maxdiff_do_14"
-        },
-        {
-          "code": 15,
-          "label": "Tim Walz",
-          "do_col": "d_electable_maxdiff_do_15"
-        },
-        {
-          "code": 16,
-          "label": "Jon Ossoff",
-          "do_col": "d_electable_maxdiff_do_16"
-        },
-        {
-          "code": 17,
-          "label": "Chris Murphy",
-          "do_col": "d_electable_maxdiff_do_17"
-        },
-        {
-          "code": 18,
-          "label": "Raphael Warnock",
-          "do_col": "d_electable_maxdiff_do_18"
-        },
-        {
-          "code": 19,
-          "label": "Rahm Emanuel",
-          "do_col": "d_electable_maxdiff_do_19"
-        }
-      ]
-    },
     "Deficit reduction A": {
       "label": "Deficit reduction A  [S25]",
       "question": "When it comes to reducing the deficit \u2014 the shortfall between what the government spends and what it collects in revenue each year, requiring borrowing to cover the gap \u2014 which approach do you prefer the most?",
@@ -2692,6 +3967,36 @@
         }
       ]
     },
+    "dei": {
+      "label": "dei  [S26]",
+      "question": "Many companies and schools have programs that encourage diversity, educate about and combat discrimination, accommodate different types of people, and work to create inclusive environments. Which of the following comes closest to your views on the role of Jews in these programs?",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "These programs should do more to include Jews than they do right now."
+        },
+        {
+          "code": 2,
+          "label": "These programs should include Jews the same amount as they do right now."
+        },
+        {
+          "code": 3,
+          "label": "These programs should focus on more marginalized communities rather than Jews."
+        },
+        {
+          "code": 4,
+          "label": "These programs should not exist."
+        },
+        {
+          "code": 5,
+          "label": "Not sure"
+        }
+      ]
+    },
     "Dem econ priority": {
       "label": "Dem econ priority  [S25]",
       "question": "Using the same list, which aspect of the American economy do you think the Democratic Party is most focused on?",
@@ -2727,6 +4032,214 @@
         {
           "code": 7,
           "label": "None of the above"
+        }
+      ]
+    },
+    "donor_a_1": {
+      "label": "donor_a_1  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - Wealthy donors have too much control over American politics.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "donor_a_2": {
+      "label": "donor_a_2  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - Wealthy donors prioritize their own interests over American ones.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "donor_a_3": {
+      "label": "donor_a_3  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - Wealthy donors prioritize the interests of other countries over American interests.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "donor_b_1": {
+      "label": "donor_b_1  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - Wealthy Jewish donors have too much control over American politics.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "donor_b_2": {
+      "label": "donor_b_2  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - Wealthy Jewish donors prioritize their own interests over American ones.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "donor_b_3": {
+      "label": "donor_b_3  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - Wealthy Jewish donors prioritize the interests of Israel over American interests.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "donor_split_do_donor_a": {
+      "label": "donor_split_do_donor_a  [S26]",
+      "question": "donor_split - Display Order donor_a",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        }
+      ]
+    },
+    "donor_split_do_donor_b": {
+      "label": "donor_split_do_donor_b  [S26]",
+      "question": "donor_split - Display Order donor_b",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
         }
       ]
     },
@@ -3541,6 +5054,66 @@
         }
       ]
     },
+    "feeling_of_safety_1": {
+      "label": "feeling_of_safety_1  [S26]",
+      "question": "To what extent do you agree or disagree with the following statements? - Police officers make me feel safer in my community.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "feeling_of_safety_2": {
+      "label": "feeling_of_safety_2  [S26]",
+      "question": "To what extent do you agree or disagree with the following statements? - Immigration and Customs Enforcement (ICE) agents make me feel safer in my community.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
     "Filibuster": {
       "label": "Filibuster  [F24+S25]",
       "question": "Filibuster",
@@ -4209,12 +5782,34 @@
       ]
     },
     "Generic ballot 2026": {
-      "label": "Generic ballot 2026  [S25+F25]",
+      "label": "Generic ballot 2026  [S25]",
       "question": "If the election for U.S. Congress in your district was held today, which one of the following candidates would you vote for?",
       "type": "categorical",
       "waves": [
-        "S25",
-        "F25"
+        "S25"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "The Democrat"
+        },
+        {
+          "code": 2,
+          "label": "The Republican"
+        },
+        {
+          "code": 3,
+          "label": "Don't know"
+        }
+      ]
+    },
+    "generic_ballot": {
+      "label": "generic_ballot  [F25+S26]",
+      "question": "If the election for U.S. Congress in your district was held today, which one of the following candidates would you vote for?",
+      "type": "categorical",
+      "waves": [
+        "F25",
+        "S26"
       ],
       "options": [
         {
@@ -4296,12 +5891,35 @@
         }
       ]
     },
+    "gop_base_vs_swing": {
+      "label": "gop_base_vs_swing  [S26]",
+      "question": "When it comes to the next election, what do you think is more important for Republicans?",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Republicans need to focus on energizing and turning out the base by running on conservative, America-first policies."
+        },
+        {
+          "code": 4,
+          "label": "Republicans need to focus on moderating their policies and ideology in order to appeal to a wider range of voters."
+        },
+        {
+          "code": 5,
+          "label": "Republicans don\u2019t need to change much from their 2024 strategy."
+        }
+      ]
+    },
     "hersh_battery_1": {
-      "label": "hersh_battery_1  [F25]",
+      "label": "hersh_battery_1  [F25+S26]",
       "question": "To what extent do you agree with these statements? - Jews in the United States are more loyal to Israel than to America.",
       "type": "categorical",
       "waves": [
-        "F25"
+        "F25",
+        "S26"
       ],
       "options": [
         {
@@ -4327,11 +5945,12 @@
       ]
     },
     "hersh_battery_2": {
-      "label": "hersh_battery_2  [F25]",
+      "label": "hersh_battery_2  [F25+S26]",
       "question": "To what extent do you agree with these statements? - It\u2019s appropriate to boycott Jewish American-owned businesses to protest the war in Gaza.",
       "type": "categorical",
       "waves": [
-        "F25"
+        "F25",
+        "S26"
       ],
       "options": [
         {
@@ -4357,11 +5976,12 @@
       ]
     },
     "hersh_battery_3": {
-      "label": "hersh_battery_3  [F25]",
+      "label": "hersh_battery_3  [F25+S26]",
       "question": "To what extent do you agree with these statements? - Jews in the United States have too much power.",
       "type": "categorical",
       "waves": [
-        "F25"
+        "F25",
+        "S26"
       ],
       "options": [
         {
@@ -4566,6 +6186,156 @@
         }
       ]
     },
+    "holocaust_battery_1": {
+      "label": "holocaust_battery_1  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - Public schools should be required to teach about the Holocaust in world history classes.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "holocaust_battery_2": {
+      "label": "holocaust_battery_2  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - People exaggerate how bad the Holocaust actually was.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "holocaust_battery_3": {
+      "label": "holocaust_battery_3  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - Jews should move on from the Holocaust.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "holocaust_battery_4": {
+      "label": "holocaust_battery_4  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - Something like the Holocaust could happen again to Jews today.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "holocaust_battery_5": {
+      "label": "holocaust_battery_5  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - Jews were partially responsible for the Holocaust.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
     "Homelessness A": {
       "label": "Homelessness A  [S25]",
       "question": "When it comes to homelessness, which position comes closest to your view?",
@@ -4634,6 +6404,36 @@
         {
           "code": 4,
           "label": "4"
+        }
+      ]
+    },
+    "ice_budget": {
+      "label": "ice_budget  [S26]",
+      "question": "When it comes to Immigration and Customs Enforcement (ICE), do you favor:",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Increasing the ICE budget"
+        },
+        {
+          "code": 8,
+          "label": "Maintaining the ICE budget"
+        },
+        {
+          "code": 9,
+          "label": "Reducing the ICE budget"
+        },
+        {
+          "code": 10,
+          "label": "Eliminating the ICE budget"
+        },
+        {
+          "code": 11,
+          "label": "Not sure or no opinion"
         }
       ]
     },
@@ -4963,163 +6763,183 @@
         }
       ]
     },
-    "issue_rank_maxdiff": {
-      "label": "issue_rank_maxdiff  [F25]",
-      "question": "When it comes to deciding your vote, which of the following issues is more important to you?",
-      "type": "maxdiff",
+    "israel_views_1": {
+      "label": "israel_views_1  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - America should end the slavish surrender to Israel, its wars, and its demands for foreign aid.",
+      "type": "categorical",
       "waves": [
-        "F25"
+        "S26"
       ],
-      "items": [
+      "options": [
         {
           "code": 1,
-          "label": "Cost of living/affordability",
-          "do_col": "issue_rank_maxdiff_do_1"
+          "label": "Strongly agree"
         },
         {
           "code": 2,
-          "label": "Healthcare",
-          "do_col": "issue_rank_maxdiff_do_2"
+          "label": "Somewhat agree"
         },
         {
           "code": 3,
-          "label": "Jobs",
-          "do_col": "issue_rank_maxdiff_do_3"
+          "label": "Neither agree nor disagree"
         },
         {
           "code": 4,
-          "label": "Taxes",
-          "do_col": "issue_rank_maxdiff_do_4"
+          "label": "Somewhat disagree"
         },
         {
           "code": 5,
-          "label": "The national debt",
-          "do_col": "issue_rank_maxdiff_do_5"
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "israel_views_2": {
+      "label": "israel_views_2  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - The Bible says that those who bless Israel will be blessed, and those who curse Israel will be cursed, so America should stand with Israel.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
         },
         {
-          "code": 6,
-          "label": "Corruption",
-          "do_col": "issue_rank_maxdiff_do_6"
+          "code": 2,
+          "label": "Somewhat agree"
         },
         {
-          "code": 7,
-          "label": "Social Security",
-          "do_col": "issue_rank_maxdiff_do_7"
+          "code": 3,
+          "label": "Neither agree nor disagree"
         },
         {
-          "code": 8,
-          "label": "Medicaid and Medicare",
-          "do_col": "issue_rank_maxdiff_do_8"
+          "code": 4,
+          "label": "Somewhat disagree"
         },
         {
-          "code": 9,
-          "label": "K-12 education",
-          "do_col": "issue_rank_maxdiff_do_9"
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "israel_views_3": {
+      "label": "israel_views_3  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - America needs Israel for national security. They are the tip of the spear when it comes to defeating terrorism.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
         },
         {
-          "code": 10,
-          "label": "Abortion",
-          "do_col": "issue_rank_maxdiff_do_10"
+          "code": 2,
+          "label": "Somewhat agree"
         },
         {
-          "code": 11,
-          "label": "Crime",
-          "do_col": "issue_rank_maxdiff_do_11"
+          "code": 3,
+          "label": "Neither agree nor disagree"
         },
         {
-          "code": 12,
-          "label": "Israel and Palestine",
-          "do_col": "issue_rank_maxdiff_do_12"
+          "code": 4,
+          "label": "Somewhat disagree"
         },
         {
-          "code": 13,
-          "label": "Race relations",
-          "do_col": "issue_rank_maxdiff_do_13"
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "israel_views_4": {
+      "label": "israel_views_4  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - Israel is a sanctuary for historically oppressed people, minority rights, and democracy in a region where no others exist.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
         },
         {
-          "code": 14,
-          "label": "Diplomatic relations",
-          "do_col": "issue_rank_maxdiff_do_14"
+          "code": 2,
+          "label": "Somewhat agree"
         },
         {
-          "code": 15,
-          "label": "Climate change",
-          "do_col": "issue_rank_maxdiff_do_15"
+          "code": 3,
+          "label": "Neither agree nor disagree"
         },
         {
-          "code": 16,
-          "label": "The environment",
-          "do_col": "issue_rank_maxdiff_do_16"
+          "code": 4,
+          "label": "Somewhat disagree"
         },
         {
-          "code": 17,
-          "label": "Election integrity",
-          "do_col": "issue_rank_maxdiff_do_17"
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "israel_views_5": {
+      "label": "israel_views_5  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - Israel is a democracy and the safe haven of the Jewish people, but they have a moral obligation to ensure humanitarian treatment of Palestinian civilians.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
         },
         {
-          "code": 18,
-          "label": "Immigration",
-          "do_col": "issue_rank_maxdiff_do_18"
+          "code": 2,
+          "label": "Somewhat agree"
         },
         {
-          "code": 19,
-          "label": "Regulating businesses and corporations",
-          "do_col": "issue_rank_maxdiff_do_19"
+          "code": 3,
+          "label": "Neither agree nor disagree"
         },
         {
-          "code": 20,
-          "label": "Ukraine and Russia",
-          "do_col": "issue_rank_maxdiff_do_20"
+          "code": 4,
+          "label": "Somewhat disagree"
         },
         {
-          "code": 21,
-          "label": "Acceptance of gay people",
-          "do_col": "issue_rank_maxdiff_do_21"
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "israel_views_6": {
+      "label": "israel_views_6  [S26]",
+      "question": "To what extent do you agree or disagree with these statements? - Israel is an apartheid state, engaged in racist oppression against Palestinians.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
         },
         {
-          "code": 22,
-          "label": "Acceptance of transgender people",
-          "do_col": "issue_rank_maxdiff_do_22"
+          "code": 2,
+          "label": "Somewhat agree"
         },
         {
-          "code": 23,
-          "label": "Higher education",
-          "do_col": "issue_rank_maxdiff_do_23"
+          "code": 3,
+          "label": "Neither agree nor disagree"
         },
         {
-          "code": 24,
-          "label": "China",
-          "do_col": "issue_rank_maxdiff_do_24"
+          "code": 4,
+          "label": "Somewhat disagree"
         },
         {
-          "code": 25,
-          "label": "Trade",
-          "do_col": "issue_rank_maxdiff_do_25"
-        },
-        {
-          "code": 26,
-          "label": "Artificial intelligence",
-          "do_col": "issue_rank_maxdiff_do_26"
-        },
-        {
-          "code": 27,
-          "label": "Guns",
-          "do_col": "issue_rank_maxdiff_do_27"
-        },
-        {
-          "code": 28,
-          "label": "Democracy",
-          "do_col": "issue_rank_maxdiff_do_28"
-        },
-        {
-          "code": 29,
-          "label": "Free speech",
-          "do_col": "issue_rank_maxdiff_do_29"
-        },
-        {
-          "code": 30,
-          "label": "Housing",
-          "do_col": "issue_rank_maxdiff_do_30"
+          "code": 5,
+          "label": "Strongly disagree"
         }
       ]
     },
@@ -5154,11 +6974,12 @@
       ]
     },
     "jewish_id": {
-      "label": "jewish_id  [F25]",
+      "label": "jewish_id  [F25+S26]",
       "question": "Regardless of your level of religiosity, do you consider yourself to be culturally Jewish?",
       "type": "categorical",
       "waves": [
-        "F25"
+        "F25",
+        "S26"
       ],
       "options": [
         {
@@ -5727,7 +7548,8 @@
       "waves": [
         "F24",
         "S25",
-        "F25"
+        "F25",
+        "S26"
       ],
       "options": [
         {
@@ -5759,7 +7581,8 @@
       "waves": [
         "F24",
         "S25",
-        "F25"
+        "F25",
+        "S26"
       ],
       "options": [
         {
@@ -6068,304 +7891,6 @@
         }
       ]
     },
-    "obbba_messages": {
-      "label": "OBBBA D vs R messaging (collated 4 rounds)  [F25]",
-      "question": "There is a lot of talk these days about the recently passed One Big Beautiful Bill Act. Which position do you agree with more? \u2014 collated across 4 rounds of randomly drawn (Democrat, Republican) message pairs",
-      "type": "maxdiff",
-      "waves": [
-        "F25"
-      ],
-      "items": [
-        {
-          "code": 1,
-          "label": "Democrats say: 40 million low-income individuals and families will lose essential food assistance through drastic cuts to the SNAP program in OBBBA.",
-          "do_col": "obbba_messages_do_1",
-          "pick_col": "obbba_messages_pick_1"
-        },
-        {
-          "code": 2,
-          "label": "Democrats say: If you are concerned about the existential threat of climate change, this law decimates investments in energy efficiency and sustainable energy like wind and solar and moves us in exactly the wrong direction when it comes to energy.",
-          "do_col": "obbba_messages_do_2",
-          "pick_col": "obbba_messages_pick_2"
-        },
-        {
-          "code": 3,
-          "label": "Democrats say: Instead of passing OBBBA, both parties could have worked together to extend middle-class tax cuts without giveaways to corporations and the wealthy, built on the success of $35 insulin and Medicare drug price negotiations to make healthcare more affordable, and reduced the deficit \u2014 something both parties agree should be a priority.",
-          "do_col": "obbba_messages_do_3",
-          "pick_col": "obbba_messages_pick_3"
-        },
-        {
-          "code": 4,
-          "label": "Democrats say: Medicaid work requirements in OBBBA will kick 17 million people off of health insurance. These are life and death decisions There are people can't afford health insurance because they have no money in their budget to go and buy health care. Now they've got to make a decision between eating and their rent, or they just don't go to the doctor.",
-          "do_col": "obbba_messages_do_4",
-          "pick_col": "obbba_messages_pick_4"
-        },
-        {
-          "code": 5,
-          "label": "Democrats say: Millions of working Americans rely on SNAP to feed their families. If OBBBA passes, many will go hungry. SNAP isn't a handout \u2014 it's a lifeline. Stripping it away will hurt real people.",
-          "do_col": "obbba_messages_do_5",
-          "pick_col": "obbba_messages_pick_5"
-        },
-        {
-          "code": 6,
-          "label": "Democrats say: OBBBA is a triple\u2013whammy: it makes devastating cuts to food and healthcare programs while driving up costs for everyone; gives massive tax breaks to big corporations and the ultra-rich instead of the middle class; and irresponsibly adds over $5 trillion to the national debt. It is fundamentally unfair and un-American: Families will lose health care. Hospitals will close. Kids will go hungry. All so the wealthiest 0.1% can get even richer.",
-          "do_col": "obbba_messages_do_6",
-          "pick_col": "obbba_messages_pick_6"
-        },
-        {
-          "code": 7,
-          "label": "Democrats say: OBBBA means more seniors, veterans, people with disabilities and children will go to bed hungry. It means farmers, who are already operating on razor-thin margins, will see billions in lost revenue. It will mean job losses and lost wages for everyone who is a part of the food system \u2013 from truck drivers to local grocers.",
-          "do_col": "obbba_messages_do_7",
-          "pick_col": "obbba_messages_pick_7"
-        },
-        {
-          "code": 8,
-          "label": "Democrats say: OBBBA will kill 300,000 jobs in wind and solar per year. We're going to lose out on $450 billion in capital as thousands of projects go under. We are going to have energy shortages as a result of this legislation.",
-          "do_col": "obbba_messages_do_8",
-          "pick_col": "obbba_messages_pick_8"
-        },
-        {
-          "code": 9,
-          "label": "Democrats say: OBBBA work requirements are designed to kick people off of Medicaid. The work requirements are built so that people won't be able to satisfy them because Republicans hate the idea that Medicaid actually helps the working poor in this country.",
-          "do_col": "obbba_messages_do_9",
-          "pick_col": "obbba_messages_pick_9"
-        },
-        {
-          "code": 10,
-          "label": "Democrats say: Republicans flooded OBBBA with unchecked billions in the name of 'homeland security' while Americans are against masked ICE agents terrorizing people in our communities who have been contributing to this country for decades \u2014including parents of U.S. Marines and even American kids.",
-          "do_col": "obbba_messages_do_10",
-          "pick_col": "obbba_messages_pick_10"
-        },
-        {
-          "code": 11,
-          "label": "Democrats say: Republicans' so-called 'Big, Beautiful Bill' guts health coverage to pay for tax cuts for billionaires.",
-          "do_col": "obbba_messages_do_11",
-          "pick_col": "obbba_messages_pick_11"
-        },
-        {
-          "code": 12,
-          "label": "Democrats say: Thanks to OBBBA, jobs that should belong in America will go to China, because China is not cutting back on clean energy. They're going to get way ahead of us on this industry, like they did on electric cars. And Americans will pay the price in high energy costs and fewer jobs.",
-          "do_col": "obbba_messages_do_12",
-          "pick_col": "obbba_messages_pick_12"
-        },
-        {
-          "code": 13,
-          "label": "Democrats say: The One Big Beautiful Bill provides ICE with an expanded budget of over $170 billion, raising fears of widespread abuse, as more reports emerge of masked agents detaining individuals at courthouses, workplaces, schools, and places of worship, often without transparency, oversight, or accountability.",
-          "do_col": "obbba_messages_do_13",
-          "pick_col": "obbba_messages_pick_13"
-        },
-        {
-          "code": 14,
-          "label": "Democrats say: The SNAP cuts in OBBBA will make groceries more expensive, shutter local grocery stores, and force kids to go hungry.",
-          "do_col": "obbba_messages_do_14",
-          "pick_col": "obbba_messages_pick_14"
-        },
-        {
-          "code": 15,
-          "label": "Democrats say: The big ugly bill is going to mean a lot of big ugly energy bills. It's economics 101, straight from Trump University: more demand and less supply as wind and solar is killed, meaning more costs for consumers and small businesses.",
-          "do_col": "obbba_messages_do_15",
-          "pick_col": "obbba_messages_pick_15"
-        },
-        {
-          "code": 16,
-          "label": "Democrats say: The fact is that millions of Americans are about to lose their health care and food assistance so Republicans can give giant tax breaks to the rich and large corporate interests. The overwhelming majority of people on Medicaid already work or are caretakers for loved ones. This isn't about work, it's about burying people in so much monthly paperwork that they miss a filing deadline and lose their health care and food assistance.",
-          "do_col": "obbba_messages_do_16",
-          "pick_col": "obbba_messages_pick_16"
-        },
-        {
-          "code": 17,
-          "label": "Democrats say: The fossil fuel industry will make a fortune off the Big Beautiful-for-Billionaires Bill. And American families will have to pay.",
-          "do_col": "obbba_messages_do_17",
-          "pick_col": "obbba_messages_pick_17"
-        },
-        {
-          "code": 18,
-          "label": "Democrats say: The law's changes to Medicaid will cause people to lose access to their healthcare or spend more on it, hospitals and nursing homes will close, and will prevent people from receiving at-home care",
-          "do_col": "obbba_messages_do_18",
-          "pick_col": "obbba_messages_pick_18"
-        },
-        {
-          "code": 19,
-          "label": "Democrats say: The real-life consequences of these nearly $1 trillion in Medicaid cuts \u2013 the largest ever proposed by Congress \u2013 will result in irreparable harm to our health care system, reducing access to care for all Americans and severely undermining the ability of hospitals and health systems to care for our most vulnerable patients.",
-          "do_col": "obbba_messages_do_19",
-          "pick_col": "obbba_messages_pick_19"
-        },
-        {
-          "code": 20,
-          "label": "Democrats say: The result of OBBBA? Average electric bills will rise by 10% more, costing working families an additional $400 a year.",
-          "do_col": "obbba_messages_do_20",
-          "pick_col": "obbba_messages_pick_20"
-        },
-        {
-          "code": 21,
-          "label": "Democrats say: This bill would destroy the future of clean energy in this country, increase energy costs, slash hundreds of thousands of good jobs, sell off our public lands, weaken environmental and public health protections, and put polluters above the law, all to give tax cuts to the wealthiest people in this country.",
-          "do_col": "obbba_messages_do_21",
-          "pick_col": "obbba_messages_pick_21"
-        },
-        {
-          "code": 22,
-          "label": "Democrats say: This law rips away health care from vulnerable children and families, guts food assistance, and raises costs for everyday Americans.",
-          "do_col": "obbba_messages_do_22",
-          "pick_col": "obbba_messages_pick_22"
-        },
-        {
-          "code": 23,
-          "label": "Democrats say: Under the so-called middle-class provisions of OBBBA, the wealthiest 0.1% get an average tax cut of $400,000. What does it mean to your family? Fewer benefits. Higher costs.",
-          "do_col": "obbba_messages_do_23",
-          "pick_col": "obbba_messages_pick_23"
-        },
-        {
-          "code": 24,
-          "label": "Democrats say: With this bill, tens of millions who would otherwise qualify for health care benefits would be mummified in new red tape, shortened enrollment periods, higher premiums and weaker coverage.",
-          "do_col": "obbba_messages_do_24",
-          "pick_col": "obbba_messages_pick_24"
-        },
-        {
-          "code": 25,
-          "label": "Republicans say: America's brave ICE officers are putting their own lives on the line to make our communities safer. OBBBA secures historic investments in border security and immigration enforcement, ensuring law enforcement officers have the tools they need to protect American citizens from foreign criminals and terrorists.",
-          "do_col": "obbba_messages_do_25",
-          "pick_col": "obbba_messages_pick_25"
-        },
-        {
-          "code": 26,
-          "label": "Republicans say: Despite critics' rhetoric about tax cuts for 'billionaires and corporations,' the reality is this legislation prevents massive tax hikes across the board and overwhelmingly benefits middle-class households and job creators.",
-          "do_col": "obbba_messages_do_26",
-          "pick_col": "obbba_messages_pick_26"
-        },
-        {
-          "code": 27,
-          "label": "Republicans say: For rural communities, OBBBA cuts through permitting delays and restarts oil, gas, and coal leases, boosting our energy sector and creating thousands of jobs.",
-          "do_col": "obbba_messages_do_27",
-          "pick_col": "obbba_messages_pick_27"
-        },
-        {
-          "code": 28,
-          "label": "Republicans say: If you are able to work and you refuse to do so, you are defrauding the system. You're cheating the system. And no one in the country believes that that's right. So there's a moral component to the SNAP changes in OBBBA.",
-          "do_col": "obbba_messages_do_28",
-          "pick_col": "obbba_messages_pick_28"
-        },
-        {
-          "code": 29,
-          "label": "Republicans say: Millionaires and billionaires don't work for tips. They don't get paid overtime. And they don't rely on Social Security. Working families do, and for the first time, the Big Beautiful Bill shields these earnings from being taxed.",
-          "do_col": "obbba_messages_do_29",
-          "pick_col": "obbba_messages_pick_29"
-        },
-        {
-          "code": 30,
-          "label": "Republicans say: OBBBA cuts wasteful spending on woke Green New Deal-style programs and secures American energy dominance to support the rapid innovation of American industry.",
-          "do_col": "obbba_messages_do_30",
-          "pick_col": "obbba_messages_pick_30"
-        },
-        {
-          "code": 31,
-          "label": "Republicans say: OBBBA delivers for the American people by extending tax relief for hardworking families and small businesses, securing our border, unleashing American energy dominance, achieving peace through strength, and critically \u2013 making real, measurable reductions in federal spending.",
-          "do_col": "obbba_messages_do_31",
-          "pick_col": "obbba_messages_pick_31"
-        },
-        {
-          "code": 32,
-          "label": "Republicans say: OBBBA is a win for law and order and the safety and security of the American people: the $165 billion in funding will help the Department of Homeland Security and our brave law enforcement further deliver on President Trump's mandate to arrest and deport criminal illegal aliens.",
-          "do_col": "obbba_messages_do_32",
-          "pick_col": "obbba_messages_pick_32"
-        },
-        {
-          "code": 33,
-          "label": "Republicans say: OBBBA protects Medicaid for future generations as well as for the seniors, children, individuals with disabilities, and others who rely on the program. The law establishes common sense work requirements in Medicaid for certain able-bodied adults without dependents.",
-          "do_col": "obbba_messages_do_33",
-          "pick_col": "obbba_messages_pick_33"
-        },
-        {
-          "code": 34,
-          "label": "Republicans say: OBBBA removes barriers for America's energy producers to invest in our nation's energy future and accelerates the responsible development of America-made energy on federal lands.These smart, durable reforms will help ensure our nation's independent producers keep powering American energy dominance for generations to come.",
-          "do_col": "obbba_messages_do_34",
-          "pick_col": "obbba_messages_pick_34"
-        },
-        {
-          "code": 35,
-          "label": "Republicans say: OBBBA returns personal accountability to the Medicaid program. Under the status quo, able-bodied adults can remain on the rolls without working or meaningfully engaging with their communities. The One Big Beautiful Bill transforms the existing system by instituting commonsense community engagement requirements, the kind of reforms once lauded by Democrats under President Bill Clinton.",
-          "do_col": "obbba_messages_do_35",
-          "pick_col": "obbba_messages_pick_35"
-        },
-        {
-          "code": 36,
-          "label": "Republicans say: OBBBA takes a practical approach to improve SNAP by reducing waste, enhancing accountability, and encouraging recipients to move toward self-reliance through work and training",
-          "do_col": "obbba_messages_do_36",
-          "pick_col": "obbba_messages_pick_36"
-        },
-        {
-          "code": 37,
-          "label": "Republicans say: Our bill requires people to work or train 80 hours each month to remain on Medicaid. This is a responsible path to self-reliance for able-bodied, working-age people. No more taxpayer-funded coddling",
-          "do_col": "obbba_messages_do_37",
-          "pick_col": "obbba_messages_pick_37"
-        },
-        {
-          "code": 38,
-          "label": "Republicans say: President Trump and Congressional Republicans ran on restoring American energy dominance, after the Biden Administration's all-out assault on oil and gas production left the U.S. with higher gas and energy prices. The One Big Beautiful Bill delivered on rolling back stringent regulations on the oil and gas sector, reducing tax burdens on the sector, streamlining permits, and ending the special treatment that the IRA gave to solar and wind producers.",
-          "do_col": "obbba_messages_do_38",
-          "pick_col": "obbba_messages_pick_38"
-        },
-        {
-          "code": 39,
-          "label": "Republicans say: Republican reforms aim to tighten eligibility, reinforce work requirements, and curb misuse in SNAP. These measures will further facilitate self-sufficiency for recipients, reduce taxpayer burden, and empower states to take greater ownership over their welfare programs.",
-          "do_col": "obbba_messages_do_39",
-          "pick_col": "obbba_messages_pick_39"
-        },
-        {
-          "code": 40,
-          "label": "Republicans say: The OBBBA does not cut Medicaid benefits for those who need them, but it does make sure that people who are not eligible for these benefits do not collect them. Since 2019, Medicaid spending has increased 60%. It's unsustainable. If we wanted to ensure that Medicaid exists for current and future generations, Congress had to get to the bottom of this unsustainable growth rate and make some significant changes.",
-          "do_col": "obbba_messages_do_40",
-          "pick_col": "obbba_messages_pick_40"
-        },
-        {
-          "code": 41,
-          "label": "Republicans say: The One Big Beautiful Bill Act represents a sea change for border security and immigration enforcement. That change is long overdue, particularly as we work to undo the devastation of the Biden-Harris border crisis.",
-          "do_col": "obbba_messages_do_41",
-          "pick_col": "obbba_messages_pick_41"
-        },
-        {
-          "code": 42,
-          "label": "Republicans say: The One Big Beautiful Bill is a big and beautiful win for the American people. It's big because it delivers the largest tax cuts for families and small businesses.",
-          "do_col": "obbba_messages_do_42",
-          "pick_col": "obbba_messages_pick_42"
-        },
-        {
-          "code": 43,
-          "label": "Republicans say: The One Big Beautiful Bill restores the dignity of work with historically bipartisan work requirements for able-bodied Americans. We are implementing common sense, Clinton-era work, volunteer, education, or training requirements with broad bipartisan support.",
-          "do_col": "obbba_messages_do_43",
-          "pick_col": "obbba_messages_pick_43"
-        },
-        {
-          "code": 44,
-          "label": "Republicans say: The law's changes to Medicaid will prevent illegal immigrants and able-bodied adults from taking advantage of the system and make the system more fiscally responsible",
-          "do_col": "obbba_messages_do_44",
-          "pick_col": "obbba_messages_pick_44"
-        },
-        {
-          "code": 45,
-          "label": "Republicans say: The thing that will bankrupt this country more than any other policy is flooding the country with illegal immigration and then giving those migrants generous benefits. OBBBA fixes this problem.",
-          "do_col": "obbba_messages_do_45",
-          "pick_col": "obbba_messages_pick_45"
-        },
-        {
-          "code": 46,
-          "label": "Republicans say: There are about 4.8 million people on Medicaid right now nationwide who are able-bodied workers, young men, for example, who are not working, who are taking advantage of the system. When you make young men work, it's good for them, it's good for their dignity, it's good for their self worth, and it's good for the community that they live in.",
-          "do_col": "obbba_messages_do_46",
-          "pick_col": "obbba_messages_pick_46"
-        },
-        {
-          "code": 47,
-          "label": "Republicans say: This law unleashes American energy, refills the Strategic Petroleum Reserve, and repeals the Green New Scam policies. The One Big Beautiful Bill unleashes clean, American-made energy and will reduce the cost of living for Americans nationwide.",
-          "do_col": "obbba_messages_do_47",
-          "pick_col": "obbba_messages_pick_47"
-        },
-        {
-          "code": 48,
-          "label": "Republicans say: When Americans do their taxes next year, they're going to see that they're saving money, particularly if they are a working family who's in the low to middle income brackets, they're a senior citizen on Social Security, they're a tipped worker \u2014 they're going to see savings thanks to OBBBA.",
-          "do_col": "obbba_messages_do_48",
-          "pick_col": "obbba_messages_pick_48"
-        }
-      ]
-    },
     "opposite_sex_friends": {
       "label": "opposite_sex_friends  [F25]",
       "question": "How many of your close friends are of the opposite sex?",
@@ -6489,6 +8014,78 @@
         {
           "code": 75,
           "label": "75.0"
+        }
+      ]
+    },
+    "ordinary_influence": {
+      "label": "ordinary_influence  [S26]",
+      "question": "How much influence do you think ordinary people have on government policies?",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "No influence"
+        },
+        {
+          "code": 2,
+          "label": "A little influence"
+        },
+        {
+          "code": 3,
+          "label": "Some influence"
+        },
+        {
+          "code": 4,
+          "label": "A lot of influence"
+        }
+      ]
+    },
+    "parents_ideology": {
+      "label": "parents_ideology  [S26]",
+      "question": "Here is a seven-point scale of political views, arranged from extremely liberal to extremely conservative. Thinking about the political views of your parent(s) when you were a teenager, where would you place YOUR PARENT(S) on this scale?",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Extremely liberal"
+        },
+        {
+          "code": 2,
+          "label": "Liberal"
+        },
+        {
+          "code": 3,
+          "label": "Slightly liberal"
+        },
+        {
+          "code": 4,
+          "label": "Moderate; middle of the road"
+        },
+        {
+          "code": 5,
+          "label": "Slightly conservative"
+        },
+        {
+          "code": 6,
+          "label": "Conservative"
+        },
+        {
+          "code": 7,
+          "label": "Extremely conservative"
+        },
+        {
+          "code": 8,
+          "label": "My parents do not (or did not) hold the same views"
+        },
+        {
+          "code": 9,
+          "label": "Don\u2019t know or not applicable"
         }
       ]
     },
@@ -6631,11 +8228,12 @@
       ]
     },
     "pid_leaners": {
-      "label": "pid_leaners  [F25]",
+      "label": "pid_leaners  [F25+S26]",
       "question": "Do you think of yourself as closer to the Republican or Democratic party?",
       "type": "categorical",
       "waves": [
-        "F25"
+        "F25",
+        "S26"
       ],
       "options": [
         {
@@ -6649,6 +8247,364 @@
         {
           "code": 3,
           "label": "Neither"
+        }
+      ]
+    },
+    "pol_vio_scenarios_1": {
+      "label": "pol_vio_scenarios_1  [S26]",
+      "question": "Regardless of your willingness to perform these actions, which of the following scenarios do you think constitutes political violence? Check all that apply. Calling political opponents \u201cauthoritarian,\u201d \u201ca threat to democracy,\u201d or \u201cfascist\u201d",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Calling political opponents \u201cauthoritarian,\u201d \u201ca threat to democracy,\u201d or \u201cfascist\u201d"
+        }
+      ]
+    },
+    "pol_vio_scenarios_2": {
+      "label": "pol_vio_scenarios_2  [S26]",
+      "question": "Regardless of your willingness to perform these actions, which of the following scenarios do you think constitutes political violence? Check all that apply. Using racial or religious slurs to insult someone",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Using racial or religious slurs to insult someone"
+        }
+      ]
+    },
+    "pol_vio_scenarios_3": {
+      "label": "pol_vio_scenarios_3  [S26]",
+      "question": "Regardless of your willingness to perform these actions, which of the following scenarios do you think constitutes political violence? Check all that apply. Shouting at a political speaker you disagree with",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Shouting at a political speaker you disagree with"
+        }
+      ]
+    },
+    "pol_vio_scenarios_4": {
+      "label": "pol_vio_scenarios_4  [S26]",
+      "question": "Regardless of your willingness to perform these actions, which of the following scenarios do you think constitutes political violence? Check all that apply. Ripping down a political poster in a public place",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Ripping down a political poster in a public place"
+        }
+      ]
+    },
+    "pol_vio_scenarios_5": {
+      "label": "pol_vio_scenarios_5  [S26]",
+      "question": "Regardless of your willingness to perform these actions, which of the following scenarios do you think constitutes political violence? Check all that apply. Trying to get someone fired from their job because of their political views",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Trying to get someone fired from their job because of their political views"
+        }
+      ]
+    },
+    "pol_vio_scenarios_6": {
+      "label": "pol_vio_scenarios_6  [S26]",
+      "question": "Regardless of your willingness to perform these actions, which of the following scenarios do you think constitutes political violence? Check all that apply. Smashing the windows of a business because of the owner\u2019s political views",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Smashing the windows of a business because of the owner\u2019s political views"
+        }
+      ]
+    },
+    "pol_vio_scenarios_7": {
+      "label": "pol_vio_scenarios_7  [S26]",
+      "question": "Regardless of your willingness to perform these actions, which of the following scenarios do you think constitutes political violence? Check all that apply. Beating someone up because of their political views",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Beating someone up because of their political views"
+        }
+      ]
+    },
+    "pol_vio_scenarios_8": {
+      "label": "pol_vio_scenarios_8  [S26]",
+      "question": "Regardless of your willingness to perform these actions, which of the following scenarios do you think constitutes political violence? Check all that apply. Beating someone up because of their race, sex, religion, or sexual orientation",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Beating someone up because of their race, sex, religion, or sexual orientation"
+        }
+      ]
+    },
+    "pol_vio_scenarios_9": {
+      "label": "pol_vio_scenarios_9  [S26]",
+      "question": "Regardless of your willingness to perform these actions, which of the following scenarios do you think constitutes political violence? Check all that apply. None of the above",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "None of the above"
+        }
+      ]
+    },
+    "pres_battery_1": {
+      "label": "pres_battery_1  [S26]",
+      "question": "To what extent do you agree or disagree that the president should have the authority to: - Exert control over independent agencies that are responsible for making financial regulations",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "pres_battery_2": {
+      "label": "pres_battery_2  [S26]",
+      "question": "To what extent do you agree or disagree that the president should have the authority to: - Direct the Department of Justice to investigate political opponents",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "pres_battery_3": {
+      "label": "pres_battery_3  [S26]",
+      "question": "To what extent do you agree or disagree that the president should have the authority to: - Continue their administration\u2019s policies after courts have ruled them unlawful",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "pres_battery_4": {
+      "label": "pres_battery_4  [S26]",
+      "question": "To what extent do you agree or disagree that the president should have the authority to: - Cancel congressionally-approved funding without approval from Congress",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "pres_battery_5": {
+      "label": "pres_battery_5  [S26]",
+      "question": "To what extent do you agree or disagree that the president should have the authority to: - Carry out military strikes in other countries without approval from Congress",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "pres_battery_6": {
+      "label": "pres_battery_6  [S26]",
+      "question": "To what extent do you agree or disagree that the president should have the authority to: - Issue executive orders without approval from Congress",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "pres_battery_7": {
+      "label": "pres_battery_7  [S26]",
+      "question": "To what extent do you agree or disagree that the president should have the authority to: - Veto bills that Congress has passed",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat agree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat disagree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "pres_immunity": {
+      "label": "pres_immunity  [S26]",
+      "question": "The Supreme Court recently ruled that presidents cannot be prosecuted for official acts taken while in office. When thinking about the impact of this ruling on the presidency, which of the following comes closest to your view?",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "The ruling is dangerous because it places the president above the law, potentially allowing them to abuse their power without ever facing justice."
+        },
+        {
+          "code": 2,
+          "label": "The ruling is necessary to protect the president's ability to take decisive action without the constant fear of politically-motivated prosecution."
+        },
+        {
+          "code": 3,
+          "label": "Not sure or no opinion"
         }
       ]
     },
@@ -7711,118 +9667,91 @@
         }
       ]
     },
-    "r_electable_maxdiff": {
-      "label": "r_electable_maxdiff  [F25]",
-      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat?",
-      "type": "maxdiff",
+    "race_a": {
+      "label": "race_a  [S26]",
+      "question": "To what extent do you agree or disagree with this statement? The interests of Jews come at the expense of white people.",
+      "type": "categorical",
       "waves": [
-        "F25"
+        "S26"
       ],
-      "items": [
+      "options": [
         {
           "code": 1,
-          "label": "JD Vance",
-          "do_col": "r_electable_maxdiff_do_1"
+          "label": "Strongly agree"
         },
         {
           "code": 2,
-          "label": "Ron DeSantis",
-          "do_col": "r_electable_maxdiff_do_2"
+          "label": "Somewhat agree"
         },
         {
           "code": 3,
-          "label": "Brian Kemp",
-          "do_col": "r_electable_maxdiff_do_3"
+          "label": "Neither agree nor disagree"
         },
         {
           "code": 4,
-          "label": "Glenn Youngkin",
-          "do_col": "r_electable_maxdiff_do_4"
+          "label": "Somewhat disagree"
         },
         {
           "code": 5,
-          "label": "Nikki Haley",
-          "do_col": "r_electable_maxdiff_do_5"
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "race_b": {
+      "label": "race_b  [S26]",
+      "question": "To what extent do you agree or disagree with this statement? The interests of Jews come at the expense of people of color.",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly agree"
         },
         {
-          "code": 6,
-          "label": "Mike Pence",
-          "do_col": "r_electable_maxdiff_do_6"
+          "code": 2,
+          "label": "Somewhat agree"
         },
         {
-          "code": 7,
-          "label": "Vivek Ramaswamy",
-          "do_col": "r_electable_maxdiff_do_7"
+          "code": 3,
+          "label": "Neither agree nor disagree"
         },
         {
-          "code": 8,
-          "label": "Ted Cruz",
-          "do_col": "r_electable_maxdiff_do_8"
+          "code": 4,
+          "label": "Somewhat disagree"
         },
         {
-          "code": 9,
-          "label": "Marco Rubio",
-          "do_col": "r_electable_maxdiff_do_9"
-        },
+          "code": 5,
+          "label": "Strongly disagree"
+        }
+      ]
+    },
+    "race_split_do_race_a": {
+      "label": "race_split_do_race_a  [S26]",
+      "question": "race_split - Display Order race_a",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
         {
-          "code": 10,
-          "label": "Josh Hawley",
-          "do_col": "r_electable_maxdiff_do_10"
-        },
+          "code": 1,
+          "label": "1"
+        }
+      ]
+    },
+    "race_split_do_race_b": {
+      "label": "race_split_do_race_b  [S26]",
+      "question": "race_split - Display Order race_b",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
         {
-          "code": 11,
-          "label": "Tim Scott",
-          "do_col": "r_electable_maxdiff_do_11"
-        },
-        {
-          "code": 12,
-          "label": "Tulsi Gabbard",
-          "do_col": "r_electable_maxdiff_do_12"
-        },
-        {
-          "code": 13,
-          "label": "Robert F. Kennedy Jr.",
-          "do_col": "r_electable_maxdiff_do_13"
-        },
-        {
-          "code": 14,
-          "label": "Steve Bannon",
-          "do_col": "r_electable_maxdiff_do_14"
-        },
-        {
-          "code": 15,
-          "label": "Tucker Carlson",
-          "do_col": "r_electable_maxdiff_do_15"
-        },
-        {
-          "code": 16,
-          "label": "Kristi Noem",
-          "do_col": "r_electable_maxdiff_do_16"
-        },
-        {
-          "code": 17,
-          "label": "Katie Britt",
-          "do_col": "r_electable_maxdiff_do_17"
-        },
-        {
-          "code": 18,
-          "label": "Doug Burgum",
-          "do_col": "r_electable_maxdiff_do_18"
-        },
-        {
-          "code": 19,
-          "label": "Donald Trump Jr.",
-          "do_col": "r_electable_maxdiff_do_19"
-        },
-        {
-          "code": 20,
-          "label": "Greg Abbott",
-          "do_col": "r_electable_maxdiff_do_20"
-        },
-        {
-          "code": 21,
-          "label": "Elise Stefanik",
-          "do_col": "r_electable_maxdiff_do_21"
+          "code": 1,
+          "label": "1"
         }
       ]
     },
@@ -7899,11 +9828,12 @@
       ]
     },
     "religion": {
-      "label": "religion  [F25]",
+      "label": "religion  [F25+S26]",
       "question": "What is your present religion, if any? Are you:",
       "type": "categorical",
       "waves": [
-        "F25"
+        "F25",
+        "S26"
       ],
       "options": [
         {
@@ -8083,36 +10013,6 @@
         {
           "code": 4,
           "label": "4"
-        }
-      ]
-    },
-    "sexuality": {
-      "label": "sexuality  [F25]",
-      "question": "Which of the following best describes your sexual orientation? Remember, your answers are anonymous. - Selected Choice",
-      "type": "categorical",
-      "waves": [
-        "F25"
-      ],
-      "options": [
-        {
-          "code": 1,
-          "label": "Straight (heterosexual)"
-        },
-        {
-          "code": 2,
-          "label": "Gay or lesbian"
-        },
-        {
-          "code": 3,
-          "label": "Bisexual"
-        },
-        {
-          "code": 4,
-          "label": "Prefer not to say"
-        },
-        {
-          "code": 5,
-          "label": "Other"
         }
       ]
     },
@@ -8976,6 +10876,114 @@
         }
       ]
     },
+    "stigma_a": {
+      "label": "stigma_a  [S26]",
+      "question": "If you were receiving Supplemental Nutrition Assistance Program (SNAP) benefits, also known as food stamps, which of the following would come closest to your view?",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "I would feel uncomfortable telling friends or family I am receiving SNAP benefits"
+        },
+        {
+          "code": 2,
+          "label": "I would feel comfortable telling friends or family I am receiving SNAP benefits"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ]
+    },
+    "stigma_b": {
+      "label": "stigma_b  [S26]",
+      "question": "If you were receiving Medicaid, government-provided health insurance for low-income individuals, which of the following would come closest to your view?",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "I would feel uncomfortable telling friends or family I am receiving Medicaid"
+        },
+        {
+          "code": 2,
+          "label": "I would feel comfortable telling friends or family I am receiving Medicaid"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ]
+    },
+    "stigma_c": {
+      "label": "stigma_c  [S26]",
+      "question": "If you were receiving Social Security benefits, a government-provided pension program for the elderly and disabled, which of the following would come closest to your view?",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "I would feel uncomfortable telling friends or family I am receiving Social Security benefits"
+        },
+        {
+          "code": 2,
+          "label": "I would feel comfortable telling friends or family I am receiving Social Security benefits"
+        },
+        {
+          "code": 3,
+          "label": "Not sure"
+        }
+      ]
+    },
+    "stigma_split_do_stigma_a": {
+      "label": "stigma_split_do_stigma_a  [S26]",
+      "question": "stigma_split - Display Order stigma_a",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        }
+      ]
+    },
+    "stigma_split_do_stigma_b": {
+      "label": "stigma_split_do_stigma_b  [S26]",
+      "question": "stigma_split - Display Order stigma_b",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        }
+      ]
+    },
+    "stigma_split_do_stigma_c": {
+      "label": "stigma_split_do_stigma_c  [S26]",
+      "question": "stigma_split - Display Order stigma_c",
+      "type": "categorical",
+      "waves": [
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "1"
+        }
+      ]
+    },
     "Student deportations": {
       "label": "Student deportations  [S25]",
       "question": "You may have heard about some international students who participated in campus protests against the war in Gaza being detained by federal immigration authorities and threatened with deportation. \n\nWhite House officials argue that these students should be deported, or have their visas revoked, because their actions in the protests were antisemitic and constituted a threat to national security under a 1952 law. \n\nLegal experts say that these detentions are unconstitutional and threaten free speech, since the Supreme Court has ruled in the past that the First Amendment applies to non-citizens. \n\nWhich of the following comes closer to your view?",
@@ -9657,11 +11665,12 @@
       ]
     },
     "trump_approval": {
-      "label": "trump_approval  [F25]",
+      "label": "trump_approval  [F25+S26]",
       "question": "How do you feel about the way that Donald Trump is handling his job as president?",
       "type": "categorical",
       "waves": [
-        "F25"
+        "F25",
+        "S26"
       ],
       "options": [
         {

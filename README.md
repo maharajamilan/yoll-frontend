@@ -120,8 +120,9 @@ re-downloaded the repo.
 
 Four steps, each builds on the previous:
 
-1. **Select Data Source** — single wave (Fall 2024, Spring 2025, Fall 2025) or
-   a stacked combination (`2026 cycle` = S25+F25, `All waves` = F24+S25+F25).
+1. **Select Data Source** — single wave (Fall 2024, Spring 2025, Fall 2025,
+   Spring 2026) or a stacked combination (`2026 cycle` = S25+F25+S26,
+   `All waves` = F24+S25+F25+S26).
 2. **Configure Groups** — define columns of the crosstab. Each group is one
    or more demographic dimensions whose Cartesian product becomes the column
    set (e.g. Party ID × Gender → 6 columns).
@@ -137,26 +138,34 @@ preprocessed JSON.
 
 ## Stacked datasets
 
-`stacked_2026` (S25+F25) and `stacked_all` (F24+S25+F25) pool weighted
+`stacked_2026` (S25+F25+S26) and `stacked_all` (F24+S25+F25+S26) pool weighted
 respondents across the selected waves. **Every column from every pooled
 wave is exposed** — respondents from waves that didn't ask a given question
 carry `null`, so the weighted N naturally restricts to the waves that did.
-Column labels carry a coverage tag like `[F25]` or `[F24+S25]` when a
+Column labels carry a coverage tag like `[S26]` or `[F24+S25]` when a
 question wasn't asked everywhere; full-coverage columns are unannotated.
 
 Demographics use the canonical S25 coding regardless of how each wave coded
 them. Columns whose option codes diverge across waves (e.g. MaxDiff item
-batteries whose candidate list grew between waves) are dropped from the
-stacked view rather than silently fused.
+batteries whose candidate list changed between waves, or the 2028 primary
+fields) are dropped from the stacked view rather than silently fused.
 
 ## Weighting
 
-Every wave is reweighted from scratch using the **Spring 2025 YYP raking
-procedure**, applied to harmonized demographics (Age × Race × Education ×
-Gender × 5-cat Party ID, raked to national registered-voter targets,
-post-trim rescale to N). This keeps results comparable across waves but
-means originally-published topline numbers may differ slightly from what
-this tool produces.
+Fall 2024, Spring 2025, and Fall 2025 are reweighted from scratch using the
+**Spring 2025 YYP raking procedure**, applied to harmonized demographics
+(Age × Race × Education × Gender × 5-cat Party ID, raked to national
+registered-voter targets, post-trim rescale to N) so they stay comparable.
+
+**Spring 2026** is weighted differently — with Yale's **official Spring-2026
+(138b) procedure** reproduced faithfully (`scripts/rake_weights.py`
+`weight_s26_official`): a CPS Nov-2024 age×gender interaction plus
+race / education / party (Pew-Gallup 2024) targets, Black/Hispanic × R/D
+seeds, a post-IPF age×party calibration, and a 5×-mean trim. This means S26
+reproduces the published YYP S26 toplines, but a stacked dataset that
+includes S26 mixes the two weighting schemes (acceptable because each wave's
+weights still sum to its own N). Originally-published numbers may differ
+slightly from what this tool produces.
 
 ---
 
@@ -180,15 +189,21 @@ weighting scheme.
 
 The `scripts/` directory contains the Python pipeline that turns the raw YYP
 replication packages into the frontend-ready JSON. To re-run end to end, drop
-the F24 / S25 / F25 replication packages from
+the F24 / S25 / F25 / S26 replication packages from
 [Yale Dataverse](https://dataverse.yale.edu/dataverse/YYP) into your
-`~/Downloads` under their canonical names and run:
+`~/Downloads` under their canonical names (`yyp f24 repo`, `yyp s25 repo`,
+`yyp f25 repo`, `yyp s26 repo`) and run:
 
 ```bash
 python scripts/crosswalk.py        # raw -> harmonized S25-coded demographics
-python scripts/rake_weights.py     # apply S25 weighting pipeline to every wave
+python scripts/rake_weights.py     # S25 procedure for F24/S25/F25; official 138b for S26
 python scripts/preprocess.py       # produce public/data/{codebook,data}_*.json
 ```
+
+Adding a future wave touches: a `harmonize_<wave>()` in `crosswalk.py`, a
+`load_<wave>()` in `preprocess.py`, the wave's weighting in `rake_weights.py`,
+the `AVAILABLE_WAVES` list in `src/app/page.tsx`, and the stacked-dataset
+definitions in `preprocess.py` `main()`.
 
 Outputs in `public/data/`:
 

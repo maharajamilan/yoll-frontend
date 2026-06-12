@@ -33,6 +33,7 @@ OUTPUT_DIR = REPO_ROOT / "public" / "data"
 
 S25_DIR = Path("/Users/milansingh/Downloads/yyp s25 repo")
 F25_DIR = Path("/Users/milansingh/Downloads/yyp f25 repo")
+S26_DIR = Path("/Users/milansingh/Downloads/yyp s26 repo")
 F24_DIR = Path("/Users/milansingh/Downloads/yyp f24 repo")
 
 # Columns we never expose (PII, admin, free-text, metadata).
@@ -367,6 +368,206 @@ def load_f25() -> tuple[pd.DataFrame, dict[str, str], pd.DataFrame, str]:
 
 
 # ------------------------------------------------------------------
+# S26 loader (Verasight CSV; no _labels columns, so labels come from the
+# codebook XLSX. Race is an 8-way multi-select we collapse to a single column.)
+# ------------------------------------------------------------------
+
+# Multi-round MaxDiff families: the same battery shown across several rounds
+# (e.g. issue_maxdiff1/2/3). We collate the rounds into ONE MaxDiff, summing
+# offers (times shown) and picks across rounds per item — rather than exposing
+# each round as its own column. (stem, [round numbers])
+S26_MAXDIFF_FAMILIES = [
+    ("issue_maxdiff", [1, 2, 3]),
+    ("ai_risks_md", [1, 2]),
+    ("ai_benefits_md", [1, 2]),
+]
+S26_MAXDIFF_QTEXT = {
+    "issue_maxdiff": "When it comes to deciding your vote, which issue is more important to you? — collated across 3 MaxDiff rounds",
+    "ai_risks_md": "Which is the bigger risk of AI? — collated across 2 MaxDiff rounds",
+    "ai_benefits_md": "Which is the bigger benefit of AI? — collated across 2 MaxDiff rounds",
+}
+S26_MAXDIFF_LABEL = {
+    "issue_maxdiff": "Issue importance MaxDiff (collated 3 rounds)",
+    "ai_risks_md": "AI risks MaxDiff (collated 2 rounds)",
+    "ai_benefits_md": "AI benefits MaxDiff (collated 2 rounds)",
+}
+# Populated by build_s26_multiround_maxdiffs (in load_s26), read by preprocess_wave.
+S26_MAXDIFF_ITEMS: dict[str, list[dict]] = {}
+S26_MAXDIFF_HIDE: set[str] = set()
+S26_MAXDIFF_AUX: set[str] = set()
+
+
+def build_s26_multiround_maxdiffs(
+    raw: pd.DataFrame, code_label: dict[str, dict[float, str]]
+) -> pd.DataFrame:
+    """Collate each S26 multi-round MaxDiff family into one. Returns a DataFrame
+    of new columns: per item code c, `<stem>_do_<c>` (# rounds shown) and
+    `<stem>_pick_<c>` (# rounds picked), plus a main token column `<stem>`.
+    Populates S26_MAXDIFF_ITEMS / _HIDE / _AUX."""
+    S26_MAXDIFF_ITEMS.clear()
+    S26_MAXDIFF_HIDE.clear()
+    S26_MAXDIFF_AUX.clear()
+    n = len(raw)
+    out_cols: dict[str, list] = {}
+    for stem, rounds in S26_MAXDIFF_FAMILIES:
+        round_cols = [f"{stem}{r}" for r in rounds]
+        if not all(c in raw.columns for c in round_cols):
+            continue
+        cl = code_label.get(round_cols[0], {})
+        if not cl:
+            continue
+        item_codes = sorted(int(c) for c in cl.keys())
+        do_counts = {c: [0] * n for c in item_codes}
+        pick_counts = {c: [0] * n for c in item_codes}
+        answered = [False] * n
+        for r in rounds:
+            rc = f"{stem}{r}"
+            S26_MAXDIFF_HIDE.add(rc)
+            picks = pd.to_numeric(raw[rc], errors="coerce").tolist()
+            shown_by_item = {}
+            for c in item_codes:
+                sib = f"{rc}_do_{c}"
+                if sib in raw.columns:
+                    S26_MAXDIFF_HIDE.add(sib)
+                    shown_by_item[c] = raw[sib].notna().tolist()
+            for i in range(n):
+                pv = picks[i]
+                if pv is not None and not pd.isna(pv):
+                    answered[i] = True
+                    pvi = int(pv)
+                    if pvi in pick_counts:
+                        pick_counts[pvi][i] += 1
+                for c in item_codes:
+                    sb = shown_by_item.get(c)
+                    if sb is not None and sb[i]:
+                        do_counts[c][i] += 1
+        items = []
+        for c in item_codes:
+            do_col, pick_col = f"{stem}_do_{c}", f"{stem}_pick_{c}"
+            out_cols[do_col] = [v if v > 0 else np.nan for v in do_counts[c]]
+            out_cols[pick_col] = [v if v > 0 else np.nan for v in pick_counts[c]]
+            S26_MAXDIFF_AUX.add(do_col)
+            S26_MAXDIFF_AUX.add(pick_col)
+            items.append({"code": c, "label": cl.get(float(c), str(c)),
+                          "do_col": do_col, "pick_col": pick_col})
+        S26_MAXDIFF_ITEMS[stem] = items
+        out_cols[stem] = [1 if a else np.nan for a in answered]
+    return pd.DataFrame(out_cols, index=raw.index)
+
+
+# Codebook ships these with a leading 'a' (an export quirk); the official
+# cleaning notebook strips it. We do the same so names read cleanly and match
+# cross-wave (e.g. 2024_recalled_vote pools with F25).
+S26_STRIP_A_PREFIX = (
+    "a2024_recalled_vote", "a2028_dem_primary", "a2028_gop_primary",
+    "a2028_gop_primary_djt",
+)
+S26_CES_RACE_LABELS = {
+    1: "White", 2: "Black or African-American", 3: "Hispanic or Latino",
+    4: "Asian or Asian-American", 5: "Native American",
+    7: "Two or more races", 8: "Other",
+}
+# S26 ships `age` as a raw integer; bucket to Yale's official 138b 6-cat scheme
+# for display so the age demographic reads cleanly (and matches YYP toplines).
+S26_AGE_BINS = [18, 22, 29, 34, 44, 64, 200]
+S26_AGE_CODES = [1, 2, 3, 4, 5, 6]
+S26_DEMO_OPTION_OVERRIDES: dict[str, list[tuple[int, str]]] = {
+    "age": [(1, "18-22"), (2, "23-29"), (3, "30-34"),
+            (4, "35-44"), (5, "45-64"), (6, "65+")],
+}
+
+
+def _s26_codebook_maps(codebook_path: Path) -> tuple[dict[str, str], dict[str, dict[float, str]]]:
+    """Return (qtexts, code_label) from the S26 codebook XLSX.
+    code_label[var] = {numeric_code: label}."""
+    cb = pd.read_excel(codebook_path)
+    cb["Variable"] = cb["Variable"].ffill()
+    qtexts: dict[str, str] = {}
+    code_label: dict[str, dict[float, str]] = {}
+    for var in cb["Variable"].dropna().unique():
+        rows = cb[cb["Variable"] == var]
+        desc = rows["Description"].dropna()
+        qtexts[var] = str(desc.iloc[0]) if len(desc) else str(var)
+        cl: dict[float, str] = {}
+        for _, r in rows.iterrows():
+            resp, lab = r["Response"], r["Label"]
+            if pd.notna(resp) and pd.notna(lab):
+                try:
+                    cl[float(resp)] = str(lab)
+                except (ValueError, TypeError):
+                    continue
+        if cl:
+            code_label[var] = cl
+    return qtexts, code_label
+
+
+def load_s26() -> tuple[pd.DataFrame, dict[str, str], pd.DataFrame, str]:
+    data_path = S26_DIR / "data_original"
+    codebook_path = S26_DIR / "2025-138b_codebook.xlsx"
+
+    raw = pd.read_csv(data_path, low_memory=False)
+    qtexts, code_label = _s26_codebook_maps(codebook_path)
+
+    # Bucket raw integer age into the 6-cat 138b scheme (override supplies labels).
+    if "age" in raw.columns:
+        raw["age"] = pd.cut(
+            pd.to_numeric(raw["age"], errors="coerce"),
+            bins=S26_AGE_BINS, labels=S26_AGE_CODES, right=True, include_lowest=True,
+        ).astype("Int64")
+
+    # Collapse the 8-way ces_race multi-select into a single ces_race column
+    # (Yale's priority pick; Middle Eastern 6 -> Asian 4). Then drop the binaries.
+    race_priority = [f"ces_race_{i}" for i in (2, 4, 5, 3, 1, 6, 7, 8)]
+
+    def pick_race(row):
+        for col in race_priority:
+            if row.get(col) == 1:
+                return int(col.rsplit("_", 1)[-1])
+        return np.nan
+    if all(c in raw.columns for c in race_priority):
+        ces = raw.apply(pick_race, axis=1).replace(6, 4)
+        raw = raw.drop(columns=[c for c in raw.columns if c.startswith("ces_race_")])
+        raw["ces_race"] = ces
+        code_label["ces_race"] = {float(k): v for k, v in S26_CES_RACE_LABELS.items()}
+        qtexts["ces_race"] = "What racial or ethnic group best describes you?"
+
+    # Collate multi-round MaxDiff families (issue_maxdiff1/2/3, ai_*_md1/2)
+    # into single MaxDiff columns with offer/pick counts per item.
+    md_extras = build_s26_multiround_maxdiffs(raw, code_label)
+    if not md_extras.empty:
+        raw = pd.concat([raw, md_extras], axis=1).copy()
+
+    values = raw.copy()
+
+    # Reconstruct a labels_df from the codebook (no _labels columns in S26).
+    labels = pd.DataFrame(index=values.index)
+    for c in values.columns:
+        cl = code_label.get(c)
+        if not cl:
+            continue
+        num = pd.to_numeric(values[c], errors="coerce")
+        labels[c] = num.map(cl)
+
+    # Strip the leading 'a' on the recalled-vote / primary columns (and their
+    # _do_/_text siblings) across values, labels, and qtexts so names read
+    # cleanly and pool cross-wave.
+    rename: dict[str, str] = {}
+    for c in values.columns:
+        for pref in S26_STRIP_A_PREFIX:
+            if c == pref or c.startswith(pref + "_"):
+                rename[c] = c[1:]
+                break
+    if rename:
+        values = values.rename(columns=rename)
+        labels = labels.rename(columns={k: v for k, v in rename.items() if k in labels.columns})
+        for k, v in rename.items():
+            if k in qtexts:
+                qtexts[v] = qtexts.pop(k)
+
+    return values, qtexts, labels, "case_id"
+
+
+# ------------------------------------------------------------------
 # F24 loader (plain CSV + qualtrics mappings for readable names)
 # ------------------------------------------------------------------
 
@@ -562,7 +763,7 @@ def build_column_entry(
 
 def preprocess_wave(wave: str) -> None:
     print(f"\n===== preprocess {wave} =====")
-    loader = {"S25": load_s25, "F25": load_f25, "F24": load_f24}[wave]
+    loader = {"S25": load_s25, "F25": load_f25, "F24": load_f24, "S26": load_s26}[wave]
     values, qtexts, labels, case_id_col = loader()
 
     print(f"  {len(values)} rows; {len(values.columns)} cols")
@@ -582,6 +783,7 @@ def preprocess_wave(wave: str) -> None:
     option_overrides = {
         "F24": F24_DEMO_OPTION_OVERRIDES,
         "F25": F25_DEMO_OPTION_OVERRIDES,
+        "S26": S26_DEMO_OPTION_OVERRIDES,
     }.get(wave)
 
     # First pass: detect MaxDiff bases (and their _do_N siblings). The siblings
@@ -613,6 +815,18 @@ def preprocess_wave(wave: str) -> None:
                          if not b.startswith("obbba_maxdiff_")}
         maxdiff_do_cols = {c for c in maxdiff_do_cols
                            if not c.startswith("obbba_maxdiff_")}
+
+    # S26 multi-round MaxDiff families: hide the per-round bases + their _do_
+    # siblings (superseded by the collated column built in load_s26); keep the
+    # collated offer/pick count columns in the data file.
+    if wave == "S26" and S26_MAXDIFF_ITEMS:
+        obbba_hide_cols |= set(S26_MAXDIFF_HIDE)
+        obbba_aux_cols |= set(S26_MAXDIFF_AUX)
+        # Drop per-round bases from auto-detected MaxDiff (they're collated now).
+        hide_stems = tuple(S26_MAXDIFF_ITEMS.keys())
+        maxdiff_bases = {b: items for b, items in maxdiff_bases.items()
+                         if b not in S26_MAXDIFF_HIDE}
+        maxdiff_do_cols = {c for c in maxdiff_do_cols if c not in S26_MAXDIFF_HIDE}
 
     # Build codebook columns
     columns_out: dict[str, dict] = {}
@@ -673,11 +887,23 @@ def preprocess_wave(wave: str) -> None:
             "waves": [wave],
         }
 
+    # Inject collated S26 multi-round MaxDiff entries.
+    if wave == "S26" and S26_MAXDIFF_ITEMS:
+        for stem, items in S26_MAXDIFF_ITEMS.items():
+            columns_out[stem] = {
+                "label": S26_MAXDIFF_LABEL.get(stem, stem),
+                "question": S26_MAXDIFF_QTEXT.get(stem, stem),
+                "type": "maxdiff",
+                "items": list(items),
+                "waves": [wave],
+            }
+
     # Put demographic columns first for UX
     demo_priority = {
         "S25": ["Age", "Gender", "Race", "Education", "Income", "Party ID", "PID Lean", "2024 vote"],
         "F25": ["age", "gender", "ces_race", "education", "anes_party_id", "pid_leaners", "2024_recalled_vote"],
         "F24": ["age", "gender", "race", "education", "income", "party_id", "pid_lean", "x2024_horserace", "x2020_vote"],
+        "S26": ["age", "gender", "ces_race", "education", "income", "anes_party_id", "pid_leaners", "2024_recalled_vote", "anes_ideology"],
     }
     priority_cols = [c for c in demo_priority.get(wave, []) if c in columns_out]
     other_cols = [c for c in columns_out if c not in priority_cols]
@@ -687,6 +913,7 @@ def preprocess_wave(wave: str) -> None:
         "S25": {"label": "Spring 2025", "n": int(len(values)), "note": "Weighted via S25 pipeline."},
         "F25": {"label": "Fall 2025", "n": int(len(values)), "note": "Reweighted using S25 pipeline as standard."},
         "F24": {"label": "Fall 2024", "n": int(len(values)), "note": "Registered voters only; reweighted using S25 pipeline."},
+        "S26": {"label": "Spring 2026", "n": int(len(values)), "note": "Weighted with Yale's official Spring-2026 procedure (CPS-2024 age×gender + race/education/party targets), not the S25 pipeline."},
     }[wave]
 
     codebook = {
@@ -845,7 +1072,7 @@ def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
     # Per wave, gather: processed codebook (to know surviving column schema),
     # raw values DataFrame (so we can pull non-demographic values keyed by
     # case_id), harmonized demographics, and final weights.
-    loaders = {"S25": load_s25, "F25": load_f25, "F24": load_f24}
+    loaders = {"S25": load_s25, "F25": load_f25, "F24": load_f24, "S26": load_s26}
     per_wave: dict[str, dict] = {}
     for wave in waves:
         cb_path = OUTPUT_DIR / f"codebook_{wave.lower()}.json"
@@ -1042,6 +1269,17 @@ def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
             continue
         skipped.append((canon, f"diverging code-sets {dict(zip([w for w,_ in entries], codes))}"))
 
+    # Exclude MaxDiff columns from stacked datasets. They never pool across
+    # waves (each wave has its own item set), so in a stack they'd be
+    # single-wave [tag] columns — and their per-item offer/pick aux columns
+    # bloat the data file enormously (carried, mostly-null, across every wave's
+    # rows: stacked_all hit 52 MB and crashed the browser). MaxDiffs remain
+    # fully available in the single-wave views.
+    n_maxdiff = sum(1 for i in accepted.values() if i.get("type") == "maxdiff")
+    if n_maxdiff:
+        accepted = {c: i for c, i in accepted.items() if i.get("type") != "maxdiff"}
+        print(f"  excluded {n_maxdiff} MaxDiff columns from stack (use single waves for those)")
+
     print(f"  pooled non-demog canonicals: {len(canon_map)}; "
           f"accepted: {len(accepted)}; skipped: {len(skipped)}")
     if skipped:
@@ -1220,23 +1458,23 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--wave",
-        choices=["F24", "S25", "F25", "stacked_all", "stacked_2026", "all"],
+        choices=["F24", "S25", "F25", "S26", "stacked_all", "stacked_2026", "all"],
         default="all",
     )
     args = parser.parse_args()
 
     if args.wave == "all":
-        targets = ["F24", "S25", "F25", "stacked_all", "stacked_2026"]
+        targets = ["F24", "S25", "F25", "S26", "stacked_all", "stacked_2026"]
     else:
         targets = [args.wave]
 
     for t in targets:
-        if t in {"F24", "S25", "F25"}:
+        if t in {"F24", "S25", "F25", "S26"}:
             preprocess_wave(t)
         elif t == "stacked_all":
-            build_stacked("stacked_all", "All waves (stacked)", ["F24", "S25", "F25"])
+            build_stacked("stacked_all", "All waves (stacked)", ["F24", "S25", "F25", "S26"])
         elif t == "stacked_2026":
-            build_stacked("stacked_2026", "2026 cycle (S25 + F25)", ["S25", "F25"])
+            build_stacked("stacked_2026", "2026 cycle (S25 + F25 + S26)", ["S25", "F25", "S26"])
     return 0
 
 

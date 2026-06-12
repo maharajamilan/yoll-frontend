@@ -12,8 +12,9 @@ const AVAILABLE_WAVES = [
   { id: "F24", label: "Fall 2024", group: "wave" as const },
   { id: "S25", label: "Spring 2025", group: "wave" as const },
   { id: "F25", label: "Fall 2025", group: "wave" as const },
-  { id: "stacked_2026", label: "2026 cycle (S25 + F25)", group: "stacked" as const },
-  { id: "stacked_all", label: "All waves (F24 + S25 + F25)", group: "stacked" as const },
+  { id: "S26", label: "Spring 2026", group: "wave" as const },
+  { id: "stacked_2026", label: "2026 cycle (S25 + F25 + S26)", group: "stacked" as const },
+  { id: "stacked_all", label: "All waves (F24 + S25 + F25 + S26)", group: "stacked" as const },
 ];
 
 export default function Home() {
@@ -85,15 +86,20 @@ export default function Home() {
             export as CSV.
           </p>
           <p className="text-[color:var(--muted)] mb-3">
-            <strong>A note on weighting:</strong> to keep results comparable
-            across waves, every wave is reweighted using the Spring 2025 YYP
-            weighting procedure (age × gender × race × education × party ID
-            × 2024 vote, raked to national registered-voter targets).
-            Originally-published topline numbers may differ slightly.{" "}
+            <strong>A note on weighting:</strong> Fall 2024, Spring 2025, and
+            Fall 2025 are reweighted using the Spring 2025 YYP procedure (age ×
+            gender × race × education × party ID × 2024 vote, raked to national
+            registered-voter targets) so they stay comparable.{" "}
+            <strong>Spring 2026</strong> instead uses Yale&apos;s own official
+            Spring-2026 weighting (CPS-2024 age×gender interaction plus
+            race / education / party targets), so it reproduces the published
+            S26 toplines but isn&apos;t weighted identically to the earlier
+            waves. Originally-published numbers may differ slightly.{" "}
             <strong>Stacking</strong> pools weighted respondents across the
-            selected waves. Every question asked in any of the pooled waves is
-            available; the column label tags partial coverage (e.g.{" "}
-            <code className="text-[11px]">[F25]</code> or{" "}
+            selected waves (mixing those two weighting schemes when S26 is
+            included). Every question asked in any pooled wave is available; the
+            column label tags partial coverage (e.g.{" "}
+            <code className="text-[11px]">[S26]</code> or{" "}
             <code className="text-[11px]">[F24+S25]</code>), and the weighted N
             for those crosstabs naturally restricts to respondents who were
             asked the question.
