@@ -77,6 +77,17 @@ export default function Home() {
       </header>
 
       <main className="max-w-3xl mx-auto px-4 py-8 space-y-5">
+        <div className="rounded-md border border-[color:var(--accent)]/30 bg-[color:var(--accent-soft)] px-4 py-3 text-sm text-[color:var(--ink)]">
+          If you find any errors or have suggestions for how this tool could be
+          improved, please email me at{" "}
+          <a
+            href="mailto:milansingh03@gmail.com"
+            className="font-medium underline hover:text-[color:var(--accent)]"
+          >
+            milansingh03@gmail.com
+          </a>
+          .
+        </div>
         <section className="rounded-xl bg-card border border-[color:var(--border)] p-6 text-sm leading-relaxed text-[color:var(--ink)]">
           <p className="mb-2">
             This is a <strong>preliminary website</strong> for exploring Yale

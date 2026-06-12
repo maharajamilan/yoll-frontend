@@ -1,9 +1,9 @@
 {
   "waves": {
     "stacked_all": {
-      "label": "All waves (stacked)",
+      "label": "Zoning  [S25]",
       "n": 16211,
-      "note": "Stacked: F24+S25+F25+S26. 7 canonical demographics + 440 non-demographic columns (in all 4 waves: 2; partial coverage: 36; single wave: 402). Rows from waves that didn't ask a given question carry null."
+      "note": "Stacked: F24+S25+F25+S26. 7 canonical demographics + 447 non-demographic columns (in all 4 waves: 2; partial coverage: 43; single wave: 402). Rows from waves that didn't ask a given question carry null."
     }
   },
   "columns": {
@@ -279,6 +279,200 @@
         {
           "code": 5,
           "label": "Was not old enough to vote"
+        }
+      ]
+    },
+    "2028_dem_primary": {
+      "label": "2028_dem_primary  [F25+S26]  \u2295",
+      "question": "2028_dem_primary",
+      "type": "categorical",
+      "waves": [
+        "F25",
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Andy Beshear"
+        },
+        {
+          "code": 2,
+          "label": "Alexandria Ocasio-Cortez"
+        },
+        {
+          "code": 3,
+          "label": "Kamala Harris"
+        },
+        {
+          "code": 4,
+          "label": "Wes Moore"
+        },
+        {
+          "code": 5,
+          "label": "Gavin Newsom"
+        },
+        {
+          "code": 6,
+          "label": "JB Pritzker"
+        },
+        {
+          "code": 7,
+          "label": "Josh Shapiro"
+        },
+        {
+          "code": 8,
+          "label": "Gretchen Whitmer"
+        },
+        {
+          "code": 9,
+          "label": "Mark Cuban"
+        },
+        {
+          "code": 10,
+          "label": "Ruben Gallego"
+        },
+        {
+          "code": 11,
+          "label": "Mark Kelly"
+        },
+        {
+          "code": 12,
+          "label": "Jared Polis"
+        },
+        {
+          "code": 13,
+          "label": "Pete Buttigieg"
+        },
+        {
+          "code": 14,
+          "label": "Cory Booker"
+        },
+        {
+          "code": 15,
+          "label": "Tim Walz"
+        },
+        {
+          "code": 16,
+          "label": "Jon Ossoff"
+        },
+        {
+          "code": 17,
+          "label": "Chris Murphy"
+        },
+        {
+          "code": 18,
+          "label": "Raphael Warnock"
+        },
+        {
+          "code": 19,
+          "label": "Rahm Emanuel"
+        },
+        {
+          "code": 20,
+          "label": "Abigail Spanberger  [S26]"
+        },
+        {
+          "code": 21,
+          "label": "Other"
+        }
+      ]
+    },
+    "2028_gop_primary": {
+      "label": "2028_gop_primary  [F25+S26]  \u2295",
+      "question": "2028_gop_primary",
+      "type": "categorical",
+      "waves": [
+        "F25",
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "JD Vance"
+        },
+        {
+          "code": 2,
+          "label": "Ron DeSantis"
+        },
+        {
+          "code": 3,
+          "label": "Brian Kemp"
+        },
+        {
+          "code": 4,
+          "label": "Glenn Youngkin"
+        },
+        {
+          "code": 5,
+          "label": "Nikki Haley"
+        },
+        {
+          "code": 6,
+          "label": "Mike Pence"
+        },
+        {
+          "code": 7,
+          "label": "Vivek Ramaswamy"
+        },
+        {
+          "code": 8,
+          "label": "Ted Cruz"
+        },
+        {
+          "code": 9,
+          "label": "Marco Rubio"
+        },
+        {
+          "code": 10,
+          "label": "Josh Hawley"
+        },
+        {
+          "code": 11,
+          "label": "Tim Scott"
+        },
+        {
+          "code": 12,
+          "label": "Tulsi Gabbard"
+        },
+        {
+          "code": 13,
+          "label": "Robert F. Kennedy Jr."
+        },
+        {
+          "code": 14,
+          "label": "Steve Bannon"
+        },
+        {
+          "code": 15,
+          "label": "Tucker Carlson"
+        },
+        {
+          "code": 16,
+          "label": "Kristi Noem"
+        },
+        {
+          "code": 17,
+          "label": "Katie Britt"
+        },
+        {
+          "code": 18,
+          "label": "Doug Burgum  [S26]"
+        },
+        {
+          "code": 19,
+          "label": "Donald Trump Jr."
+        },
+        {
+          "code": 20,
+          "label": "Greg Abbott"
+        },
+        {
+          "code": 21,
+          "label": "Elise Stefanik"
+        },
+        {
+          "code": 22,
+          "label": "Other"
         }
       ]
     },
@@ -2435,6 +2629,45 @@
         }
       ]
     },
+    "ces_race": {
+      "label": "ces_race  [F25+S26]  \u2295",
+      "question": "What racial or ethnic group best describes you? (combined)",
+      "type": "categorical",
+      "waves": [
+        "F25",
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "White"
+        },
+        {
+          "code": 2,
+          "label": "Black or African-American"
+        },
+        {
+          "code": 3,
+          "label": "Hispanic or Latino"
+        },
+        {
+          "code": 4,
+          "label": "Asian or Asian-American"
+        },
+        {
+          "code": 5,
+          "label": "Native American"
+        },
+        {
+          "code": 6,
+          "label": "Two or more races"
+        },
+        {
+          "code": 7,
+          "label": "Other"
+        }
+      ]
+    },
     "change_party": {
       "label": "change_party  [F25]",
       "question": "Which of the two main political parties do you think most stands for change?",
@@ -2866,6 +3099,38 @@
         {
           "code": 5,
           "label": "Neither favorable nor unfavorable"
+        }
+      ]
+    },
+    "D base vs swing": {
+      "label": "D base vs swing  [S25+F25+S26]  \u2295",
+      "question": "When it comes to winning the next election, what do you think is more important for Democrats?",
+      "type": "categorical",
+      "waves": [
+        "S25",
+        "F25",
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Democrats need to focus on energizing and turning out their voter base by running on progressive policies.  [S26+F25]"
+        },
+        {
+          "code": 2,
+          "label": "Democrats need to focus on moderating their policies and ideology in order to appeal to a wider range of voters.  [S26+F25]"
+        },
+        {
+          "code": 3,
+          "label": "Democrats don\u2019t need to change much from their 2024 strategy."
+        },
+        {
+          "code": 4,
+          "label": "Democrats need to focus on energizing and turning out their voter base, by running on progressive policies that give their voters something to vote for  [S25]"
+        },
+        {
+          "code": 5,
+          "label": "Democrats need to focus on moderating in order to appeal to the swing voters and independents who decide elections  [S25]"
         }
       ]
     },
@@ -3904,6 +4169,137 @@
         {
           "code": 5,
           "label": "Very conservative"
+        }
+      ]
+    },
+    "d_electable_maxdiff": {
+      "label": "d_electable_maxdiff  [F25+S26]  \u2295",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican?",
+      "type": "maxdiff",
+      "waves": [
+        "F25",
+        "S26"
+      ],
+      "items": [
+        {
+          "code": 1,
+          "label": "Andy Beshear",
+          "do_col": "__md_d_electable_maxdiff__do_1",
+          "pick_col": "__md_d_electable_maxdiff__pick_1"
+        },
+        {
+          "code": 2,
+          "label": "Alexandria Ocasio-Cortez",
+          "do_col": "__md_d_electable_maxdiff__do_2",
+          "pick_col": "__md_d_electable_maxdiff__pick_2"
+        },
+        {
+          "code": 3,
+          "label": "Kamala Harris",
+          "do_col": "__md_d_electable_maxdiff__do_3",
+          "pick_col": "__md_d_electable_maxdiff__pick_3"
+        },
+        {
+          "code": 4,
+          "label": "Wes Moore",
+          "do_col": "__md_d_electable_maxdiff__do_4",
+          "pick_col": "__md_d_electable_maxdiff__pick_4"
+        },
+        {
+          "code": 5,
+          "label": "Gavin Newsom",
+          "do_col": "__md_d_electable_maxdiff__do_5",
+          "pick_col": "__md_d_electable_maxdiff__pick_5"
+        },
+        {
+          "code": 6,
+          "label": "JB Pritzker",
+          "do_col": "__md_d_electable_maxdiff__do_6",
+          "pick_col": "__md_d_electable_maxdiff__pick_6"
+        },
+        {
+          "code": 7,
+          "label": "Josh Shapiro",
+          "do_col": "__md_d_electable_maxdiff__do_7",
+          "pick_col": "__md_d_electable_maxdiff__pick_7"
+        },
+        {
+          "code": 8,
+          "label": "Gretchen Whitmer",
+          "do_col": "__md_d_electable_maxdiff__do_8",
+          "pick_col": "__md_d_electable_maxdiff__pick_8"
+        },
+        {
+          "code": 9,
+          "label": "Mark Cuban",
+          "do_col": "__md_d_electable_maxdiff__do_9",
+          "pick_col": "__md_d_electable_maxdiff__pick_9"
+        },
+        {
+          "code": 10,
+          "label": "Ruben Gallego",
+          "do_col": "__md_d_electable_maxdiff__do_10",
+          "pick_col": "__md_d_electable_maxdiff__pick_10"
+        },
+        {
+          "code": 11,
+          "label": "Mark Kelly",
+          "do_col": "__md_d_electable_maxdiff__do_11",
+          "pick_col": "__md_d_electable_maxdiff__pick_11"
+        },
+        {
+          "code": 12,
+          "label": "Jared Polis",
+          "do_col": "__md_d_electable_maxdiff__do_12",
+          "pick_col": "__md_d_electable_maxdiff__pick_12"
+        },
+        {
+          "code": 13,
+          "label": "Pete Buttigieg",
+          "do_col": "__md_d_electable_maxdiff__do_13",
+          "pick_col": "__md_d_electable_maxdiff__pick_13"
+        },
+        {
+          "code": 14,
+          "label": "Cory Booker",
+          "do_col": "__md_d_electable_maxdiff__do_14",
+          "pick_col": "__md_d_electable_maxdiff__pick_14"
+        },
+        {
+          "code": 15,
+          "label": "Tim Walz",
+          "do_col": "__md_d_electable_maxdiff__do_15",
+          "pick_col": "__md_d_electable_maxdiff__pick_15"
+        },
+        {
+          "code": 16,
+          "label": "Jon Ossoff",
+          "do_col": "__md_d_electable_maxdiff__do_16",
+          "pick_col": "__md_d_electable_maxdiff__pick_16"
+        },
+        {
+          "code": 17,
+          "label": "Chris Murphy",
+          "do_col": "__md_d_electable_maxdiff__do_17",
+          "pick_col": "__md_d_electable_maxdiff__pick_17"
+        },
+        {
+          "code": 18,
+          "label": "Raphael Warnock",
+          "do_col": "__md_d_electable_maxdiff__do_18",
+          "pick_col": "__md_d_electable_maxdiff__pick_18"
+        },
+        {
+          "code": 19,
+          "label": "Rahm Emanuel",
+          "do_col": "__md_d_electable_maxdiff__do_19",
+          "pick_col": "__md_d_electable_maxdiff__pick_19"
+        },
+        {
+          "code": 20,
+          "label": "Abigail Spanberger",
+          "do_col": "__md_d_electable_maxdiff__do_20",
+          "pick_col": "__md_d_electable_maxdiff__pick_20"
         }
       ]
     },
@@ -9667,6 +10063,143 @@
         }
       ]
     },
+    "r_electable_maxdiff": {
+      "label": "r_electable_maxdiff  [F25+S26]",
+      "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat?",
+      "type": "maxdiff",
+      "waves": [
+        "F25",
+        "S26"
+      ],
+      "items": [
+        {
+          "code": 1,
+          "label": "JD Vance",
+          "do_col": "__md_r_electable_maxdiff__do_1",
+          "pick_col": "__md_r_electable_maxdiff__pick_1"
+        },
+        {
+          "code": 2,
+          "label": "Ron DeSantis",
+          "do_col": "__md_r_electable_maxdiff__do_2",
+          "pick_col": "__md_r_electable_maxdiff__pick_2"
+        },
+        {
+          "code": 3,
+          "label": "Brian Kemp",
+          "do_col": "__md_r_electable_maxdiff__do_3",
+          "pick_col": "__md_r_electable_maxdiff__pick_3"
+        },
+        {
+          "code": 4,
+          "label": "Glenn Youngkin",
+          "do_col": "__md_r_electable_maxdiff__do_4",
+          "pick_col": "__md_r_electable_maxdiff__pick_4"
+        },
+        {
+          "code": 5,
+          "label": "Nikki Haley",
+          "do_col": "__md_r_electable_maxdiff__do_5",
+          "pick_col": "__md_r_electable_maxdiff__pick_5"
+        },
+        {
+          "code": 6,
+          "label": "Mike Pence",
+          "do_col": "__md_r_electable_maxdiff__do_6",
+          "pick_col": "__md_r_electable_maxdiff__pick_6"
+        },
+        {
+          "code": 7,
+          "label": "Vivek Ramaswamy",
+          "do_col": "__md_r_electable_maxdiff__do_7",
+          "pick_col": "__md_r_electable_maxdiff__pick_7"
+        },
+        {
+          "code": 8,
+          "label": "Ted Cruz",
+          "do_col": "__md_r_electable_maxdiff__do_8",
+          "pick_col": "__md_r_electable_maxdiff__pick_8"
+        },
+        {
+          "code": 9,
+          "label": "Marco Rubio",
+          "do_col": "__md_r_electable_maxdiff__do_9",
+          "pick_col": "__md_r_electable_maxdiff__pick_9"
+        },
+        {
+          "code": 10,
+          "label": "Josh Hawley",
+          "do_col": "__md_r_electable_maxdiff__do_10",
+          "pick_col": "__md_r_electable_maxdiff__pick_10"
+        },
+        {
+          "code": 11,
+          "label": "Tim Scott",
+          "do_col": "__md_r_electable_maxdiff__do_11",
+          "pick_col": "__md_r_electable_maxdiff__pick_11"
+        },
+        {
+          "code": 12,
+          "label": "Tulsi Gabbard",
+          "do_col": "__md_r_electable_maxdiff__do_12",
+          "pick_col": "__md_r_electable_maxdiff__pick_12"
+        },
+        {
+          "code": 13,
+          "label": "Robert F. Kennedy Jr.",
+          "do_col": "__md_r_electable_maxdiff__do_13",
+          "pick_col": "__md_r_electable_maxdiff__pick_13"
+        },
+        {
+          "code": 14,
+          "label": "Steve Bannon",
+          "do_col": "__md_r_electable_maxdiff__do_14",
+          "pick_col": "__md_r_electable_maxdiff__pick_14"
+        },
+        {
+          "code": 15,
+          "label": "Tucker Carlson",
+          "do_col": "__md_r_electable_maxdiff__do_15",
+          "pick_col": "__md_r_electable_maxdiff__pick_15"
+        },
+        {
+          "code": 16,
+          "label": "Kristi Noem",
+          "do_col": "__md_r_electable_maxdiff__do_16",
+          "pick_col": "__md_r_electable_maxdiff__pick_16"
+        },
+        {
+          "code": 17,
+          "label": "Katie Britt",
+          "do_col": "__md_r_electable_maxdiff__do_17",
+          "pick_col": "__md_r_electable_maxdiff__pick_17"
+        },
+        {
+          "code": 18,
+          "label": "Doug Burgum",
+          "do_col": "__md_r_electable_maxdiff__do_18",
+          "pick_col": "__md_r_electable_maxdiff__pick_18"
+        },
+        {
+          "code": 19,
+          "label": "Donald Trump Jr.",
+          "do_col": "__md_r_electable_maxdiff__do_19",
+          "pick_col": "__md_r_electable_maxdiff__pick_19"
+        },
+        {
+          "code": 20,
+          "label": "Greg Abbott",
+          "do_col": "__md_r_electable_maxdiff__do_20",
+          "pick_col": "__md_r_electable_maxdiff__pick_20"
+        },
+        {
+          "code": 21,
+          "label": "Elise Stefanik",
+          "do_col": "__md_r_electable_maxdiff__do_21",
+          "pick_col": "__md_r_electable_maxdiff__pick_21"
+        }
+      ]
+    },
     "race_a": {
       "label": "race_a  [S26]",
       "question": "To what extent do you agree or disagree with this statement? The interests of Jews come at the expense of white people.",
@@ -10013,6 +10546,37 @@
         {
           "code": 4,
           "label": "4"
+        }
+      ]
+    },
+    "sexuality": {
+      "label": "sexuality  [F25+S26]  \u2295",
+      "question": "Which of the following best describes your sexual orientation? Remember, your answers are anonymous. - Selected Choice",
+      "type": "categorical",
+      "waves": [
+        "F25",
+        "S26"
+      ],
+      "options": [
+        {
+          "code": 1,
+          "label": "Straight (heterosexual)"
+        },
+        {
+          "code": 2,
+          "label": "Gay or lesbian"
+        },
+        {
+          "code": 3,
+          "label": "Bisexual"
+        },
+        {
+          "code": 4,
+          "label": "Prefer not to say"
+        },
+        {
+          "code": 5,
+          "label": "Other"
         }
       ]
     },

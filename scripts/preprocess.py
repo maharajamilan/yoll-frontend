@@ -1052,6 +1052,70 @@ def _options_codes(options: list | None) -> tuple | None:
     return tuple(sorted(o["code"] for o in options))
 
 
+def _norm_label(s: str) -> str:
+    """Normalize an option/item label for cross-wave matching."""
+    return re.sub(r"\s+", " ", str(s).strip().lower()).rstrip(".")
+
+
+def union_by_label(entries: list[tuple[str, dict]], key: str):
+    """Union the options/items of the same question across waves when the
+    response set changed (options added/removed) and/or codes were renumbered.
+
+    Matches by normalized LABEL, not code, because YYP renumbers codes across
+    waves (e.g. a 2028 candidate is code 2 one wave, code 21 the next) — the
+    label is the stable identity. Returns:
+        (union_list, value_remap, coverage)
+      union_list : list of {code, label, [do_col/pick_col for maxdiff]} with
+                   fresh canonical codes (most-recent wave's items first).
+      value_remap: {wave: {orig_code: canonical_code}}   (categorical only;
+                   maxdiff remap is carried per-item via wave_to_orig fields)
+      coverage   : {canonical_code: [waves that offered it]}
+    `key` is "options" (categorical) or "items" (maxdiff).
+    Returns None if any single wave maps two different labels to one code
+    ambiguously (shouldn't happen) — caller then skips.
+    """
+    # Wave priority: most-recent first so current items get the low codes.
+    order = ["S26", "F25", "S25", "F24"]
+    ordered = sorted(entries, key=lambda e: order.index(e[0]) if e[0] in order else 99)
+
+    canon_by_norm: dict[str, dict] = {}
+    coverage: dict[int, list[str]] = {}
+    value_remap: dict[str, dict] = {}
+    next_code = 1
+    for wave, e in ordered:
+        opts = e.get(key) or []
+        remap: dict = {}
+        for o in opts:
+            norm = _norm_label(o["label"])
+            if not norm:
+                continue
+            canon = canon_by_norm.get(norm)
+            if canon is None:
+                canon = {"code": next_code, "label": o["label"]}
+                if key == "items":
+                    # carry the per-wave source columns for maxdiff aggregation
+                    canon["_src"] = {}
+                canon_by_norm[norm] = canon
+                coverage[next_code] = []
+                next_code += 1
+            if wave not in coverage[canon["code"]]:
+                coverage[canon["code"]].append(wave)
+            remap[o["code"]] = canon["code"]
+            if key == "items":
+                canon["_src"][wave] = {
+                    "do_col": o.get("do_col"),
+                    "pick_col": o.get("pick_col"),
+                    "orig_code": o["code"],
+                }
+        value_remap[wave] = remap
+
+    union_list = sorted(canon_by_norm.values(), key=lambda c: c["code"])
+    # Re-sort coverage waves into canonical wave order for stable tags.
+    for code in coverage:
+        coverage[code] = [w for w in order if w in coverage[code]]
+    return union_list, value_remap, coverage
+
+
 def _normalize_question(q: str | None) -> str | None:
     """Aggressive-but-conservative wording normalization for cross-wave matches.
 
@@ -1186,45 +1250,40 @@ def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
             }
             continue
 
-        # Mixed types across waves (e.g. one wave is MaxDiff, another isn't):
-        # auto-skip from stacking. MaxDiff structures don't pool with simple
-        # categoricals, even when the question text matches.
+        # MaxDiff present in any wave: union the item sets across the MaxDiff
+        # waves by LABEL (codes get renumbered across waves — e.g. an electable
+        # candidate is code 5 one wave, code 23 the next — so the candidate name
+        # is the stable identity). Categorical-only waves of the same question
+        # can't contribute item-level offers/picks, so they're left out of the
+        # pooled MaxDiff (their respondents simply show null for it).
         types_seen = {e.get("type", "categorical") for _, e in entries}
-        if len(types_seen) > 1 or "maxdiff" in types_seen:
-            # If everyone is MaxDiff with matching item codes, pool them straight.
-            if types_seen == {"maxdiff"}:
-                items_by_code = [tuple(sorted(it["code"] for it in e.get("items", []))) for _, e in entries]
-                if len(set(items_by_code)) == 1:
-                    accepted[canon] = {
-                        "label": entries[0][1]["label"],
-                        "question": entries[0][1]["question"],
-                        "type": "maxdiff",
-                        "options": None,
-                        "items": entries[0][1].get("items"),
-                        "wave_to_orig": dict(by_wave),
-                        "present_waves": present_waves,
-                    }
-                    continue
-            # Mixed types: at least one wave is MaxDiff, others are categorical.
-            # Prefer the MaxDiff version — it has display-order data so it can
-            # produce real win rates. Other waves' rows show null on the
-            # `_do_N` siblings, so the MaxDiff math naturally restricts the
-            # denominator to MaxDiff-bearing waves.
+        if "maxdiff" in types_seen:
             md_entries = [(w, e) for w, e in entries if e.get("type") == "maxdiff"]
-            if md_entries and len({tuple(sorted(it["code"] for it in e.get("items", []))) for _, e in md_entries}) == 1:
-                md_waves = {w: by_wave[w] for w, _ in md_entries}
-                md_present = [w for w in waves if w in md_waves]
+            md_present = [w for w in waves if w in {w for w, _ in md_entries}]
+            union, _, coverage = union_by_label(md_entries, "items")
+            if union and len(md_present) >= 1:
+                items = []
+                item_src: dict[int, dict] = {}
+                for u in union:
+                    c = u["code"]
+                    do_col = f"__md_{canon}__do_{c}"
+                    pick_col = f"__md_{canon}__pick_{c}"
+                    items.append({"code": c, "label": u["label"],
+                                  "do_col": do_col, "pick_col": pick_col})
+                    item_src[c] = u.get("_src", {})
                 accepted[canon] = {
                     "label": md_entries[0][1]["label"],
                     "question": md_entries[0][1]["question"],
                     "type": "maxdiff",
                     "options": None,
-                    "items": md_entries[0][1].get("items"),
-                    "wave_to_orig": md_waves,
+                    "items": items,
+                    "item_src": item_src,
+                    "wave_to_orig": {w: by_wave[w] for w, _ in md_entries},
                     "present_waves": md_present,
+                    "unioned": len({tuple(sorted(it["code"] for it in e.get("items", []))) for _, e in md_entries}) > 1,
                 }
                 continue
-            skipped.append((canon, f"mixed/incompatible types across waves: {types_seen}"))
+            skipped.append((canon, f"maxdiff union failed: {types_seen}"))
             continue
 
         # Multiple waves: figure out compatibility
@@ -1270,18 +1329,39 @@ def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
                 "label_drift": True,
             }
             continue
+        # Diverging code-sets: same question, but options were added/removed
+        # and/or codes were renumbered across waves. Union by LABEL so the
+        # question still stacks (the YYP/Argument approach). Codes are remapped
+        # per wave to fresh canonical codes during row materialization.
+        union, value_remap, coverage = union_by_label(entries, "options")
+        if union:
+            accepted[canon] = {
+                "label": entries[0][1]["label"],
+                "question": entries[0][1]["question"],
+                "type": "categorical",
+                "options": [{"code": o["code"], "label": o["label"]} for o in union],
+                "wave_to_orig": dict(by_wave),
+                "present_waves": present_waves,
+                "value_remap": value_remap,
+                "option_coverage": coverage,
+                "unioned": True,
+            }
+            continue
         skipped.append((canon, f"diverging code-sets {dict(zip([w for w,_ in entries], codes))}"))
 
-    # Exclude MaxDiff columns from stacked datasets. They never pool across
-    # waves (each wave has its own item set), so in a stack they'd be
-    # single-wave [tag] columns — and their per-item offer/pick aux columns
-    # bloat the data file enormously (carried, mostly-null, across every wave's
-    # rows: stacked_all hit 52 MB and crashed the browser). MaxDiffs remain
-    # fully available in the single-wave views.
-    n_maxdiff = sum(1 for i in accepted.values() if i.get("type") == "maxdiff")
-    if n_maxdiff:
-        accepted = {c: i for c, i in accepted.items() if i.get("type") != "maxdiff"}
-        print(f"  excluded {n_maxdiff} MaxDiff columns from stack (use single waves for those)")
+    # Drop SINGLE-WAVE MaxDiff columns from stacked datasets: in a stack they'd
+    # just be a [tag] column for one wave, and their per-item offer/pick aux
+    # columns bloat the file (carried mostly-null across every wave's rows — all
+    # MaxDiffs together hit 52 MB and crashed the browser). They remain fully
+    # available in the single-wave views. MaxDiffs that pool across ≥2 waves
+    # (e.g. electability, issue) are KEPT — that's the cross-wave value.
+    drop = [c for c, i in accepted.items()
+            if i.get("type") == "maxdiff" and len(i.get("present_waves", [])) < 2]
+    for c in drop:
+        accepted.pop(c)
+    if drop:
+        print(f"  dropped {len(drop)} single-wave MaxDiff columns from stack "
+              f"(kept cross-wave ones)")
 
     print(f"  pooled non-demog canonicals: {len(canon_map)}; "
           f"accepted: {len(accepted)}; skipped: {len(skipped)}")
@@ -1325,16 +1405,33 @@ def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
 
     # MaxDiff `_do_N` (and optional `_pick_N`) siblings: not user-facing (no
     # codebook entry) but carried in the data file so the frontend can compute
-    # offers and (multi-task) wins per item.
+    # offers and (multi-task) wins per item. For cross-wave unioned MaxDiffs the
+    # aux columns are canonical (`__md_<canon>__do_<c>`) and sourced per wave
+    # from that wave's original item columns via `aux_source`.
     maxdiff_do_extras: list[str] = []
+    # aux_plan[aux_col][wave] = how to fill that wave's value. Handles two source
+    # styles uniformly: multi-round sources already store offer/pick *counts*;
+    # single-round sources store a shown-slot indicator + the pick in the main
+    # column, which we synthesize into counts (1 shown / 1 picked) here.
+    aux_plan: dict[str, dict[str, tuple]] = {}
     for info in nondemog_ordered:
         if info["type"] != "maxdiff" or not info.get("items"):
             continue
+        item_src = info.get("item_src")
         for it in info["items"]:
             for k in ("do_col", "pick_col"):
                 col = it.get(k)
                 if col and col not in output_columns and col not in maxdiff_do_extras:
                     maxdiff_do_extras.append(col)
+            if item_src is None:
+                continue
+            for wv, srcs in item_src.get(it["code"], {}).items():
+                multiround = srcs.get("pick_col") is not None
+                main_col = info["wave_to_orig"].get(wv)
+                aux_plan.setdefault(it["do_col"], {})[wv] = (
+                    "do", srcs.get("do_col"), multiround)
+                aux_plan.setdefault(it["pick_col"], {})[wv] = (
+                    "pick", srcs.get("pick_col"), main_col, srcs.get("orig_code"), multiround)
     output_columns += maxdiff_do_extras
 
     # Build the codebook entries.
@@ -1358,14 +1455,28 @@ def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
         present = info["present_waves"]
         # Annotate label with wave coverage when not asked in every pooled wave.
         coverage = "" if set(present) == set(waves) else f"  [{'+'.join(present)}]"
+        label = f"{info['label']}{coverage}"
+        if info.get("unioned"):
+            label += "  ⊕"  # marks a cross-wave union (options/items pooled by label)
         entry: dict = {
-            "label": f"{info['label']}{coverage}",
+            "label": label,
             "question": info["question"],
             "type": info["type"],
             "waves": present,
         }
         if info.get("options"):
-            entry["options"] = info["options"]
+            # For union columns, tag options that weren't offered in every
+            # wave the question appeared in, so partial coverage is visible.
+            opt_cov = info.get("option_coverage")
+            if opt_cov and len(present) > 1:
+                opts = []
+                for o in info["options"]:
+                    waves_for = opt_cov.get(o["code"], [])
+                    tag = "" if set(waves_for) >= set(present) else f"  [{'+'.join(waves_for)}]"
+                    opts.append({"code": o["code"], "label": f"{o['label']}{tag}"})
+                entry["options"] = opts
+            else:
+                entry["options"] = info["options"]
         if info.get("items"):
             entry["items"] = info["items"]
         columns_out[info["output_key"]] = entry
@@ -1373,6 +1484,7 @@ def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
     # Materialize stacked rows. We do this column-by-column per wave because
     # itertuples renames columns with spaces/punct (e.g. "Need for cognition_1"
     # -> "_0"), which would silently null them out.
+    info_by_key = {info["output_key"]: info for info in nondemog_ordered}
     rows: list[list] = []
     weights_out: list[float] = []
     for wave in waves:
@@ -1390,28 +1502,49 @@ def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
                     [to_compact_value(v) for v in wdf[src].tolist()]
                 )
             elif out_key in maxdiff_do_extras:
-                # MaxDiff offer-tracking column: same name across waves (it's
-                # tied to a specific wave's variable naming since we don't pool
-                # MaxDiff cross-wave). Pull verbatim if present in this wave.
-                if out_key in wdf.columns:
-                    wave_cols.append(
-                        [to_compact_value(v) for v in wdf[out_key].tolist()]
-                    )
-                else:
+                # MaxDiff offer/pick aux column, sourced per wave via aux_plan
+                # (synthesizing counts for single-round source MaxDiffs).
+                spec = (aux_plan.get(out_key) or {}).get(wave)
+                if spec is None:
                     wave_cols.append([None] * n_wave)
+                elif spec[0] == "do":
+                    _, src_do, multi = spec
+                    if not src_do or src_do not in wdf.columns:
+                        wave_cols.append([None] * n_wave)
+                    elif multi:
+                        wave_cols.append([to_compact_value(v) for v in wdf[src_do].tolist()])
+                    else:  # single-round: non-null slot indicator -> shown once
+                        wave_cols.append([1 if pd.notna(v) else None for v in wdf[src_do].tolist()])
+                else:  # pick
+                    _, src_pick, main_col, orig_code, multi = spec
+                    if multi and src_pick and src_pick in wdf.columns:
+                        wave_cols.append([to_compact_value(v) for v in wdf[src_pick].tolist()])
+                    elif main_col and main_col in wdf.columns and orig_code is not None:
+                        oc = float(orig_code)
+                        wave_cols.append([
+                            1 if (pd.notna(v) and float(v) == oc) else None
+                            for v in wdf[main_col].tolist()
+                        ])
+                    else:
+                        wave_cols.append([None] * n_wave)
             else:
-                # Find the canonical info for this output key
-                src = None
-                for info in nondemog_ordered:
-                    if info["output_key"] == out_key:
-                        src = info["wave_to_orig"].get(wave)
-                        break
+                # Regular (categorical / numeric / maxdiff-main) column.
+                info = info_by_key.get(out_key)
+                src = info["wave_to_orig"].get(wave) if info else None
                 if src is None or src not in wdf.columns:
                     wave_cols.append([None] * n_wave)
                 else:
-                    wave_cols.append(
-                        [to_compact_value(v) for v in wdf[src].tolist()]
-                    )
+                    raw_vals = wdf[src].tolist()
+                    remap = (info.get("value_remap") or {}).get(wave) if info else None
+                    if remap:
+                        # Union categorical: remap this wave's codes -> canonical.
+                        col = []
+                        for v in raw_vals:
+                            cv = to_compact_value(v)
+                            col.append(remap.get(cv, remap.get(v, None) if cv is not None else None))
+                        wave_cols.append(col)
+                    else:
+                        wave_cols.append([to_compact_value(v) for v in raw_vals])
 
         # Transpose column-major to row-major and append.
         for i in range(n_wave):
