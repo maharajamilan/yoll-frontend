@@ -12,10 +12,27 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://yoll-crosstabs.vercel.app";
+const SITE_TITLE = "Yale Youth Poll — Data Explorer";
+const SITE_DESC =
+  "Explore weighted crosstabs across every Yale Youth Poll survey wave.";
+
 export const metadata: Metadata = {
-  title: "Yale Youth Poll Crosstabs",
-  description:
-    "Interactive crosstab explorer for Yale Youth Poll survey waves.",
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
+  description: SITE_DESC,
+  openGraph: {
+    title: SITE_TITLE,
+    description: SITE_DESC,
+    url: SITE_URL,
+    siteName: "Yale Youth Poll Data Explorer",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESC,
+  },
 };
 
 export default function RootLayout({

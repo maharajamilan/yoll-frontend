@@ -56,7 +56,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="text-lg font-semibold tracking-tight">
-              Yale Youth Poll — Crosstab Explorer
+              Yale Youth Poll — Data Explorer
             </div>
           </div>
           <div className="flex gap-2">
