@@ -284,10 +284,17 @@ export function runCrosstab(
     return { key: rd.key, label: rd.label, pct };
   });
 
+  // Drop group columns that no respondent landed in (weighted N = 0) — e.g. a
+  // wave that didn't ask the question — so the table has no blank columns. The
+  // Total column is always kept.
+  const keptColumns = columns.filter(
+    (c) => c.isTotal || weightedTotal[c.key] > 0,
+  );
+
   return {
     question: question.column,
     questionText: cbCol.question,
-    columns: columns.map(({ key, label }) => ({ key, label })),
+    columns: keptColumns.map(({ key, label }) => ({ key, label })),
     rows,
     weightedN: weightedTotal,
     effectiveN,
@@ -510,10 +517,16 @@ function runMaxDiffCrosstab(
     }
   }
 
+  // Drop columns no respondent answered (e.g. a wave that didn't run this
+  // MaxDiff) so there are no blank "—" columns. Total is always kept.
+  const keptColumns = columns.filter(
+    (c) => c.isTotal || weightedTotal[c.key] > 0,
+  );
+
   return {
     question: question.column,
     questionText: cbCol.question,
-    columns: columns.map(({ key, label }) => ({ key, label })),
+    columns: keptColumns.map(({ key, label }) => ({ key, label })),
     rows,
     weightedN: weightedTotal,
     effectiveN,

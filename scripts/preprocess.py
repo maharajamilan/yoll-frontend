@@ -1559,30 +1559,17 @@ def build_stacked(stack_id: str, label: str, waves: list[str]) -> None:
         }
     for info in nondemog_ordered:
         present = info["present_waves"]
-        # Annotate label with wave coverage when not asked in every pooled wave.
-        coverage = "" if set(present) == set(waves) else f"  [{'+'.join(present)}]"
-        label = f"{info['label']}{coverage}"
-        if info.get("unioned"):
-            label += "  ⊕"  # marks a cross-wave union (options/items pooled by label)
+        # Wave coverage is kept in the `waves` field (and visible by crosstabbing
+        # against the Wave column) rather than tagged into the label — the
+        # bracketed "[F25+S26]" tags read as visual clutter in the picker.
         entry: dict = {
-            "label": label,
+            "label": info["label"],
             "question": info["question"],
             "type": info["type"],
             "waves": present,
         }
         if info.get("options"):
-            # For union columns, tag options that weren't offered in every
-            # wave the question appeared in, so partial coverage is visible.
-            opt_cov = info.get("option_coverage")
-            if opt_cov and len(present) > 1:
-                opts = []
-                for o in info["options"]:
-                    waves_for = opt_cov.get(o["code"], [])
-                    tag = "" if set(waves_for) >= set(present) else f"  [{'+'.join(waves_for)}]"
-                    opts.append({"code": o["code"], "label": f"{o['label']}{tag}"})
-                entry["options"] = opts
-            else:
-                entry["options"] = info["options"]
+            entry["options"] = info["options"]
         if info.get("items"):
             entry["items"] = info["items"]
         columns_out[info["output_key"]] = entry

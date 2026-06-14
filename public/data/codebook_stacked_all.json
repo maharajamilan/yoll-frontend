@@ -1,7 +1,7 @@
 {
   "waves": {
     "stacked_all": {
-      "label": "Zoning  [S25]",
+      "label": "All waves (stacked)",
       "n": 16211,
       "note": "Stacked: F24+S25+F25+S26. 7 canonical demographics + 443 non-demographic columns (in all 4 waves: 2; partial coverage: 43; single wave: 398). Rows from waves that didn't ask a given question carry null."
     }
@@ -252,7 +252,7 @@
       ]
     },
     "2024_recalled_vote": {
-      "label": "2024_recalled_vote  [F25+S26]",
+      "label": "2024_recalled_vote",
       "question": "Who did you vote for for president in 2024?",
       "type": "categorical",
       "waves": [
@@ -283,7 +283,7 @@
       ]
     },
     "2028_dem_primary": {
-      "label": "2028_dem_primary  [F25+S26]  \u2295",
+      "label": "2028_dem_primary",
       "question": "2028_dem_primary",
       "type": "categorical",
       "waves": [
@@ -369,7 +369,7 @@
         },
         {
           "code": 20,
-          "label": "Abigail Spanberger  [S26]"
+          "label": "Abigail Spanberger"
         },
         {
           "code": 21,
@@ -378,7 +378,7 @@
       ]
     },
     "2028_gop_primary": {
-      "label": "2028_gop_primary  [F25+S26]  \u2295",
+      "label": "2028_gop_primary",
       "question": "2028_gop_primary",
       "type": "categorical",
       "waves": [
@@ -456,7 +456,7 @@
         },
         {
           "code": 18,
-          "label": "Doug Burgum  [S26]"
+          "label": "Doug Burgum"
         },
         {
           "code": 19,
@@ -477,7 +477,7 @@
       ]
     },
     "2028_gop_primary_djt": {
-      "label": "2028_gop_primary_djt  [F25+S26]",
+      "label": "2028_gop_primary_djt",
       "question": "2028_gop_primary_djt",
       "type": "categorical",
       "waves": [
@@ -576,7 +576,7 @@
       ]
     },
     "a_as_whodefinessplit_do_who_defines_a": {
-      "label": "a_as_whodefinessplit_do_who_defines_a  [F25]",
+      "label": "a_as_whodefinessplit_do_who_defines_a",
       "question": "[AS] Who defines split - Display Order who_defines_A",
       "type": "categorical",
       "waves": [
@@ -590,7 +590,7 @@
       ]
     },
     "a_as_whodefinessplit_do_who_defines_b": {
-      "label": "a_as_whodefinessplit_do_who_defines_b  [F25]",
+      "label": "a_as_whodefinessplit_do_who_defines_b",
       "question": "[AS] Who defines split - Display Order who_defines_B",
       "type": "categorical",
       "waves": [
@@ -604,7 +604,7 @@
       ]
     },
     "a_as_whodefinessplit_do_who_defines_c": {
-      "label": "a_as_whodefinessplit_do_who_defines_c  [F25]",
+      "label": "a_as_whodefinessplit_do_who_defines_c",
       "question": "[AS] Who defines split - Display Order who_defines_C",
       "type": "categorical",
       "waves": [
@@ -618,7 +618,7 @@
       ]
     },
     "Abortion": {
-      "label": "Abortion  [S25]",
+      "label": "Abortion",
       "question": "When it comes to abortion, which of the following is closest to your view?",
       "type": "categorical",
       "waves": [
@@ -660,7 +660,7 @@
       ]
     },
     "ai_ethics_1": {
-      "label": "ai_ethics_1  [S26]",
+      "label": "ai_ethics_1",
       "question": "To what extent do you agree or disagree with the following statements? - The benefits of AI will outweigh the harms",
       "type": "categorical",
       "waves": [
@@ -690,7 +690,7 @@
       ]
     },
     "ai_ethics_2": {
-      "label": "ai_ethics_2  [S26]",
+      "label": "ai_ethics_2",
       "question": "To what extent do you agree or disagree with the following statements? - AI can be trusted to adopt values that are beneficial for our society",
       "type": "categorical",
       "waves": [
@@ -720,7 +720,7 @@
       ]
     },
     "ai_familiarity_1": {
-      "label": "ai_familiarity_1  [S26]",
+      "label": "ai_familiarity_1",
       "question": "Please rate how familiar you are with each product. - Instagram",
       "type": "categorical",
       "waves": [
@@ -746,7 +746,7 @@
       ]
     },
     "ai_familiarity_10": {
-      "label": "ai_familiarity_10  [S26]",
+      "label": "ai_familiarity_10",
       "question": "Please rate how familiar you are with each product. - Samsung Galaxy",
       "type": "categorical",
       "waves": [
@@ -772,7 +772,7 @@
       ]
     },
     "ai_familiarity_2": {
-      "label": "ai_familiarity_2  [S26]",
+      "label": "ai_familiarity_2",
       "question": "Please rate how familiar you are with each product. - iPhone",
       "type": "categorical",
       "waves": [
@@ -798,7 +798,7 @@
       ]
     },
     "ai_familiarity_3": {
-      "label": "ai_familiarity_3  [S26]",
+      "label": "ai_familiarity_3",
       "question": "Please rate how familiar you are with each product. - ChatGPT",
       "type": "categorical",
       "waves": [
@@ -824,7 +824,7 @@
       ]
     },
     "ai_familiarity_4": {
-      "label": "ai_familiarity_4  [S26]",
+      "label": "ai_familiarity_4",
       "question": "Please rate how familiar you are with each product. - Facebook",
       "type": "categorical",
       "waves": [
@@ -850,7 +850,7 @@
       ]
     },
     "ai_familiarity_5": {
-      "label": "ai_familiarity_5  [S26]",
+      "label": "ai_familiarity_5",
       "question": "Please rate how familiar you are with each product. - Grok",
       "type": "categorical",
       "waves": [
@@ -876,7 +876,7 @@
       ]
     },
     "ai_familiarity_6": {
-      "label": "ai_familiarity_6  [S26]",
+      "label": "ai_familiarity_6",
       "question": "Please rate how familiar you are with each product. - Gemini",
       "type": "categorical",
       "waves": [
@@ -902,7 +902,7 @@
       ]
     },
     "ai_familiarity_7": {
-      "label": "ai_familiarity_7  [S26]",
+      "label": "ai_familiarity_7",
       "question": "Please rate how familiar you are with each product. - Claude",
       "type": "categorical",
       "waves": [
@@ -928,7 +928,7 @@
       ]
     },
     "ai_familiarity_8": {
-      "label": "ai_familiarity_8  [S26]",
+      "label": "ai_familiarity_8",
       "question": "Please rate how familiar you are with each product. - Omnius",
       "type": "categorical",
       "waves": [
@@ -954,7 +954,7 @@
       ]
     },
     "ai_familiarity_9": {
-      "label": "ai_familiarity_9  [S26]",
+      "label": "ai_familiarity_9",
       "question": "Please rate how familiar you are with each product. - Waymo",
       "type": "categorical",
       "waves": [
@@ -980,7 +980,7 @@
       ]
     },
     "ai_frequency": {
-      "label": "ai_frequency  [S26]",
+      "label": "ai_frequency",
       "question": "How often do you interact with any form of AI (such as ChatGPT, Claude, Grok)?",
       "type": "categorical",
       "waves": [
@@ -1010,7 +1010,7 @@
       ]
     },
     "ai_recognition_1": {
-      "label": "ai_recognition_1  [S26]",
+      "label": "ai_recognition_1",
       "question": "How confident are you in your ability to recognize if the following types of media have been generated by AI? - Text",
       "type": "categorical",
       "waves": [
@@ -1040,7 +1040,7 @@
       ]
     },
     "ai_recognition_2": {
-      "label": "ai_recognition_2  [S26]",
+      "label": "ai_recognition_2",
       "question": "How confident are you in your ability to recognize if the following types of media have been generated by AI? - Images",
       "type": "categorical",
       "waves": [
@@ -1070,7 +1070,7 @@
       ]
     },
     "ai_recognition_3": {
-      "label": "ai_recognition_3  [S26]",
+      "label": "ai_recognition_3",
       "question": "How confident are you in your ability to recognize if the following types of media have been generated by AI? - Videos",
       "type": "categorical",
       "waves": [
@@ -1100,7 +1100,7 @@
       ]
     },
     "ai_recognition_4": {
-      "label": "ai_recognition_4  [S26]",
+      "label": "ai_recognition_4",
       "question": "How confident are you in your ability to recognize if the following types of media have been generated by AI? - Voices",
       "type": "categorical",
       "waves": [
@@ -1130,7 +1130,7 @@
       ]
     },
     "ai_regulation_1": {
-      "label": "ai_regulation_1  [S26]",
+      "label": "ai_regulation_1",
       "question": "Who should be responsible for regulating AI? Check all that apply. International agencies",
       "type": "categorical",
       "waves": [
@@ -1144,7 +1144,7 @@
       ]
     },
     "ai_regulation_2": {
-      "label": "ai_regulation_2  [S26]",
+      "label": "ai_regulation_2",
       "question": "Who should be responsible for regulating AI? Check all that apply. The federal government",
       "type": "categorical",
       "waves": [
@@ -1158,7 +1158,7 @@
       ]
     },
     "ai_regulation_3": {
-      "label": "ai_regulation_3  [S26]",
+      "label": "ai_regulation_3",
       "question": "Who should be responsible for regulating AI? Check all that apply. U.S. state governments",
       "type": "categorical",
       "waves": [
@@ -1172,7 +1172,7 @@
       ]
     },
     "ai_regulation_4": {
-      "label": "ai_regulation_4  [S26]",
+      "label": "ai_regulation_4",
       "question": "Who should be responsible for regulating AI? Check all that apply. The companies that make the AI systems",
       "type": "categorical",
       "waves": [
@@ -1186,7 +1186,7 @@
       ]
     },
     "ai_regulation_5": {
-      "label": "ai_regulation_5  [S26]",
+      "label": "ai_regulation_5",
       "question": "Who should be responsible for regulating AI? Check all that apply. AI should not be regulated at all",
       "type": "categorical",
       "waves": [
@@ -1200,7 +1200,7 @@
       ]
     },
     "ai_regulation_6": {
-      "label": "ai_regulation_6  [S26]",
+      "label": "ai_regulation_6",
       "question": "Who should be responsible for regulating AI? Check all that apply. Not sure or no opinion",
       "type": "categorical",
       "waves": [
@@ -1214,7 +1214,7 @@
       ]
     },
     "ai_situations_1": {
-      "label": "ai_situations_1  [S26]",
+      "label": "ai_situations_1",
       "question": "For the following situations, tell us whether or not you believe AI should be used. - Filling out personal tax forms",
       "type": "categorical",
       "waves": [
@@ -1244,7 +1244,7 @@
       ]
     },
     "ai_situations_2": {
-      "label": "ai_situations_2  [S26]",
+      "label": "ai_situations_2",
       "question": "For the following situations, tell us whether or not you believe AI should be used. - Reading job applications and making hiring decisions",
       "type": "categorical",
       "waves": [
@@ -1274,7 +1274,7 @@
       ]
     },
     "ai_situations_3": {
-      "label": "ai_situations_3  [S26]",
+      "label": "ai_situations_3",
       "question": "For the following situations, tell us whether or not you believe AI should be used. - Making decisions in military combat situations",
       "type": "categorical",
       "waves": [
@@ -1304,7 +1304,7 @@
       ]
     },
     "ai_situations_4": {
-      "label": "ai_situations_4  [S26]",
+      "label": "ai_situations_4",
       "question": "For the following situations, tell us whether or not you believe AI should be used. - Deciding whether or not someone qualifies for government benefits, such as food stamps",
       "type": "categorical",
       "waves": [
@@ -1334,7 +1334,7 @@
       ]
     },
     "ai_situations_5": {
-      "label": "ai_situations_5  [S26]",
+      "label": "ai_situations_5",
       "question": "For the following situations, tell us whether or not you believe AI should be used. - Making patient care decisions in healthcare settings",
       "type": "categorical",
       "waves": [
@@ -1364,7 +1364,7 @@
       ]
     },
     "ai_situations_6": {
-      "label": "ai_situations_6  [S26]",
+      "label": "ai_situations_6",
       "question": "For the following situations, tell us whether or not you believe AI should be used. - Driving public buses, trains, or subways",
       "type": "categorical",
       "waves": [
@@ -1394,7 +1394,7 @@
       ]
     },
     "ai_situations_7": {
-      "label": "ai_situations_7  [S26]",
+      "label": "ai_situations_7",
       "question": "For the following situations, tell us whether or not you believe AI should be used. - Helping K-12 students learn in the classroom",
       "type": "categorical",
       "waves": [
@@ -1424,7 +1424,7 @@
       ]
     },
     "ai_test_1": {
-      "label": "ai_test_1  [S26]",
+      "label": "ai_test_1",
       "question": "Now, please indicate whether or not you believe the following images are AI-generated. - 2",
       "type": "categorical",
       "waves": [
@@ -1442,7 +1442,7 @@
       ]
     },
     "ai_test_2": {
-      "label": "ai_test_2  [S26]",
+      "label": "ai_test_2",
       "question": "Now, please indicate whether or not you believe the following images are AI-generated. - 5",
       "type": "categorical",
       "waves": [
@@ -1460,7 +1460,7 @@
       ]
     },
     "ai_test_3": {
-      "label": "ai_test_3  [S26]",
+      "label": "ai_test_3",
       "question": "Now, please indicate whether or not you believe the following images are AI-generated. - 12",
       "type": "categorical",
       "waves": [
@@ -1478,7 +1478,7 @@
       ]
     },
     "ai_test_4": {
-      "label": "ai_test_4  [S26]",
+      "label": "ai_test_4",
       "question": "Now, please indicate whether or not you believe the following images are AI-generated. - 14",
       "type": "categorical",
       "waves": [
@@ -1496,7 +1496,7 @@
       ]
     },
     "ai_uses_1": {
-      "label": "ai_uses_1  [S26]",
+      "label": "ai_uses_1",
       "question": "How often have you used AI in the following ways? - Used AI for advice in making major life decisions (career changes, moves, marriage proposals, etc.)",
       "type": "categorical",
       "waves": [
@@ -1526,7 +1526,7 @@
       ]
     },
     "ai_uses_2": {
-      "label": "ai_uses_2  [S26]",
+      "label": "ai_uses_2",
       "question": "How often have you used AI in the following ways? - Used AI for everyday tasks (make a meal plan, create a playlist, write an email, etc.)",
       "type": "categorical",
       "waves": [
@@ -1556,7 +1556,7 @@
       ]
     },
     "ai_uses_3": {
-      "label": "ai_uses_3  [S26]",
+      "label": "ai_uses_3",
       "question": "How often have you used AI in the following ways? - Talked with AI as you would talk to a friend",
       "type": "categorical",
       "waves": [
@@ -1586,7 +1586,7 @@
       ]
     },
     "ai_uses_4": {
-      "label": "ai_uses_4  [S26]",
+      "label": "ai_uses_4",
       "question": "How often have you used AI in the following ways? - Talked with AI as you would talk to a romantic partner",
       "type": "categorical",
       "waves": [
@@ -1616,7 +1616,7 @@
       ]
     },
     "ai_uses_5": {
-      "label": "ai_uses_5  [S26]",
+      "label": "ai_uses_5",
       "question": "How often have you used AI in the following ways? - Used AI as a therapist or mentor to discuss and process emotional topics",
       "type": "categorical",
       "waves": [
@@ -1646,7 +1646,7 @@
       ]
     },
     "ai_uses_6": {
-      "label": "ai_uses_6  [S26]",
+      "label": "ai_uses_6",
       "question": "How often have you used AI in the following ways? - Used AI for work or academic purposes",
       "type": "categorical",
       "waves": [
@@ -1676,7 +1676,7 @@
       ]
     },
     "ai_uses_7": {
-      "label": "ai_uses_7  [S26]",
+      "label": "ai_uses_7",
       "question": "How often have you used AI in the following ways? - Talked with fictional characters from film or other media via AI chatbots",
       "type": "categorical",
       "waves": [
@@ -1706,7 +1706,7 @@
       ]
     },
     "ai_uses_ado_7": {
-      "label": "ai_uses_ado_7  [S26]",
+      "label": "ai_uses_ado_7",
       "question": "How often have you used AI in the following ways? - Answer Display Order Never",
       "type": "categorical",
       "waves": [
@@ -1724,7 +1724,7 @@
       ]
     },
     "Amendment mechanics": {
-      "label": "Amendment mechanics  [F24+S25]",
+      "label": "Amendment mechanics",
       "question": "Amendment mechanics",
       "type": "categorical",
       "waves": [
@@ -1751,7 +1751,7 @@
       ]
     },
     "anes_ideology": {
-      "label": "anes_ideology  [F25+S26]",
+      "label": "anes_ideology",
       "question": "Here is a seven-point scale on which the political views that people might hold are arranged from extremely liberal to extremely conservative. Where would you place yourself on this scale?",
       "type": "categorical",
       "waves": [
@@ -1790,7 +1790,7 @@
       ]
     },
     "anes_party_id": {
-      "label": "anes_party_id  [F25+S26]",
+      "label": "anes_party_id",
       "question": "Generally speaking, do you usually think of yourself as a Republican, a Democrat, independent, or what?",
       "type": "categorical",
       "waves": [
@@ -1817,7 +1817,7 @@
       ]
     },
     "arg_news_sources_1": {
-      "label": "arg_news_sources_1  [S26]",
+      "label": "arg_news_sources_1",
       "question": "Which of the following do you regularly use to get news? Select all that apply. X (formerly Twitter)",
       "type": "categorical",
       "waves": [
@@ -1831,7 +1831,7 @@
       ]
     },
     "arg_news_sources_10": {
-      "label": "arg_news_sources_10  [S26]",
+      "label": "arg_news_sources_10",
       "question": "Which of the following do you regularly use to get news? Select all that apply. TikTok",
       "type": "categorical",
       "waves": [
@@ -1845,7 +1845,7 @@
       ]
     },
     "arg_news_sources_2": {
-      "label": "arg_news_sources_2  [S26]",
+      "label": "arg_news_sources_2",
       "question": "Which of the following do you regularly use to get news? Select all that apply. Cable television",
       "type": "categorical",
       "waves": [
@@ -1859,7 +1859,7 @@
       ]
     },
     "arg_news_sources_3": {
-      "label": "arg_news_sources_3  [S26]",
+      "label": "arg_news_sources_3",
       "question": "Which of the following do you regularly use to get news? Select all that apply. Facebook",
       "type": "categorical",
       "waves": [
@@ -1873,7 +1873,7 @@
       ]
     },
     "arg_news_sources_4": {
-      "label": "arg_news_sources_4  [S26]",
+      "label": "arg_news_sources_4",
       "question": "Which of the following do you regularly use to get news? Select all that apply. Local television",
       "type": "categorical",
       "waves": [
@@ -1887,7 +1887,7 @@
       ]
     },
     "arg_news_sources_5": {
-      "label": "arg_news_sources_5  [S26]",
+      "label": "arg_news_sources_5",
       "question": "Which of the following do you regularly use to get news? Select all that apply. Podcasts and YouTube",
       "type": "categorical",
       "waves": [
@@ -1901,7 +1901,7 @@
       ]
     },
     "arg_news_sources_6": {
-      "label": "arg_news_sources_6  [S26]",
+      "label": "arg_news_sources_6",
       "question": "Which of the following do you regularly use to get news? Select all that apply. Broadcast television",
       "type": "categorical",
       "waves": [
@@ -1915,7 +1915,7 @@
       ]
     },
     "arg_news_sources_7": {
-      "label": "arg_news_sources_7  [S26]",
+      "label": "arg_news_sources_7",
       "question": "Which of the following do you regularly use to get news? Select all that apply. Newspapers or news websites",
       "type": "categorical",
       "waves": [
@@ -1929,7 +1929,7 @@
       ]
     },
     "arg_news_sources_8": {
-      "label": "arg_news_sources_8  [S26]",
+      "label": "arg_news_sources_8",
       "question": "Which of the following do you regularly use to get news? Select all that apply. Instagram",
       "type": "categorical",
       "waves": [
@@ -1943,7 +1943,7 @@
       ]
     },
     "arg_news_sources_9": {
-      "label": "arg_news_sources_9  [S26]",
+      "label": "arg_news_sources_9",
       "question": "Which of the following do you regularly use to get news? Select all that apply. Reddit",
       "type": "categorical",
       "waves": [
@@ -1957,7 +1957,7 @@
       ]
     },
     "as_scenarios_1": {
-      "label": "as_scenarios_1  [F25]",
+      "label": "as_scenarios_1",
       "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Not allowing a Jewish student to join a theater group because of their pro-Israel views",
       "type": "categorical",
       "waves": [
@@ -1979,7 +1979,7 @@
       ]
     },
     "as_scenarios_10": {
-      "label": "as_scenarios_10  [F25]",
+      "label": "as_scenarios_10",
       "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Saying that Jews have too much influence over the media",
       "type": "categorical",
       "waves": [
@@ -2001,7 +2001,7 @@
       ]
     },
     "as_scenarios_11": {
-      "label": "as_scenarios_11  [F25]",
+      "label": "as_scenarios_11",
       "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Saying that Jews are too concerned with money",
       "type": "categorical",
       "waves": [
@@ -2023,7 +2023,7 @@
       ]
     },
     "as_scenarios_12": {
-      "label": "as_scenarios_12  [F25]",
+      "label": "as_scenarios_12",
       "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Saying that Jews are responsible for immigration policies that are making America less of a white, Christian nation",
       "type": "categorical",
       "waves": [
@@ -2045,7 +2045,7 @@
       ]
     },
     "as_scenarios_2": {
-      "label": "as_scenarios_2  [F25]",
+      "label": "as_scenarios_2",
       "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Boycotting Jewish American-owned businesses to protest the war in Gaza",
       "type": "categorical",
       "waves": [
@@ -2067,7 +2067,7 @@
       ]
     },
     "as_scenarios_3": {
-      "label": "as_scenarios_3  [F25]",
+      "label": "as_scenarios_3",
       "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Boycotting Israeli-owned businesses to protest the war in Gaza",
       "type": "categorical",
       "waves": [
@@ -2089,7 +2089,7 @@
       ]
     },
     "as_scenarios_4": {
-      "label": "as_scenarios_4  [F25]",
+      "label": "as_scenarios_4",
       "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Saying that pro-Israel lobbyists have too much influence over the government",
       "type": "categorical",
       "waves": [
@@ -2111,7 +2111,7 @@
       ]
     },
     "as_scenarios_5": {
-      "label": "as_scenarios_5  [F25]",
+      "label": "as_scenarios_5",
       "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Calling what is happening in Gaza a \u201cgenocide\u201d",
       "type": "categorical",
       "waves": [
@@ -2133,7 +2133,7 @@
       ]
     },
     "as_scenarios_6": {
-      "label": "as_scenarios_6  [F25]",
+      "label": "as_scenarios_6",
       "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Comparing the Israeli government\u2019s policies to the Nazis",
       "type": "categorical",
       "waves": [
@@ -2155,7 +2155,7 @@
       ]
     },
     "as_scenarios_7": {
-      "label": "as_scenarios_7  [F25]",
+      "label": "as_scenarios_7",
       "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Protesting the war in Gaza outside of a synagogue",
       "type": "categorical",
       "waves": [
@@ -2177,7 +2177,7 @@
       ]
     },
     "as_scenarios_8": {
-      "label": "as_scenarios_8  [F25]",
+      "label": "as_scenarios_8",
       "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Saying that Jewish people in the United States have too much power",
       "type": "categorical",
       "waves": [
@@ -2199,7 +2199,7 @@
       ]
     },
     "as_scenarios_9": {
-      "label": "as_scenarios_9  [F25]",
+      "label": "as_scenarios_9",
       "question": "Thinking about each of the following hypothetical scenarios, do you think each is or is not a form of anti-Jewish prejudice or discrimination (also known as antisemitism)? - Using the phrase \u201cglobalize the intifada\u201d",
       "type": "categorical",
       "waves": [
@@ -2221,7 +2221,7 @@
       ]
     },
     "as_statements_1": {
-      "label": "as_statements_1  [S26]",
+      "label": "as_statements_1",
       "question": "To what extent do you agree or disagree with these statements? - Antisemitism is a serious problem in the United States today.",
       "type": "categorical",
       "waves": [
@@ -2251,7 +2251,7 @@
       ]
     },
     "as_statements_2": {
-      "label": "as_statements_2  [S26]",
+      "label": "as_statements_2",
       "question": "To what extent do you agree or disagree with these statements? - Jewish Americans face more hate crimes than almost every other demographic group in the United States.",
       "type": "categorical",
       "waves": [
@@ -2281,7 +2281,7 @@
       ]
     },
     "as_statements_3": {
-      "label": "as_statements_3  [S26]",
+      "label": "as_statements_3",
       "question": "To what extent do you agree or disagree with these statements? - Jews are promoting nonwhite immigration to reduce the power of white Americans in American politics and culture.",
       "type": "categorical",
       "waves": [
@@ -2311,7 +2311,7 @@
       ]
     },
     "as_statements_4": {
-      "label": "as_statements_4  [S26]",
+      "label": "as_statements_4",
       "question": "To what extent do you agree or disagree with these statements? - Jews have an extremely organized international community that puts their own interests before those of their home countries.",
       "type": "categorical",
       "waves": [
@@ -2341,7 +2341,7 @@
       ]
     },
     "as_statements_5": {
-      "label": "as_statements_5  [S26]",
+      "label": "as_statements_5",
       "question": "To what extent do you agree or disagree with these statements? - The U.S. government should declare America a Christian nation.",
       "type": "categorical",
       "waves": [
@@ -2371,7 +2371,7 @@
       ]
     },
     "as_statements_6": {
-      "label": "as_statements_6  [S26]",
+      "label": "as_statements_6",
       "question": "To what extent do you agree or disagree with these statements? - Being Christian is an important part of being truly American.",
       "type": "categorical",
       "waves": [
@@ -2401,7 +2401,7 @@
       ]
     },
     "attention_check": {
-      "label": "attention_check  [F25+S26]",
+      "label": "attention_check",
       "question": "In this question, we just want to verify that you are a real person. In the list below, please select\n\u201chealthcare.\u201d",
       "type": "categorical",
       "waves": [
@@ -2416,7 +2416,7 @@
       ]
     },
     "br_change": {
-      "label": "br_change  [F25]",
+      "label": "br_change",
       "question": "Which of the following do you agree with the most, even if none are exactly right?",
       "type": "categorical",
       "waves": [
@@ -2442,7 +2442,7 @@
       ]
     },
     "Budget perceptions_1": {
-      "label": "Budget perceptions_1  [S25]",
+      "label": "Budget perceptions_1",
       "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - Interest payments on the federal debt",
       "type": "numeric",
       "waves": [
@@ -2450,7 +2450,7 @@
       ]
     },
     "Budget perceptions_10": {
-      "label": "Budget perceptions_10  [S25]",
+      "label": "Budget perceptions_10",
       "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - Waste and fraud",
       "type": "numeric",
       "waves": [
@@ -2458,7 +2458,7 @@
       ]
     },
     "Budget perceptions_2": {
-      "label": "Budget perceptions_2  [S25]",
+      "label": "Budget perceptions_2",
       "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - Social Security",
       "type": "numeric",
       "waves": [
@@ -2466,7 +2466,7 @@
       ]
     },
     "Budget perceptions_3": {
-      "label": "Budget perceptions_3  [S25]",
+      "label": "Budget perceptions_3",
       "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - Medicare",
       "type": "numeric",
       "waves": [
@@ -2474,7 +2474,7 @@
       ]
     },
     "Budget perceptions_4": {
-      "label": "Budget perceptions_4  [S25]",
+      "label": "Budget perceptions_4",
       "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - Other healthcare spending",
       "type": "numeric",
       "waves": [
@@ -2482,7 +2482,7 @@
       ]
     },
     "Budget perceptions_5": {
-      "label": "Budget perceptions_5  [S25]",
+      "label": "Budget perceptions_5",
       "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - The military",
       "type": "numeric",
       "waves": [
@@ -2490,7 +2490,7 @@
       ]
     },
     "Budget perceptions_6": {
-      "label": "Budget perceptions_6  [S25]",
+      "label": "Budget perceptions_6",
       "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - Foreign aid",
       "type": "numeric",
       "waves": [
@@ -2498,7 +2498,7 @@
       ]
     },
     "Budget perceptions_7": {
-      "label": "Budget perceptions_7  [S25]",
+      "label": "Budget perceptions_7",
       "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - Education",
       "type": "numeric",
       "waves": [
@@ -2506,7 +2506,7 @@
       ]
     },
     "Budget perceptions_8": {
-      "label": "Budget perceptions_8  [S25]",
+      "label": "Budget perceptions_8",
       "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - Welfare programs",
       "type": "numeric",
       "waves": [
@@ -2514,7 +2514,7 @@
       ]
     },
     "Budget perceptions_9": {
-      "label": "Budget perceptions_9  [S25]",
+      "label": "Budget perceptions_9",
       "question": "For every $100 in tax revenue the US federal government receives, how much do you think goes to: - Infrastructure and transportation",
       "type": "numeric",
       "waves": [
@@ -2522,7 +2522,7 @@
       ]
     },
     "burden_a": {
-      "label": "burden_a  [S26]",
+      "label": "burden_a",
       "question": "Which of the following is closest to your view?",
       "type": "categorical",
       "waves": [
@@ -2544,7 +2544,7 @@
       ]
     },
     "burden_b": {
-      "label": "burden_b  [S26]",
+      "label": "burden_b",
       "question": "Which of the following is closest to your view?",
       "type": "categorical",
       "waves": [
@@ -2566,7 +2566,7 @@
       ]
     },
     "burden_c": {
-      "label": "burden_c  [S26]",
+      "label": "burden_c",
       "question": "Which of the following is closest to your view?",
       "type": "categorical",
       "waves": [
@@ -2588,7 +2588,7 @@
       ]
     },
     "burden_split_do_burden_a": {
-      "label": "burden_split_do_burden_a  [S26]",
+      "label": "burden_split_do_burden_a",
       "question": "burden_split - Display Order burden_a",
       "type": "categorical",
       "waves": [
@@ -2602,7 +2602,7 @@
       ]
     },
     "burden_split_do_burden_b": {
-      "label": "burden_split_do_burden_b  [S26]",
+      "label": "burden_split_do_burden_b",
       "question": "burden_split - Display Order burden_b",
       "type": "categorical",
       "waves": [
@@ -2616,7 +2616,7 @@
       ]
     },
     "burden_split_do_burden_c": {
-      "label": "burden_split_do_burden_c  [S26]",
+      "label": "burden_split_do_burden_c",
       "question": "burden_split - Display Order burden_c",
       "type": "categorical",
       "waves": [
@@ -2630,7 +2630,7 @@
       ]
     },
     "ces_race": {
-      "label": "ces_race  [F25+S26]  \u2295",
+      "label": "ces_race",
       "question": "What racial or ethnic group best describes you? (combined)",
       "type": "categorical",
       "waves": [
@@ -2669,7 +2669,7 @@
       ]
     },
     "change_party": {
-      "label": "change_party  [F25]",
+      "label": "change_party",
       "question": "Which of the two main political parties do you think most stands for change?",
       "type": "categorical",
       "waves": [
@@ -2699,7 +2699,7 @@
       ]
     },
     "close_friends": {
-      "label": "close_friends  [F25]",
+      "label": "close_friends",
       "question": "How many close friends would you say that you have?",
       "type": "categorical",
       "waves": [
@@ -2841,7 +2841,7 @@
       ]
     },
     "Confidence in voters_1": {
-      "label": "Confidence in voters_1  [S25]",
+      "label": "Confidence in voters_1",
       "question": "Do you agree or disagree with the following statements? - Voters are informed enough to make decisions about politics.",
       "type": "categorical",
       "waves": [
@@ -2871,7 +2871,7 @@
       ]
     },
     "Confidence in voters_2": {
-      "label": "Confidence in voters_2  [S25]",
+      "label": "Confidence in voters_2",
       "question": "Do you agree or disagree with the following statements? - I trust elected officials to make decisions.",
       "type": "categorical",
       "waves": [
@@ -2901,7 +2901,7 @@
       ]
     },
     "Confidence in voters_3": {
-      "label": "Confidence in voters_3  [S25]",
+      "label": "Confidence in voters_3",
       "question": "Do you agree or disagree with the following statements? - We should have more direct ballot measures where regular voters make decisions instead of elected officials.",
       "type": "categorical",
       "waves": [
@@ -2931,7 +2931,7 @@
       ]
     },
     "conflation_a": {
-      "label": "conflation_a  [S26]",
+      "label": "conflation_a",
       "question": "Which of the following comes closest to your view?",
       "type": "categorical",
       "waves": [
@@ -2957,7 +2957,7 @@
       ]
     },
     "conflation_b": {
-      "label": "conflation_b  [S26]",
+      "label": "conflation_b",
       "question": "Which of the following comes closest to your view?",
       "type": "categorical",
       "waves": [
@@ -2983,7 +2983,7 @@
       ]
     },
     "conflation_c": {
-      "label": "conflation_c  [S26]",
+      "label": "conflation_c",
       "question": "Which of the following comes closest to your view?",
       "type": "categorical",
       "waves": [
@@ -3009,7 +3009,7 @@
       ]
     },
     "conflation_split_do_conflation_a": {
-      "label": "conflation_split_do_conflation_a  [S26]",
+      "label": "conflation_split_do_conflation_a",
       "question": "conflation_split - Display Order conflation_a",
       "type": "categorical",
       "waves": [
@@ -3023,7 +3023,7 @@
       ]
     },
     "conflation_split_do_conflation_b": {
-      "label": "conflation_split_do_conflation_b  [S26]",
+      "label": "conflation_split_do_conflation_b",
       "question": "conflation_split - Display Order conflation_b",
       "type": "categorical",
       "waves": [
@@ -3037,7 +3037,7 @@
       ]
     },
     "conflation_split_do_conflation_c": {
-      "label": "conflation_split_do_conflation_c  [S26]",
+      "label": "conflation_split_do_conflation_c",
       "question": "conflation_split - Display Order conflation_c",
       "type": "categorical",
       "waves": [
@@ -3051,7 +3051,7 @@
       ]
     },
     "Criminal justice": {
-      "label": "Criminal justice  [S25]",
+      "label": "Criminal justice",
       "question": "Which is more important in the United States today: keeping sentences harsh to reduce crime, or limiting the length of sentences to reduce mass incarceration?",
       "type": "categorical",
       "waves": [
@@ -3073,7 +3073,7 @@
       ]
     },
     "Crypto favs": {
-      "label": "Crypto favs  [S25]",
+      "label": "Crypto favs",
       "question": "How do you feel about cryptocurrencies generally?",
       "type": "categorical",
       "waves": [
@@ -3103,7 +3103,7 @@
       ]
     },
     "D base vs swing": {
-      "label": "D base vs swing  [S25+F25+S26]  \u2295",
+      "label": "D base vs swing",
       "question": "When it comes to winning the next election, what do you think is more important for Democrats?",
       "type": "categorical",
       "waves": [
@@ -3114,11 +3114,11 @@
       "options": [
         {
           "code": 1,
-          "label": "Democrats need to focus on energizing and turning out their voter base by running on progressive policies.  [S26+F25]"
+          "label": "Democrats need to focus on energizing and turning out their voter base by running on progressive policies."
         },
         {
           "code": 2,
-          "label": "Democrats need to focus on moderating their policies and ideology in order to appeal to a wider range of voters.  [S26+F25]"
+          "label": "Democrats need to focus on moderating their policies and ideology in order to appeal to a wider range of voters."
         },
         {
           "code": 3,
@@ -3126,16 +3126,16 @@
         },
         {
           "code": 4,
-          "label": "Democrats need to focus on energizing and turning out their voter base, by running on progressive policies that give their voters something to vote for  [S25]"
+          "label": "Democrats need to focus on energizing and turning out their voter base, by running on progressive policies that give their voters something to vote for"
         },
         {
           "code": 5,
-          "label": "Democrats need to focus on moderating in order to appeal to the swing voters and independents who decide elections  [S25]"
+          "label": "Democrats need to focus on moderating in order to appeal to the swing voters and independents who decide elections"
         }
       ]
     },
     "D primary favs_1": {
-      "label": "D primary favs_1  [S25]",
+      "label": "D primary favs_1",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Andy Beshear",
       "type": "categorical",
       "waves": [
@@ -3165,7 +3165,7 @@
       ]
     },
     "D primary favs_10": {
-      "label": "D primary favs_10  [S25]",
+      "label": "D primary favs_10",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Gretchen Whitmer",
       "type": "categorical",
       "waves": [
@@ -3195,7 +3195,7 @@
       ]
     },
     "D primary favs_11": {
-      "label": "D primary favs_11  [S25]",
+      "label": "D primary favs_11",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Mark Cuban",
       "type": "categorical",
       "waves": [
@@ -3225,7 +3225,7 @@
       ]
     },
     "D primary favs_12": {
-      "label": "D primary favs_12  [S25]",
+      "label": "D primary favs_12",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Ruben Gallego",
       "type": "categorical",
       "waves": [
@@ -3255,7 +3255,7 @@
       ]
     },
     "D primary favs_13": {
-      "label": "D primary favs_13  [S25]",
+      "label": "D primary favs_13",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Stephen A. Smith",
       "type": "categorical",
       "waves": [
@@ -3285,7 +3285,7 @@
       ]
     },
     "D primary favs_14": {
-      "label": "D primary favs_14  [S25]",
+      "label": "D primary favs_14",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Mark Kelly",
       "type": "categorical",
       "waves": [
@@ -3315,7 +3315,7 @@
       ]
     },
     "D primary favs_15": {
-      "label": "D primary favs_15  [S25]",
+      "label": "D primary favs_15",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Jared Polis",
       "type": "categorical",
       "waves": [
@@ -3345,7 +3345,7 @@
       ]
     },
     "D primary favs_16": {
-      "label": "D primary favs_16  [S25]",
+      "label": "D primary favs_16",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Pete Buttigieg",
       "type": "categorical",
       "waves": [
@@ -3375,7 +3375,7 @@
       ]
     },
     "D primary favs_2": {
-      "label": "D primary favs_2  [S25]",
+      "label": "D primary favs_2",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Alexandria Ocasio-Cortez",
       "type": "categorical",
       "waves": [
@@ -3405,7 +3405,7 @@
       ]
     },
     "D primary favs_3": {
-      "label": "D primary favs_3  [S25]",
+      "label": "D primary favs_3",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Roy Cooper",
       "type": "categorical",
       "waves": [
@@ -3435,7 +3435,7 @@
       ]
     },
     "D primary favs_4": {
-      "label": "D primary favs_4  [S25]",
+      "label": "D primary favs_4",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - John Fetterman",
       "type": "categorical",
       "waves": [
@@ -3465,7 +3465,7 @@
       ]
     },
     "D primary favs_5": {
-      "label": "D primary favs_5  [S25]",
+      "label": "D primary favs_5",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Kamala Harris",
       "type": "categorical",
       "waves": [
@@ -3495,7 +3495,7 @@
       ]
     },
     "D primary favs_6": {
-      "label": "D primary favs_6  [S25]",
+      "label": "D primary favs_6",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Wes Moore",
       "type": "categorical",
       "waves": [
@@ -3525,7 +3525,7 @@
       ]
     },
     "D primary favs_7": {
-      "label": "D primary favs_7  [S25]",
+      "label": "D primary favs_7",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Gavin Newsom",
       "type": "categorical",
       "waves": [
@@ -3555,7 +3555,7 @@
       ]
     },
     "D primary favs_8": {
-      "label": "D primary favs_8  [S25]",
+      "label": "D primary favs_8",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - JB Pritzker",
       "type": "categorical",
       "waves": [
@@ -3585,7 +3585,7 @@
       ]
     },
     "D primary favs_9": {
-      "label": "D primary favs_9  [S25]",
+      "label": "D primary favs_9",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Josh Shapiro",
       "type": "categorical",
       "waves": [
@@ -3615,7 +3615,7 @@
       ]
     },
     "D primary horserace": {
-      "label": "D primary horserace  [S25]",
+      "label": "D primary horserace",
       "question": "If the 2028 Democratic presidential primary were held today, and these were the candidates, who would you vote for? - Selected Choice",
       "type": "categorical",
       "waves": [
@@ -3693,7 +3693,7 @@
       ]
     },
     "D primary ideology\u00a0_1": {
-      "label": "D primary ideology\u00a0_1  [S25]",
+      "label": "D primary ideology\u00a0_1",
       "question": "How would you rate the following individuals? - Andy Beshear",
       "type": "categorical",
       "waves": [
@@ -3723,7 +3723,7 @@
       ]
     },
     "D primary ideology\u00a0_10": {
-      "label": "D primary ideology\u00a0_10  [S25]",
+      "label": "D primary ideology\u00a0_10",
       "question": "How would you rate the following individuals? - Gretchen Whitmer",
       "type": "categorical",
       "waves": [
@@ -3753,7 +3753,7 @@
       ]
     },
     "D primary ideology\u00a0_11": {
-      "label": "D primary ideology\u00a0_11  [S25]",
+      "label": "D primary ideology\u00a0_11",
       "question": "How would you rate the following individuals? - Mark Cuban",
       "type": "categorical",
       "waves": [
@@ -3783,7 +3783,7 @@
       ]
     },
     "D primary ideology\u00a0_12": {
-      "label": "D primary ideology\u00a0_12  [S25]",
+      "label": "D primary ideology\u00a0_12",
       "question": "How would you rate the following individuals? - Ruben Gallego",
       "type": "categorical",
       "waves": [
@@ -3813,7 +3813,7 @@
       ]
     },
     "D primary ideology\u00a0_13": {
-      "label": "D primary ideology\u00a0_13  [S25]",
+      "label": "D primary ideology\u00a0_13",
       "question": "How would you rate the following individuals? - Stephen A. Smith",
       "type": "categorical",
       "waves": [
@@ -3843,7 +3843,7 @@
       ]
     },
     "D primary ideology\u00a0_14": {
-      "label": "D primary ideology\u00a0_14  [S25]",
+      "label": "D primary ideology\u00a0_14",
       "question": "How would you rate the following individuals? - Mark Kelly",
       "type": "categorical",
       "waves": [
@@ -3873,7 +3873,7 @@
       ]
     },
     "D primary ideology\u00a0_15": {
-      "label": "D primary ideology\u00a0_15  [S25]",
+      "label": "D primary ideology\u00a0_15",
       "question": "How would you rate the following individuals? - Jared Polis",
       "type": "categorical",
       "waves": [
@@ -3903,7 +3903,7 @@
       ]
     },
     "D primary ideology\u00a0_16": {
-      "label": "D primary ideology\u00a0_16  [S25]",
+      "label": "D primary ideology\u00a0_16",
       "question": "How would you rate the following individuals? - Pete Buttigieg",
       "type": "categorical",
       "waves": [
@@ -3933,7 +3933,7 @@
       ]
     },
     "D primary ideology\u00a0_2": {
-      "label": "D primary ideology\u00a0_2  [S25]",
+      "label": "D primary ideology\u00a0_2",
       "question": "How would you rate the following individuals? - Alexandria Ocasio-Cortez",
       "type": "categorical",
       "waves": [
@@ -3963,7 +3963,7 @@
       ]
     },
     "D primary ideology\u00a0_3": {
-      "label": "D primary ideology\u00a0_3  [S25]",
+      "label": "D primary ideology\u00a0_3",
       "question": "How would you rate the following individuals? - Roy Cooper",
       "type": "categorical",
       "waves": [
@@ -3993,7 +3993,7 @@
       ]
     },
     "D primary ideology\u00a0_4": {
-      "label": "D primary ideology\u00a0_4  [S25]",
+      "label": "D primary ideology\u00a0_4",
       "question": "How would you rate the following individuals? - John Fetterman",
       "type": "categorical",
       "waves": [
@@ -4023,7 +4023,7 @@
       ]
     },
     "D primary ideology\u00a0_5": {
-      "label": "D primary ideology\u00a0_5  [S25]",
+      "label": "D primary ideology\u00a0_5",
       "question": "How would you rate the following individuals? - Kamala Harris",
       "type": "categorical",
       "waves": [
@@ -4053,7 +4053,7 @@
       ]
     },
     "D primary ideology\u00a0_6": {
-      "label": "D primary ideology\u00a0_6  [S25]",
+      "label": "D primary ideology\u00a0_6",
       "question": "How would you rate the following individuals? - Wes Moore",
       "type": "categorical",
       "waves": [
@@ -4083,7 +4083,7 @@
       ]
     },
     "D primary ideology\u00a0_7": {
-      "label": "D primary ideology\u00a0_7  [S25]",
+      "label": "D primary ideology\u00a0_7",
       "question": "How would you rate the following individuals? - Gavin Newsom",
       "type": "categorical",
       "waves": [
@@ -4113,7 +4113,7 @@
       ]
     },
     "D primary ideology\u00a0_8": {
-      "label": "D primary ideology\u00a0_8  [S25]",
+      "label": "D primary ideology\u00a0_8",
       "question": "How would you rate the following individuals? - JB Pritzker",
       "type": "categorical",
       "waves": [
@@ -4143,7 +4143,7 @@
       ]
     },
     "D primary ideology\u00a0_9": {
-      "label": "D primary ideology\u00a0_9  [S25]",
+      "label": "D primary ideology\u00a0_9",
       "question": "How would you rate the following individuals? - Josh Shapiro",
       "type": "categorical",
       "waves": [
@@ -4173,7 +4173,7 @@
       ]
     },
     "d_electable_maxdiff": {
-      "label": "d_electable_maxdiff  [F25+S26]  \u2295",
+      "label": "d_electable_maxdiff",
       "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Republican?",
       "type": "maxdiff",
       "waves": [
@@ -4304,7 +4304,7 @@
       ]
     },
     "Deficit reduction A": {
-      "label": "Deficit reduction A  [S25]",
+      "label": "Deficit reduction A",
       "question": "When it comes to reducing the deficit \u2014 the shortfall between what the government spends and what it collects in revenue each year, requiring borrowing to cover the gap \u2014 which approach do you prefer the most?",
       "type": "categorical",
       "waves": [
@@ -4334,7 +4334,7 @@
       ]
     },
     "Deficit reduction B": {
-      "label": "Deficit reduction B  [S25]",
+      "label": "Deficit reduction B",
       "question": "When it comes to reducing the deficit \u2014 the shortfall between what the government spends and what it collects in revenue each year, requiring borrowing to cover the gap \u2014 which approach do you prefer the most?",
       "type": "categorical",
       "waves": [
@@ -4364,7 +4364,7 @@
       ]
     },
     "dei": {
-      "label": "dei  [S26]",
+      "label": "dei",
       "question": "Many companies and schools have programs that encourage diversity, educate about and combat discrimination, accommodate different types of people, and work to create inclusive environments. Which of the following comes closest to your views on the role of Jews in these programs?",
       "type": "categorical",
       "waves": [
@@ -4394,7 +4394,7 @@
       ]
     },
     "Dem econ priority": {
-      "label": "Dem econ priority  [S25]",
+      "label": "Dem econ priority",
       "question": "Using the same list, which aspect of the American economy do you think the Democratic Party is most focused on?",
       "type": "categorical",
       "waves": [
@@ -4432,7 +4432,7 @@
       ]
     },
     "donor_a_1": {
-      "label": "donor_a_1  [S26]",
+      "label": "donor_a_1",
       "question": "To what extent do you agree or disagree with these statements? - Wealthy donors have too much control over American politics.",
       "type": "categorical",
       "waves": [
@@ -4462,7 +4462,7 @@
       ]
     },
     "donor_a_2": {
-      "label": "donor_a_2  [S26]",
+      "label": "donor_a_2",
       "question": "To what extent do you agree or disagree with these statements? - Wealthy donors prioritize their own interests over American ones.",
       "type": "categorical",
       "waves": [
@@ -4492,7 +4492,7 @@
       ]
     },
     "donor_a_3": {
-      "label": "donor_a_3  [S26]",
+      "label": "donor_a_3",
       "question": "To what extent do you agree or disagree with these statements? - Wealthy donors prioritize the interests of other countries over American interests.",
       "type": "categorical",
       "waves": [
@@ -4522,7 +4522,7 @@
       ]
     },
     "donor_b_1": {
-      "label": "donor_b_1  [S26]",
+      "label": "donor_b_1",
       "question": "To what extent do you agree or disagree with these statements? - Wealthy Jewish donors have too much control over American politics.",
       "type": "categorical",
       "waves": [
@@ -4552,7 +4552,7 @@
       ]
     },
     "donor_b_2": {
-      "label": "donor_b_2  [S26]",
+      "label": "donor_b_2",
       "question": "To what extent do you agree or disagree with these statements? - Wealthy Jewish donors prioritize their own interests over American ones.",
       "type": "categorical",
       "waves": [
@@ -4582,7 +4582,7 @@
       ]
     },
     "donor_b_3": {
-      "label": "donor_b_3  [S26]",
+      "label": "donor_b_3",
       "question": "To what extent do you agree or disagree with these statements? - Wealthy Jewish donors prioritize the interests of Israel over American interests.",
       "type": "categorical",
       "waves": [
@@ -4612,7 +4612,7 @@
       ]
     },
     "donor_split_do_donor_a": {
-      "label": "donor_split_do_donor_a  [S26]",
+      "label": "donor_split_do_donor_a",
       "question": "donor_split - Display Order donor_a",
       "type": "categorical",
       "waves": [
@@ -4626,7 +4626,7 @@
       ]
     },
     "donor_split_do_donor_b": {
-      "label": "donor_split_do_donor_b  [S26]",
+      "label": "donor_split_do_donor_b",
       "question": "donor_split - Display Order donor_b",
       "type": "categorical",
       "waves": [
@@ -4640,7 +4640,7 @@
       ]
     },
     "EC mechanics": {
-      "label": "EC mechanics  [F24+S25]",
+      "label": "EC mechanics",
       "question": "EC mechanics",
       "type": "categorical",
       "waves": [
@@ -4667,7 +4667,7 @@
       ]
     },
     "econ_party_support_1": {
-      "label": "Econ party support_1  [F24]",
+      "label": "Econ party support_1",
       "question": "Econ party support_1",
       "type": "categorical",
       "waves": [
@@ -4697,7 +4697,7 @@
       ]
     },
     "econ_party_support_10": {
-      "label": "Econ party support_10  [F24]",
+      "label": "Econ party support_10",
       "question": "Econ party support_10",
       "type": "categorical",
       "waves": [
@@ -4727,7 +4727,7 @@
       ]
     },
     "econ_party_support_2": {
-      "label": "Econ party support_2  [F24]",
+      "label": "Econ party support_2",
       "question": "Econ party support_2",
       "type": "categorical",
       "waves": [
@@ -4757,7 +4757,7 @@
       ]
     },
     "econ_party_support_3": {
-      "label": "Econ party support_3  [F24]",
+      "label": "Econ party support_3",
       "question": "Econ party support_3",
       "type": "categorical",
       "waves": [
@@ -4787,7 +4787,7 @@
       ]
     },
     "econ_party_support_4": {
-      "label": "Econ party support_4  [F24]",
+      "label": "Econ party support_4",
       "question": "Econ party support_4",
       "type": "categorical",
       "waves": [
@@ -4817,7 +4817,7 @@
       ]
     },
     "econ_party_support_5": {
-      "label": "Econ party support_5  [F24]",
+      "label": "Econ party support_5",
       "question": "Econ party support_5",
       "type": "categorical",
       "waves": [
@@ -4847,7 +4847,7 @@
       ]
     },
     "econ_party_support_6": {
-      "label": "Econ party support_6  [F24]",
+      "label": "Econ party support_6",
       "question": "Econ party support_6",
       "type": "categorical",
       "waves": [
@@ -4877,7 +4877,7 @@
       ]
     },
     "econ_party_support_7": {
-      "label": "Econ party support_7  [F24]",
+      "label": "Econ party support_7",
       "question": "Econ party support_7",
       "type": "categorical",
       "waves": [
@@ -4907,7 +4907,7 @@
       ]
     },
     "econ_party_support_8": {
-      "label": "Econ party support_8  [F24]",
+      "label": "Econ party support_8",
       "question": "Econ party support_8",
       "type": "categorical",
       "waves": [
@@ -4937,7 +4937,7 @@
       ]
     },
     "econ_party_support_9": {
-      "label": "Econ party support_9  [F24]",
+      "label": "Econ party support_9",
       "question": "Econ party support_9",
       "type": "categorical",
       "waves": [
@@ -4967,7 +4967,7 @@
       ]
     },
     "econ_support_1": {
-      "label": "Econ support_1  [F24]",
+      "label": "Econ support_1",
       "question": "Econ support_1",
       "type": "categorical",
       "waves": [
@@ -4997,7 +4997,7 @@
       ]
     },
     "econ_support_10": {
-      "label": "Econ support_10  [F24]",
+      "label": "Econ support_10",
       "question": "Econ support_10",
       "type": "categorical",
       "waves": [
@@ -5027,7 +5027,7 @@
       ]
     },
     "econ_support_2": {
-      "label": "Econ support_2  [F24]",
+      "label": "Econ support_2",
       "question": "Econ support_2",
       "type": "categorical",
       "waves": [
@@ -5057,7 +5057,7 @@
       ]
     },
     "econ_support_3": {
-      "label": "Econ support_3  [F24]",
+      "label": "Econ support_3",
       "question": "Econ support_3",
       "type": "categorical",
       "waves": [
@@ -5087,7 +5087,7 @@
       ]
     },
     "econ_support_4": {
-      "label": "Econ support_4  [F24]",
+      "label": "Econ support_4",
       "question": "Econ support_4",
       "type": "categorical",
       "waves": [
@@ -5117,7 +5117,7 @@
       ]
     },
     "econ_support_5": {
-      "label": "Econ support_5  [F24]",
+      "label": "Econ support_5",
       "question": "Econ support_5",
       "type": "categorical",
       "waves": [
@@ -5147,7 +5147,7 @@
       ]
     },
     "econ_support_6": {
-      "label": "Econ support_6  [F24]",
+      "label": "Econ support_6",
       "question": "Econ support_6",
       "type": "categorical",
       "waves": [
@@ -5177,7 +5177,7 @@
       ]
     },
     "econ_support_7": {
-      "label": "Econ support_7  [F24]",
+      "label": "Econ support_7",
       "question": "Econ support_7",
       "type": "categorical",
       "waves": [
@@ -5207,7 +5207,7 @@
       ]
     },
     "econ_support_8": {
-      "label": "Econ support_8  [F24]",
+      "label": "Econ support_8",
       "question": "Econ support_8",
       "type": "categorical",
       "waves": [
@@ -5237,7 +5237,7 @@
       ]
     },
     "econ_support_9": {
-      "label": "Econ support_9  [F24]",
+      "label": "Econ support_9",
       "question": "Econ support_9",
       "type": "categorical",
       "waves": [
@@ -5267,7 +5267,7 @@
       ]
     },
     "Endowment taxes": {
-      "label": "Endowment taxes  [S25]",
+      "label": "Endowment taxes",
       "question": "To what extent would you support having private universities with an endowment \u2014 a financial fund made up of donations to a university, typically invested to support the institution\u2019s operations, scholarships, faculty salaries, and research \u2014 greater than $10 billion paying a tax of 21% on the annual profits from their endowments? Under current law, profits from university endowments are taxed at 1.4%.",
       "type": "categorical",
       "waves": [
@@ -5297,7 +5297,7 @@
       ]
     },
     "Favorabilities_1": {
-      "label": "Favorabilities_1  [F24+S25]",
+      "label": "Favorabilities_1",
       "question": "Favorabilities_1",
       "type": "categorical",
       "waves": [
@@ -5328,7 +5328,7 @@
       ]
     },
     "Favorabilities_2": {
-      "label": "Favorabilities_2  [F24+S25]",
+      "label": "Favorabilities_2",
       "question": "Favorabilities_2",
       "type": "categorical",
       "waves": [
@@ -5359,7 +5359,7 @@
       ]
     },
     "Favorabilities_3": {
-      "label": "Favorabilities_3  [F24+S25]",
+      "label": "Favorabilities_3",
       "question": "Favorabilities_3",
       "type": "categorical",
       "waves": [
@@ -5390,7 +5390,7 @@
       ]
     },
     "Favorabilities_4": {
-      "label": "Favorabilities_4  [F24+S25]",
+      "label": "Favorabilities_4",
       "question": "Favorabilities_4",
       "type": "categorical",
       "waves": [
@@ -5421,7 +5421,7 @@
       ]
     },
     "Favorabilities_5": {
-      "label": "Favorabilities_5  [S25]",
+      "label": "Favorabilities_5",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Joe Biden",
       "type": "categorical",
       "waves": [
@@ -5451,7 +5451,7 @@
       ]
     },
     "feeling_of_safety_1": {
-      "label": "feeling_of_safety_1  [S26]",
+      "label": "feeling_of_safety_1",
       "question": "To what extent do you agree or disagree with the following statements? - Police officers make me feel safer in my community.",
       "type": "categorical",
       "waves": [
@@ -5481,7 +5481,7 @@
       ]
     },
     "feeling_of_safety_2": {
-      "label": "feeling_of_safety_2  [S26]",
+      "label": "feeling_of_safety_2",
       "question": "To what extent do you agree or disagree with the following statements? - Immigration and Customs Enforcement (ICE) agents make me feel safer in my community.",
       "type": "categorical",
       "waves": [
@@ -5511,7 +5511,7 @@
       ]
     },
     "Filibuster": {
-      "label": "Filibuster  [F24+S25]",
+      "label": "Filibuster",
       "question": "Filibuster",
       "type": "categorical",
       "waves": [
@@ -5538,7 +5538,7 @@
       ]
     },
     "foreign_party_suppor_1": {
-      "label": "Foreign party suppor_1  [F24]",
+      "label": "Foreign party suppor_1",
       "question": "Foreign party suppor_1",
       "type": "categorical",
       "waves": [
@@ -5568,7 +5568,7 @@
       ]
     },
     "foreign_party_suppor_2": {
-      "label": "Foreign party suppor_2  [F24]",
+      "label": "Foreign party suppor_2",
       "question": "Foreign party suppor_2",
       "type": "categorical",
       "waves": [
@@ -5598,7 +5598,7 @@
       ]
     },
     "foreign_party_suppor_3": {
-      "label": "Foreign party suppor_3  [F24]",
+      "label": "Foreign party suppor_3",
       "question": "Foreign party suppor_3",
       "type": "categorical",
       "waves": [
@@ -5628,7 +5628,7 @@
       ]
     },
     "foreign_party_suppor_4": {
-      "label": "Foreign party suppor_4  [F24]",
+      "label": "Foreign party suppor_4",
       "question": "Foreign party suppor_4",
       "type": "categorical",
       "waves": [
@@ -5658,7 +5658,7 @@
       ]
     },
     "foreign_party_suppor_5": {
-      "label": "Foreign party suppor_5  [F24]",
+      "label": "Foreign party suppor_5",
       "question": "Foreign party suppor_5",
       "type": "categorical",
       "waves": [
@@ -5688,7 +5688,7 @@
       ]
     },
     "foreign_party_suppor_6": {
-      "label": "Foreign party suppor_6  [F24]",
+      "label": "Foreign party suppor_6",
       "question": "Foreign party suppor_6",
       "type": "categorical",
       "waves": [
@@ -5718,7 +5718,7 @@
       ]
     },
     "foreign_party_suppor_7": {
-      "label": "Foreign party suppor_7  [F24]",
+      "label": "Foreign party suppor_7",
       "question": "Foreign party suppor_7",
       "type": "categorical",
       "waves": [
@@ -5748,7 +5748,7 @@
       ]
     },
     "foreign_party_suppor_8": {
-      "label": "Foreign party suppor_8  [F24]",
+      "label": "Foreign party suppor_8",
       "question": "Foreign party suppor_8",
       "type": "categorical",
       "waves": [
@@ -5778,7 +5778,7 @@
       ]
     },
     "foreign_support_1": {
-      "label": "Foreign support_1  [F24]",
+      "label": "Foreign support_1",
       "question": "Foreign support_1",
       "type": "categorical",
       "waves": [
@@ -5808,7 +5808,7 @@
       ]
     },
     "foreign_support_2": {
-      "label": "Foreign support_2  [F24]",
+      "label": "Foreign support_2",
       "question": "Foreign support_2",
       "type": "categorical",
       "waves": [
@@ -5838,7 +5838,7 @@
       ]
     },
     "foreign_support_3": {
-      "label": "Foreign support_3  [F24]",
+      "label": "Foreign support_3",
       "question": "Foreign support_3",
       "type": "categorical",
       "waves": [
@@ -5868,7 +5868,7 @@
       ]
     },
     "foreign_support_4": {
-      "label": "Foreign support_4  [F24]",
+      "label": "Foreign support_4",
       "question": "Foreign support_4",
       "type": "categorical",
       "waves": [
@@ -5898,7 +5898,7 @@
       ]
     },
     "foreign_support_5": {
-      "label": "Foreign support_5  [F24]",
+      "label": "Foreign support_5",
       "question": "Foreign support_5",
       "type": "categorical",
       "waves": [
@@ -5928,7 +5928,7 @@
       ]
     },
     "foreign_support_6": {
-      "label": "Foreign support_6  [F24]",
+      "label": "Foreign support_6",
       "question": "Foreign support_6",
       "type": "categorical",
       "waves": [
@@ -5958,7 +5958,7 @@
       ]
     },
     "foreign_support_7": {
-      "label": "Foreign support_7  [F24]",
+      "label": "Foreign support_7",
       "question": "Foreign support_7",
       "type": "categorical",
       "waves": [
@@ -5988,7 +5988,7 @@
       ]
     },
     "foreign_support_8": {
-      "label": "Foreign support_8  [F24]",
+      "label": "Foreign support_8",
       "question": "Foreign support_8",
       "type": "categorical",
       "waves": [
@@ -6018,7 +6018,7 @@
       ]
     },
     "future_optimism": {
-      "label": "future_optimism  [F25]",
+      "label": "future_optimism",
       "question": "How do you, personally, feel about the future of America?",
       "type": "categorical",
       "waves": [
@@ -6048,7 +6048,7 @@
       ]
     },
     "gender_wars_1": {
-      "label": "gender_wars_1  [F25]",
+      "label": "gender_wars_1",
       "question": "In your opinion, who, in general, has more challenges in the following areas today? - Making friends",
       "type": "categorical",
       "waves": [
@@ -6074,7 +6074,7 @@
       ]
     },
     "gender_wars_2": {
-      "label": "gender_wars_2  [F25]",
+      "label": "gender_wars_2",
       "question": "In your opinion, who, in general, has more challenges in the following areas today? - Finding a romantic partner",
       "type": "categorical",
       "waves": [
@@ -6100,7 +6100,7 @@
       ]
     },
     "gender_wars_3": {
-      "label": "gender_wars_3  [F25]",
+      "label": "gender_wars_3",
       "question": "In your opinion, who, in general, has more challenges in the following areas today? - Finding a good job",
       "type": "categorical",
       "waves": [
@@ -6126,7 +6126,7 @@
       ]
     },
     "gender_wars_4": {
-      "label": "gender_wars_4  [F25]",
+      "label": "gender_wars_4",
       "question": "In your opinion, who, in general, has more challenges in the following areas today? - Finding a sense of purpose in life",
       "type": "categorical",
       "waves": [
@@ -6152,7 +6152,7 @@
       ]
     },
     "gender_wars_5": {
-      "label": "gender_wars_5  [F25]",
+      "label": "gender_wars_5",
       "question": "In your opinion, who, in general, has more challenges in the following areas today? - Talking about emotions/mental health",
       "type": "categorical",
       "waves": [
@@ -6178,7 +6178,7 @@
       ]
     },
     "Generic ballot 2026": {
-      "label": "Generic ballot 2026  [S25]",
+      "label": "Generic ballot 2026",
       "question": "If the election for U.S. Congress in your district was held today, which one of the following candidates would you vote for?",
       "type": "categorical",
       "waves": [
@@ -6200,7 +6200,7 @@
       ]
     },
     "generic_ballot": {
-      "label": "generic_ballot  [F25+S26]",
+      "label": "generic_ballot",
       "question": "If the election for U.S. Congress in your district was held today, which one of the following candidates would you vote for?",
       "type": "categorical",
       "waves": [
@@ -6223,7 +6223,7 @@
       ]
     },
     "Gerrymandering def.": {
-      "label": "Gerrymandering def.  [F24+S25]",
+      "label": "Gerrymandering def.",
       "question": "Gerrymandering def.",
       "type": "categorical",
       "waves": [
@@ -6250,7 +6250,7 @@
       ]
     },
     "GOP econ priority": {
-      "label": "GOP econ priority  [S25]",
+      "label": "GOP econ priority",
       "question": "Using the same list, which aspect of the American economy do you think the Republican Party is most focused on?",
       "type": "categorical",
       "waves": [
@@ -6288,7 +6288,7 @@
       ]
     },
     "gop_base_vs_swing": {
-      "label": "gop_base_vs_swing  [S26]",
+      "label": "gop_base_vs_swing",
       "question": "When it comes to the next election, what do you think is more important for Republicans?",
       "type": "categorical",
       "waves": [
@@ -6310,7 +6310,7 @@
       ]
     },
     "hersh_battery_1": {
-      "label": "hersh_battery_1  [F25+S26]",
+      "label": "hersh_battery_1",
       "question": "To what extent do you agree with these statements? - Jews in the United States are more loyal to Israel than to America.",
       "type": "categorical",
       "waves": [
@@ -6341,7 +6341,7 @@
       ]
     },
     "hersh_battery_2": {
-      "label": "hersh_battery_2  [F25+S26]",
+      "label": "hersh_battery_2",
       "question": "To what extent do you agree with these statements? - It\u2019s appropriate to boycott Jewish American-owned businesses to protest the war in Gaza.",
       "type": "categorical",
       "waves": [
@@ -6372,7 +6372,7 @@
       ]
     },
     "hersh_battery_3": {
-      "label": "hersh_battery_3  [F25+S26]",
+      "label": "hersh_battery_3",
       "question": "To what extent do you agree with these statements? - Jews in the United States have too much power.",
       "type": "categorical",
       "waves": [
@@ -6403,7 +6403,7 @@
       ]
     },
     "Higher ed trust_1": {
-      "label": "Higher ed trust_1  [S25]",
+      "label": "Higher ed trust_1",
       "question": "How much would you say that you trust professors from the following kinds of higher education institutions to educate America\u2019s youth? - Elite private universities, like the Ivy League",
       "type": "categorical",
       "waves": [
@@ -6433,7 +6433,7 @@
       ]
     },
     "Higher ed trust_2": {
-      "label": "Higher ed trust_2  [S25]",
+      "label": "Higher ed trust_2",
       "question": "How much would you say that you trust professors from the following kinds of higher education institutions to educate America\u2019s youth? - Private non-profit universities",
       "type": "categorical",
       "waves": [
@@ -6463,7 +6463,7 @@
       ]
     },
     "Higher ed trust_3": {
-      "label": "Higher ed trust_3  [S25]",
+      "label": "Higher ed trust_3",
       "question": "How much would you say that you trust professors from the following kinds of higher education institutions to educate America\u2019s youth? - Public 4-year universities",
       "type": "categorical",
       "waves": [
@@ -6493,7 +6493,7 @@
       ]
     },
     "Higher ed trust_4": {
-      "label": "Higher ed trust_4  [S25]",
+      "label": "Higher ed trust_4",
       "question": "How much would you say that you trust professors from the following kinds of higher education institutions to educate America\u2019s youth? - Community colleges",
       "type": "categorical",
       "waves": [
@@ -6523,7 +6523,7 @@
       ]
     },
     "Higher ed trust_5": {
-      "label": "Higher ed trust_5  [S25]",
+      "label": "Higher ed trust_5",
       "question": "How much would you say that you trust professors from the following kinds of higher education institutions to educate America\u2019s youth? - Private for-profit colleges",
       "type": "categorical",
       "waves": [
@@ -6553,7 +6553,7 @@
       ]
     },
     "Higher ed trust_6": {
-      "label": "Higher ed trust_6  [S25]",
+      "label": "Higher ed trust_6",
       "question": "How much would you say that you trust professors from the following kinds of higher education institutions to educate America\u2019s youth? - Trade schools",
       "type": "categorical",
       "waves": [
@@ -6583,7 +6583,7 @@
       ]
     },
     "holocaust_battery_1": {
-      "label": "holocaust_battery_1  [S26]",
+      "label": "holocaust_battery_1",
       "question": "To what extent do you agree or disagree with these statements? - Public schools should be required to teach about the Holocaust in world history classes.",
       "type": "categorical",
       "waves": [
@@ -6613,7 +6613,7 @@
       ]
     },
     "holocaust_battery_2": {
-      "label": "holocaust_battery_2  [S26]",
+      "label": "holocaust_battery_2",
       "question": "To what extent do you agree or disagree with these statements? - People exaggerate how bad the Holocaust actually was.",
       "type": "categorical",
       "waves": [
@@ -6643,7 +6643,7 @@
       ]
     },
     "holocaust_battery_3": {
-      "label": "holocaust_battery_3  [S26]",
+      "label": "holocaust_battery_3",
       "question": "To what extent do you agree or disagree with these statements? - Jews should move on from the Holocaust.",
       "type": "categorical",
       "waves": [
@@ -6673,7 +6673,7 @@
       ]
     },
     "holocaust_battery_4": {
-      "label": "holocaust_battery_4  [S26]",
+      "label": "holocaust_battery_4",
       "question": "To what extent do you agree or disagree with these statements? - Something like the Holocaust could happen again to Jews today.",
       "type": "categorical",
       "waves": [
@@ -6703,7 +6703,7 @@
       ]
     },
     "holocaust_battery_5": {
-      "label": "holocaust_battery_5  [S26]",
+      "label": "holocaust_battery_5",
       "question": "To what extent do you agree or disagree with these statements? - Jews were partially responsible for the Holocaust.",
       "type": "categorical",
       "waves": [
@@ -6733,7 +6733,7 @@
       ]
     },
     "Homelessness A": {
-      "label": "Homelessness A  [S25]",
+      "label": "Homelessness A",
       "question": "When it comes to homelessness, which position comes closest to your view?",
       "type": "categorical",
       "waves": [
@@ -6755,7 +6755,7 @@
       ]
     },
     "Homelessness B": {
-      "label": "Homelessness B  [S25]",
+      "label": "Homelessness B",
       "question": "When it comes to homelessness, which position comes closest to your view?",
       "type": "categorical",
       "waves": [
@@ -6777,7 +6777,7 @@
       ]
     },
     "House control": {
-      "label": "House control  [F24+S25]",
+      "label": "House control",
       "question": "House control",
       "type": "categorical",
       "waves": [
@@ -6804,7 +6804,7 @@
       ]
     },
     "ice_budget": {
-      "label": "ice_budget  [S26]",
+      "label": "ice_budget",
       "question": "When it comes to Immigration and Customs Enforcement (ICE), do you favor:",
       "type": "categorical",
       "waves": [
@@ -6834,7 +6834,7 @@
       ]
     },
     "Ideology_1": {
-      "label": "Ideology_1  [F24+S25]",
+      "label": "Ideology_1",
       "question": "Ideology_1",
       "type": "categorical",
       "waves": [
@@ -6869,7 +6869,7 @@
       ]
     },
     "Ideology_2": {
-      "label": "Ideology_2  [F24+S25]",
+      "label": "Ideology_2",
       "question": "Ideology_2",
       "type": "categorical",
       "waves": [
@@ -6904,7 +6904,7 @@
       ]
     },
     "Ideology_3": {
-      "label": "Ideology_3  [F24+S25]",
+      "label": "Ideology_3",
       "question": "Ideology_3",
       "type": "categorical",
       "waves": [
@@ -6939,7 +6939,7 @@
       ]
     },
     "Ideology_4": {
-      "label": "Ideology_4  [F24+S25]",
+      "label": "Ideology_4",
       "question": "Ideology_4",
       "type": "categorical",
       "waves": [
@@ -6974,7 +6974,7 @@
       ]
     },
     "Ideology_5": {
-      "label": "Ideology_5  [F24+S25]",
+      "label": "Ideology_5",
       "question": "Ideology_5",
       "type": "categorical",
       "waves": [
@@ -7009,7 +7009,7 @@
       ]
     },
     "Ideology_6": {
-      "label": "Ideology_6  [F24+S25]",
+      "label": "Ideology_6",
       "question": "Ideology_6",
       "type": "categorical",
       "waves": [
@@ -7044,7 +7044,7 @@
       ]
     },
     "ideology_7": {
-      "label": "Ideology_7  [F24]",
+      "label": "Ideology_7",
       "question": "Ideology_7",
       "type": "categorical",
       "waves": [
@@ -7078,7 +7078,7 @@
       ]
     },
     "Immigration level": {
-      "label": "Immigration level  [S25]",
+      "label": "Immigration level",
       "question": "When it comes to legal immigration to the US, which comes closest to your view?",
       "type": "categorical",
       "waves": [
@@ -7104,7 +7104,7 @@
       ]
     },
     "israel_exist": {
-      "label": "israel_exist  [F25]",
+      "label": "israel_exist",
       "question": "Do you believe the state of Israel should exist as a Jewish state?",
       "type": "categorical",
       "waves": [
@@ -7130,7 +7130,7 @@
       ]
     },
     "israel_military_aid": {
-      "label": "israel_military_aid  [F25]",
+      "label": "israel_military_aid",
       "question": "Do you favor the United States\u2026",
       "type": "categorical",
       "waves": [
@@ -7160,7 +7160,7 @@
       ]
     },
     "israel_views_1": {
-      "label": "israel_views_1  [S26]",
+      "label": "israel_views_1",
       "question": "To what extent do you agree or disagree with these statements? - America should end the slavish surrender to Israel, its wars, and its demands for foreign aid.",
       "type": "categorical",
       "waves": [
@@ -7190,7 +7190,7 @@
       ]
     },
     "israel_views_2": {
-      "label": "israel_views_2  [S26]",
+      "label": "israel_views_2",
       "question": "To what extent do you agree or disagree with these statements? - The Bible says that those who bless Israel will be blessed, and those who curse Israel will be cursed, so America should stand with Israel.",
       "type": "categorical",
       "waves": [
@@ -7220,7 +7220,7 @@
       ]
     },
     "israel_views_3": {
-      "label": "israel_views_3  [S26]",
+      "label": "israel_views_3",
       "question": "To what extent do you agree or disagree with these statements? - America needs Israel for national security. They are the tip of the spear when it comes to defeating terrorism.",
       "type": "categorical",
       "waves": [
@@ -7250,7 +7250,7 @@
       ]
     },
     "israel_views_4": {
-      "label": "israel_views_4  [S26]",
+      "label": "israel_views_4",
       "question": "To what extent do you agree or disagree with these statements? - Israel is a sanctuary for historically oppressed people, minority rights, and democracy in a region where no others exist.",
       "type": "categorical",
       "waves": [
@@ -7280,7 +7280,7 @@
       ]
     },
     "israel_views_5": {
-      "label": "israel_views_5  [S26]",
+      "label": "israel_views_5",
       "question": "To what extent do you agree or disagree with these statements? - Israel is a democracy and the safe haven of the Jewish people, but they have a moral obligation to ensure humanitarian treatment of Palestinian civilians.",
       "type": "categorical",
       "waves": [
@@ -7310,7 +7310,7 @@
       ]
     },
     "israel_views_6": {
-      "label": "israel_views_6  [S26]",
+      "label": "israel_views_6",
       "question": "To what extent do you agree or disagree with these statements? - Israel is an apartheid state, engaged in racist oppression against Palestinians.",
       "type": "categorical",
       "waves": [
@@ -7340,7 +7340,7 @@
       ]
     },
     "Ivy League favs": {
-      "label": "Ivy League favs  [S25]",
+      "label": "Ivy League favs",
       "question": "In general, how would you say you feel about elite private universities, such as the Ivy League?",
       "type": "categorical",
       "waves": [
@@ -7370,7 +7370,7 @@
       ]
     },
     "jewish_id": {
-      "label": "jewish_id  [F25+S26]",
+      "label": "jewish_id",
       "question": "Regardless of your level of religiosity, do you consider yourself to be culturally Jewish?",
       "type": "categorical",
       "waves": [
@@ -7389,7 +7389,7 @@
       ]
     },
     "jews_left_right": {
-      "label": "jews_left_right  [F25]",
+      "label": "jews_left_right",
       "question": "Which comes closest to your view on the impact of the Jewish community on American politics?",
       "type": "categorical",
       "waves": [
@@ -7415,7 +7415,7 @@
       ]
     },
     "Judicial power": {
-      "label": "Judicial power  [S25]",
+      "label": "Judicial power",
       "question": "Which view comes closest to your stance on the role of the judiciary?",
       "type": "categorical",
       "waves": [
@@ -7437,7 +7437,7 @@
       ]
     },
     "leah_battery_1": {
-      "label": "leah_battery_1  [F25]",
+      "label": "leah_battery_1",
       "question": "If you found yourself in the following situations, do you have a friend who, if you asked, would: - Drop off food for you when you\u2019re sick",
       "type": "categorical",
       "waves": [
@@ -7459,7 +7459,7 @@
       ]
     },
     "leah_battery_2": {
-      "label": "leah_battery_2  [F25]",
+      "label": "leah_battery_2",
       "question": "If you found yourself in the following situations, do you have a friend who, if you asked, would: - Help you move to a new apartment or house",
       "type": "categorical",
       "waves": [
@@ -7481,7 +7481,7 @@
       ]
     },
     "leah_battery_3": {
-      "label": "leah_battery_3  [F25]",
+      "label": "leah_battery_3",
       "question": "If you found yourself in the following situations, do you have a friend who, if you asked, would: - Talk to you about a difficult personal situation, like a breakup",
       "type": "categorical",
       "waves": [
@@ -7503,7 +7503,7 @@
       ]
     },
     "leah_battery_4": {
-      "label": "leah_battery_4  [F25]",
+      "label": "leah_battery_4",
       "question": "If you found yourself in the following situations, do you have a friend who, if you asked, would: - Come to a last-minute social event or hangout",
       "type": "categorical",
       "waves": [
@@ -7525,7 +7525,7 @@
       ]
     },
     "Lina Khan": {
-      "label": "Lina Khan  [S25]",
+      "label": "Lina Khan",
       "question": "When it comes to antitrust policy \u2014 that is, policies meant to ensure fair competition between companies \u2014 which comes closer to your view?",
       "type": "categorical",
       "waves": [
@@ -7547,7 +7547,7 @@
       ]
     },
     "manosphere_battery_1": {
-      "label": "manosphere_battery_1  [F25]",
+      "label": "manosphere_battery_1",
       "question": "For the following statements, tell us whether you agree or disagree with each one: - A woman\u2019s place is in the home",
       "type": "categorical",
       "waves": [
@@ -7577,7 +7577,7 @@
       ]
     },
     "manosphere_battery_2": {
-      "label": "manosphere_battery_2  [F25]",
+      "label": "manosphere_battery_2",
       "question": "For the following statements, tell us whether you agree or disagree with each one: - Men and women should get equal pay for equal work",
       "type": "categorical",
       "waves": [
@@ -7607,7 +7607,7 @@
       ]
     },
     "manosphere_battery_3": {
-      "label": "manosphere_battery_3  [F25]",
+      "label": "manosphere_battery_3",
       "question": "For the following statements, tell us whether you agree or disagree with each one: - These days, men have it worse than women on average",
       "type": "categorical",
       "waves": [
@@ -7637,7 +7637,7 @@
       ]
     },
     "manosphere_battery_4": {
-      "label": "manosphere_battery_4  [F25]",
+      "label": "manosphere_battery_4",
       "question": "For the following statements, tell us whether you agree or disagree with each one: - Traditional masculinity is under attack in society these days",
       "type": "categorical",
       "waves": [
@@ -7667,7 +7667,7 @@
       ]
     },
     "manosphere_battery_5": {
-      "label": "manosphere_battery_5  [F25]",
+      "label": "manosphere_battery_5",
       "question": "For the following statements, tell us whether you agree or disagree with each one: - Acceptance of gay people has gone too far",
       "type": "categorical",
       "waves": [
@@ -7697,7 +7697,7 @@
       ]
     },
     "manosphere_battery_6": {
-      "label": "manosphere_battery_6  [F25]",
+      "label": "manosphere_battery_6",
       "question": "For the following statements, tell us whether you agree or disagree with each one: - Acceptance of transgender people has gone too far",
       "type": "categorical",
       "waves": [
@@ -7727,7 +7727,7 @@
       ]
     },
     "Mass deportations_1": {
-      "label": "Mass deportations_1  [S25]",
+      "label": "Mass deportations_1",
       "question": "Below are descriptions of various categories of illegal immigrants to the United States. For each, please select whether you think they should or should not be deported. - Someone who crossed the US border illegally and then claimed refugee or asylum status",
       "type": "categorical",
       "waves": [
@@ -7749,7 +7749,7 @@
       ]
     },
     "Mass deportations_2": {
-      "label": "Mass deportations_2  [S25]",
+      "label": "Mass deportations_2",
       "question": "Below are descriptions of various categories of illegal immigrants to the United States. For each, please select whether you think they should or should not be deported. - Someone brought to the US illegally as a child and is now an adult (also known as DREAMers)",
       "type": "categorical",
       "waves": [
@@ -7771,7 +7771,7 @@
       ]
     },
     "Mass deportations_3": {
-      "label": "Mass deportations_3  [S25]",
+      "label": "Mass deportations_3",
       "question": "Below are descriptions of various categories of illegal immigrants to the United States. For each, please select whether you think they should or should not be deported. - Someone who came to the US illegally as an adult and now has children who are US citizens",
       "type": "categorical",
       "waves": [
@@ -7793,7 +7793,7 @@
       ]
     },
     "Mass deportations_4": {
-      "label": "Mass deportations_4  [S25]",
+      "label": "Mass deportations_4",
       "question": "Below are descriptions of various categories of illegal immigrants to the United States. For each, please select whether you think they should or should not be deported. - Someone who illegally entered the US over 10 years ago and has no criminal record",
       "type": "categorical",
       "waves": [
@@ -7815,7 +7815,7 @@
       ]
     },
     "Mass deportations_5": {
-      "label": "Mass deportations_5  [S25]",
+      "label": "Mass deportations_5",
       "question": "Below are descriptions of various categories of illegal immigrants to the United States. For each, please select whether you think they should or should not be deported. - Someone who illegally entered the US and has been convicted of a violent crime",
       "type": "categorical",
       "waves": [
@@ -7837,7 +7837,7 @@
       ]
     },
     "Mass deportations_6": {
-      "label": "Mass deportations_6  [S25]",
+      "label": "Mass deportations_6",
       "question": "Below are descriptions of various categories of illegal immigrants to the United States. For each, please select whether you think they should or should not be deported. - Someone who illegally entered the US and has been convicted of a non-violent crime, such as selling illegal drugs or shoplifting",
       "type": "categorical",
       "waves": [
@@ -7859,7 +7859,7 @@
       ]
     },
     "Middle East": {
-      "label": "Middle East  [S25]",
+      "label": "Middle East",
       "question": "When it comes to the Middle East, which comes closest to your view?",
       "type": "categorical",
       "waves": [
@@ -7885,7 +7885,7 @@
       ]
     },
     "milestones": {
-      "label": "milestones  [F25]",
+      "label": "milestones",
       "question": "How do you feel you compare to your peer group in terms of romantic relationship milestones (for example, first kiss, sexual experiences, dating, romantic love)?",
       "type": "categorical",
       "waves": [
@@ -7911,7 +7911,7 @@
       ]
     },
     "Money vs ideology": {
-      "label": "Money vs ideology  [F24+S25]",
+      "label": "Money vs ideology",
       "question": "Money vs ideology",
       "type": "categorical",
       "waves": [
@@ -8004,7 +8004,7 @@
       ]
     },
     "Need for cognition_3": {
-      "label": "Need for cognition_3  [F24+S25]",
+      "label": "Need for cognition_3",
       "question": "Need for cognition_3",
       "type": "categorical",
       "waves": [
@@ -8031,7 +8031,7 @@
       ]
     },
     "NPV": {
-      "label": "NPV  [F24+S25]",
+      "label": "NPV",
       "question": "NPV",
       "type": "categorical",
       "waves": [
@@ -8054,7 +8054,7 @@
       ]
     },
     "Nuclear expand": {
-      "label": "Nuclear expand  [S25]",
+      "label": "Nuclear expand",
       "question": "When it comes to the use of nuclear energy to provide electricity, which of the following comes closest to your view?",
       "type": "categorical",
       "waves": [
@@ -8080,7 +8080,7 @@
       ]
     },
     "Nuclear support": {
-      "label": "Nuclear support  [S25]",
+      "label": "Nuclear support",
       "question": "Overall, do you strongly favor, somewhat favor, somewhat oppose or strongly oppose the use of nuclear energy as one of the ways to provide electricity for the U.S.?",
       "type": "categorical",
       "waves": [
@@ -8110,7 +8110,7 @@
       ]
     },
     "obbba_benefits": {
-      "label": "obbba_benefits  [F25]",
+      "label": "obbba_benefits",
       "question": "Which group do you think will benefit the most from the One Big Beautiful Bill Act?",
       "type": "categorical",
       "waves": [
@@ -8152,7 +8152,7 @@
       ]
     },
     "obbba_effects_gen_1": {
-      "label": "obbba_effects_gen_1  [F25]",
+      "label": "obbba_effects_gen_1",
       "question": "Do you agree or disagree that the One Big Beautiful Bill Act will\u2026 - Increase the prices I pay for everyday purchases",
       "type": "categorical",
       "waves": [
@@ -8174,7 +8174,7 @@
       ]
     },
     "obbba_effects_gen_2": {
-      "label": "obbba_effects_gen_2  [F25]",
+      "label": "obbba_effects_gen_2",
       "question": "Do you agree or disagree that the One Big Beautiful Bill Act will\u2026 - Increase my taxes",
       "type": "categorical",
       "waves": [
@@ -8196,7 +8196,7 @@
       ]
     },
     "obbba_effects_gen_3": {
-      "label": "obbba_effects_gen_3  [F25]",
+      "label": "obbba_effects_gen_3",
       "question": "Do you agree or disagree that the One Big Beautiful Bill Act will\u2026 - Lead to more jobs",
       "type": "categorical",
       "waves": [
@@ -8218,7 +8218,7 @@
       ]
     },
     "obbba_effects_gen_4": {
-      "label": "obbba_effects_gen_4  [F25]",
+      "label": "obbba_effects_gen_4",
       "question": "Do you agree or disagree that the One Big Beautiful Bill Act will\u2026 - Increase government spending",
       "type": "categorical",
       "waves": [
@@ -8240,7 +8240,7 @@
       ]
     },
     "obbba_effects_gen_5": {
-      "label": "obbba_effects_gen_5  [F25]",
+      "label": "obbba_effects_gen_5",
       "question": "Do you agree or disagree that the One Big Beautiful Bill Act will\u2026 - Increase the national debt",
       "type": "categorical",
       "waves": [
@@ -8262,7 +8262,7 @@
       ]
     },
     "obbba_effects_pers": {
-      "label": "obbba_effects_pers  [F25]",
+      "label": "obbba_effects_pers",
       "question": "How do you think the One Big Beautiful Bill Act will affect your personal financial situation?",
       "type": "categorical",
       "waves": [
@@ -8288,7 +8288,7 @@
       ]
     },
     "opposite_sex_friends": {
-      "label": "opposite_sex_friends  [F25]",
+      "label": "opposite_sex_friends",
       "question": "How many of your close friends are of the opposite sex?",
       "type": "categorical",
       "waves": [
@@ -8414,7 +8414,7 @@
       ]
     },
     "ordinary_influence": {
-      "label": "ordinary_influence  [S26]",
+      "label": "ordinary_influence",
       "question": "How much influence do you think ordinary people have on government policies?",
       "type": "categorical",
       "waves": [
@@ -8440,7 +8440,7 @@
       ]
     },
     "parents_ideology": {
-      "label": "parents_ideology  [S26]",
+      "label": "parents_ideology",
       "question": "Here is a seven-point scale of political views, arranged from extremely liberal to extremely conservative. Thinking about the political views of your parent(s) when you were a teenager, where would you place YOUR PARENT(S) on this scale?",
       "type": "categorical",
       "waves": [
@@ -8486,7 +8486,7 @@
       ]
     },
     "PC 1_1": {
-      "label": "PC 1_1  [S25]",
+      "label": "PC 1_1",
       "question": "Do you agree or disagree with the following: - Democrats are too aggressive at policing language, which threatens free speech",
       "type": "categorical",
       "waves": [
@@ -8516,7 +8516,7 @@
       ]
     },
     "PC 1_2": {
-      "label": "PC 1_2  [S25]",
+      "label": "PC 1_2",
       "question": "Do you agree or disagree with the following: - I would rather have a beer with a Republican politician than a Democratic one",
       "type": "categorical",
       "waves": [
@@ -8546,7 +8546,7 @@
       ]
     },
     "PC 1_3": {
-      "label": "PC 1_3  [S25]",
+      "label": "PC 1_3",
       "question": "Do you agree or disagree with the following: - Republicans don\u2019t do enough to make sure that their supporters don\u2019t say offensive things",
       "type": "categorical",
       "waves": [
@@ -8576,7 +8576,7 @@
       ]
     },
     "PC 2": {
-      "label": "PC 2  [S25]",
+      "label": "PC 2",
       "question": "Which comes closer to your view:",
       "type": "categorical",
       "waves": [
@@ -8594,7 +8594,7 @@
       ]
     },
     "Pell Grant MGP": {
-      "label": "Pell Grant MGP  [S25]",
+      "label": "Pell Grant MGP",
       "question": "Federal Pell Grants help low-income students afford college. Currently, Pell Grants can only be used for four-year colleges and graduate schools. Would you support changing the law so that Pell Grants could be used for trade schools?",
       "type": "categorical",
       "waves": [
@@ -8624,7 +8624,7 @@
       ]
     },
     "pid_leaners": {
-      "label": "pid_leaners  [F25+S26]",
+      "label": "pid_leaners",
       "question": "Do you think of yourself as closer to the Republican or Democratic party?",
       "type": "categorical",
       "waves": [
@@ -8647,7 +8647,7 @@
       ]
     },
     "pol_vio_scenarios_1": {
-      "label": "pol_vio_scenarios_1  [S26]",
+      "label": "pol_vio_scenarios_1",
       "question": "Regardless of your willingness to perform these actions, which of the following scenarios do you think constitutes political violence? Check all that apply. Calling political opponents \u201cauthoritarian,\u201d \u201ca threat to democracy,\u201d or \u201cfascist\u201d",
       "type": "categorical",
       "waves": [
@@ -8661,7 +8661,7 @@
       ]
     },
     "pol_vio_scenarios_2": {
-      "label": "pol_vio_scenarios_2  [S26]",
+      "label": "pol_vio_scenarios_2",
       "question": "Regardless of your willingness to perform these actions, which of the following scenarios do you think constitutes political violence? Check all that apply. Using racial or religious slurs to insult someone",
       "type": "categorical",
       "waves": [
@@ -8675,7 +8675,7 @@
       ]
     },
     "pol_vio_scenarios_3": {
-      "label": "pol_vio_scenarios_3  [S26]",
+      "label": "pol_vio_scenarios_3",
       "question": "Regardless of your willingness to perform these actions, which of the following scenarios do you think constitutes political violence? Check all that apply. Shouting at a political speaker you disagree with",
       "type": "categorical",
       "waves": [
@@ -8689,7 +8689,7 @@
       ]
     },
     "pol_vio_scenarios_4": {
-      "label": "pol_vio_scenarios_4  [S26]",
+      "label": "pol_vio_scenarios_4",
       "question": "Regardless of your willingness to perform these actions, which of the following scenarios do you think constitutes political violence? Check all that apply. Ripping down a political poster in a public place",
       "type": "categorical",
       "waves": [
@@ -8703,7 +8703,7 @@
       ]
     },
     "pol_vio_scenarios_5": {
-      "label": "pol_vio_scenarios_5  [S26]",
+      "label": "pol_vio_scenarios_5",
       "question": "Regardless of your willingness to perform these actions, which of the following scenarios do you think constitutes political violence? Check all that apply. Trying to get someone fired from their job because of their political views",
       "type": "categorical",
       "waves": [
@@ -8717,7 +8717,7 @@
       ]
     },
     "pol_vio_scenarios_6": {
-      "label": "pol_vio_scenarios_6  [S26]",
+      "label": "pol_vio_scenarios_6",
       "question": "Regardless of your willingness to perform these actions, which of the following scenarios do you think constitutes political violence? Check all that apply. Smashing the windows of a business because of the owner\u2019s political views",
       "type": "categorical",
       "waves": [
@@ -8731,7 +8731,7 @@
       ]
     },
     "pol_vio_scenarios_7": {
-      "label": "pol_vio_scenarios_7  [S26]",
+      "label": "pol_vio_scenarios_7",
       "question": "Regardless of your willingness to perform these actions, which of the following scenarios do you think constitutes political violence? Check all that apply. Beating someone up because of their political views",
       "type": "categorical",
       "waves": [
@@ -8745,7 +8745,7 @@
       ]
     },
     "pol_vio_scenarios_8": {
-      "label": "pol_vio_scenarios_8  [S26]",
+      "label": "pol_vio_scenarios_8",
       "question": "Regardless of your willingness to perform these actions, which of the following scenarios do you think constitutes political violence? Check all that apply. Beating someone up because of their race, sex, religion, or sexual orientation",
       "type": "categorical",
       "waves": [
@@ -8759,7 +8759,7 @@
       ]
     },
     "pol_vio_scenarios_9": {
-      "label": "pol_vio_scenarios_9  [S26]",
+      "label": "pol_vio_scenarios_9",
       "question": "Regardless of your willingness to perform these actions, which of the following scenarios do you think constitutes political violence? Check all that apply. None of the above",
       "type": "categorical",
       "waves": [
@@ -8773,7 +8773,7 @@
       ]
     },
     "pres_battery_1": {
-      "label": "pres_battery_1  [S26]",
+      "label": "pres_battery_1",
       "question": "To what extent do you agree or disagree that the president should have the authority to: - Exert control over independent agencies that are responsible for making financial regulations",
       "type": "categorical",
       "waves": [
@@ -8803,7 +8803,7 @@
       ]
     },
     "pres_battery_2": {
-      "label": "pres_battery_2  [S26]",
+      "label": "pres_battery_2",
       "question": "To what extent do you agree or disagree that the president should have the authority to: - Direct the Department of Justice to investigate political opponents",
       "type": "categorical",
       "waves": [
@@ -8833,7 +8833,7 @@
       ]
     },
     "pres_battery_3": {
-      "label": "pres_battery_3  [S26]",
+      "label": "pres_battery_3",
       "question": "To what extent do you agree or disagree that the president should have the authority to: - Continue their administration\u2019s policies after courts have ruled them unlawful",
       "type": "categorical",
       "waves": [
@@ -8863,7 +8863,7 @@
       ]
     },
     "pres_battery_4": {
-      "label": "pres_battery_4  [S26]",
+      "label": "pres_battery_4",
       "question": "To what extent do you agree or disagree that the president should have the authority to: - Cancel congressionally-approved funding without approval from Congress",
       "type": "categorical",
       "waves": [
@@ -8893,7 +8893,7 @@
       ]
     },
     "pres_battery_5": {
-      "label": "pres_battery_5  [S26]",
+      "label": "pres_battery_5",
       "question": "To what extent do you agree or disagree that the president should have the authority to: - Carry out military strikes in other countries without approval from Congress",
       "type": "categorical",
       "waves": [
@@ -8923,7 +8923,7 @@
       ]
     },
     "pres_battery_6": {
-      "label": "pres_battery_6  [S26]",
+      "label": "pres_battery_6",
       "question": "To what extent do you agree or disagree that the president should have the authority to: - Issue executive orders without approval from Congress",
       "type": "categorical",
       "waves": [
@@ -8953,7 +8953,7 @@
       ]
     },
     "pres_battery_7": {
-      "label": "pres_battery_7  [S26]",
+      "label": "pres_battery_7",
       "question": "To what extent do you agree or disagree that the president should have the authority to: - Veto bills that Congress has passed",
       "type": "categorical",
       "waves": [
@@ -8983,7 +8983,7 @@
       ]
     },
     "pres_immunity": {
-      "label": "pres_immunity  [S26]",
+      "label": "pres_immunity",
       "question": "The Supreme Court recently ruled that presidents cannot be prosecuted for official acts taken while in office. When thinking about the impact of this ruling on the presidency, which of the following comes closest to your view?",
       "type": "categorical",
       "waves": [
@@ -9005,7 +9005,7 @@
       ]
     },
     "R base vs swing": {
-      "label": "R base vs swing  [S25+F25]",
+      "label": "R base vs swing",
       "question": "When it comes to the next election, what do you think is more important for Republicans?",
       "type": "categorical",
       "waves": [
@@ -9028,7 +9028,7 @@
       ]
     },
     "R primary '28 w/ DJT": {
-      "label": "R primary '28 w/ DJT  [S25]",
+      "label": "R primary '28 w/ DJT",
       "question": "If the 2028 Republican presidential primary were held today, and Donald Trump was running in the primary so that he could serve a third term as president, who would you vote for? - Selected Choice",
       "type": "categorical",
       "waves": [
@@ -9098,7 +9098,7 @@
       ]
     },
     "R primary favs_1": {
-      "label": "R primary favs_1  [S25]",
+      "label": "R primary favs_1",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - JD Vance",
       "type": "categorical",
       "waves": [
@@ -9128,7 +9128,7 @@
       ]
     },
     "R primary favs_10": {
-      "label": "R primary favs_10  [S25]",
+      "label": "R primary favs_10",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Tim Scott",
       "type": "categorical",
       "waves": [
@@ -9158,7 +9158,7 @@
       ]
     },
     "R primary favs_11": {
-      "label": "R primary favs_11  [S25]",
+      "label": "R primary favs_11",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Marjorie Taylor Greene",
       "type": "categorical",
       "waves": [
@@ -9188,7 +9188,7 @@
       ]
     },
     "R primary favs_12": {
-      "label": "R primary favs_12  [S25]",
+      "label": "R primary favs_12",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Tulsi Gabbard",
       "type": "categorical",
       "waves": [
@@ -9218,7 +9218,7 @@
       ]
     },
     "R primary favs_13": {
-      "label": "R primary favs_13  [S25]",
+      "label": "R primary favs_13",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Robert F. Kennedy Jr.",
       "type": "categorical",
       "waves": [
@@ -9248,7 +9248,7 @@
       ]
     },
     "R primary favs_14": {
-      "label": "R primary favs_14  [S25]",
+      "label": "R primary favs_14",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Steve Bannon",
       "type": "categorical",
       "waves": [
@@ -9278,7 +9278,7 @@
       ]
     },
     "R primary favs_2": {
-      "label": "R primary favs_2  [S25]",
+      "label": "R primary favs_2",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Ron DeSantis",
       "type": "categorical",
       "waves": [
@@ -9308,7 +9308,7 @@
       ]
     },
     "R primary favs_3": {
-      "label": "R primary favs_3  [S25]",
+      "label": "R primary favs_3",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Brian Kemp",
       "type": "categorical",
       "waves": [
@@ -9338,7 +9338,7 @@
       ]
     },
     "R primary favs_4": {
-      "label": "R primary favs_4  [S25]",
+      "label": "R primary favs_4",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Glenn Youngkin",
       "type": "categorical",
       "waves": [
@@ -9368,7 +9368,7 @@
       ]
     },
     "R primary favs_5": {
-      "label": "R primary favs_5  [S25]",
+      "label": "R primary favs_5",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Nikki Haley",
       "type": "categorical",
       "waves": [
@@ -9398,7 +9398,7 @@
       ]
     },
     "R primary favs_6": {
-      "label": "R primary favs_6  [S25]",
+      "label": "R primary favs_6",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Vivek Ramaswamy",
       "type": "categorical",
       "waves": [
@@ -9428,7 +9428,7 @@
       ]
     },
     "R primary favs_7": {
-      "label": "R primary favs_7  [S25]",
+      "label": "R primary favs_7",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Ted Cruz",
       "type": "categorical",
       "waves": [
@@ -9458,7 +9458,7 @@
       ]
     },
     "R primary favs_8": {
-      "label": "R primary favs_8  [S25]",
+      "label": "R primary favs_8",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Marco Rubio",
       "type": "categorical",
       "waves": [
@@ -9488,7 +9488,7 @@
       ]
     },
     "R primary favs_9": {
-      "label": "R primary favs_9  [S25]",
+      "label": "R primary favs_9",
       "question": "Do you have a favorable or unfavorable opinion of the following political figures? - Josh Hawley",
       "type": "categorical",
       "waves": [
@@ -9518,7 +9518,7 @@
       ]
     },
     "R primary horserace": {
-      "label": "R primary horserace  [S25]",
+      "label": "R primary horserace",
       "question": "If the 2028 Republican presidential primary were held today, and these were the candidates, who would you vote for? - Selected Choice",
       "type": "categorical",
       "waves": [
@@ -9588,7 +9588,7 @@
       ]
     },
     "R primary ideology_1": {
-      "label": "R primary ideology_1  [S25]",
+      "label": "R primary ideology_1",
       "question": "How would you rate the following individuals? - JD Vance",
       "type": "categorical",
       "waves": [
@@ -9622,7 +9622,7 @@
       ]
     },
     "R primary ideology_10": {
-      "label": "R primary ideology_10  [S25]",
+      "label": "R primary ideology_10",
       "question": "How would you rate the following individuals? - Tim Scott",
       "type": "categorical",
       "waves": [
@@ -9656,7 +9656,7 @@
       ]
     },
     "R primary ideology_11": {
-      "label": "R primary ideology_11  [S25]",
+      "label": "R primary ideology_11",
       "question": "How would you rate the following individuals? - Marjorie Taylor Greene",
       "type": "categorical",
       "waves": [
@@ -9690,7 +9690,7 @@
       ]
     },
     "R primary ideology_12": {
-      "label": "R primary ideology_12  [S25]",
+      "label": "R primary ideology_12",
       "question": "How would you rate the following individuals? - Tulsi Gabbard",
       "type": "categorical",
       "waves": [
@@ -9724,7 +9724,7 @@
       ]
     },
     "R primary ideology_13": {
-      "label": "R primary ideology_13  [S25]",
+      "label": "R primary ideology_13",
       "question": "How would you rate the following individuals? - Robert F. Kennedy Jr.",
       "type": "categorical",
       "waves": [
@@ -9758,7 +9758,7 @@
       ]
     },
     "R primary ideology_14": {
-      "label": "R primary ideology_14  [S25]",
+      "label": "R primary ideology_14",
       "question": "How would you rate the following individuals? - Steve Bannon",
       "type": "categorical",
       "waves": [
@@ -9792,7 +9792,7 @@
       ]
     },
     "R primary ideology_2": {
-      "label": "R primary ideology_2  [S25]",
+      "label": "R primary ideology_2",
       "question": "How would you rate the following individuals? - Ron DeSantis",
       "type": "categorical",
       "waves": [
@@ -9826,7 +9826,7 @@
       ]
     },
     "R primary ideology_3": {
-      "label": "R primary ideology_3  [S25]",
+      "label": "R primary ideology_3",
       "question": "How would you rate the following individuals? - Brian Kemp",
       "type": "categorical",
       "waves": [
@@ -9860,7 +9860,7 @@
       ]
     },
     "R primary ideology_4": {
-      "label": "R primary ideology_4  [S25]",
+      "label": "R primary ideology_4",
       "question": "How would you rate the following individuals? - Glenn Youngkin",
       "type": "categorical",
       "waves": [
@@ -9894,7 +9894,7 @@
       ]
     },
     "R primary ideology_5": {
-      "label": "R primary ideology_5  [S25]",
+      "label": "R primary ideology_5",
       "question": "How would you rate the following individuals? - Nikki Haley",
       "type": "categorical",
       "waves": [
@@ -9928,7 +9928,7 @@
       ]
     },
     "R primary ideology_6": {
-      "label": "R primary ideology_6  [S25]",
+      "label": "R primary ideology_6",
       "question": "How would you rate the following individuals? - Vivek Ramaswamy",
       "type": "categorical",
       "waves": [
@@ -9962,7 +9962,7 @@
       ]
     },
     "R primary ideology_7": {
-      "label": "R primary ideology_7  [S25]",
+      "label": "R primary ideology_7",
       "question": "How would you rate the following individuals? - Ted Cruz",
       "type": "categorical",
       "waves": [
@@ -9996,7 +9996,7 @@
       ]
     },
     "R primary ideology_8": {
-      "label": "R primary ideology_8  [S25]",
+      "label": "R primary ideology_8",
       "question": "How would you rate the following individuals? - Marco Rubio",
       "type": "categorical",
       "waves": [
@@ -10030,7 +10030,7 @@
       ]
     },
     "R primary ideology_9": {
-      "label": "R primary ideology_9  [S25]",
+      "label": "R primary ideology_9",
       "question": "How would you rate the following individuals? - Josh Hawley",
       "type": "categorical",
       "waves": [
@@ -10064,7 +10064,7 @@
       ]
     },
     "r_electable_maxdiff": {
-      "label": "r_electable_maxdiff  [F25+S26]",
+      "label": "r_electable_maxdiff",
       "question": "Regardless of who you personally like more, which of the following candidates do you think would be more likely to win the 2028 presidential election against a Democrat?",
       "type": "maxdiff",
       "waves": [
@@ -10201,7 +10201,7 @@
       ]
     },
     "race_a": {
-      "label": "race_a  [S26]",
+      "label": "race_a",
       "question": "To what extent do you agree or disagree with this statement? The interests of Jews come at the expense of white people.",
       "type": "categorical",
       "waves": [
@@ -10231,7 +10231,7 @@
       ]
     },
     "race_b": {
-      "label": "race_b  [S26]",
+      "label": "race_b",
       "question": "To what extent do you agree or disagree with this statement? The interests of Jews come at the expense of people of color.",
       "type": "categorical",
       "waves": [
@@ -10261,7 +10261,7 @@
       ]
     },
     "race_split_do_race_a": {
-      "label": "race_split_do_race_a  [S26]",
+      "label": "race_split_do_race_a",
       "question": "race_split - Display Order race_a",
       "type": "categorical",
       "waves": [
@@ -10275,7 +10275,7 @@
       ]
     },
     "race_split_do_race_b": {
-      "label": "race_split_do_race_b  [S26]",
+      "label": "race_split_do_race_b",
       "question": "race_split - Display Order race_b",
       "type": "categorical",
       "waves": [
@@ -10289,7 +10289,7 @@
       ]
     },
     "Reform MaxDiff 1": {
-      "label": "Reform MaxDiff 1  [S25]",
+      "label": "Reform MaxDiff 1",
       "question": "Which proposal for a democratic reform do you think will improve our government the most?",
       "type": "categorical",
       "waves": [
@@ -10307,7 +10307,7 @@
       ]
     },
     "Reform MaxDiff 2": {
-      "label": "Reform MaxDiff 2  [S25]",
+      "label": "Reform MaxDiff 2",
       "question": "Which proposal for a democratic reform do you think will improve our government the most?",
       "type": "categorical",
       "waves": [
@@ -10325,7 +10325,7 @@
       ]
     },
     "religion": {
-      "label": "religion  [F25+S26]",
+      "label": "religion",
       "question": "What is your present religion, if any? Are you:",
       "type": "categorical",
       "waves": [
@@ -10384,7 +10384,7 @@
       ]
     },
     "role_of_jews": {
-      "label": "role_of_jews  [F25]",
+      "label": "role_of_jews",
       "question": "On the whole, do you think the American Jewish community has a positive or negative impact on the United States?",
       "type": "categorical",
       "waves": [
@@ -10410,7 +10410,7 @@
       ]
     },
     "SCOTUS appointments": {
-      "label": "SCOTUS appointments  [F24+S25]",
+      "label": "SCOTUS appointments",
       "question": "SCOTUS appointments",
       "type": "categorical",
       "waves": [
@@ -10437,7 +10437,7 @@
       ]
     },
     "SCOTUS bias": {
-      "label": "SCOTUS bias  [F24+S25]",
+      "label": "SCOTUS bias",
       "question": "SCOTUS bias",
       "type": "categorical",
       "waves": [
@@ -10460,7 +10460,7 @@
       ]
     },
     "SCOTUS control": {
-      "label": "SCOTUS control  [F24+S25]",
+      "label": "SCOTUS control",
       "question": "SCOTUS control",
       "type": "categorical",
       "waves": [
@@ -10487,7 +10487,7 @@
       ]
     },
     "Senate control": {
-      "label": "Senate control  [F24+S25]",
+      "label": "Senate control",
       "question": "Senate control",
       "type": "categorical",
       "waves": [
@@ -10514,7 +10514,7 @@
       ]
     },
     "sexuality": {
-      "label": "sexuality  [F25+S26]  \u2295",
+      "label": "sexuality",
       "question": "Which of the following best describes your sexual orientation? Remember, your answers are anonymous. - Selected Choice",
       "type": "categorical",
       "waves": [
@@ -10545,7 +10545,7 @@
       ]
     },
     "social_party_support_1": {
-      "label": "Social party support_1  [F24]",
+      "label": "Social party support_1",
       "question": "Social party support_1",
       "type": "categorical",
       "waves": [
@@ -10575,7 +10575,7 @@
       ]
     },
     "social_party_support_2": {
-      "label": "Social party support_2  [F24]",
+      "label": "Social party support_2",
       "question": "Social party support_2",
       "type": "categorical",
       "waves": [
@@ -10605,7 +10605,7 @@
       ]
     },
     "social_party_support_3": {
-      "label": "Social party support_3  [F24]",
+      "label": "Social party support_3",
       "question": "Social party support_3",
       "type": "categorical",
       "waves": [
@@ -10635,7 +10635,7 @@
       ]
     },
     "social_party_support_4": {
-      "label": "Social party support_4  [F24]",
+      "label": "Social party support_4",
       "question": "Social party support_4",
       "type": "categorical",
       "waves": [
@@ -10665,7 +10665,7 @@
       ]
     },
     "social_party_support_5": {
-      "label": "Social party support_5  [F24]",
+      "label": "Social party support_5",
       "question": "Social party support_5",
       "type": "categorical",
       "waves": [
@@ -10695,7 +10695,7 @@
       ]
     },
     "social_party_support_6": {
-      "label": "Social party support_6  [F24]",
+      "label": "Social party support_6",
       "question": "Social party support_6",
       "type": "categorical",
       "waves": [
@@ -10725,7 +10725,7 @@
       ]
     },
     "social_party_support_7": {
-      "label": "Social party support_7  [F24]",
+      "label": "Social party support_7",
       "question": "Social party support_7",
       "type": "categorical",
       "waves": [
@@ -10755,7 +10755,7 @@
       ]
     },
     "social_support_1": {
-      "label": "Social support_1  [F24]",
+      "label": "Social support_1",
       "question": "Social support_1",
       "type": "categorical",
       "waves": [
@@ -10785,7 +10785,7 @@
       ]
     },
     "social_support_2": {
-      "label": "Social support_2  [F24]",
+      "label": "Social support_2",
       "question": "Social support_2",
       "type": "categorical",
       "waves": [
@@ -10815,7 +10815,7 @@
       ]
     },
     "social_support_3": {
-      "label": "Social support_3  [F24]",
+      "label": "Social support_3",
       "question": "Social support_3",
       "type": "categorical",
       "waves": [
@@ -10845,7 +10845,7 @@
       ]
     },
     "social_support_4": {
-      "label": "Social support_4  [F24]",
+      "label": "Social support_4",
       "question": "Social support_4",
       "type": "categorical",
       "waves": [
@@ -10875,7 +10875,7 @@
       ]
     },
     "social_support_5": {
-      "label": "Social support_5  [F24]",
+      "label": "Social support_5",
       "question": "Social support_5",
       "type": "categorical",
       "waves": [
@@ -10905,7 +10905,7 @@
       ]
     },
     "social_support_6": {
-      "label": "Social support_6  [F24]",
+      "label": "Social support_6",
       "question": "Social support_6",
       "type": "categorical",
       "waves": [
@@ -10935,7 +10935,7 @@
       ]
     },
     "social_support_7": {
-      "label": "Social support_7  [F24]",
+      "label": "Social support_7",
       "question": "Social support_7",
       "type": "categorical",
       "waves": [
@@ -10965,7 +10965,7 @@
       ]
     },
     "Spending cuts A_1": {
-      "label": "Spending cuts A_1  [S25]",
+      "label": "Spending cuts A_1",
       "question": "When it comes to government spending, what do you think of the following programs? - Social Security",
       "type": "categorical",
       "waves": [
@@ -10987,7 +10987,7 @@
       ]
     },
     "Spending cuts A_2": {
-      "label": "Spending cuts A_2  [S25]",
+      "label": "Spending cuts A_2",
       "question": "When it comes to government spending, what do you think of the following programs? - Medicare",
       "type": "categorical",
       "waves": [
@@ -11009,7 +11009,7 @@
       ]
     },
     "Spending cuts A_3": {
-      "label": "Spending cuts A_3  [S25]",
+      "label": "Spending cuts A_3",
       "question": "When it comes to government spending, what do you think of the following programs? - Medicaid",
       "type": "categorical",
       "waves": [
@@ -11031,7 +11031,7 @@
       ]
     },
     "Spending cuts A_4": {
-      "label": "Spending cuts A_4  [S25]",
+      "label": "Spending cuts A_4",
       "question": "When it comes to government spending, what do you think of the following programs? - The military",
       "type": "categorical",
       "waves": [
@@ -11053,7 +11053,7 @@
       ]
     },
     "Spending cuts A_5": {
-      "label": "Spending cuts A_5  [S25]",
+      "label": "Spending cuts A_5",
       "question": "When it comes to government spending, what do you think of the following programs? - Veterans\u2019 affairs",
       "type": "categorical",
       "waves": [
@@ -11075,7 +11075,7 @@
       ]
     },
     "Spending cuts A_6": {
-      "label": "Spending cuts A_6  [S25]",
+      "label": "Spending cuts A_6",
       "question": "When it comes to government spending, what do you think of the following programs? - Foreign aid",
       "type": "categorical",
       "waves": [
@@ -11097,7 +11097,7 @@
       ]
     },
     "Spending cuts A_7": {
-      "label": "Spending cuts A_7  [S25]",
+      "label": "Spending cuts A_7",
       "question": "When it comes to government spending, what do you think of the following programs? - Education",
       "type": "categorical",
       "waves": [
@@ -11119,7 +11119,7 @@
       ]
     },
     "Spending cuts A_8": {
-      "label": "Spending cuts A_8  [S25]",
+      "label": "Spending cuts A_8",
       "question": "When it comes to government spending, what do you think of the following programs? - Welfare programs",
       "type": "categorical",
       "waves": [
@@ -11141,7 +11141,7 @@
       ]
     },
     "Spending cuts A_9": {
-      "label": "Spending cuts A_9  [S25]",
+      "label": "Spending cuts A_9",
       "question": "When it comes to government spending, what do you think of the following programs? - Infrastructure and transportation",
       "type": "categorical",
       "waves": [
@@ -11163,7 +11163,7 @@
       ]
     },
     "Spending cuts B_1": {
-      "label": "Spending cuts B_1  [S25]",
+      "label": "Spending cuts B_1",
       "question": "When it comes to government spending, what do you think of the following programs? - Social Security",
       "type": "categorical",
       "waves": [
@@ -11185,7 +11185,7 @@
       ]
     },
     "Spending cuts B_2": {
-      "label": "Spending cuts B_2  [S25]",
+      "label": "Spending cuts B_2",
       "question": "When it comes to government spending, what do you think of the following programs? - Medicare",
       "type": "categorical",
       "waves": [
@@ -11207,7 +11207,7 @@
       ]
     },
     "Spending cuts B_3": {
-      "label": "Spending cuts B_3  [S25]",
+      "label": "Spending cuts B_3",
       "question": "When it comes to government spending, what do you think of the following programs? - Medicaid",
       "type": "categorical",
       "waves": [
@@ -11229,7 +11229,7 @@
       ]
     },
     "Spending cuts B_4": {
-      "label": "Spending cuts B_4  [S25]",
+      "label": "Spending cuts B_4",
       "question": "When it comes to government spending, what do you think of the following programs? - The military",
       "type": "categorical",
       "waves": [
@@ -11251,7 +11251,7 @@
       ]
     },
     "Spending cuts B_5": {
-      "label": "Spending cuts B_5  [S25]",
+      "label": "Spending cuts B_5",
       "question": "When it comes to government spending, what do you think of the following programs? - Veterans\u2019 affairs",
       "type": "categorical",
       "waves": [
@@ -11273,7 +11273,7 @@
       ]
     },
     "Spending cuts B_6": {
-      "label": "Spending cuts B_6  [S25]",
+      "label": "Spending cuts B_6",
       "question": "When it comes to government spending, what do you think of the following programs? - Foreign aid",
       "type": "categorical",
       "waves": [
@@ -11295,7 +11295,7 @@
       ]
     },
     "Spending cuts B_7": {
-      "label": "Spending cuts B_7  [S25]",
+      "label": "Spending cuts B_7",
       "question": "When it comes to government spending, what do you think of the following programs? - Education",
       "type": "categorical",
       "waves": [
@@ -11317,7 +11317,7 @@
       ]
     },
     "Spending cuts B_8": {
-      "label": "Spending cuts B_8  [S25]",
+      "label": "Spending cuts B_8",
       "question": "When it comes to government spending, what do you think of the following programs? - Welfare programs",
       "type": "categorical",
       "waves": [
@@ -11339,7 +11339,7 @@
       ]
     },
     "Spending cuts B_9": {
-      "label": "Spending cuts B_9  [S25]",
+      "label": "Spending cuts B_9",
       "question": "When it comes to government spending, what do you think of the following programs? - Infrastructure and transportation",
       "type": "categorical",
       "waves": [
@@ -11361,7 +11361,7 @@
       ]
     },
     "Sports betting": {
-      "label": "Sports betting  [S25]",
+      "label": "Sports betting",
       "question": "When it comes to the legalization of online sports gambling, which comes closer to your view?",
       "type": "categorical",
       "waves": [
@@ -11383,7 +11383,7 @@
       ]
     },
     "Standardized tests": {
-      "label": "Standardized tests  [S25]",
+      "label": "Standardized tests",
       "question": "When it comes to standardized tests like the SAT or ACT, which of the following comes closest to your view?",
       "type": "categorical",
       "waves": [
@@ -11405,7 +11405,7 @@
       ]
     },
     "stigma_a": {
-      "label": "stigma_a  [S26]",
+      "label": "stigma_a",
       "question": "If you were receiving Supplemental Nutrition Assistance Program (SNAP) benefits, also known as food stamps, which of the following would come closest to your view?",
       "type": "categorical",
       "waves": [
@@ -11427,7 +11427,7 @@
       ]
     },
     "stigma_b": {
-      "label": "stigma_b  [S26]",
+      "label": "stigma_b",
       "question": "If you were receiving Medicaid, government-provided health insurance for low-income individuals, which of the following would come closest to your view?",
       "type": "categorical",
       "waves": [
@@ -11449,7 +11449,7 @@
       ]
     },
     "stigma_c": {
-      "label": "stigma_c  [S26]",
+      "label": "stigma_c",
       "question": "If you were receiving Social Security benefits, a government-provided pension program for the elderly and disabled, which of the following would come closest to your view?",
       "type": "categorical",
       "waves": [
@@ -11471,7 +11471,7 @@
       ]
     },
     "stigma_split_do_stigma_a": {
-      "label": "stigma_split_do_stigma_a  [S26]",
+      "label": "stigma_split_do_stigma_a",
       "question": "stigma_split - Display Order stigma_a",
       "type": "categorical",
       "waves": [
@@ -11485,7 +11485,7 @@
       ]
     },
     "stigma_split_do_stigma_b": {
-      "label": "stigma_split_do_stigma_b  [S26]",
+      "label": "stigma_split_do_stigma_b",
       "question": "stigma_split - Display Order stigma_b",
       "type": "categorical",
       "waves": [
@@ -11499,7 +11499,7 @@
       ]
     },
     "stigma_split_do_stigma_c": {
-      "label": "stigma_split_do_stigma_c  [S26]",
+      "label": "stigma_split_do_stigma_c",
       "question": "stigma_split - Display Order stigma_c",
       "type": "categorical",
       "waves": [
@@ -11513,7 +11513,7 @@
       ]
     },
     "Student deportations": {
-      "label": "Student deportations  [S25]",
+      "label": "Student deportations",
       "question": "You may have heard about some international students who participated in campus protests against the war in Gaza being detained by federal immigration authorities and threatened with deportation. \n\nWhite House officials argue that these students should be deported, or have their visas revoked, because their actions in the protests were antisemitic and constituted a threat to national security under a 1952 law. \n\nLegal experts say that these detentions are unconstitutional and threaten free speech, since the Supreme Court has ruled in the past that the First Amendment applies to non-citizens. \n\nWhich of the following comes closer to your view?",
       "type": "categorical",
       "waves": [
@@ -11535,7 +11535,7 @@
       ]
     },
     "Taiwan": {
-      "label": "Taiwan  [S25]",
+      "label": "Taiwan",
       "question": "When it comes to China and Taiwan, which position comes closest to your view?",
       "type": "categorical",
       "waves": [
@@ -11561,7 +11561,7 @@
       ]
     },
     "Tariffs general": {
-      "label": "Tariffs general  [S25]",
+      "label": "Tariffs general",
       "question": "Tariffs are a tax on imported goods, paid for by the person or company who imports the goods. Donald Trump has proposed new tariffs on all imports to the United States, arguing that they will reduce the national debt and create jobs. Democrats support tariffs on some strategic goods\u2014such as microchips and electric vehicles\u2014to prevent adversaries like China from gaining a competitive edge. Economists warn that any tariffs could hurt the economy by raising prices for consumers, which must be weighed against potential national security benefits. Which of the following best reflects your view?",
       "type": "categorical",
       "waves": [
@@ -11587,7 +11587,7 @@
       ]
     },
     "Tax hikes A_1": {
-      "label": "Tax hikes A_1  [S25]",
+      "label": "Tax hikes A_1",
       "question": "What do you think of the following types of taxes? - Wealth and high-income taxes (e.g., taxes on billionaires, millionaires, and income over $400,000)",
       "type": "categorical",
       "waves": [
@@ -11609,7 +11609,7 @@
       ]
     },
     "Tax hikes A_2": {
-      "label": "Tax hikes A_2  [S25]",
+      "label": "Tax hikes A_2",
       "question": "What do you think of the following types of taxes? - Middle- and low-income taxes (e.g., income taxes on people making less than $100,000)",
       "type": "categorical",
       "waves": [
@@ -11631,7 +11631,7 @@
       ]
     },
     "Tax hikes A_3": {
-      "label": "Tax hikes A_3  [S25]",
+      "label": "Tax hikes A_3",
       "question": "What do you think of the following types of taxes? - Business taxes (e.g., corporate taxes, payroll taxes)",
       "type": "categorical",
       "waves": [
@@ -11653,7 +11653,7 @@
       ]
     },
     "Tax hikes A_4": {
-      "label": "Tax hikes A_4  [S25]",
+      "label": "Tax hikes A_4",
       "question": "What do you think of the following types of taxes? - Environmental taxes (e.g., taxes on greenhouse gas emissions, or other pollution)",
       "type": "categorical",
       "waves": [
@@ -11675,7 +11675,7 @@
       ]
     },
     "Tax hikes A_5": {
-      "label": "Tax hikes A_5  [S25]",
+      "label": "Tax hikes A_5",
       "question": "What do you think of the following types of taxes? - Consumption taxes (e.g., excise taxes on cigarettes/alcohol, sales taxes)",
       "type": "categorical",
       "waves": [
@@ -11697,7 +11697,7 @@
       ]
     },
     "Tax hikes A_6": {
-      "label": "Tax hikes A_6  [S25]",
+      "label": "Tax hikes A_6",
       "question": "What do you think of the following types of taxes? - Taxes on imported goods (tariffs)",
       "type": "categorical",
       "waves": [
@@ -11719,7 +11719,7 @@
       ]
     },
     "Tax hikes B_1": {
-      "label": "Tax hikes B_1  [S25]",
+      "label": "Tax hikes B_1",
       "question": "What do you think of the following types of taxes? - Wealth and high-income taxes (e.g., taxes on billionaires, millionaires, and income over $400,000)",
       "type": "categorical",
       "waves": [
@@ -11741,7 +11741,7 @@
       ]
     },
     "Tax hikes B_2": {
-      "label": "Tax hikes B_2  [S25]",
+      "label": "Tax hikes B_2",
       "question": "What do you think of the following types of taxes? - Middle- and low-income taxes (e.g., income taxes on people making less than $100,000)",
       "type": "categorical",
       "waves": [
@@ -11763,7 +11763,7 @@
       ]
     },
     "Tax hikes B_3": {
-      "label": "Tax hikes B_3  [S25]",
+      "label": "Tax hikes B_3",
       "question": "What do you think of the following types of taxes? - Business taxes (e.g., corporate taxes, payroll taxes)",
       "type": "categorical",
       "waves": [
@@ -11785,7 +11785,7 @@
       ]
     },
     "Tax hikes B_4": {
-      "label": "Tax hikes B_4  [S25]",
+      "label": "Tax hikes B_4",
       "question": "What do you think of the following types of taxes? - Environmental taxes (e.g., taxes on greenhouse gas emissions, or other pollution)",
       "type": "categorical",
       "waves": [
@@ -11807,7 +11807,7 @@
       ]
     },
     "Tax hikes B_5": {
-      "label": "Tax hikes B_5  [S25]",
+      "label": "Tax hikes B_5",
       "question": "What do you think of the following types of taxes? - Consumption taxes (e.g., excise taxes on cigarettes/alcohol, sales taxes)",
       "type": "categorical",
       "waves": [
@@ -11829,7 +11829,7 @@
       ]
     },
     "Tax hikes B_6": {
-      "label": "Tax hikes B_6  [S25]",
+      "label": "Tax hikes B_6",
       "question": "What do you think of the following types of taxes? - Taxes on imported goods (tariffs)",
       "type": "categorical",
       "waves": [
@@ -11851,7 +11851,7 @@
       ]
     },
     "Teacher disclosure": {
-      "label": "Teacher disclosure  [S25]",
+      "label": "Teacher disclosure",
       "question": "Which view aligns closest to your stance on children who identify as LGBTQ+ in schools?",
       "type": "categorical",
       "waves": [
@@ -11877,7 +11877,7 @@
       ]
     },
     "Test optional": {
-      "label": "Test optional  [S25]",
+      "label": "Test optional",
       "question": "Which of the following comes closest to your views about the use of standardized testing in college admissions?",
       "type": "categorical",
       "waves": [
@@ -11903,7 +11903,7 @@
       ]
     },
     "Threat MaxDiff 1": {
-      "label": "Threat MaxDiff 1  [S25]",
+      "label": "Threat MaxDiff 1",
       "question": "Which of the following issues do you think poses a bigger threat to our democracy?",
       "type": "categorical",
       "waves": [
@@ -11921,7 +11921,7 @@
       ]
     },
     "Threat MaxDiff 2": {
-      "label": "Threat MaxDiff 2  [S25]",
+      "label": "Threat MaxDiff 2",
       "question": "Which of the following issues do you think poses a bigger threat to our democracy?",
       "type": "categorical",
       "waves": [
@@ -11939,7 +11939,7 @@
       ]
     },
     "trad_battery_1": {
-      "label": "trad_battery_1  [F25]",
+      "label": "trad_battery_1",
       "question": "We are going to ask you a series of questions about dynamics in straight (heterosexual) relationships. Regardless of your personal sexual orientation or relationship status, please tell us who you think should do the following, in your opinion. - Make more money",
       "type": "categorical",
       "waves": [
@@ -11965,7 +11965,7 @@
       ]
     },
     "trad_battery_2": {
-      "label": "trad_battery_2  [F25]",
+      "label": "trad_battery_2",
       "question": "We are going to ask you a series of questions about dynamics in straight (heterosexual) relationships. Regardless of your personal sexual orientation or relationship status, please tell us who you think should do the following, in your opinion. - Take the lead on childcare",
       "type": "categorical",
       "waves": [
@@ -11991,7 +11991,7 @@
       ]
     },
     "trad_battery_3": {
-      "label": "trad_battery_3  [F25]",
+      "label": "trad_battery_3",
       "question": "We are going to ask you a series of questions about dynamics in straight (heterosexual) relationships. Regardless of your personal sexual orientation or relationship status, please tell us who you think should do the following, in your opinion. - Make the big financial decisions for the family",
       "type": "categorical",
       "waves": [
@@ -12017,7 +12017,7 @@
       ]
     },
     "trad_battery_4": {
-      "label": "trad_battery_4  [F25]",
+      "label": "trad_battery_4",
       "question": "We are going to ask you a series of questions about dynamics in straight (heterosexual) relationships. Regardless of your personal sexual orientation or relationship status, please tell us who you think should do the following, in your opinion. - Handle household chores like cooking and cleaning",
       "type": "categorical",
       "waves": [
@@ -12043,7 +12043,7 @@
       ]
     },
     "trad_battery_5": {
-      "label": "trad_battery_5  [F25]",
+      "label": "trad_battery_5",
       "question": "We are going to ask you a series of questions about dynamics in straight (heterosexual) relationships. Regardless of your personal sexual orientation or relationship status, please tell us who you think should do the following, in your opinion. - Ask the other person out on a first date",
       "type": "categorical",
       "waves": [
@@ -12069,7 +12069,7 @@
       ]
     },
     "Trans sports_1": {
-      "label": "Trans sports_1  [S25]",
+      "label": "Trans sports_1",
       "question": "When it comes to transgender women and girls \u2014 that is, people whose biological sex is male but who identify as female \u2014 do you think transgender women and girls should or should not be allowed to compete with other women and girls at each of the following levels? - Professional sports",
       "type": "categorical",
       "waves": [
@@ -12091,7 +12091,7 @@
       ]
     },
     "Trans sports_2": {
-      "label": "Trans sports_2  [S25]",
+      "label": "Trans sports_2",
       "question": "When it comes to transgender women and girls \u2014 that is, people whose biological sex is male but who identify as female \u2014 do you think transgender women and girls should or should not be allowed to compete with other women and girls at each of the following levels? - College sports",
       "type": "categorical",
       "waves": [
@@ -12113,7 +12113,7 @@
       ]
     },
     "Trans sports_3": {
-      "label": "Trans sports_3  [S25]",
+      "label": "Trans sports_3",
       "question": "When it comes to transgender women and girls \u2014 that is, people whose biological sex is male but who identify as female \u2014 do you think transgender women and girls should or should not be allowed to compete with other women and girls at each of the following levels? - High school sports",
       "type": "categorical",
       "waves": [
@@ -12135,7 +12135,7 @@
       ]
     },
     "Trans sports_4": {
-      "label": "Trans sports_4  [S25]",
+      "label": "Trans sports_4",
       "question": "When it comes to transgender women and girls \u2014 that is, people whose biological sex is male but who identify as female \u2014 do you think transgender women and girls should or should not be allowed to compete with other women and girls at each of the following levels? - Youth sports",
       "type": "categorical",
       "waves": [
@@ -12157,7 +12157,7 @@
       ]
     },
     "trump_approval": {
-      "label": "trump_approval  [F25+S26]",
+      "label": "trump_approval",
       "question": "How do you feel about the way that Donald Trump is handling his job as president?",
       "type": "categorical",
       "waves": [
@@ -12188,7 +12188,7 @@
       ]
     },
     "Ukraine": {
-      "label": "Ukraine  [S25]",
+      "label": "Ukraine",
       "question": "When it comes to the Ukraine conflict, which position comes closest to your view?",
       "type": "categorical",
       "waves": [
@@ -12210,7 +12210,7 @@
       ]
     },
     "Uni statements": {
-      "label": "Uni statements  [S25]",
+      "label": "Uni statements",
       "question": "To what extent do you agree with the following statement? \n\nUniversities should publish statements that take a position in response to current political and social issues.",
       "type": "categorical",
       "waves": [
@@ -12240,7 +12240,7 @@
       ]
     },
     "Vaccine mandates": {
-      "label": "Vaccine mandates  [S25]",
+      "label": "Vaccine mandates",
       "question": "In your opinion, which of the following comes closest to what should be the vaccination requirement for public schools?",
       "type": "categorical",
       "waves": [
@@ -12270,7 +12270,7 @@
       ]
     },
     "Weed legalization": {
-      "label": "Weed legalization  [S25]",
+      "label": "Weed legalization",
       "question": "When it comes to marijuana legalization, which of the following comes closest to your view?",
       "type": "categorical",
       "waves": [
@@ -12300,7 +12300,7 @@
       ]
     },
     "weight": {
-      "label": "weight  [F25]",
+      "label": "weight",
       "question": "weight",
       "type": "numeric",
       "waves": [
@@ -12308,7 +12308,7 @@
       ]
     },
     "x2020_vote": {
-      "label": "x2020_vote  [F24]",
+      "label": "x2020_vote",
       "question": "Who did you vote for for president in 2020?",
       "type": "categorical",
       "waves": [
@@ -12338,7 +12338,7 @@
       ]
     },
     "x2024_horserace": {
-      "label": "x2024_horserace  [F24]",
+      "label": "x2024_horserace",
       "question": "If the November 2024 election for U.S. president was held today, and these were the candidates, who would you vote for?",
       "type": "categorical",
       "waves": [
@@ -12380,7 +12380,7 @@
       ]
     },
     "x2024_horserace_push": {
-      "label": "x2024_horserace_push  [F24]",
+      "label": "x2024_horserace_push",
       "question": "x2024_horserace_push",
       "type": "categorical",
       "waves": [
@@ -12414,7 +12414,7 @@
       ]
     },
     "Your econ priority": {
-      "label": "Your econ priority  [S25]",
+      "label": "Your econ priority",
       "question": "If you could only improve one aspect of the American economy, which of the following would you choose?",
       "type": "categorical",
       "waves": [
@@ -12452,7 +12452,7 @@
       ]
     },
     "Youth transition_1": {
-      "label": "Youth transition_1  [S25]",
+      "label": "Youth transition_1",
       "question": "When it comes to gender transition treatments \u2014 such as hormone therapy or gender transition surgery \u2014 when is the youngest age you think people should or should not be allowed to receive these treatments? - People 21 and older",
       "type": "categorical",
       "waves": [
@@ -12478,7 +12478,7 @@
       ]
     },
     "Youth transition_2": {
-      "label": "Youth transition_2  [S25]",
+      "label": "Youth transition_2",
       "question": "When it comes to gender transition treatments \u2014 such as hormone therapy or gender transition surgery \u2014 when is the youngest age you think people should or should not be allowed to receive these treatments? - People between the ages of 18 and 21",
       "type": "categorical",
       "waves": [
@@ -12504,7 +12504,7 @@
       ]
     },
     "Youth transition_3": {
-      "label": "Youth transition_3  [S25]",
+      "label": "Youth transition_3",
       "question": "When it comes to gender transition treatments \u2014 such as hormone therapy or gender transition surgery \u2014 when is the youngest age you think people should or should not be allowed to receive these treatments? - People between the ages of 13 and 17",
       "type": "categorical",
       "waves": [
@@ -12530,7 +12530,7 @@
       ]
     },
     "Youth transition_4": {
-      "label": "Youth transition_4  [S25]",
+      "label": "Youth transition_4",
       "question": "When it comes to gender transition treatments \u2014 such as hormone therapy or gender transition surgery \u2014 when is the youngest age you think people should or should not be allowed to receive these treatments? - People 13 and under",
       "type": "categorical",
       "waves": [
@@ -12556,7 +12556,7 @@
       ]
     },
     "zionism_def_8": {
-      "label": "zionism_def_8  [F25]",
+      "label": "zionism_def_8",
       "question": "Which of the following definitions is closest to how you would define the word \u201cZionism?\u201d Check all that apply. I\u2019m not familiar with the term \u201cZionism\u201d",
       "type": "categorical",
       "waves": [
@@ -12570,7 +12570,7 @@
       ]
     },
     "Zoning": {
-      "label": "Zoning  [S25]",
+      "label": "Zoning",
       "question": "When it comes to detailed rules about what can be built in your city, which would you prefer?",
       "type": "categorical",
       "waves": [
