@@ -151,20 +151,29 @@ fields) are dropped from the stacked view rather than silently fused.
 
 ## Weighting
 
-Fall 2024, Spring 2025, and Fall 2025 are reweighted from scratch using the
-**Spring 2025 YYP raking procedure**, applied to harmonized demographics
-(Age × Race × Education × Gender × 5-cat Party ID, raked to national
-registered-voter targets, post-trim rescale to N) so they stay comparable.
+Each single wave is weighted with **its own official YYP weighting**, so
+single-wave toplines reproduce youthpoll.yale.edu (validated — e.g. F24's
+threat-to-democracy MaxDiff matches the published all-voter figures to the
+decimal). All waves are weighted to the **full registered-voter electorate**,
+not the youth subsample.
 
-**Spring 2026** is weighted differently — with Yale's **official Spring-2026
-(138b) procedure** reproduced faithfully (`scripts/rake_weights.py`
-`weight_s26_official`): a CPS Nov-2024 age×gender interaction plus
-race / education / party (Pew-Gallup 2024) targets, Black/Hispanic × R/D
-seeds, a post-IPF age×party calibration, and a 5×-mean trim. This means S26
-reproduces the published YYP S26 toplines, but a stacked dataset that
-includes S26 mixes the two weighting schemes (acceptable because each wave's
-weights still sum to its own N). Originally-published numbers may differ
-slightly from what this tool produces.
+* **Fall 2024** — the official F24 raking procedure (Age × Race × Education ×
+  Gender × 5-cat Party ID, Black/Hispanic × R/D seeds, IPF, 0.3 trim, rescale
+  to N) with F24's own target marginals (`rake_weights.py`, `F24_TARGETS`).
+* **Spring 2025** — the same procedure with S25's official targets (transcribed
+  from `yyp2025_weighting_pipeline_official.ipynb`).
+* **Fall 2025** — Yale's **shipped** per-respondent `weight` column, used
+  verbatim (`extract_f25_official_weights`).
+* **Spring 2026** — the official **138b** procedure reproduced faithfully
+  (`weight_s26_official`): CPS Nov-2024 age×gender interaction +
+  race / education / party (Pew-Gallup 2024) targets, seeds, a post-IPF
+  age×party calibration, and a 5×-mean trim.
+
+**Cross-wave note:** because every wave now carries its own official weights,
+a stacked dataset mixes weighting schemes. That's fine for single-wave use and
+for "is this question available across waves" exploration, but a principled
+cross-wave weighting (so e.g. Trump approval is comparable wave-to-wave) is
+still an open question — see the in-app caveat.
 
 ---
 

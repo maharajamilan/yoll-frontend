@@ -49,17 +49,46 @@ WEIGHTS_DIR = REPO_ROOT / "data-raw" / "weights"
 # (its own demographic coding), not the canonical harmonized CSV.
 S26_DIR = REPO_ROOT / "data-raw" / "source" / "S26"
 S26_RAW = S26_DIR / "2025-138b_client.csv"
+# F25 ships its official per-respondent weight column, so we use it verbatim.
+F25_RAW = REPO_ROOT / "data-raw" / "source" / "F25" / "yypfall25dat_withweights.csv"
 
-# S25 pipeline constants, copied verbatim from yyp2025_weighting_pipeline_official.ipynb
+
+def extract_f25_official_weights() -> "pd.DataFrame":
+    """F25 ships an official `weight` column keyed by case_id — use it directly
+    instead of re-raking, so single-wave F25 matches the published toplines."""
+    print("\n===== F25 (official shipped weights) =====")
+    df = pd.read_csv(F25_RAW, low_memory=False, usecols=["case_id", "weight"])
+    out = df.rename(columns={"case_id": "case_id"})[["case_id", "weight"]].copy()
+    out["weight"] = pd.to_numeric(out["weight"], errors="coerce").fillna(1.0)
+    out["wave"] = "F25"
+    print(f"  N={len(out)}  sum(weights)={out['weight'].sum():.1f}  "
+          f"mean={out['weight'].mean():.3f}  max={out['weight'].max():.3f}")
+    return out
+
+# Each wave is weighted to ITS OWN official YYP targets so single-wave results
+# match youthpoll.yale.edu. The procedure (party 5-cat collapse, Black/Hispanic
+# seeds, IPF, 0.3 trim, rescale to N) is identical across F24 and S25 — only the
+# target marginals differ — so one function serves both, parameterized by target.
+# (F25 uses its shipped weight column; S26 uses the dedicated 138b procedure.)
 RAKE_VARS = ["Age", "Race", "Education", "Gender", "Party ID"]
-TARGETS = {
+# 5-category Party ID coding (both waves): 1=Strong Dem 2=Strong Rep 3=Lean Dem
+# 4=Lean Rep 5=Pure Ind.
+S25_TARGETS = {
     "Age":       {"1": 0.07, "2": 0.05, "3": 0.23, "4": 0.39, "5": 0.26},
     "Race":      {"1": 0.50, "2": 0.18, "3": 0.24, "4": 0.04, "5": 0.04},
     "Education": {"1": 0.35, "2": 0.105, "3": 0.185, "4": 0.11, "5": 0.175, "6": 0.175, "7": 0.0},
     "Gender":    {"1": 0.50, "2": 0.49, "3": 0.01},
-    # 5-category Party ID: 1=Strong Dem, 2=Strong Rep, 3=Lean Dem, 4=Lean Rep, 5=Pure Ind
     "Party ID":  {"1": 0.18, "2": 0.27, "3": 0.15, "4": 0.15, "5": 0.15},
 }
+# Verbatim from weighting_pipeline_F24.ipynb (official Fall-2024 targets).
+F24_TARGETS = {
+    "Age":       {"1": 0.06, "2": 0.07, "3": 0.23, "4": 0.40, "5": 0.24},
+    "Race":      {"1": 0.64, "2": 0.13, "3": 0.15, "4": 0.04, "5": 0.04},
+    "Education": {"1": 0.12, "2": 0.145, "3": 0.225, "4": 0.16, "5": 0.225, "6": 0.125, "7": 0.0},
+    "Gender":    {"1": 0.47, "2": 0.52, "3": 0.01},
+    "Party ID":  {"1": 0.34, "2": 0.41, "3": 0.1025, "4": 0.10, "5": 0.0225},
+}
+WAVE_TARGETS = {"F24": F24_TARGETS, "S25": S25_TARGETS}
 RAKE_MAX_ITER = 50
 RAKE_TOLERANCE = 1e-2
 TRIM_RATIO = 0.3  # Weights clipped to [TRIM_RATIO * mean, mean / TRIM_RATIO]
@@ -150,7 +179,7 @@ def apply_seed_weights(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def weight_one_wave(harmonized_csv: Path, wave: str) -> pd.DataFrame:
+def weight_one_wave(harmonized_csv: Path, wave: str, targets: dict) -> pd.DataFrame:
     print(f"\n===== {wave} =====")
     h = pd.read_csv(harmonized_csv)
     print(f"  Loaded {len(h)} rows from {harmonized_csv.name}")
@@ -175,7 +204,7 @@ def weight_one_wave(harmonized_csv: Path, wave: str) -> pd.DataFrame:
 
     # Seed + rake + trim
     complete = apply_seed_weights(complete)
-    complete = rake_weights(complete, RAKE_VARS, TARGETS)
+    complete = rake_weights(complete, RAKE_VARS, targets)
 
     mean_w = complete["weight"].mean()
     lower = max(TRIM_RATIO * mean_w, 0.0)
@@ -202,7 +231,7 @@ def weight_one_wave(harmonized_csv: Path, wave: str) -> pd.DataFrame:
         for var in RAKE_VARS:
             wp = complete.groupby(var)["weight"].sum()
             wp = (wp / wp.sum()).round(3).to_dict()
-            tgt = TARGETS[var]
+            tgt = targets[var]
             tgt_norm = {k: round(v / sum(tgt.values()), 3) for k, v in tgt.items()}
             print(f"    {var}: got={wp}")
             print(f"             target(norm)={tgt_norm}")
@@ -366,12 +395,15 @@ def main() -> int:
                 print(f"ERROR: {S26_RAW} not found", file=sys.stderr)
                 return 1
             result = weight_s26_official(S26_RAW)
+        elif w == "F25":
+            # F25 ships its official weight column — use it directly.
+            result = extract_f25_official_weights()
         else:
             src = HARMONIZED_DIR / f"harmonized_{w.lower()}.csv"
             if not src.exists():
                 print(f"ERROR: {src} not found — run scripts/crosswalk.py first", file=sys.stderr)
                 return 1
-            result = weight_one_wave(src, w)
+            result = weight_one_wave(src, w, WAVE_TARGETS[w])
         out_path = WEIGHTS_DIR / f"weights_{w.lower()}.csv"
         result.to_csv(out_path, index=False)
         print(f"  Wrote {out_path}")

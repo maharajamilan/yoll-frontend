@@ -97,23 +97,29 @@ export default function Home() {
             export as CSV.
           </p>
           <p className="text-[color:var(--muted)] mb-3">
-            <strong>A note on weighting:</strong> Fall 2024, Spring 2025, and
-            Fall 2025 are reweighted using the Spring 2025 YYP procedure (age ×
-            gender × race × education × party ID × 2024 vote, raked to national
-            registered-voter targets) so they stay comparable.{" "}
-            <strong>Spring 2026</strong> instead uses Yale&apos;s own official
-            Spring-2026 weighting (CPS-2024 age×gender interaction plus
-            race / education / party targets), so it reproduces the published
-            S26 toplines but isn&apos;t weighted identically to the earlier
-            waves. Originally-published numbers may differ slightly.{" "}
+            <strong>A note on weighting:</strong> each single wave is weighted
+            with <strong>its own official YYP weighting</strong>, so single-wave
+            results match the toplines at{" "}
+            <a
+              href="https://youthpoll.yale.edu"
+              className="underline hover:text-[color:var(--accent)]"
+            >
+              youthpoll.yale.edu
+            </a>{" "}
+            (Fall 2024 and Spring 2025 raked to each cycle&apos;s official
+            registered-voter targets; Fall 2025 uses Yale&apos;s shipped
+            weights; Spring 2026 uses the official 138b procedure). Results are
+            weighted to the <strong>full registered-voter electorate</strong>,
+            not the youth subsample, so they line up with YYP&apos;s
+            &ldquo;all voters&rdquo; figures.{" "}
             <strong>Stacking</strong> pools weighted respondents across the
-            selected waves (mixing those two weighting schemes when S26 is
-            included). Every question asked in any pooled wave is available; the
-            column label tags partial coverage (e.g.{" "}
+            selected waves — note that because each wave uses its own weighting,
+            cross-wave stacked comparisons mix weighting schemes (harmonizing
+            this is still in progress). Every question asked in any pooled wave
+            is available; the column label tags partial coverage (e.g.{" "}
             <code className="text-[11px]">[S26]</code> or{" "}
             <code className="text-[11px]">[F24+S25]</code>), and the weighted N
-            for those crosstabs naturally restricts to respondents who were
-            asked the question.
+            naturally restricts to respondents who were asked the question.
           </p>
           <div className="mt-3 rounded-md border border-emerald-300 bg-emerald-50 p-3 text-xs text-emerald-900">
             <p className="font-semibold mb-1">Caveats</p>

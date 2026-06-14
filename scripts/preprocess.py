@@ -1019,10 +1019,10 @@ def preprocess_wave(wave: str) -> None:
     ordered_columns = {c: columns_out[c] for c in (priority_cols + other_cols)}
 
     wave_meta = {
-        "S25": {"label": "Spring 2025", "n": int(len(values)), "note": "Weighted via S25 pipeline."},
-        "F25": {"label": "Fall 2025", "n": int(len(values)), "note": "Reweighted using S25 pipeline as standard."},
-        "F24": {"label": "Fall 2024", "n": int(len(values)), "note": "Registered voters only; reweighted using S25 pipeline."},
-        "S26": {"label": "Spring 2026", "n": int(len(values)), "note": "Weighted with Yale's official Spring-2026 procedure (CPS-2024 age×gender + race/education/party targets), not the S25 pipeline."},
+        "S25": {"label": "Spring 2025", "n": int(len(values)), "note": "Weighted with YYP's official Spring-2025 procedure; matches youthpoll.yale.edu."},
+        "F25": {"label": "Fall 2025", "n": int(len(values)), "note": "Uses YYP's official shipped Fall-2025 weights; matches youthpoll.yale.edu."},
+        "F24": {"label": "Fall 2024", "n": int(len(values)), "note": "Registered voters; weighted to YYP's official Fall-2024 targets; matches youthpoll.yale.edu."},
+        "S26": {"label": "Spring 2026", "n": int(len(values)), "note": "Weighted with YYP's official Spring-2026 (138b) procedure; matches youthpoll.yale.edu."},
     }[wave]
 
     codebook = {
