@@ -316,6 +316,87 @@ def build_f25_obbba_messages(raw: pd.DataFrame) -> tuple[pd.DataFrame, list[dict
     return extras, items
 
 
+# ------------------------------------------------------------------
+# F24 paired-statement MaxDiffs (threat / reform to democracy)
+# ------------------------------------------------------------------
+# Each respondent saw two random pairs of statements and picked one per pair
+# (threat: statement1 vs statement2, then statement3 vs statement4). The actual
+# statement text is per-respondent in `<fam>_statement1..4`, and the pick is in
+# `<fam>_max_diff_1` / `_2` (1 = first statement, 2 = second). We collate each
+# battery into a single MaxDiff (offers/picks per unique statement), exactly
+# like F25's obbba_messages.
+F24_STATEMENT_FAMILIES = [
+    ("threat_maxdiff", "Threat to democracy MaxDiff (collated 2 rounds)",
+     "Which of the following do you think poses a bigger threat to our democracy? "
+     "— collated across 2 forced-choice rounds",
+     [("threat_max_diff_1", "threat_statement1", "threat_statement2"),
+      ("threat_max_diff_2", "threat_statement3", "threat_statement4")]),
+    ("reform_maxdiff", "Democratic reform MaxDiff (collated 2 rounds)",
+     "Which proposal for a democratic reform do you think would improve our "
+     "government the most? — collated across 2 forced-choice rounds",
+     [("reform_max_diff_1", "reform_statement1", "reform_statement2"),
+      ("reform_max_diff_2", "reform_statement3", "reform_statement4")]),
+]
+F24_STATEMENT_ITEMS: dict[str, list[dict]] = {}
+F24_STATEMENT_HIDE: set[str] = set()
+F24_STATEMENT_AUX: set[str] = set()
+
+
+def build_f24_statement_maxdiffs(raw: pd.DataFrame) -> pd.DataFrame:
+    """Collate F24 threat/reform paired-statement batteries into MaxDiffs.
+    Returns a DataFrame of `<out>_do_<c>` / `<out>_pick_<c>` count columns plus
+    a main token column per family. Populates the module-level holders."""
+    F24_STATEMENT_ITEMS.clear()
+    F24_STATEMENT_HIDE.clear()
+    F24_STATEMENT_AUX.clear()
+    n = len(raw)
+    out_cols: dict[str, list] = {}
+    for out_name, _label, _q, rounds in F24_STATEMENT_FAMILIES:
+        if not all(c in raw.columns for pc, ta, tb in rounds for c in (pc, ta, tb)):
+            continue
+        uniq: set[str] = set()
+        for _pc, ta, tb in rounds:
+            uniq |= set(raw[ta].dropna().astype(str))
+            uniq |= set(raw[tb].dropna().astype(str))
+        items_sorted = sorted(uniq)
+        code_of = {t: i + 1 for i, t in enumerate(items_sorted)}
+        do_counts = {c: [0] * n for c in range(1, len(items_sorted) + 1)}
+        pick_counts = {c: [0] * n for c in range(1, len(items_sorted) + 1)}
+        answered = [False] * n
+        for pc, ta, tb in rounds:
+            picks = pd.to_numeric(raw[pc], errors="coerce").tolist()
+            txa = raw[ta].astype(object).where(raw[ta].notna(), None).tolist()
+            txb = raw[tb].astype(object).where(raw[tb].notna(), None).tolist()
+            F24_STATEMENT_HIDE.update([pc, ta, tb])
+            for i in range(n):
+                a, b = txa[i], txb[i]
+                if a is None or b is None:
+                    continue
+                ca, cb = code_of.get(str(a)), code_of.get(str(b))
+                if ca is None or cb is None:
+                    continue
+                do_counts[ca][i] += 1
+                do_counts[cb][i] += 1
+                p = picks[i]
+                if p == 1:
+                    pick_counts[ca][i] += 1
+                    answered[i] = True
+                elif p == 2:
+                    pick_counts[cb][i] += 1
+                    answered[i] = True
+        items = []
+        for t in items_sorted:
+            c = code_of[t]
+            do_col, pick_col = f"{out_name}_do_{c}", f"{out_name}_pick_{c}"
+            out_cols[do_col] = [v if v > 0 else np.nan for v in do_counts[c]]
+            out_cols[pick_col] = [v if v > 0 else np.nan for v in pick_counts[c]]
+            F24_STATEMENT_AUX.update([do_col, pick_col])
+            items.append({"code": c, "label": t, "do_col": do_col, "pick_col": pick_col})
+        F24_STATEMENT_ITEMS[out_name] = items
+        out_cols[out_name] = [1 if a else np.nan for a in answered]
+    return pd.DataFrame(out_cols, index=raw.index)
+
+
 def load_f25() -> tuple[pd.DataFrame, dict[str, str], pd.DataFrame, str]:
     data_path = F25_DIR / "yypfall25dat_withweights.csv"
     codebook_path = F25_DIR / "2025-138a_codebook.xlsx"
@@ -641,6 +722,11 @@ def load_f24() -> tuple[pd.DataFrame, dict[str, str], pd.DataFrame, str]:
     if "rv_screen" in values.columns:
         values = values[values["rv_screen"] == 1].copy()
 
+    # Collate the threat/reform paired-statement batteries into MaxDiffs.
+    stmt_extras = build_f24_statement_maxdiffs(values)
+    if not stmt_extras.empty:
+        values = pd.concat([values, stmt_extras], axis=1).copy()
+
     # Readable names from the mappings file: header row is the "nice" Qualtrics
     # name, data file uses snake_case. Build snake_case -> readable map.
     mappings = pd.read_csv(mappings_path)
@@ -831,6 +917,13 @@ def preprocess_wave(wave: str) -> None:
                          if b not in S26_MAXDIFF_HIDE}
         maxdiff_do_cols = {c for c in maxdiff_do_cols if c not in S26_MAXDIFF_HIDE}
 
+    # F24 threat/reform paired-statement batteries: hide the raw pick + statement
+    # columns (superseded by the collated MaxDiffs built in load_f24); keep the
+    # collated offer/pick count columns in the data file.
+    if wave == "F24" and F24_STATEMENT_ITEMS:
+        obbba_hide_cols |= set(F24_STATEMENT_HIDE)
+        obbba_aux_cols |= set(F24_STATEMENT_AUX)
+
     # Build codebook columns
     columns_out: dict[str, dict] = {}
     for col in values.columns:
@@ -896,6 +989,19 @@ def preprocess_wave(wave: str) -> None:
             columns_out[stem] = {
                 "label": S26_MAXDIFF_LABEL.get(stem, stem),
                 "question": S26_MAXDIFF_QTEXT.get(stem, stem),
+                "type": "maxdiff",
+                "items": list(items),
+                "waves": [wave],
+            }
+
+    # Inject collated F24 threat/reform MaxDiff entries.
+    if wave == "F24" and F24_STATEMENT_ITEMS:
+        meta = {fam[0]: (fam[1], fam[2]) for fam in F24_STATEMENT_FAMILIES}
+        for out_name, items in F24_STATEMENT_ITEMS.items():
+            lbl, q = meta.get(out_name, (out_name, out_name))
+            columns_out[out_name] = {
+                "label": lbl,
+                "question": q,
                 "type": "maxdiff",
                 "items": list(items),
                 "waves": [wave],

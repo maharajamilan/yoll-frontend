@@ -2537,72 +2537,314 @@
         "F24"
       ]
     },
-    "threat_max_diff_1": {
-      "label": "threat_max_diff_1",
-      "question": "threat_max_diff_1",
-      "type": "categorical",
-      "options": [
+    "threat_maxdiff": {
+      "label": "Threat to democracy MaxDiff (collated 2 rounds)",
+      "question": "Which of the following do you think poses a bigger threat to our democracy? \u2014 collated across 2 forced-choice rounds",
+      "type": "maxdiff",
+      "items": [
         {
           "code": 1,
-          "label": "1"
+          "label": "Attempts to overturn elections",
+          "do_col": "threat_maxdiff_do_1",
+          "pick_col": "threat_maxdiff_pick_1"
         },
         {
           "code": 2,
-          "label": "2"
+          "label": "Conservative judges",
+          "do_col": "threat_maxdiff_do_2",
+          "pick_col": "threat_maxdiff_pick_2"
+        },
+        {
+          "code": 3,
+          "label": "Economic inequality",
+          "do_col": "threat_maxdiff_do_3",
+          "pick_col": "threat_maxdiff_pick_3"
+        },
+        {
+          "code": 4,
+          "label": "Election fraud",
+          "do_col": "threat_maxdiff_do_4",
+          "pick_col": "threat_maxdiff_pick_4"
+        },
+        {
+          "code": 5,
+          "label": "Extremism from both sides equally",
+          "do_col": "threat_maxdiff_do_5",
+          "pick_col": "threat_maxdiff_pick_5"
+        },
+        {
+          "code": 6,
+          "label": "Gerrymandering",
+          "do_col": "threat_maxdiff_do_6",
+          "pick_col": "threat_maxdiff_pick_6"
+        },
+        {
+          "code": 7,
+          "label": "Having only two political parties",
+          "do_col": "threat_maxdiff_do_7",
+          "pick_col": "threat_maxdiff_pick_7"
+        },
+        {
+          "code": 8,
+          "label": "Immigration bringing in new voters who don\u2019t share American values",
+          "do_col": "threat_maxdiff_do_8",
+          "pick_col": "threat_maxdiff_pick_8"
+        },
+        {
+          "code": 9,
+          "label": "Influence of wealthy donors",
+          "do_col": "threat_maxdiff_do_9",
+          "pick_col": "threat_maxdiff_pick_9"
+        },
+        {
+          "code": 10,
+          "label": "Lack of patriotism",
+          "do_col": "threat_maxdiff_do_10",
+          "pick_col": "threat_maxdiff_pick_10"
+        },
+        {
+          "code": 11,
+          "label": "Left-wing extremism",
+          "do_col": "threat_maxdiff_do_11",
+          "pick_col": "threat_maxdiff_pick_11"
+        },
+        {
+          "code": 12,
+          "label": "Our democracy is not really under threat",
+          "do_col": "threat_maxdiff_do_12",
+          "pick_col": "threat_maxdiff_pick_12"
+        },
+        {
+          "code": 13,
+          "label": "Partisanship",
+          "do_col": "threat_maxdiff_do_13",
+          "pick_col": "threat_maxdiff_pick_13"
+        },
+        {
+          "code": 14,
+          "label": "Racism",
+          "do_col": "threat_maxdiff_do_14",
+          "pick_col": "threat_maxdiff_pick_14"
+        },
+        {
+          "code": 15,
+          "label": "Right-wing extremism",
+          "do_col": "threat_maxdiff_do_15",
+          "pick_col": "threat_maxdiff_pick_15"
+        },
+        {
+          "code": 16,
+          "label": "The Electoral College",
+          "do_col": "threat_maxdiff_do_16",
+          "pick_col": "threat_maxdiff_pick_16"
+        },
+        {
+          "code": 17,
+          "label": "Voter ID laws",
+          "do_col": "threat_maxdiff_do_17",
+          "pick_col": "threat_maxdiff_pick_17"
+        },
+        {
+          "code": 18,
+          "label": "Voter ignorance of how our government works",
+          "do_col": "threat_maxdiff_do_18",
+          "pick_col": "threat_maxdiff_pick_18"
         }
       ],
       "waves": [
         "F24"
       ]
     },
-    "threat_max_diff_2": {
-      "label": "threat_max_diff_2",
-      "question": "threat_max_diff_2",
-      "type": "categorical",
-      "options": [
+    "reform_maxdiff": {
+      "label": "Democratic reform MaxDiff (collated 2 rounds)",
+      "question": "Which proposal for a democratic reform do you think would improve our government the most? \u2014 collated across 2 forced-choice rounds",
+      "type": "maxdiff",
+      "items": [
         {
           "code": 1,
-          "label": "1"
+          "label": "As a country, we need to lower the temperature on both sides. Rhetoric painting the other side as a threat to our country or democracy is fanning the flames of division \u2014 and all too often, fueling political violence.",
+          "do_col": "reform_maxdiff_do_1",
+          "pick_col": "reform_maxdiff_pick_1"
         },
         {
           "code": 2,
-          "label": "2"
-        }
-      ],
-      "waves": [
-        "F24"
-      ]
-    },
-    "reform_max_diff_1": {
-      "label": "reform_max_diff_1",
-      "question": "reform_max_diff_1",
-      "type": "categorical",
-      "options": [
-        {
-          "code": 1,
-          "label": "1"
+          "label": "In 1776, the founding fathers brought forth a new nation, conceived in liberty, and dedicated to the proposition that all men are created equal. Today, each of us as individuals must strive to uphold that ideal, and ensure that that government of the people, by the people, for the people, shall not perish from the Earth.",
+          "do_col": "reform_maxdiff_do_2",
+          "pick_col": "reform_maxdiff_pick_2"
         },
         {
-          "code": 2,
-          "label": "2"
-        }
-      ],
-      "waves": [
-        "F24"
-      ]
-    },
-    "reform_max_diff_2": {
-      "label": "reform_max_diff_2",
-      "question": "reform_max_diff_2",
-      "type": "categorical",
-      "options": [
-        {
-          "code": 1,
-          "label": "1"
+          "code": 3,
+          "label": "It is time to take election fraud seriously. Whether it is foreign governments trying to influence our elections or non-citizens casting ballots, we need to take concrete steps to crack down on election interference and make sure that only eligible citizens vote in our elections.",
+          "do_col": "reform_maxdiff_do_3",
+          "pick_col": "reform_maxdiff_pick_3"
         },
         {
-          "code": 2,
-          "label": "2"
+          "code": 4,
+          "label": "Our system of government isn\u2019t perfect, but most changes would make it worse, not better. Lots of proposals sound great on paper, but we don\u2019t know how they\u2019d play out in reality. Our current system is what the founders envisioned, and we shouldn\u2019t second-guess the wisdom of their design.",
+          "do_col": "reform_maxdiff_do_4",
+          "pick_col": "reform_maxdiff_pick_4"
+        },
+        {
+          "code": 5,
+          "label": "The Constitution is meant to be a living document, that American citizens adapt and modify to keep up with changing times. But these days, it\u2019s just too hard to change. We need to make it easier to amend the Constitution so it can better address current problems.",
+          "do_col": "reform_maxdiff_do_5",
+          "pick_col": "reform_maxdiff_pick_5"
+        },
+        {
+          "code": 6,
+          "label": "The biggest problem in politics is extremism, on both sides. Both parties have been captured by activists who are out of touch with the public and only want to push their own ideological agendas. Politicians need to be more moderate like most Americans are.",
+          "do_col": "reform_maxdiff_do_6",
+          "pick_col": "reform_maxdiff_pick_6"
+        },
+        {
+          "code": 7,
+          "label": "The problem with our politics is that primary elections are decided by a minority of ideologically extreme partisans. Instead, we should have all candidates run in the same primary, regardless of party affiliation, and then have a runoff between the top two. This will lead to more moderate politicians.",
+          "do_col": "reform_maxdiff_do_7",
+          "pick_col": "reform_maxdiff_pick_7"
+        },
+        {
+          "code": 8,
+          "label": "The problem with our politics is the two-party duopoly that robs voters of a real choice. Independents are the fastest-growing group of voters because Americans are fed up with the existing options. We need a third party that can represent them.",
+          "do_col": "reform_maxdiff_do_8",
+          "pick_col": "reform_maxdiff_pick_8"
+        },
+        {
+          "code": 9,
+          "label": "The pundits like to slice and dice our country into red states and blue states. But there is not a liberal America and a conservative America, there is the United States of America. We need to move past the division spread by politicians and the media and come together as one country.",
+          "do_col": "reform_maxdiff_do_9",
+          "pick_col": "reform_maxdiff_pick_9"
+        },
+        {
+          "code": 10,
+          "label": "These days Congress can\u2019t get anything done. It is unable to fix pressing problems because of gridlock. We need a national referendum process where we allow Americans to directly vote up or down on proposed policies, which almost every state already allows.",
+          "do_col": "reform_maxdiff_do_10",
+          "pick_col": "reform_maxdiff_pick_10"
+        },
+        {
+          "code": 11,
+          "label": "We need a national ban on gerrymandering: the process of politicians redrawing legislative districts to unfairly advantage their party. In a democracy, voters are supposed to pick the politicians \u2014 not the other way around.",
+          "do_col": "reform_maxdiff_do_11",
+          "pick_col": "reform_maxdiff_pick_11"
+        },
+        {
+          "code": 12,
+          "label": "We need an age limit on candidates for president. Both the current and previous presidents are showing clear signs of cognitive decline. No person over 75 should be eligible for office, and all candidates should be required to take cognitive tests.",
+          "do_col": "reform_maxdiff_do_12",
+          "pick_col": "reform_maxdiff_pick_12"
+        },
+        {
+          "code": 13,
+          "label": "We need new leadership. The leaders of both parties have been in office too long, and they\u2019ve proven themselves either incapable of or unwilling to solve problems. It\u2019s time for some fresh faces from a new generation.",
+          "do_col": "reform_maxdiff_do_13",
+          "pick_col": "reform_maxdiff_pick_13"
+        },
+        {
+          "code": 14,
+          "label": "We need term limits for Congress. We don\u2019t need career politicians staying in office for decades, twelve years is long enough \u2014 that\u2019s two terms for senators and six terms for representatives.",
+          "do_col": "reform_maxdiff_do_14",
+          "pick_col": "reform_maxdiff_pick_14"
+        },
+        {
+          "code": 15,
+          "label": "We need to ban members of Congress from trading individual stocks and bonds. Members of Congress are already paid over $170,000 per year, almost triple the median income. Elected officials should serve the public interest \u2014 not enrich themselves with insider trading.",
+          "do_col": "reform_maxdiff_do_15",
+          "pick_col": "reform_maxdiff_pick_15"
+        },
+        {
+          "code": 16,
+          "label": "We need to enact a universal voter ID law, requiring all Americans to show a valid ID before voting in any federal election. This ensures that only citizens are voting which guards against fraud, and ensures trust in the democratic process.",
+          "do_col": "reform_maxdiff_do_16",
+          "pick_col": "reform_maxdiff_pick_16"
+        },
+        {
+          "code": 17,
+          "label": "We need to end the Senate filibuster. The filibuster lets just 41 senators block bills, even if they\u2019re supported by bipartisan majorities. It\u2019s just another tool to promote gridlock, and it is time for it to go.",
+          "do_col": "reform_maxdiff_do_17",
+          "pick_col": "reform_maxdiff_pick_17"
+        },
+        {
+          "code": 18,
+          "label": "We need to expand the number of justices in the Supreme Court. Right now, the unelected conservative majority on the Court is taking away people's rights and forcing extreme rulings on the country. New justices would restore balance to the Court\u2019s rulings.",
+          "do_col": "reform_maxdiff_do_18",
+          "pick_col": "reform_maxdiff_pick_18"
+        },
+        {
+          "code": 19,
+          "label": "We need to get rid of voter ID laws. Data shows that voter fraud is exceedingly rare, and voter ID laws are mostly used to justify discrimination, disenfranchising some voters on the basis of skin color.",
+          "do_col": "reform_maxdiff_do_19",
+          "pick_col": "reform_maxdiff_pick_19"
+        },
+        {
+          "code": 20,
+          "label": "We need to implement participatory budgeting, a system where community members are empowered through civic engagement to suggest and vote on ideas for spending a portion of a state or locality\u2019s budget.",
+          "do_col": "reform_maxdiff_do_20",
+          "pick_col": "reform_maxdiff_pick_20"
+        },
+        {
+          "code": 21,
+          "label": "We need to let the House of Representatives grow with the population. In 1929, the House was capped at 435 members. That means that every 10 years, some states lose representation in Congress, even if their population is growing.",
+          "do_col": "reform_maxdiff_do_21",
+          "pick_col": "reform_maxdiff_pick_21"
+        },
+        {
+          "code": 22,
+          "label": "We need to make Election Day a national holiday. Right now, Election Day is the first Tuesday of November. But not everyone can take the time away from work or taking care of kids, and their voices deserve to be heard too.",
+          "do_col": "reform_maxdiff_do_22",
+          "pick_col": "reform_maxdiff_pick_22"
+        },
+        {
+          "code": 23,
+          "label": "We need to overturn Citizens United, a 2010 Supreme Court case that struck down campaign contribution limits for corporations. The wealthy have too much influence in politics, and corporations making unlimited donations to candidates is just legalized corruption.",
+          "do_col": "reform_maxdiff_do_23",
+          "pick_col": "reform_maxdiff_pick_23"
+        },
+        {
+          "code": 24,
+          "label": "We need to place term limits on Supreme Court justices, where each justice would serve for 18 years, staggered so that each president appoints two justices per four-year term. This way, every president has the same influence on the Court\u2019s ideological balance.",
+          "do_col": "reform_maxdiff_do_24",
+          "pick_col": "reform_maxdiff_pick_24"
+        },
+        {
+          "code": 25,
+          "label": "We need to prosecute the politicians who supported \u2014 and rioters who took part in \u2014 the January 6th insurrection. Trying to steal an election is unacceptable and un-American, and any politician who tried to do so must be disqualified from ever holding office again.",
+          "do_col": "reform_maxdiff_do_25",
+          "pick_col": "reform_maxdiff_pick_25"
+        },
+        {
+          "code": 26,
+          "label": "We need to restore the 1965 Voting Rights Act. Across the country, voting rights are under threat as politicians use voter suppression tactics to disenfranchise minority voters and violate their 15th Amendment right to vote.",
+          "do_col": "reform_maxdiff_do_26",
+          "pick_col": "reform_maxdiff_pick_26"
+        },
+        {
+          "code": 27,
+          "label": "We need to switch to a ranked-choice voting system, where voters rank candidates in their order of preference. If no candidate has a majority of the votes in the first round, the candidate with the fewest votes has their votes reallocated to their supporters\u2019 second choices, continuing until one candidate wins a majority. This eliminates the problem where third parties act as \u201cspoilers\u201d and lets voters better express their views.",
+          "do_col": "reform_maxdiff_do_27",
+          "pick_col": "reform_maxdiff_pick_27"
+        },
+        {
+          "code": 28,
+          "label": "We need to switch to a system of proportional representation for the US House of Representatives. Proportional representation means that a party gets the same percentage of seats in the House of Representatives as the percentage of votes they receive. This way, everyone's opinions are more fairly represented. It makes the system fairer for all parties.",
+          "do_col": "reform_maxdiff_do_28",
+          "pick_col": "reform_maxdiff_pick_28"
+        },
+        {
+          "code": 29,
+          "label": "We need to switch to electing the president by national popular vote. The Electoral College is undemocratic \u2014 two of the last four presidents lost the popular vote, and the system lets candidates ignore over 80% of voters. It goes against America\u2019s fundamental promise: government of, by, and for the people.",
+          "do_col": "reform_maxdiff_do_29",
+          "pick_col": "reform_maxdiff_pick_29"
+        },
+        {
+          "code": 30,
+          "label": "We should make Washington, DC, and Puerto Rico into states. Right now, residents of both are US citizens but don\u2019t have a say in Congress. Taxation without representation? That\u2019s not what America is about.",
+          "do_col": "reform_maxdiff_do_30",
+          "pick_col": "reform_maxdiff_pick_30"
+        },
+        {
+          "code": 31,
+          "label": "We should only use paper ballots for our elections. Right now, some states use electronic voting machines, where election results can be manipulated. Paper ballots are safe from hacking and can be hand-counted, reducing fraud.",
+          "do_col": "reform_maxdiff_do_31",
+          "pick_col": "reform_maxdiff_pick_31"
         }
       ],
       "waves": [

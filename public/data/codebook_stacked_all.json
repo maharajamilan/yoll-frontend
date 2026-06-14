@@ -3,7 +3,7 @@
     "stacked_all": {
       "label": "Zoning  [S25]",
       "n": 16211,
-      "note": "Stacked: F24+S25+F25+S26. 7 canonical demographics + 447 non-demographic columns (in all 4 waves: 2; partial coverage: 43; single wave: 402). Rows from waves that didn't ask a given question carry null."
+      "note": "Stacked: F24+S25+F25+S26. 7 canonical demographics + 443 non-demographic columns (in all 4 waves: 2; partial coverage: 43; single wave: 398). Rows from waves that didn't ask a given question carry null."
     }
   },
   "columns": {
@@ -10324,42 +10324,6 @@
         }
       ]
     },
-    "reform_max_diff_1": {
-      "label": "reform_max_diff_1  [F24]",
-      "question": "reform_max_diff_1",
-      "type": "categorical",
-      "waves": [
-        "F24"
-      ],
-      "options": [
-        {
-          "code": 1,
-          "label": "1"
-        },
-        {
-          "code": 2,
-          "label": "2"
-        }
-      ]
-    },
-    "reform_max_diff_2": {
-      "label": "reform_max_diff_2  [F24]",
-      "question": "reform_max_diff_2",
-      "type": "categorical",
-      "waves": [
-        "F24"
-      ],
-      "options": [
-        {
-          "code": 1,
-          "label": "1"
-        },
-        {
-          "code": 2,
-          "label": "2"
-        }
-      ]
-    },
     "religion": {
       "label": "religion  [F25+S26]",
       "question": "What is your present religion, if any? Are you:",
@@ -11971,42 +11935,6 @@
         {
           "code": 2,
           "label": "${e://Field/threat_statement4}"
-        }
-      ]
-    },
-    "threat_max_diff_1": {
-      "label": "threat_max_diff_1  [F24]",
-      "question": "threat_max_diff_1",
-      "type": "categorical",
-      "waves": [
-        "F24"
-      ],
-      "options": [
-        {
-          "code": 1,
-          "label": "1"
-        },
-        {
-          "code": 2,
-          "label": "2"
-        }
-      ]
-    },
-    "threat_max_diff_2": {
-      "label": "threat_max_diff_2  [F24]",
-      "question": "threat_max_diff_2",
-      "type": "categorical",
-      "waves": [
-        "F24"
-      ],
-      "options": [
-        {
-          "code": 1,
-          "label": "1"
-        },
-        {
-          "code": 2,
-          "label": "2"
         }
       ]
     },
