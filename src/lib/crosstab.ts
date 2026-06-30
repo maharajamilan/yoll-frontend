@@ -549,46 +549,26 @@ export function crosstabToCsv(results: CrosstabResult[]): string {
       continue;
     }
     if (r.isMaxDiff) {
-      // MaxDiff CSV: 4 sub-rows per item \u2014 Win rate, MOE, Wins, Offers \u2014 so
-      // analysts can re-derive everything downstream.
-      lines.push(
-        csvRow([
-          "Item",
-          ...r.columns.flatMap((c) => [
-            `${c.label} \u2014 win %`,
-            `${c.label} \u2014 MOE (\u00B1pp, 95%)`,
-            `${c.label} \u2014 wins`,
-            `${c.label} \u2014 offers`,
-          ]),
-        ]),
-      );
+      // MaxDiff CSV mirrors the regular crosstab grid: items down the rows,
+      // one win-rate per demographic column, then Weighted N. (Per-cell MOE /
+      // wins / offers are shown on hover in the app; kept out of the export so
+      // it reads cleanly like a normal crosstab.)
+      lines.push(csvRow(["Item", ...r.columns.map((c) => c.label)]));
       for (const row of r.rows) {
         lines.push(
           csvRow([
             row.label,
-            ...r.columns.flatMap((c) => {
-              const m = row.cellMoe?.[c.key];
-              const w = row.cellWins?.[c.key];
-              const o = row.cellOffers?.[c.key];
-              return [
-                row.pct[c.key].toFixed(1) + "%",
-                Number.isFinite(m) ? (m as number).toFixed(1) : "",
-                w !== undefined ? Math.round(w).toString() : "",
-                o !== undefined ? Math.round(o).toString() : "",
-              ];
+            ...r.columns.map((c) => {
+              const offers = row.cellOffers?.[c.key];
+              return offers && offers > 0 ? row.pct[c.key].toFixed(1) + "%" : "";
             }),
           ]),
         );
       }
       lines.push(
         csvRow([
-          "Column N (any item shown + pick)",
-          ...r.columns.flatMap((c) => [
-            Math.round(r.weightedN[c.key]).toString(),
-            "",
-            "",
-            "",
-          ]),
+          "Weighted N",
+          ...r.columns.map((c) => Math.round(r.weightedN[c.key]).toString()),
         ]),
       );
     } else {
