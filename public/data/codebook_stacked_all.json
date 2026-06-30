@@ -3,7 +3,7 @@
     "stacked_all": {
       "label": "All waves (stacked)",
       "n": 16211,
-      "note": "Stacked: F24+S25+F25+S26. 7 canonical demographics + 444 non-demographic columns (in all 4 waves: 2; partial coverage: 44; single wave: 398). Rows from waves that didn't ask a given question carry null."
+      "note": "Stacked: F24+S25+F25+S26. 8 canonical demographics + 444 non-demographic columns (in all 4 waves: 2; partial coverage: 44; single wave: 398). Rows from waves that didn't ask a given question carry null."
     }
   },
   "columns": {
@@ -242,6 +242,39 @@
         {
           "code": 5,
           "label": "Was not old enough to vote"
+        }
+      ],
+      "waves": [
+        "F24",
+        "S25",
+        "F25",
+        "S26"
+      ]
+    },
+    "Ideology": {
+      "label": "Ideology",
+      "question": "Ideological self-placement (harmonized to 5 categories across waves).",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
         }
       ],
       "waves": [

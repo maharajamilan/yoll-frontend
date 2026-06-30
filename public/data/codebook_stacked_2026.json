@@ -3,7 +3,7 @@
     "stacked_2026": {
       "label": "2026 cycle (S25 + F25 + S26)",
       "n": 11083,
-      "note": "Stacked: S25+F25+S26. 7 canonical demographics + 390 non-demographic columns (in all 3 waves: 3; partial coverage: 21; single wave: 366). Rows from waves that didn't ask a given question carry null."
+      "note": "Stacked: S25+F25+S26. 8 canonical demographics + 390 non-demographic columns (in all 3 waves: 3; partial coverage: 21; single wave: 366). Rows from waves that didn't ask a given question carry null."
     }
   },
   "columns": {
@@ -231,6 +231,38 @@
         {
           "code": 5,
           "label": "Was not old enough to vote"
+        }
+      ],
+      "waves": [
+        "S25",
+        "F25",
+        "S26"
+      ]
+    },
+    "Ideology": {
+      "label": "Ideology",
+      "question": "Ideological self-placement (harmonized to 5 categories across waves).",
+      "type": "categorical",
+      "options": [
+        {
+          "code": 1,
+          "label": "Very liberal"
+        },
+        {
+          "code": 2,
+          "label": "Somewhat liberal"
+        },
+        {
+          "code": 3,
+          "label": "Moderate"
+        },
+        {
+          "code": 4,
+          "label": "Somewhat conservative"
+        },
+        {
+          "code": 5,
+          "label": "Very conservative"
         }
       ],
       "waves": [

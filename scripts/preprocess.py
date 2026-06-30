@@ -1089,10 +1089,18 @@ HARMONIZED_DEMOGRAPHICS: dict[str, str] = {
     "Party ID": "Party ID",
     "PID Lean": "PID Lean",
     "2024 vote": "2024 Vote",
+    "Ideology": "Ideology",
 }
 
 CANONICAL_OPTIONS: dict[str, list[tuple[int, str]]] = {
     "Age": [(1, "18-21"), (2, "22-29"), (3, "30-44"), (4, "45-64"), (5, "65+")],
+    "Ideology": [
+        (1, "Very liberal"),
+        (2, "Somewhat liberal"),
+        (3, "Moderate"),
+        (4, "Somewhat conservative"),
+        (5, "Very conservative"),
+    ],
     "Gender": [(1, "Man"), (2, "Woman"), (3, "Other")],
     "Race": [(1, "White"), (2, "Black"), (3, "Hispanic"), (4, "Asian"), (5, "Other")],
     "Education": [
@@ -1127,6 +1135,7 @@ CANONICAL_QUESTIONS: dict[str, str] = {
     "Party ID": "Which political party do you most closely identify with?",
     "PID Lean": "Do you lean closer to the Democratic Party or the Republican Party?",
     "2024 vote": "Who did you vote for for president in 2024?",
+    "Ideology": "Ideological self-placement (harmonized to 5 categories across waves).",
 }
 
 

@@ -53,6 +53,17 @@ S26_DIR = SOURCE_DIR / "S26"
 # Helpers
 # ------------------------------------------------------------------
 
+# Canonical 5-category ideology (liberal -> conservative), harmonized across
+# waves that measured self-placement on different scales:
+#   1=Very liberal  2=Somewhat liberal  3=Moderate
+#   4=Somewhat conservative  5=Very conservative
+# F24/S25 ship a reversed 5-point self-placement (the "Yourself" item of an
+# ideology battery): 1=Very cons .. 5=Very lib, 7=Not sure.
+IDEO_5PT_REVERSED = {5.0: 1, 4.0: 2, 3.0: 3, 2.0: 4, 1.0: 5}  # 7 (Not sure) -> NaN
+# F25/S26 ship a 7-point ANES scale: 1=Extremely lib .. 7=Extremely cons.
+# Collapse to the canonical 5 (validated against 2024-vote shares).
+IDEO_ANES_7TO5 = {1.0: 1, 2.0: 1, 3.0: 2, 4.0: 3, 5.0: 4, 6.0: 5, 7.0: 5}
+
 
 def age_to_s25_bucket(years: float) -> int | float:
     if pd.isna(years):
@@ -125,6 +136,8 @@ def harmonize_f24() -> pd.DataFrame:
     # Other, Did not vote, Not old enough. Fold F24's pre-election codes:
     vote_map = {1: 1, 2: 2, 3: 3, 4: 3, 5: 3, 6: 4, 7: 5, 8: 3}
     out["2024 Vote"] = out["2024 Vote"].map(vote_map)
+    # Ideology: F24 ideology_1 ("Yourself" item) is a reversed 5-point scale.
+    out["Ideology"] = df["ideology_1"].map(IDEO_5PT_REVERSED)
     out["pid5"] = derive_pid5(out["Party ID"], out["PID Lean"])
     return out
 
@@ -147,6 +160,8 @@ def harmonize_s25() -> pd.DataFrame:
             "2024 Vote": df["2024 vote"],
         }
     )
+    # Ideology: S25 Ideology_1 ("Yourself" item) is a reversed 5-point scale.
+    out["Ideology"] = df["Ideology_1"].map(IDEO_5PT_REVERSED)
     out["pid5"] = derive_pid5(out["Party ID"], out["PID Lean"])
     return out
 
@@ -199,6 +214,8 @@ def harmonize_f25() -> pd.DataFrame:
             "2024 Vote": vote,
         }
     )
+    # Ideology: F25 anes_ideology is the 7-point ANES scale.
+    out["Ideology"] = df["anes_ideology"].map(IDEO_ANES_7TO5)
     out["pid5"] = derive_pid5(out["Party ID"], out["PID Lean"])
     return out
 
@@ -267,6 +284,8 @@ def harmonize_s26() -> pd.DataFrame:
             "2024 Vote": vote,
         }
     )
+    # Ideology: S26 anes_ideology is the 7-point ANES scale.
+    out["Ideology"] = df["anes_ideology"].map(IDEO_ANES_7TO5)
     out["pid5"] = derive_pid5(out["Party ID"], out["PID Lean"])
     return out
 
