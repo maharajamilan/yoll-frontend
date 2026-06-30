@@ -3,7 +3,7 @@
     "S26": {
       "label": "Spring 2026",
       "n": 3429,
-      "note": "Weighted with Yale's official Spring-2026 procedure (CPS-2024 age\u00d7gender + race/education/party targets), not the S25 pipeline."
+      "note": "Weighted with YYP's official Spring-2026 (138b) procedure; matches youthpoll.yale.edu."
     }
   },
   "columns": {
@@ -4058,190 +4058,190 @@
         "S26"
       ]
     },
-    "issue_maxdiff": {
+    "issue_rank_maxdiff": {
       "label": "Issue importance MaxDiff (collated 3 rounds)",
-      "question": "When it comes to deciding your vote, which issue is more important to you? \u2014 collated across 3 MaxDiff rounds",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you?",
       "type": "maxdiff",
       "items": [
         {
           "code": 1,
           "label": "Cost of living/affordability",
-          "do_col": "issue_maxdiff_do_1",
-          "pick_col": "issue_maxdiff_pick_1"
+          "do_col": "issue_rank_maxdiff_do_1",
+          "pick_col": "issue_rank_maxdiff_pick_1"
         },
         {
           "code": 2,
           "label": "Healthcare",
-          "do_col": "issue_maxdiff_do_2",
-          "pick_col": "issue_maxdiff_pick_2"
+          "do_col": "issue_rank_maxdiff_do_2",
+          "pick_col": "issue_rank_maxdiff_pick_2"
         },
         {
           "code": 3,
           "label": "Jobs",
-          "do_col": "issue_maxdiff_do_3",
-          "pick_col": "issue_maxdiff_pick_3"
+          "do_col": "issue_rank_maxdiff_do_3",
+          "pick_col": "issue_rank_maxdiff_pick_3"
         },
         {
           "code": 4,
           "label": "Taxes",
-          "do_col": "issue_maxdiff_do_4",
-          "pick_col": "issue_maxdiff_pick_4"
+          "do_col": "issue_rank_maxdiff_do_4",
+          "pick_col": "issue_rank_maxdiff_pick_4"
         },
         {
           "code": 5,
           "label": "The national debt",
-          "do_col": "issue_maxdiff_do_5",
-          "pick_col": "issue_maxdiff_pick_5"
+          "do_col": "issue_rank_maxdiff_do_5",
+          "pick_col": "issue_rank_maxdiff_pick_5"
         },
         {
           "code": 6,
           "label": "Corruption",
-          "do_col": "issue_maxdiff_do_6",
-          "pick_col": "issue_maxdiff_pick_6"
+          "do_col": "issue_rank_maxdiff_do_6",
+          "pick_col": "issue_rank_maxdiff_pick_6"
         },
         {
           "code": 7,
           "label": "Social Security",
-          "do_col": "issue_maxdiff_do_7",
-          "pick_col": "issue_maxdiff_pick_7"
+          "do_col": "issue_rank_maxdiff_do_7",
+          "pick_col": "issue_rank_maxdiff_pick_7"
         },
         {
           "code": 8,
           "label": "Medicaid and Medicare",
-          "do_col": "issue_maxdiff_do_8",
-          "pick_col": "issue_maxdiff_pick_8"
+          "do_col": "issue_rank_maxdiff_do_8",
+          "pick_col": "issue_rank_maxdiff_pick_8"
         },
         {
           "code": 9,
           "label": "K-12 education",
-          "do_col": "issue_maxdiff_do_9",
-          "pick_col": "issue_maxdiff_pick_9"
+          "do_col": "issue_rank_maxdiff_do_9",
+          "pick_col": "issue_rank_maxdiff_pick_9"
         },
         {
           "code": 10,
           "label": "Abortion",
-          "do_col": "issue_maxdiff_do_10",
-          "pick_col": "issue_maxdiff_pick_10"
+          "do_col": "issue_rank_maxdiff_do_10",
+          "pick_col": "issue_rank_maxdiff_pick_10"
         },
         {
           "code": 11,
           "label": "Crime",
-          "do_col": "issue_maxdiff_do_11",
-          "pick_col": "issue_maxdiff_pick_11"
+          "do_col": "issue_rank_maxdiff_do_11",
+          "pick_col": "issue_rank_maxdiff_pick_11"
         },
         {
           "code": 12,
           "label": "Israel and Palestine",
-          "do_col": "issue_maxdiff_do_12",
-          "pick_col": "issue_maxdiff_pick_12"
+          "do_col": "issue_rank_maxdiff_do_12",
+          "pick_col": "issue_rank_maxdiff_pick_12"
         },
         {
           "code": 13,
           "label": "Race relations",
-          "do_col": "issue_maxdiff_do_13",
-          "pick_col": "issue_maxdiff_pick_13"
+          "do_col": "issue_rank_maxdiff_do_13",
+          "pick_col": "issue_rank_maxdiff_pick_13"
         },
         {
           "code": 14,
           "label": "Foreign policy",
-          "do_col": "issue_maxdiff_do_14",
-          "pick_col": "issue_maxdiff_pick_14"
+          "do_col": "issue_rank_maxdiff_do_14",
+          "pick_col": "issue_rank_maxdiff_pick_14"
         },
         {
           "code": 15,
           "label": "Climate change",
-          "do_col": "issue_maxdiff_do_15",
-          "pick_col": "issue_maxdiff_pick_15"
+          "do_col": "issue_rank_maxdiff_do_15",
+          "pick_col": "issue_rank_maxdiff_pick_15"
         },
         {
           "code": 16,
           "label": "The environment",
-          "do_col": "issue_maxdiff_do_16",
-          "pick_col": "issue_maxdiff_pick_16"
+          "do_col": "issue_rank_maxdiff_do_16",
+          "pick_col": "issue_rank_maxdiff_pick_16"
         },
         {
           "code": 17,
           "label": "Election integrity",
-          "do_col": "issue_maxdiff_do_17",
-          "pick_col": "issue_maxdiff_pick_17"
+          "do_col": "issue_rank_maxdiff_do_17",
+          "pick_col": "issue_rank_maxdiff_pick_17"
         },
         {
           "code": 18,
           "label": "Immigration",
-          "do_col": "issue_maxdiff_do_18",
-          "pick_col": "issue_maxdiff_pick_18"
+          "do_col": "issue_rank_maxdiff_do_18",
+          "pick_col": "issue_rank_maxdiff_pick_18"
         },
         {
           "code": 19,
           "label": "Regulating businesses and corporations",
-          "do_col": "issue_maxdiff_do_19",
-          "pick_col": "issue_maxdiff_pick_19"
+          "do_col": "issue_rank_maxdiff_do_19",
+          "pick_col": "issue_rank_maxdiff_pick_19"
         },
         {
           "code": 20,
           "label": "Ukraine and Russia",
-          "do_col": "issue_maxdiff_do_20",
-          "pick_col": "issue_maxdiff_pick_20"
+          "do_col": "issue_rank_maxdiff_do_20",
+          "pick_col": "issue_rank_maxdiff_pick_20"
         },
         {
           "code": 21,
           "label": "Acceptance of gay people",
-          "do_col": "issue_maxdiff_do_21",
-          "pick_col": "issue_maxdiff_pick_21"
+          "do_col": "issue_rank_maxdiff_do_21",
+          "pick_col": "issue_rank_maxdiff_pick_21"
         },
         {
           "code": 22,
           "label": "Acceptance of transgender people",
-          "do_col": "issue_maxdiff_do_22",
-          "pick_col": "issue_maxdiff_pick_22"
+          "do_col": "issue_rank_maxdiff_do_22",
+          "pick_col": "issue_rank_maxdiff_pick_22"
         },
         {
           "code": 23,
           "label": "Higher education",
-          "do_col": "issue_maxdiff_do_23",
-          "pick_col": "issue_maxdiff_pick_23"
+          "do_col": "issue_rank_maxdiff_do_23",
+          "pick_col": "issue_rank_maxdiff_pick_23"
         },
         {
           "code": 24,
           "label": "China",
-          "do_col": "issue_maxdiff_do_24",
-          "pick_col": "issue_maxdiff_pick_24"
+          "do_col": "issue_rank_maxdiff_do_24",
+          "pick_col": "issue_rank_maxdiff_pick_24"
         },
         {
           "code": 25,
           "label": "Trade",
-          "do_col": "issue_maxdiff_do_25",
-          "pick_col": "issue_maxdiff_pick_25"
+          "do_col": "issue_rank_maxdiff_do_25",
+          "pick_col": "issue_rank_maxdiff_pick_25"
         },
         {
           "code": 26,
           "label": "Artificial intelligence",
-          "do_col": "issue_maxdiff_do_26",
-          "pick_col": "issue_maxdiff_pick_26"
+          "do_col": "issue_rank_maxdiff_do_26",
+          "pick_col": "issue_rank_maxdiff_pick_26"
         },
         {
           "code": 27,
           "label": "Guns",
-          "do_col": "issue_maxdiff_do_27",
-          "pick_col": "issue_maxdiff_pick_27"
+          "do_col": "issue_rank_maxdiff_do_27",
+          "pick_col": "issue_rank_maxdiff_pick_27"
         },
         {
           "code": 28,
           "label": "Democracy",
-          "do_col": "issue_maxdiff_do_28",
-          "pick_col": "issue_maxdiff_pick_28"
+          "do_col": "issue_rank_maxdiff_do_28",
+          "pick_col": "issue_rank_maxdiff_pick_28"
         },
         {
           "code": 29,
           "label": "Free speech",
-          "do_col": "issue_maxdiff_do_29",
-          "pick_col": "issue_maxdiff_pick_29"
+          "do_col": "issue_rank_maxdiff_do_29",
+          "pick_col": "issue_rank_maxdiff_pick_29"
         },
         {
           "code": 30,
           "label": "Housing",
-          "do_col": "issue_maxdiff_do_30",
-          "pick_col": "issue_maxdiff_pick_30"
+          "do_col": "issue_rank_maxdiff_do_30",
+          "pick_col": "issue_rank_maxdiff_pick_30"
         }
       ],
       "waves": [

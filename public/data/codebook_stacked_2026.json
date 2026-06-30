@@ -3,7 +3,7 @@
     "stacked_2026": {
       "label": "2026 cycle (S25 + F25 + S26)",
       "n": 11083,
-      "note": "Stacked: S25+F25+S26. 7 canonical demographics + 389 non-demographic columns (in all 3 waves: 3; partial coverage: 20; single wave: 366). Rows from waves that didn't ask a given question carry null."
+      "note": "Stacked: S25+F25+S26. 7 canonical demographics + 390 non-demographic columns (in all 3 waves: 3; partial coverage: 21; single wave: 366). Rows from waves that didn't ask a given question carry null."
     }
   },
   "columns": {
@@ -6195,6 +6195,203 @@
         {
           "code": 5,
           "label": "Strongly disagree"
+        }
+      ]
+    },
+    "issue_rank_maxdiff": {
+      "label": "issue_rank_maxdiff",
+      "question": "When it comes to deciding your vote, which of the following issues is more important to you?",
+      "type": "maxdiff",
+      "waves": [
+        "F25",
+        "S26"
+      ],
+      "items": [
+        {
+          "code": 1,
+          "label": "Cost of living/affordability",
+          "do_col": "__md_issue_rank_maxdiff__do_1",
+          "pick_col": "__md_issue_rank_maxdiff__pick_1"
+        },
+        {
+          "code": 2,
+          "label": "Healthcare",
+          "do_col": "__md_issue_rank_maxdiff__do_2",
+          "pick_col": "__md_issue_rank_maxdiff__pick_2"
+        },
+        {
+          "code": 3,
+          "label": "Jobs",
+          "do_col": "__md_issue_rank_maxdiff__do_3",
+          "pick_col": "__md_issue_rank_maxdiff__pick_3"
+        },
+        {
+          "code": 4,
+          "label": "Taxes",
+          "do_col": "__md_issue_rank_maxdiff__do_4",
+          "pick_col": "__md_issue_rank_maxdiff__pick_4"
+        },
+        {
+          "code": 5,
+          "label": "The national debt",
+          "do_col": "__md_issue_rank_maxdiff__do_5",
+          "pick_col": "__md_issue_rank_maxdiff__pick_5"
+        },
+        {
+          "code": 6,
+          "label": "Corruption",
+          "do_col": "__md_issue_rank_maxdiff__do_6",
+          "pick_col": "__md_issue_rank_maxdiff__pick_6"
+        },
+        {
+          "code": 7,
+          "label": "Social Security",
+          "do_col": "__md_issue_rank_maxdiff__do_7",
+          "pick_col": "__md_issue_rank_maxdiff__pick_7"
+        },
+        {
+          "code": 8,
+          "label": "Medicaid and Medicare",
+          "do_col": "__md_issue_rank_maxdiff__do_8",
+          "pick_col": "__md_issue_rank_maxdiff__pick_8"
+        },
+        {
+          "code": 9,
+          "label": "K-12 education",
+          "do_col": "__md_issue_rank_maxdiff__do_9",
+          "pick_col": "__md_issue_rank_maxdiff__pick_9"
+        },
+        {
+          "code": 10,
+          "label": "Abortion",
+          "do_col": "__md_issue_rank_maxdiff__do_10",
+          "pick_col": "__md_issue_rank_maxdiff__pick_10"
+        },
+        {
+          "code": 11,
+          "label": "Crime",
+          "do_col": "__md_issue_rank_maxdiff__do_11",
+          "pick_col": "__md_issue_rank_maxdiff__pick_11"
+        },
+        {
+          "code": 12,
+          "label": "Israel and Palestine",
+          "do_col": "__md_issue_rank_maxdiff__do_12",
+          "pick_col": "__md_issue_rank_maxdiff__pick_12"
+        },
+        {
+          "code": 13,
+          "label": "Race relations",
+          "do_col": "__md_issue_rank_maxdiff__do_13",
+          "pick_col": "__md_issue_rank_maxdiff__pick_13"
+        },
+        {
+          "code": 14,
+          "label": "Foreign policy",
+          "do_col": "__md_issue_rank_maxdiff__do_14",
+          "pick_col": "__md_issue_rank_maxdiff__pick_14"
+        },
+        {
+          "code": 15,
+          "label": "Climate change",
+          "do_col": "__md_issue_rank_maxdiff__do_15",
+          "pick_col": "__md_issue_rank_maxdiff__pick_15"
+        },
+        {
+          "code": 16,
+          "label": "The environment",
+          "do_col": "__md_issue_rank_maxdiff__do_16",
+          "pick_col": "__md_issue_rank_maxdiff__pick_16"
+        },
+        {
+          "code": 17,
+          "label": "Election integrity",
+          "do_col": "__md_issue_rank_maxdiff__do_17",
+          "pick_col": "__md_issue_rank_maxdiff__pick_17"
+        },
+        {
+          "code": 18,
+          "label": "Immigration",
+          "do_col": "__md_issue_rank_maxdiff__do_18",
+          "pick_col": "__md_issue_rank_maxdiff__pick_18"
+        },
+        {
+          "code": 19,
+          "label": "Regulating businesses and corporations",
+          "do_col": "__md_issue_rank_maxdiff__do_19",
+          "pick_col": "__md_issue_rank_maxdiff__pick_19"
+        },
+        {
+          "code": 20,
+          "label": "Ukraine and Russia",
+          "do_col": "__md_issue_rank_maxdiff__do_20",
+          "pick_col": "__md_issue_rank_maxdiff__pick_20"
+        },
+        {
+          "code": 21,
+          "label": "Acceptance of gay people",
+          "do_col": "__md_issue_rank_maxdiff__do_21",
+          "pick_col": "__md_issue_rank_maxdiff__pick_21"
+        },
+        {
+          "code": 22,
+          "label": "Acceptance of transgender people",
+          "do_col": "__md_issue_rank_maxdiff__do_22",
+          "pick_col": "__md_issue_rank_maxdiff__pick_22"
+        },
+        {
+          "code": 23,
+          "label": "Higher education",
+          "do_col": "__md_issue_rank_maxdiff__do_23",
+          "pick_col": "__md_issue_rank_maxdiff__pick_23"
+        },
+        {
+          "code": 24,
+          "label": "China",
+          "do_col": "__md_issue_rank_maxdiff__do_24",
+          "pick_col": "__md_issue_rank_maxdiff__pick_24"
+        },
+        {
+          "code": 25,
+          "label": "Trade",
+          "do_col": "__md_issue_rank_maxdiff__do_25",
+          "pick_col": "__md_issue_rank_maxdiff__pick_25"
+        },
+        {
+          "code": 26,
+          "label": "Artificial intelligence",
+          "do_col": "__md_issue_rank_maxdiff__do_26",
+          "pick_col": "__md_issue_rank_maxdiff__pick_26"
+        },
+        {
+          "code": 27,
+          "label": "Guns",
+          "do_col": "__md_issue_rank_maxdiff__do_27",
+          "pick_col": "__md_issue_rank_maxdiff__pick_27"
+        },
+        {
+          "code": 28,
+          "label": "Democracy",
+          "do_col": "__md_issue_rank_maxdiff__do_28",
+          "pick_col": "__md_issue_rank_maxdiff__pick_28"
+        },
+        {
+          "code": 29,
+          "label": "Free speech",
+          "do_col": "__md_issue_rank_maxdiff__do_29",
+          "pick_col": "__md_issue_rank_maxdiff__pick_29"
+        },
+        {
+          "code": 30,
+          "label": "Housing",
+          "do_col": "__md_issue_rank_maxdiff__do_30",
+          "pick_col": "__md_issue_rank_maxdiff__pick_30"
+        },
+        {
+          "code": 31,
+          "label": "Diplomatic relations",
+          "do_col": "__md_issue_rank_maxdiff__do_31",
+          "pick_col": "__md_issue_rank_maxdiff__pick_31"
         }
       ]
     },

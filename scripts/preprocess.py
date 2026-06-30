@@ -460,18 +460,22 @@ def load_f25() -> tuple[pd.DataFrame, dict[str, str], pd.DataFrame, str]:
 # (e.g. issue_maxdiff1/2/3). We collate the rounds into ONE MaxDiff, summing
 # offers (times shown) and picks across rounds per item — rather than exposing
 # each round as its own column. (stem, [round numbers])
+# (raw-round stem, output column name, round numbers). The output name is what
+# the collated MaxDiff is keyed by — issue uses F25's name `issue_rank_maxdiff`
+# so the two waves pool into one cross-wave issue MaxDiff (their raw variable
+# names differ: F25 `issue_rank_maxdiff`, S26 `issue_maxdiff1/2/3`).
 S26_MAXDIFF_FAMILIES = [
-    ("issue_maxdiff", [1, 2, 3]),
-    ("ai_risks_md", [1, 2]),
-    ("ai_benefits_md", [1, 2]),
+    ("issue_maxdiff", "issue_rank_maxdiff", [1, 2, 3]),
+    ("ai_risks_md", "ai_risks_md", [1, 2]),
+    ("ai_benefits_md", "ai_benefits_md", [1, 2]),
 ]
 S26_MAXDIFF_QTEXT = {
-    "issue_maxdiff": "When it comes to deciding your vote, which issue is more important to you? — collated across 3 MaxDiff rounds",
+    "issue_rank_maxdiff": "When it comes to deciding your vote, which of the following issues is more important to you?",
     "ai_risks_md": "Which is the bigger risk of AI? — collated across 2 MaxDiff rounds",
     "ai_benefits_md": "Which is the bigger benefit of AI? — collated across 2 MaxDiff rounds",
 }
 S26_MAXDIFF_LABEL = {
-    "issue_maxdiff": "Issue importance MaxDiff (collated 3 rounds)",
+    "issue_rank_maxdiff": "Issue importance MaxDiff (collated 3 rounds)",
     "ai_risks_md": "AI risks MaxDiff (collated 2 rounds)",
     "ai_benefits_md": "AI benefits MaxDiff (collated 2 rounds)",
 }
@@ -493,7 +497,7 @@ def build_s26_multiround_maxdiffs(
     S26_MAXDIFF_AUX.clear()
     n = len(raw)
     out_cols: dict[str, list] = {}
-    for stem, rounds in S26_MAXDIFF_FAMILIES:
+    for stem, out_name, rounds in S26_MAXDIFF_FAMILIES:
         round_cols = [f"{stem}{r}" for r in rounds]
         if not all(c in raw.columns for c in round_cols):
             continue
@@ -527,15 +531,15 @@ def build_s26_multiround_maxdiffs(
                         do_counts[c][i] += 1
         items = []
         for c in item_codes:
-            do_col, pick_col = f"{stem}_do_{c}", f"{stem}_pick_{c}"
+            do_col, pick_col = f"{out_name}_do_{c}", f"{out_name}_pick_{c}"
             out_cols[do_col] = [v if v > 0 else np.nan for v in do_counts[c]]
             out_cols[pick_col] = [v if v > 0 else np.nan for v in pick_counts[c]]
             S26_MAXDIFF_AUX.add(do_col)
             S26_MAXDIFF_AUX.add(pick_col)
             items.append({"code": c, "label": cl.get(float(c), str(c)),
                           "do_col": do_col, "pick_col": pick_col})
-        S26_MAXDIFF_ITEMS[stem] = items
-        out_cols[stem] = [1 if a else np.nan for a in answered]
+        S26_MAXDIFF_ITEMS[out_name] = items
+        out_cols[out_name] = [1 if a else np.nan for a in answered]
     return pd.DataFrame(out_cols, index=raw.index)
 
 
